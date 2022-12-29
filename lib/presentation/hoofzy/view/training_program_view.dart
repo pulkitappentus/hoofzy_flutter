@@ -1,5 +1,6 @@
 import 'package:Hoofzy_V2/presentation/hoofzy/model/training_program_data.dart';
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
 
 class TrainingProgramView extends StatelessWidget {
   const TrainingProgramView(
@@ -45,15 +46,15 @@ class TrainingProgramView extends StatelessWidget {
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(top: 15.0),
-                    child: Image.asset(traingData!.image,height:110,width: 110,fit: BoxFit.fill,),
+                    child: Image.asset(traingData!.image,height:115,width: 110,fit: BoxFit.fill,),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(15.0),
+                    padding: const EdgeInsets.only(left: 15.0,right: 15,top: 15,bottom: 12),
                     child: Text(
                       traingData!.title,
                       textAlign: TextAlign.left,
                       style: const TextStyle(
-                          fontWeight: FontWeight.bold,
+                          fontWeight: FontWeight.w800,
                           fontSize: 15,
                           color: Colors.black
                       ),
@@ -63,7 +64,7 @@ class TrainingProgramView extends StatelessWidget {
                     traingData!.desc,
                     textAlign: TextAlign.left,
                     style: const TextStyle(
-                        fontWeight: FontWeight.normal,
+                        fontWeight: FontWeight.w400,
                         fontSize: 13,
                         color: Colors.black
                     ),

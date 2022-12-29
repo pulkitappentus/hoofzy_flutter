@@ -68,7 +68,8 @@ abstract class BaseView<Controller extends BaseController> extends GetView<Contr
 
   Color pageBackgroundColor() => ColorsTheme.primary;
 
-  Color statusBarColor() => Colors.transparent;
+  //changed color transparent to
+  Color statusBarColor() => Color(0xFF121212);
 
   Widget? bottomNavigationBar() {
     return null;

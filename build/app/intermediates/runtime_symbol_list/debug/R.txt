@@ -245,6 +245,8 @@ int layout notification_template_media_custom 0x7f08000f
 int layout notification_template_part_chronometer 0x7f080010
 int layout notification_template_part_time 0x7f080011
 int mipmap ic_launcher 0x7f090000
+int mipmap ic_launcher_adaptive_back 0x7f090001
+int mipmap ic_launcher_adaptive_fore 0x7f090002
 int raw firebase_common_keep 0x7f0a0000
 int string about 0x7f0b0000
 int string add_path 0x7f0b0001

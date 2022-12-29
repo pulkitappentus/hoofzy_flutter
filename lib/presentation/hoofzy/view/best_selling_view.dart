@@ -44,23 +44,26 @@ class BestSellingView extends StatelessWidget {
                       'Wiggles',
                       style: TextStyle(
                           fontSize: 12,
-                          fontWeight: FontWeight.normal,
+                          fontWeight: FontWeight.w500,
                           decoration: TextDecoration.none,
                           color: Colors.black
                       ),
                     )
                   ),
-                  Align(
-                    alignment: Alignment.topLeft,
-                    child: Text(
-                      bestProductList!.title,
-                      style: const TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          decoration: TextDecoration.none,
-                          color: Colors.black
-                      ),
-                    )
+                  Padding(
+                    padding: const EdgeInsets.only(top: 5.0),
+                    child: Align(
+                      alignment: Alignment.topLeft,
+                      child: Text(
+                        bestProductList!.title,
+                        style: const TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            decoration: TextDecoration.none,
+                            color: Colors.black
+                        ),
+                      )
+                    ),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 15.0),
@@ -80,7 +83,7 @@ class BestSellingView extends StatelessWidget {
 }
 Widget bestSellingProductsPrice(String price){
   return Padding(
-    padding: const EdgeInsets.only(top: 26.0),
+    padding: const EdgeInsets.only(top: 22.0),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [

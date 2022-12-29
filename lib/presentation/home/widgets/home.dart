@@ -125,7 +125,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                       },
                     ),
                   ),
-                  upcomingScheduleHeading("Articles on legal"),
+                  articalsHeading("Articles on legal"),
                   SizedBox(
                     height: 124,
                     child: ListView.builder(
@@ -286,35 +286,41 @@ Widget articalCard(BuildContext context) {
 }
 
 Widget welcomeHeading() {
-  return Padding(
-    padding: const EdgeInsets.only(left: 20,bottom: 16),
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: <Widget>[
-        Expanded(child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children:  [
-            welcomWithUserName(),
-            const Padding(
-              padding: EdgeInsets.only(top: 20.0,bottom: 10),
-              child: Text('The Fun Place', style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 24,
+  return Container(
+    decoration: BoxDecoration(
+      color: Color(0xFF121212),
+      borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20.0),bottomRight: Radius.circular(20.0))
+    ),
+    child: Padding(
+      padding: const EdgeInsets.only(left: 20,bottom: 16),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          Expanded(child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children:  [
+              welcomWithUserName(),
+              const Padding(
+                padding: EdgeInsets.only(top: 20.0,bottom: 10),
+                child: Text('The Fun Place', style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 24,
+                      color: Color(0xFFFFFFFF)),),
+              ),
+              const Text('for your pet "Mecca"', style: TextStyle(
+                    fontWeight: FontWeight.w300,
+                    fontSize: 14,
                     color: Color(0xFFFFFFFF)),),
-            ),
-            const Text('for your pet "Mecca"', style: TextStyle(
-                  fontWeight: FontWeight.normal,
-                  fontSize: 14,
-                  color: Color(0xFFFFFFFF)),),
-            playButton()
-          ],
-        )
-        ),
-        Lottie.asset('assets/lottie/cute_doggie.json',width: 200,height: 140,fit: BoxFit.fill),
-      /*  Image.asset('assets/hoofzy/welcome_pet.png',width: 180,height: 160,)*/
-      ],
-    )
+              playButton()
+            ],
+          )
+          ),
+          Lottie.asset('assets/lottie/cute_doggie.json',width: 200,height: 140,fit: BoxFit.fill),
+        /*  Image.asset('assets/hoofzy/welcome_pet.png',width: 180,height: 160,)*/
+        ],
+      )
+    ),
   );
 }
 
@@ -335,7 +341,7 @@ Widget articalDetails() {
           padding: EdgeInsets.only(top: 10.0),
           child: Text('Today, 10:45 am | 3 min to read',
             style: TextStyle(
-              fontWeight: FontWeight.normal,
+              fontWeight: FontWeight.w400,
               fontSize: 13,
               color: Color(0xFFFFFFFF)),
 
@@ -353,11 +359,14 @@ Widget one() {
     child: Row(
       children: <Widget> [
         Image.asset('assets/hoofzy/hot.png',width: 20,height: 20,),
-        const Text('25 hot and lorem ipsum',
-          style: TextStyle(
-              fontWeight: FontWeight.normal,
-              fontSize: 13,
-              color: Color(0xFFFFFFFF)),
+        const Padding(
+          padding: EdgeInsets.only(left: 8.0),
+          child: Text('25 hot and lorem ipsum',
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 13,
+                color: Color(0xFFFFFFFF)),
+          ),
         ),
       ],
     ),
@@ -369,9 +378,9 @@ Widget playButton() {
     padding: const EdgeInsets.only(top: 20),
     child: Container(
       decoration: BoxDecoration(
-        color: Color(0xFF303030),
+        color: Color(0xFF202020),
         borderRadius: BorderRadius.circular(22),
-        border: Border.all(color: Colors.grey,width: 0.5)
+        border: Border.all(color: Color(0xFF303030),width: 1)
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
@@ -398,11 +407,11 @@ Widget welcomWithUserName() {
     mainAxisAlignment: MainAxisAlignment.start,
     children: const [
       Text('Welcome, ', style: TextStyle(
-          fontWeight: FontWeight.normal,
+          fontWeight: FontWeight.w300,
           fontSize: 18,
           color: Color(0xFFFFFFFF)),),
       Text('Milena', style: TextStyle(
-          fontWeight: FontWeight.bold,
+          fontWeight: FontWeight.w800,
           fontSize: 18,
           color: Color(0xFFFFFFFF)),),
     ],
@@ -411,22 +420,32 @@ Widget welcomWithUserName() {
 
 Widget upcomingScheduleHeading(String arg1) {
   return Padding(
-    padding: const EdgeInsets.only(left: 20,right: 20,top: 16,bottom: 16),
+    padding: const EdgeInsets.only(left: 20,right: 20,top: 20,bottom: 16),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
         Text(arg1,
           style: const TextStyle(
-              fontWeight: FontWeight.bold,
+              fontWeight: FontWeight.w400,
               fontSize: 18,
               color: Color(0xFFFFFFFF)
           ),
         ),
-        const Text("See All",
-          style: TextStyle(
-              fontWeight: FontWeight.normal,
-              fontSize: 15,
-              color: Colors.black
+      ],
+    )
+  );
+}
+Widget articalsHeading(String arg1) {
+  return Padding(
+    padding: const EdgeInsets.only(left: 20,right: 20,top: 10,bottom: 16),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: <Widget>[
+        Text(arg1,
+          style: const TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 18,
+              color: Color(0xFFFFFFFF)
           ),
         ),
       ],
@@ -442,7 +461,7 @@ Widget trendingCommunityHeading(String arg1) {
       children: <Widget>[
         Text(arg1,
           style: const TextStyle(
-              fontWeight: FontWeight.bold,
+              fontWeight: FontWeight.w400,
               fontSize: 18,
               color: Color(0xFFFFFFFF)
           ),
@@ -466,7 +485,7 @@ Widget seeAllButton() {
         const Padding(
           padding: const EdgeInsets.only(left: 18.0,right: 2),
           child: Text('See All', style: TextStyle(
-              fontWeight: FontWeight.normal,
+              fontWeight: FontWeight.w400,
               fontSize: 14,
               color: Color(0xFFFFFFFF)),),
         ),

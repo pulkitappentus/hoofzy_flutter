@@ -1,3 +1,4 @@
+import 'dart:ui';
 import 'package:Hoofzy_V2/presentation/hoofzy/model/trending_community_data.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
@@ -44,8 +45,13 @@ Widget trendingCommunityData(BuildContext context) {
         borderRadius: BorderRadius.circular(16),
         image: DecorationImage(image: AssetImage('assets/hoofzy/trending_community_image.png'),fit: BoxFit.fill)
     ),
+    alignment: Alignment.bottomCenter,
     child: Container(
+        height: 70,
+        decoration: const BoxDecoration(
 
+            borderRadius: BorderRadius.all(Radius.circular(16))
+        ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.end,
         mainAxisAlignment: MainAxisAlignment.start,
@@ -59,7 +65,7 @@ Widget trendingCommunityData(BuildContext context) {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget> [
+              children: const <Widget> [
                 Text('Jess Dsouza', style: TextStyle(
                     fontWeight: FontWeight.w500,
                     fontSize: 14,

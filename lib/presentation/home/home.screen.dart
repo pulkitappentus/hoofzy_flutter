@@ -22,33 +22,36 @@ class HomeScreen extends BaseView<HomeController> {
         mainAxisAlignment: MainAxisAlignment.start,
         mainAxisSize: MainAxisSize.max,
         children: [
-          Padding(
-            padding: EdgeInsets.all(15.sp),
-            //Obx(()), =>
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Image.asset('assets/hoofzy/profile.png',width: 40,height: 40,fit: BoxFit.fill),
-                Container(
-                    decoration: BoxDecoration(
-                        color: Color(0xFF303030),
-                        borderRadius: BorderRadius.circular(20),
-                        border: Border.all(color: Colors.grey,width: 0.3)
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 10,right: 10, top: 9,bottom: 9),
-                      child: Image.asset('assets/hoofzy/notification.png',width: 18,height: 20,fit: BoxFit.fill),
-                    )
-                ),
-                /*Text(controller.labels[controller.tabIndex.value],
-                    style: TextStyle(
-                      color: ColorsTheme.primary,
-                      fontSize: 40,
-                      height: 0.50,
-                    )
-                  ),*/
-              ],
-            )
+          Container(
+            color: Color(0xFF121212),
+            child: Padding(
+              padding: EdgeInsets.all(15.sp),
+              //Obx(()), =>
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Image.asset('assets/hoofzy/profile.png',width: 40,height: 40,fit: BoxFit.fill),
+                  Container(
+                      decoration: BoxDecoration(
+                          color: Color(0xFF202020),
+                          borderRadius: BorderRadius.circular(20),
+                          border: Border.all(color: Color(0xFF303030),width: 1)
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 10,right: 10, top: 9,bottom: 9),
+                        child: Image.asset('assets/hoofzy/notification.png',width: 18,height: 20,fit: BoxFit.fill),
+                      )
+                  ),
+                  /*Text(controller.labels[controller.tabIndex.value],
+                      style: TextStyle(
+                        color: ColorsTheme.primary,
+                        fontSize: 40,
+                        height: 0.50,
+                      )
+                    ),*/
+                ],
+              )
+            ),
           ),
           Expanded(
               child: Obx(() => IndexedStack(
