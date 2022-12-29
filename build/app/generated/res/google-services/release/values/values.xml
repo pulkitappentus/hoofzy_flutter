@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">452482022929-04j1ulmbo7gkie7gv2uenfn5s06kpmdf.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">452482022929</string>
+    <string name="google_api_key" translatable="false">AIzaSyB75OQv_rCXbPMs5wYiVtjKmIlrgbzHYr0</string>
+    <string name="google_app_id" translatable="false">1:452482022929:android:078f96af7601d4688d7bb0</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyB75OQv_rCXbPMs5wYiVtjKmIlrgbzHYr0</string>
+    <string name="google_storage_bucket" translatable="false">superheroes-wallpapers-b46f4.appspot.com</string>
+    <string name="project_id" translatable="false">superheroes-wallpapers-b46f4</string>
+</resources>

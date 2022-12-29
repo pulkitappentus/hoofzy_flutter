@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:Hoofzy_V2/presentation/hoofzy/view/popular_service_view.dart';
 import 'package:Hoofzy_V2/presentation/hoofzy/model/popular_service_data.dart';
 import 'package:Hoofzy_V2/presentation/hoofzy/model/training_program_data.dart';
@@ -11,6 +13,7 @@ import '../../hoofzy/view/knowledge_book_list_view.dart';
 import '../../hoofzy/model/knowledge_program_data.dart';
 import '../../hoofzy/model/trending_community_data.dart';
 import '../../hoofzy/view/trending_community_view.dart';
+import '../../hoofzy/widgets/boarding_page.dart';
 
 class Home extends StatefulWidget{
 
@@ -116,7 +119,14 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                         return Container(
                           width: 140.sp,
                           child: PopularServiceView(
-                            callback: () {},
+                            callback: () {
+                              Navigator.push<dynamic>(
+                                context,
+                                MaterialPageRoute<dynamic>(
+                                  builder: (BuildContext context) => BoardingPage(),
+                                ),
+                              );
+                            },
                             popularServiceList: popularServiceList[index],
                             animation: animation,
                             animationController: animationController!,
@@ -188,10 +198,6 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                     ),
                   ),
                   trendingCommunityHeading("Trending Community"),
-                 /* Padding(
-                    padding: const EdgeInsets.only(left: 18.0,right: 18.0,bottom: 18.0,top: 9.0),
-                    child: trendingCommunityData(context),
-                  )*/
                   SizedBox(
                     height: 200.sp,
                     child: ListView.builder(
@@ -221,6 +227,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                       },
                     ),
                   ),
+                  //hellItem()
                 ],
               ),
             ),
@@ -522,6 +529,77 @@ Widget trendingCommunityData(BuildContext context) {
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: const [
+                Text('Jess Dsouza', style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                    fontSize: 14,
+                    color: Color(0xFFFFFFFF)),),
+                Text('I dont always bark...', style: TextStyle(
+                    fontWeight: FontWeight.normal,
+                    fontSize: 13,
+                    color: Color(0xFFFFFFFF)),),
+              ],
+            ),
+          )),
+          Expanded(child: Padding(
+            padding: const EdgeInsets.only(right:8.0,bottom: 16.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children:  [
+                Container(
+                    decoration: BoxDecoration(
+                        color: Color(0xFFFFFFFF),
+                        borderRadius: BorderRadius.circular(20)
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 10,right: 10, top: 15,bottom: 15),
+                      child: Image.asset('assets/hoofzy/like.png',width: 18,height: 17,fit: BoxFit.fill),
+                    )
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 8.0),
+                  child: Container(
+                      decoration: BoxDecoration(
+                          color: Color(0xFFFFFFFF),
+                          borderRadius: BorderRadius.circular(20)
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 10,right: 10, top: 14,bottom: 14),
+                        child: Image.asset('assets/hoofzy/chat.png',width: 18,height: 18,fit: BoxFit.fill),
+                      )
+                  ),
+                ),
+              ],
+            ),
+          ))
+        ],
+      ),
+    ),
+  );
+}
+
+Widget hellItem() {
+  return BackdropFilter(
+    filter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
+    child: Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(16),
+        color: Colors.black.withOpacity(0.2),
+      ),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.end,
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 8.0,bottom: 8.0),
+            child: Image.asset('assets/hoofzy/profile.png',height: 40.sp,width: 40.sp,fit: BoxFit.fill,),
+          ),
+          Expanded(child: Padding(
+            padding: const EdgeInsets.only(left: 12.0,bottom: 16.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: const <Widget> [
                 Text('Jess Dsouza', style: TextStyle(
                     fontWeight: FontWeight.w500,
                     fontSize: 14,

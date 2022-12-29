@@ -59,14 +59,14 @@ class HomeScreen extends BaseView<HomeController> {
                     //changed home to hoofzy page
                     children: const [Home(), Services(), Shop(), Training(), Community()],
                   ))),
-          Obx(() => controller.showAds.value!
+          /*Obx(() => controller.showAds.value!
               ? Container(
                   alignment: Alignment.center,
                   width: controller.banner.size.width.toDouble(),
                   height: controller.banner.size.height.toDouble(),
                   child: AdWidget(ad: controller.banner),
                 )
-              : Container())
+              : Container())*/
         ],
       ),
     );

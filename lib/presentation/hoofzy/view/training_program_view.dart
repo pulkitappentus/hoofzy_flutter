@@ -1,6 +1,5 @@
 import 'package:Hoofzy_V2/presentation/hoofzy/model/training_program_data.dart';
 import 'package:flutter/material.dart';
-import 'package:sizer/sizer.dart';
 
 class TrainingProgramView extends StatelessWidget {
   const TrainingProgramView(

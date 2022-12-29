@@ -29,7 +29,7 @@ class HomeController extends BaseController {
 
   @override
   void onInit() async {
-    initAds();
+    /*initAds();
     try {
       showLoading();
       reviewAvailable = await inAppReview.isAvailable();
@@ -39,15 +39,16 @@ class HomeController extends BaseController {
     } catch (err) {
       hideLoading();
       SnackbarUtil.showError(message: err.toString());
-    }
+    }*/
     super.onInit();
   }
 
   void changeTabIndex(int index) {
     tabIndex.value = index;
+
   }
 
-  void sendFeedback() async {
+  /*void sendFeedback() async {
     PackageInfo packageInfo = await PackageInfo.fromPlatform();
     // final Uri url = Uri(scheme: 'mailto', path: 'starpremiumappz@gmail.com', query: 'subject=App Feedback&body=App Version ${packageInfo.version} - ${packageInfo.buildNumber}');
     // if (await canLaunchUrl(url)) {
@@ -77,7 +78,7 @@ class HomeController extends BaseController {
     showLoading();
     await _firebaseRepository.makeFavourite(wallpaperId);
     hideLoading();
-  }
+  }*/
 
   void initAds() {
     /*MobileAds.instance.updateRequestConfiguration(RequestConfiguration(testDeviceIds: ['9078A869DA39F95D4CEF14A600401F01']));
@@ -97,7 +98,7 @@ class HomeController extends BaseController {
   }
   @override
   Future<void> onConnectionChange(ConnectivityResult result) async {
-      if(result == ConnectivityResult.wifi || result == ConnectivityResult.mobile){
+     /* if(result == ConnectivityResult.wifi || result == ConnectivityResult.mobile){
         try {
           showLoading();
           heroes.value = await _firebaseRepository.getHeroes();
@@ -109,7 +110,7 @@ class HomeController extends BaseController {
         }
       }else if(result == ConnectivityResult.none){
         SnackbarUtil.showError(message: "No Internet Connection. Please check your internet");
-      }
+      }*/
   }
 
   @override
