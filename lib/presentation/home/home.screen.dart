@@ -1,9 +1,12 @@
+import 'package:Hoofzy_V2/presentation/home/widgets/community.dart';
+import 'package:Hoofzy_V2/presentation/home/widgets/shop.dart';
+import 'package:Hoofzy_V2/presentation/home/widgets/training.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:sizer/sizer.dart';
 import 'package:flutter/cupertino.dart';
-import 'widgets/hoofzy_page.dart';
+import 'widgets/home.dart';
 import 'widgets/services.dart';
 import '../../infrastructure/base/base_view.dart';
 import './controllers/home.controller.dart';
@@ -51,7 +54,7 @@ class HomeScreen extends BaseView<HomeController> {
               child: Obx(() => IndexedStack(
                     index: controller.tabIndex.value,
                     //changed home to hoofzy page
-                    children: const [HoofzyPage(), Services(), Services(), Services(), Services()],
+                    children: const [Home(), Services(), Shop(), Training(), Community()],
                   ))),
           Obx(() => controller.showAds.value!
               ? Container(
