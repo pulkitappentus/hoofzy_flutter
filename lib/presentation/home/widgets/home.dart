@@ -1,16 +1,16 @@
-import 'package:Hoofzy_V2/presentation/hoofzy/popular_service_data.dart';
-import 'package:Hoofzy_V2/presentation/hoofzy/popular_service_list.dart';
-import 'package:Hoofzy_V2/presentation/hoofzy/training_program_data.dart';
-import 'package:Hoofzy_V2/presentation/hoofzy/training_program_list.dart';
+import 'package:Hoofzy_V2/presentation/hoofzy/view/popular_service_view.dart';
+import 'package:Hoofzy_V2/presentation/hoofzy/model/popular_service_data.dart';
+import 'package:Hoofzy_V2/presentation/hoofzy/model/training_program_data.dart';
+import 'package:Hoofzy_V2/presentation/hoofzy/view/training_program_view.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:sizer/sizer.dart';
-import '../../hoofzy/best_selling_product_list.dart';
-import '../../hoofzy/best_selling_view.dart';
-import '../../hoofzy/knowledge_book_list_view.dart';
-import '../../hoofzy/knowledge_program_list.dart';
-import '../../hoofzy/trending_community_list.dart';
-import '../../hoofzy/trending_community_view.dart';
+import '../../hoofzy/model/best_selling_product_data.dart';
+import '../../hoofzy/view/best_selling_view.dart';
+import '../../hoofzy/view/knowledge_book_list_view.dart';
+import '../../hoofzy/model/knowledge_program_data.dart';
+import '../../hoofzy/model/trending_community_data.dart';
+import '../../hoofzy/view/trending_community_view.dart';
 
 class Home extends StatefulWidget{
 
@@ -23,11 +23,11 @@ class Home extends StatefulWidget{
 
 class _HomeState extends State<Home> with TickerProviderStateMixin {
   AnimationController? animationController;
-  List<PopularServiceList> popularServiceList = PopularServiceList.popularServiceList;
+  List<PopularServiceData> popularServiceList = PopularServiceData.popularServiceList;
   List<TrainingProgramData> trainingList = TrainingProgramData.hotelList;
   List<KnowledgeProgramData> knowledgeList = KnowledgeProgramData.knowledgeList;
-  List<BestSellingProductList> bestProductList = BestSellingProductList.bestProductList;
-  List<TrendingCommunityList> trendingCommunityList = TrendingCommunityList.trendingCommunityList;
+  List<BestSellingProductData> bestProductList = BestSellingProductData.bestProductList;
+  List<TrendingCommunityData> trendingCommunityList = TrendingCommunityData.trendingCommunityList;
 
   @override
   void initState() {
@@ -84,7 +84,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                         animationController?.forward();
                         return Container(
                           width: 140.sp,
-                          child: TrainingProgramList(
+                          child: TrainingProgramView(
                             callback: () {},
                             traingData: trainingList[index],
                             animation: animation,
@@ -115,7 +115,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                         animationController?.forward();
                         return Container(
                           width: 140.sp,
-                          child: PopularServiceData(
+                          child: PopularServiceView(
                             callback: () {},
                             popularServiceList: popularServiceList[index],
                             animation: animation,

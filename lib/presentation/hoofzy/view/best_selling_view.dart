@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'best_selling_product_list.dart';
+import '../model/best_selling_product_data.dart';
 
 class BestSellingView extends StatelessWidget {
   const BestSellingView(
@@ -10,7 +10,7 @@ class BestSellingView extends StatelessWidget {
         this.callback}) : super(key: key);
 
   final VoidCallback? callback;
-  final BestSellingProductList? bestProductList;
+  final BestSellingProductData? bestProductList;
   final AnimationController? animationController;
   final Animation<double>? animation;
 

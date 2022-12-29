@@ -1,5 +1,5 @@
-class TrendingCommunityList {
-  TrendingCommunityList({
+class TrendingCommunityData {
+  TrendingCommunityData({
     this.image = '',
     this.title = '',
     this.desc = '',
@@ -11,20 +11,20 @@ class TrendingCommunityList {
   String desc;
   String profileImage;
 
-  static List<TrendingCommunityList> trendingCommunityList = <TrendingCommunityList>[
-    TrendingCommunityList(
+  static List<TrendingCommunityData> trendingCommunityList = <TrendingCommunityData>[
+    TrendingCommunityData(
         image: 'assets/hoofzy/trending_community_image.png',
         title: 'Jess Dsouza',
         desc: 'I dont always bark...',
         profileImage: 'assets/hoofzy/profile.png',
     ),
-    TrendingCommunityList(
+    TrendingCommunityData(
       image: 'assets/hoofzy/trending_community_image.png',
       title: 'Jess Dsouza',
       desc: 'I dont always bark...',
       profileImage: 'assets/hoofzy/profile.png',
     ),
-    TrendingCommunityList(
+    TrendingCommunityData(
       image: 'assets/hoofzy/trending_community_image.png',
       title: 'Jess Dsouza',
       desc: 'I dont always bark...',

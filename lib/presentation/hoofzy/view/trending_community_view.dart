@@ -1,4 +1,4 @@
-import 'package:Hoofzy_V2/presentation/hoofzy/trending_community_list.dart';
+import 'package:Hoofzy_V2/presentation/hoofzy/model/trending_community_data.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
@@ -11,7 +11,7 @@ class TrendingCommunityView extends StatelessWidget {
         this.callback}) : super(key: key);
 
   final VoidCallback? callback;
-  final TrendingCommunityList? trendingCommunityList;
+  final TrendingCommunityData? trendingCommunityList;
   final AnimationController? animationController;
   final Animation<double>? animation;
 

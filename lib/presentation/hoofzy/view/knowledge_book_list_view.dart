@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'knowledge_program_list.dart';
+import '../model/knowledge_program_data.dart';
 
 class KnowledgeBookListView extends StatelessWidget {
   const KnowledgeBookListView(

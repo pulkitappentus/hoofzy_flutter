@@ -1,8 +1,8 @@
-import 'package:Hoofzy_V2/presentation/hoofzy/training_program_data.dart';
+import 'package:Hoofzy_V2/presentation/hoofzy/model/training_program_data.dart';
 import 'package:flutter/material.dart';
 
-class TrainingProgramList extends StatelessWidget {
-  const TrainingProgramList(
+class TrainingProgramView extends StatelessWidget {
+  const TrainingProgramView(
       {Key? key,
         this.traingData,
         this.animationController,

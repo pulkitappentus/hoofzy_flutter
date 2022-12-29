@@ -1,8 +1,8 @@
-import 'package:Hoofzy_V2/presentation/hoofzy/popular_service_list.dart';
+import 'package:Hoofzy_V2/presentation/hoofzy/model/popular_service_data.dart';
 import 'package:flutter/material.dart';
 
-class PopularServiceData extends StatelessWidget {
-  const PopularServiceData(
+class PopularServiceView extends StatelessWidget {
+  const PopularServiceView(
       {Key? key,
         this.popularServiceList,
         this.animationController,
@@ -10,7 +10,7 @@ class PopularServiceData extends StatelessWidget {
         this.callback}) : super(key: key);
 
   final VoidCallback? callback;
-  final PopularServiceList? popularServiceList;
+  final PopularServiceData? popularServiceList;
   final AnimationController? animationController;
   final Animation<double>? animation;
 
