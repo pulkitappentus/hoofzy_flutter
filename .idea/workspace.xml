@@ -15,7 +15,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a1547f2-9a36-4846-96c0-e2f361532b0a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/presentation/hoofzy/widgets/boarding_page.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/f4a6b8802d87017c9e1c8da7d3700e00/.filecache" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/f4a6b8802d87017c9e1c8da7d3700e00/.filecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/f4a6b8802d87017c9e1c8da7d3700e00/app.dill" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/f4a6b8802d87017c9e1c8da7d3700e00/app.dill" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/f4a6b8802d87017c9e1c8da7d3700e00/debug_android_application.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/f4a6b8802d87017c9e1c8da7d3700e00/debug_android_application.stamp" afterDir="false" />
@@ -34,11 +33,10 @@
       <change beforePath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app.apk.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app.apk.sha1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/presentation/home/controllers/home.controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/home/controllers/home.controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/presentation/home/home.screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/home/home.screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/presentation/home/widgets/home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/home/widgets/home.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/presentation/home/widgets/services.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/home/widgets/services.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/presentation/hoofzy/view/training_program_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/hoofzy/view/training_program_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/home/widgets/shop.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/home/widgets/shop.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/hoofzy/view/trending_community_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/hoofzy/view/trending_community_view.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,19 +73,20 @@
     <property name="cidr.known.project.marker" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/presentation/hoofzy/view" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/presentation/hoofzy/view/test_viewpager" />
     <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\lib\presentation\hoofzy\view\test_viewpager" />
       <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\lib\presentation\hoofzy\view" />
       <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\android\app\src\main\res" />
       <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\lib\presentation\home\widgets" />
       <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\lib\presentation\hoofzy" />
-      <recent name="C:\Users\hp\Documents\GitHub\super_heros\assets\lottie" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\lib\presentation\hoofzy\view\test_viewpager" />
       <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\lib\presentation\hoofzy\view" />
       <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\lib\presentation\hoofzy\model" />
       <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\lib\presentation\home\widgets" />

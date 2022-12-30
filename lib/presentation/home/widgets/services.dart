@@ -9,10 +9,8 @@ import '../../hoofzy/model/trending_community_data.dart';
 class Services extends StatefulWidget{
 
   const Services({Key? key}) : super(key: key);
-
   @override
   _ServicesState createState() => _ServicesState();
-
 }
 
 class _ServicesState extends State<Services> with TickerProviderStateMixin {
@@ -43,7 +41,6 @@ class _ServicesState extends State<Services> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-
     return  Scaffold(
       backgroundColor: Colors.transparent,
       body: Column(
