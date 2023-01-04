@@ -1,4 +1,7 @@
+import 'package:Hoofzy_V2/presentation/hoofzy/widgets/sign_up.dart';
 import 'package:flutter/material.dart';
+
+import '../../hoofzy/widgets/boarding_page.dart';
 
 class Training extends StatefulWidget{
 
@@ -34,28 +37,87 @@ class _TrainingState extends State<Training> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
 
     return  Scaffold(
-      backgroundColor: Colors.transparent,
+      backgroundColor: Colors.amber,
       body: Column(
         children: <Widget>[
-          SizedBox(
-            height: MediaQuery.of(context).padding.top,
-          ),
+          Image.asset('assets/hoofzy/setting_up.png',width: MediaQuery.of(context).size.width,height: 280,fit: BoxFit.fill,),
+
           Expanded(
-            //height: MediaQuery.of(context).size.height,
-            child: SingleChildScrollView(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: const[
-                  Text('Training', style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                      color: Color(0xFFFFFFFF)
-                   ),
-                  ),
-                ],
-              ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: const [
+                Text('Hoofzy App.',style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 24,
+                    color: Color(0xFF000000)
+                ),
+                ),
+                Text('Our programs are designed by experts to \nempower you to take training into your \nown hands.',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w300,
+                    fontSize: 14,
+                    color: Color(0xFF000000)
+                ),
+                ),
+              ],
             ),
           ),
+
+          Expanded(child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                width: 154,
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.black),
+                  borderRadius: BorderRadius.circular(12)
+
+                ),
+                child: TextButton(onPressed: () {
+                  Navigator.push<dynamic>(
+                    context,
+                    MaterialPageRoute<dynamic>(
+                      builder: (BuildContext context) => BoardingPage(),
+                    ),
+                  );
+                },
+                    child: const Text('LOGIN',
+                        style: TextStyle(
+                            fontWeight: FontWeight.w400,
+                            fontSize: 14,
+                            color: Color(0xFF000000)))
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 18.0),
+                child: Container(
+                  width: 154,
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.white),
+                    borderRadius: BorderRadius.circular(12),
+
+                  ),
+                  child: TextButton(
+                      onPressed: () {
+                        Navigator.push<dynamic>(
+                          context,
+                          MaterialPageRoute<dynamic>(
+                            builder: (BuildContext context) => SignUp(),
+                          ),
+                        );
+                      },
+                      child: const Text('SIGNUP',style: TextStyle(
+                      fontWeight: FontWeight.w400,
+                      fontSize: 14,
+                      color: Color(0xFFFFFFFF)
+                      )
+                      )
+                  ),
+                ),
+              )
+            ],
+          ))
         ],
       ),
     );

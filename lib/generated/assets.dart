@@ -26,6 +26,7 @@ class Assets {
   static const String hoofzyProfile = 'assets/hoofzy/profile.png';
   static const String hoofzyPrpp = 'assets/hoofzy/prpp.png';
   static const String hoofzyServiceIcon = 'assets/hoofzy/service_icon.png';
+  static const String hoofzySettingUp = 'assets/hoofzy/setting_up.png';
   static const String hoofzyShopIcon = 'assets/hoofzy/shop_icon.png';
   static const String hoofzySupperSale = 'assets/hoofzy/supper_sale.png';
   static const String hoofzyTrainingIcon = 'assets/hoofzy/training_icon.png';

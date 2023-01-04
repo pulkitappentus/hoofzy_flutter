@@ -24,7 +24,8 @@ class _ServicesState extends State<Services> with TickerProviderStateMixin {
   @override
   void initState() {
     animationController = AnimationController(
-        duration: const Duration(milliseconds: 1000), vsync: this);
+        duration: const Duration(milliseconds: 1000), vsync: this
+    );
     super.initState();
   }
 
@@ -54,7 +55,8 @@ class _ServicesState extends State<Services> with TickerProviderStateMixin {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
-                  welcomeHeading(),
+                  //welcomeHeading(),
+                  loginContainer(context)
                 ],
               ),
             ),
@@ -63,6 +65,86 @@ class _ServicesState extends State<Services> with TickerProviderStateMixin {
       ),
     );
   }
+
+}
+
+Widget loginContainer(BuildContext context) {
+  return Padding(
+    padding: const EdgeInsets.all(12.0),
+    child: Container(
+      height: 500,
+      width: MediaQuery.of(context).size.width,
+      decoration: BoxDecoration(
+        color: Colors.blueGrey,
+        borderRadius: BorderRadius.circular(16)
+      ),
+      child: loginBoxes(context),
+    ),
+  );
+}
+
+Widget loginBoxes(BuildContext context) {
+  return Padding(
+    padding: const EdgeInsets.only(top: 18.0),
+    child: Column(
+
+      children:  [
+        const Text('Login',
+            style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 24,
+                color: Color(0xFF000000))),
+        const Padding(
+          padding: EdgeInsets.all(18.0),
+          child: TextField(
+            style: TextStyle(color: Colors.black),
+            decoration: InputDecoration(
+              prefixIcon: Icon(Icons.account_circle),
+                border: OutlineInputBorder(),
+                labelText: 'Enter Username',
+                hintText: 'Enter Your Username',
+            ),
+          ),
+        ),
+        const Padding(
+          padding: EdgeInsets.only(left: 18.0,right: 18.0,top: 8),
+          child: TextField(
+            style: TextStyle(color: Colors.black),
+            obscureText: true,
+            decoration: InputDecoration(
+              prefixIcon: Icon(Icons.fingerprint),
+                border: OutlineInputBorder(),
+                labelText: 'Enter Password',
+                hintText: 'Enter Your Password'
+            ),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(right: 18.0),
+          child: Align(
+            alignment: Alignment.centerRight,
+            child: TextButton(
+              onPressed: () {},
+              child: const Text('Forgot password?',style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 14,
+                  color: Color(0xFF000000))),
+            ),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(left: 18.0,right: 18.0,top: 8),
+          child: SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(onPressed: () {}, child: const Text('Login',style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 14,
+                  color: Color(0xFFFFFFFF)))
+              )),
+        )
+      ],
+    ),
+  );
 }
 
 Widget welcomeHeading() {

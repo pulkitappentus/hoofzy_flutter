@@ -32,14 +32,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
   List<BestSellingProductData> bestProductList = BestSellingProductData.bestProductList;
   List<TrendingCommunityData> trendingCommunityList = TrendingCommunityData.trendingCommunityList;
 
-  //try
-  int _curr=0;
   PageController controller=PageController();
-  List<Widget> _list=<Widget>[
-    new Center(child:new TrendingCommunityView()),
-    new Center(child:new TrendingCommunityView()),
-    new Center(child:new TrendingCommunityView())
-  ];
 
   @override
   void initState() {
@@ -236,18 +229,6 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                       },
                     ),
                   ),
-                 /* PageView(
-                    children: _list,
-                    scrollDirection: Axis.horizontal,
-                    pageSnapping: true,
-                    physics: BouncingScrollPhysics(),
-                    controller: controller,
-                    onPageChanged: (num) {
-                      print("Current page number is " + num.toString());
-                      _curr = num;
-                    },
-                  ),*/
-                  //hellItem()
                 ],
               ),
             ),
