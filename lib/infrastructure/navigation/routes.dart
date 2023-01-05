@@ -16,6 +16,7 @@ class Routes {
   static const SPLASH = '/splash';
   static const WALLPAPERS = '/wallpapers';
   static const home = '/home';
+  static const boarding = '/hoofzy/boarding_screens';
   static const login = '/login';
   static const PREVIEW = '/preview';
 }

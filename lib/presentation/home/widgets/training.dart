@@ -1,6 +1,7 @@
 import 'package:Hoofzy_V2/presentation/hoofzy/widgets/sign_up.dart';
 import 'package:flutter/material.dart';
 
+import '../../../constants.dart';
 import '../../hoofzy/widgets/boarding_page.dart';
 
 class Training extends StatefulWidget{
@@ -46,18 +47,10 @@ class _TrainingState extends State<Training> with TickerProviderStateMixin {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: const [
-                Text('Hoofzy App.',style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 24,
-                    color: Color(0xFF000000)
-                ),
+                Text('Hoofzy App.',style: headlineBlack,
                 ),
                 Text('Our programs are designed by experts to \nempower you to take training into your \nown hands.',
-                  style: TextStyle(
-                    fontWeight: FontWeight.w300,
-                    fontSize: 14,
-                    color: Color(0xFF000000)
-                ),
+                  style: textBlackLight14,
                 ),
               ],
             ),
@@ -83,10 +76,8 @@ class _TrainingState extends State<Training> with TickerProviderStateMixin {
                   );
                 },
                     child: const Text('LOGIN',
-                        style: TextStyle(
-                            fontWeight: FontWeight.w400,
-                            fontSize: 14,
-                            color: Color(0xFF000000)))
+                        style: textBlackLight14
+                    )
                 ),
               ),
               Padding(
@@ -107,11 +98,7 @@ class _TrainingState extends State<Training> with TickerProviderStateMixin {
                           ),
                         );
                       },
-                      child: const Text('SIGNUP',style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 14,
-                      color: Color(0xFFFFFFFF)
-                      )
+                      child: const Text('SIGNUP',style: textWhiteLight14
                       )
                   ),
                 ),

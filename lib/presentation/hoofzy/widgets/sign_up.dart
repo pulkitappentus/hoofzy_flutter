@@ -2,6 +2,7 @@ import 'package:Hoofzy_V2/presentation/hoofzy/model/popular_service_data.dart';
 import 'package:Hoofzy_V2/presentation/hoofzy/model/training_program_data.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import '../../../constants.dart';
 import '../../hoofzy/model/best_selling_product_data.dart';
 import '../../hoofzy/model/knowledge_program_data.dart';
 import '../../hoofzy/model/trending_community_data.dart';
@@ -15,6 +16,8 @@ class SignUp extends StatefulWidget{
 
 class _SignUpState extends State<SignUp> with TickerProviderStateMixin {
   AnimationController? animationController;
+  bool valuefirst = false;
+  bool valuesecond = false;
 
   @override
   void initState() {
@@ -49,11 +52,7 @@ class _SignUpState extends State<SignUp> with TickerProviderStateMixin {
                   child: Align(
                     alignment: Alignment.center,
                     child: Text('Hoofzy Signup',
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 24,
-                          color: Color(0xFFFFFFFF)
-                      ),
+                      style: headlineWhite,
                     ),
                   ),
                 ),
@@ -64,9 +63,9 @@ class _SignUpState extends State<SignUp> with TickerProviderStateMixin {
                 const Padding(
                   padding: EdgeInsets.only(top: 8.0,left: 18,right: 18),
                   child: TextField(
-                    style: TextStyle(color: Colors.black),
+                    style: textBlackMedium16,
                     decoration: InputDecoration(
-                      prefixIcon: Icon(Icons.account_circle),
+                      prefixIcon: Icon(Icons.account_circle_outlined),
                       border: OutlineInputBorder(),
                       labelText: 'Enter First Name',
                       hintText: 'Enter Your First Name',
@@ -76,9 +75,9 @@ class _SignUpState extends State<SignUp> with TickerProviderStateMixin {
                 const Padding(
                   padding: EdgeInsets.only(top: 8.0,left: 18,right: 18),
                   child: TextField(
-                    style: TextStyle(color: Colors.black),
+                    style: textBlackMedium16,
                     decoration: InputDecoration(
-                      prefixIcon: Icon(Icons.account_circle),
+                      prefixIcon: Icon(Icons.account_circle_outlined),
                       border: OutlineInputBorder(),
                       labelText: 'Enter Last Name',
                       hintText: 'Enter Your Last Name',
@@ -88,7 +87,7 @@ class _SignUpState extends State<SignUp> with TickerProviderStateMixin {
                 const Padding(
                   padding: EdgeInsets.only(top: 8.0,left: 18,right: 18),
                   child: TextField(
-                    style: TextStyle(color: Colors.black),
+                    style: textBlackMedium16,
                     decoration: InputDecoration(
                       prefixIcon: Icon(Icons.account_circle),
                       border: OutlineInputBorder(),
@@ -101,7 +100,7 @@ class _SignUpState extends State<SignUp> with TickerProviderStateMixin {
                   padding: EdgeInsets.only(top: 8.0,left: 18,right: 18),
                   child: TextField(
                     obscureText: true,
-                    style: TextStyle(color: Colors.black),
+                    style: textBlackMedium16,
                     decoration: InputDecoration(
                       prefixIcon: Icon(Icons.fingerprint),
                       border: OutlineInputBorder(),
@@ -114,7 +113,7 @@ class _SignUpState extends State<SignUp> with TickerProviderStateMixin {
                   padding: EdgeInsets.only(top: 8.0,left: 18,right: 18),
                   child: TextField(
                     obscureText: true,
-                    style: TextStyle(color: Colors.black),
+                    style: textBlackMedium16,
                     decoration: InputDecoration(
                       prefixIcon: Icon(Icons.fingerprint),
                       border: OutlineInputBorder(),
@@ -134,7 +133,11 @@ class _SignUpState extends State<SignUp> with TickerProviderStateMixin {
                     ),
                     child: const Align(
                         alignment: Alignment.center,
-                        child: Text('SIGNUP')),
+                        child: Text(
+                            'SIGNUP',
+                            style: textWhiteLight14
+                        )
+                    ),
                   ),
                 ),
               ]
@@ -146,6 +149,10 @@ class _SignUpState extends State<SignUp> with TickerProviderStateMixin {
 
 }
 
-
+/*(bool value) {
+setState(() {
+this.valuesecond = value;
+});
+},*/
 
 

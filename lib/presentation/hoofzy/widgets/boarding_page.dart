@@ -3,6 +3,7 @@ import 'package:Hoofzy_V2/presentation/hoofzy/model/training_program_data.dart';
 import 'package:Hoofzy_V2/presentation/hoofzy/widgets/sign_up.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import '../../../constants.dart';
 import '../../hoofzy/model/best_selling_product_data.dart';
 import '../../hoofzy/model/knowledge_program_data.dart';
 import '../../hoofzy/model/trending_community_data.dart';
@@ -50,11 +51,7 @@ class _BoardingPageState extends State<BoardingPage> with TickerProviderStateMix
                   child: Align(
                     alignment: Alignment.center,
                     child: Text('Hoofzy Login',
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 24,
-                          color: Color(0xFF000000)
-                      ),
+                      style: headlineBlack,
                     ),
                   ),
                 ),
@@ -65,7 +62,7 @@ class _BoardingPageState extends State<BoardingPage> with TickerProviderStateMix
                 const Padding(
                   padding: EdgeInsets.all(18.0),
                   child: TextField(
-                    style: TextStyle(color: Colors.black),
+                    style: textBlackMedium16,
                     decoration: InputDecoration(
                       prefixIcon: Icon(Icons.account_circle),
                       border: OutlineInputBorder(),
@@ -78,7 +75,7 @@ class _BoardingPageState extends State<BoardingPage> with TickerProviderStateMix
                   padding: EdgeInsets.only(left: 18,right: 18),
                   child: TextField(
                     obscureText: true,
-                    style: TextStyle(color: Colors.black),
+                    style: textBlackMedium16,
                     decoration: InputDecoration(
                       prefixIcon: Icon(Icons.fingerprint),
                       border: OutlineInputBorder(),
@@ -93,10 +90,8 @@ class _BoardingPageState extends State<BoardingPage> with TickerProviderStateMix
                     alignment: Alignment.centerRight,
                     child: TextButton(
                       onPressed: () {},
-                      child: const Text('Forgot password?',style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 14,
-                          color: Color(0xFF000000))),
+                      child: const Text('Forgot password?',style: textBlackBold14
+                      ),
                     ),
                   ),
                 ),
@@ -109,7 +104,7 @@ class _BoardingPageState extends State<BoardingPage> with TickerProviderStateMix
                   ),
                   child: const Align(
                       alignment: Alignment.center,
-                      child: Text('LOGIN')),
+                      child: Text('LOGIN',style: textWhiteLight14,)),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 0),
@@ -126,11 +121,7 @@ class _BoardingPageState extends State<BoardingPage> with TickerProviderStateMix
                             ),
                           );
                         },child: const Text(
-                          'Don`t have account?',style: TextStyle(
-                            fontWeight: FontWeight.w400,
-                            fontSize: 14,
-                            color: Color(0xFF000000)
-                        ),
+                          'Don`t have account?',style: textBlackLight14,
                         ),),
                         TextButton(
                           onPressed: (){
@@ -141,12 +132,9 @@ class _BoardingPageState extends State<BoardingPage> with TickerProviderStateMix
                             ),
                           );
                         },child: const Text(
-                          'Signup!',style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 14,
-                            color: Color(0xFFFFFFFF)
+                          'Signup!',style: textWhiteMedium16,
                         ),
-                        ),)
+                        )
                       ],
                     ),
 

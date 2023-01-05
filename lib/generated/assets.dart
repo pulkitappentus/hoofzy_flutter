@@ -12,12 +12,14 @@ class Assets {
   static const String hoofzyCommunityIcon = 'assets/hoofzy/community_icon.png';
   static const String hoofzyDogWalkingService = 'assets/hoofzy/dog_walking_service.png';
   static const String hoofzyEveryDawg = 'assets/hoofzy/every_dawg.png';
+  static const String hoofzyFurryFriend = 'assets/hoofzy/furry_friend.png';
   static const String hoofzyGrooming = 'assets/hoofzy/grooming.png';
   static const String hoofzyHomeIcon = 'assets/hoofzy/home_icon.png';
   static const String hoofzyHot = 'assets/hoofzy/hot.png';
   static const String hoofzyIAmPro = 'assets/hoofzy/i_am_pro.png';
   static const String hoofzyLegalCare = 'assets/hoofzy/legal_care.png';
   static const String hoofzyLike = 'assets/hoofzy/like.png';
+  static const String hoofzyMeshGradient = 'assets/hoofzy/mesh_gradient.png';
   static const String hoofzyNotification = 'assets/hoofzy/notification.png';
   static const String hoofzyNutram = 'assets/hoofzy/nutram.png';
   static const String hoofzyNutrition = 'assets/hoofzy/nutrition.png';

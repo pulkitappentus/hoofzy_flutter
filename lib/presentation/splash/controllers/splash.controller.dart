@@ -60,7 +60,8 @@ class SplashController extends BaseController with GetTickerProviderStateMixin {
   switchScreen() async {
     var duration = const Duration(seconds: 2);
     return Timer(duration, () {
-      Get.offNamed(Routes.home);
+      //Get.offNamed(Routes.home);
+      Get.offNamed(Routes.boarding);
     });
   }
 
