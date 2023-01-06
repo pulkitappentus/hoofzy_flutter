@@ -1,6 +1,6 @@
-import 'package:Hoofzy_V2/presentation/hoofzy/boarding_screens/boarding.controller.dart';
 import 'package:flutter/material.dart';
 import '../../../infrastructure/base/base_view.dart';
+import 'controllers/boarding.controller.dart';
 
 class BoardingScreenView extends BaseView<BoardingController> {
 

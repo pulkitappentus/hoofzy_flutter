@@ -35,6 +35,7 @@ dependencies:
   flutter_local_notifications: ^12.0.4
   mailto: ^2.0.0-nullsafety.0
   lottie: ^2.1.0
+  get_cli: ^0.2.30
 
 dev_dependencies: 
   flutter_lints: 2.0.1
@@ -87,6 +88,20 @@ flutter:
     - assets/hoofzy/community_icon.png
     - assets/hoofzy/shop_icon.png
     - assets/hoofzy/service_icon.png
+
+    - assets/hoofzy/dog.png
+    - assets/hoofzy/cat.png
+    - assets/hoofzy/setup_profile_img.png
+    - assets/hoofzy/facebook.png
+    - assets/hoofzy/google.png
+    - assets/hoofzy/apple.png
+    - assets/hoofzy/message.png
+    - assets/hoofzy/login_image.png
+    - assets/hoofzy/boarding_title.png
+    - assets/hoofzy/boarding_1_image.png
+    - assets/hoofzy/boarding_2_image.png
+    - assets/hoofzy/boarding_3_image.png
+
     - assets/lottie/cute_doggie.json
     - assets/lottie/super_sale_hang.json
     - assets/lottie/hang.json

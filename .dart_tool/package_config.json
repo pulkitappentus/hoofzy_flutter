@@ -8,6 +8,12 @@
       "languageVersion": "2.16"
     },
     {
+      "name": "ansicolor",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/ansicolor-2.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "archive",
       "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/archive-3.3.5",
       "packageUri": "lib/",
@@ -68,6 +74,18 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "cli_menu",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/cli_menu-0.2.3",
+      "packageUri": "lib/",
+      "languageVersion": "1.20"
+    },
+    {
+      "name": "cli_util",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/cli_util-0.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
       "name": "clock",
       "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/clock-1.1.1",
       "packageUri": "lib/",
@@ -120,6 +138,12 @@
       "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/crypto-3.0.2",
       "packageUri": "lib/",
       "languageVersion": "2.14"
+    },
+    {
+      "name": "csslib",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/csslib-0.17.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "cupertino_icons",
@@ -290,6 +314,12 @@
       "languageVersion": "2.15"
     },
     {
+      "name": "get_cli",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/get_cli-0.2.30",
+      "packageUri": "lib/",
+      "languageVersion": "2.4"
+    },
+    {
       "name": "get_storage",
       "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/get_storage-2.0.3",
       "packageUri": "lib/",
@@ -306,6 +336,12 @@
       "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/hexcolor-2.0.7",
       "packageUri": "lib/",
       "languageVersion": "2.15"
+    },
+    {
+      "name": "html",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/html-0.15.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "http",
@@ -340,6 +376,12 @@
     {
       "name": "intl",
       "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/intl-0.17.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "io",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/io-1.0.3",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -522,6 +564,24 @@
       "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/process-4.2.4",
       "packageUri": "lib/",
       "languageVersion": "2.14"
+    },
+    {
+      "name": "process_run",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/process_run-0.11.2+8",
+      "packageUri": "lib/",
+      "languageVersion": "2.10"
+    },
+    {
+      "name": "pub_semver",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/pub_semver-2.1.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "recase",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/recase-3.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.6"
     },
     {
       "name": "rxdart",
@@ -722,7 +782,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2023-01-05T12:01:08.815558Z",
+  "generated": "2023-01-06T12:43:03.302114Z",
   "generator": "pub",
   "generatorVersion": "2.18.5"
 }

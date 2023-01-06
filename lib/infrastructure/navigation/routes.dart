@@ -6,9 +6,9 @@ class Routes {
     // try {
     //   final authDomainService = AuthRepositoryBinding().repository;
     //   final authenticated = await authDomainService.isAuthenticated();
-    //   return !authenticated ? login : home;
+    //   return !authenticated ? login_screens : home;
     // } catch (err) {
-    //   return login;
+    //   return login_screens;
     // }
   }
 
@@ -16,7 +16,8 @@ class Routes {
   static const SPLASH = '/splash';
   static const WALLPAPERS = '/wallpapers';
   static const home = '/home';
-  static const boarding = '/hoofzy/boarding_screens';
-  static const login = '/login';
+  static const boarding = '/boarding_screens';
+  static const login = '/login_screens';
+  static const setupprofile = '/set_up_profile';
   static const PREVIEW = '/preview';
 }
