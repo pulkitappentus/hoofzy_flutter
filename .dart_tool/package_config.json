@@ -296,6 +296,12 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "flutter_otp_text_field",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_otp_text_field-1.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "flutter_test",
       "rootUri": "file:///C:/flutter/packages/flutter_test",
       "packageUri": "lib/",
@@ -782,7 +788,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2023-01-06T12:43:03.302114Z",
+  "generated": "2023-01-09T12:14:23.748217Z",
   "generator": "pub",
   "generatorVersion": "2.18.5"
 }

@@ -19,5 +19,9 @@ class Routes {
   static const boarding = '/boarding_screens';
   static const login = '/login_screens';
   static const setupprofile = '/set_up_profile';
+  static const verification = '/verification_screen';
+  static const sitterProfile = '/sitter_profile_screens';
+  static const sitterProfile2 = '/sitter_profile_screen';
+  static const mobile = '/mobile_number';
   static const PREVIEW = '/preview';
 }

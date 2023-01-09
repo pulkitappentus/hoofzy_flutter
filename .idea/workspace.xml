@@ -15,27 +15,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a1547f2-9a36-4846-96c0-e2f361532b0a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/hoofzy/apple.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/hoofzy/boarding_1_image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/hoofzy/boarding_2_image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/hoofzy/boarding_3_image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/hoofzy/boarding_title.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/hoofzy/cat.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/hoofzy/dog.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/hoofzy/facebook.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/hoofzy/google.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/hoofzy/login_image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/hoofzy/message.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/hoofzy/setup_profile_img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/infrastructure/navigation/bindings/controllers/SetupProfileControllerBinding.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/infrastructure/navigation/bindings/controllers/login.controller.binding.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/presentation/boarding_screens/bscreen_1.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/presentation/boarding_screens/bscreen_2.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/presentation/boarding_screens/bscreen_3.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/presentation/login_screens/controllers/login.controller.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/presentation/login_screens/login_page.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/presentation/set_up_profile/controllers/setupprofile.controller.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/presentation/set_up_profile/setup_profile_page.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/hoofzy/emoji.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/hoofzy/grey_bording.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/hoofzy/grey_doggy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/hoofzy/grey_dogwalking.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/hoofzy/grey_dropin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/hoofzy/grey_house_sitting.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/hoofzy/question.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/hoofzy/them_bording.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/infrastructure/navigation/bindings/controllers/SitterProfileControllerBinding.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/presentation/mobile_number/mobile_number_page.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/presentation/sitter_profile_screen/sitter_profile_page2.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/presentation/sitter_profile_screens/controllers/sitterprofile.controller.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/presentation/sitter_profile_screens/sitter_profile_page.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/presentation/verification_screen/verification_page.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/f4a6b8802d87017c9e1c8da7d3700e00/.filecache" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/f4a6b8802d87017c9e1c8da7d3700e00/.filecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/f4a6b8802d87017c9e1c8da7d3700e00/app.dill" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/f4a6b8802d87017c9e1c8da7d3700e00/app.dill" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/f4a6b8802d87017c9e1c8da7d3700e00/debug_android_application.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/f4a6b8802d87017c9e1c8da7d3700e00/debug_android_application.stamp" afterDir="false" />
@@ -66,14 +59,10 @@
       <change beforePath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app.apk.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app.apk.sha1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/constants.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/generated/assets.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/assets.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/infrastructure/navigation/bindings/controllers/boarding.controller.binding.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/infrastructure/navigation/bindings/controllers/boarding.controller.binding.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/infrastructure/navigation/navigation.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/infrastructure/navigation/navigation.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/infrastructure/navigation/routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/infrastructure/navigation/routes.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/presentation/hoofzy/boarding_screens/boarding.controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/boarding_screens/controllers/boarding.controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/presentation/hoofzy/boarding_screens/boarding_screen_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/boarding_screens/boarding_screen_view.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/presentation/hoofzy/boarding_screens/bscreen_1.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/presentation/hoofzy/boarding_screens/bscreen_2.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/presentation/hoofzy/boarding_screens/bscreen_3.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/login_screens/login_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/login_screens/login_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/set_up_profile/setup_profile_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/set_up_profile/setup_profile_page.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
@@ -122,17 +111,17 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\assets\hoofzy" />
-      <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\lib\presentation\set_up_profile\controllers" />
+      <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\lib\presentation\sitter_profile_screens" />
       <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\lib\infrastructure\navigation\bindings\controllers" />
+      <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\lib\presentation\set_up_profile\controllers" />
       <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\lib\presentation\hoofzy\boarding_screens" />
-      <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\lib\presentation\hoofzy\view\test_viewpager" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\lib\presentation\sitter_profile_screen" />
+      <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\lib\presentation\verification_page" />
       <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\lib\presentation\boarding_screens\controllers" />
       <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\lib\presentation" />
       <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\lib\presentation\hoofzy\view\test_viewpager" />
-      <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\lib\presentation\hoofzy\view" />
-      <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\lib\presentation\hoofzy\model" />
     </key>
   </component>
   <component name="RunManager">

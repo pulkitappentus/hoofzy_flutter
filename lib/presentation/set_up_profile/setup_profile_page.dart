@@ -13,7 +13,7 @@ class SetupProfilePage extends BaseView<SetupProfileController> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Padding(
-        padding: const EdgeInsets.only(top: 20.0,bottom: 20),
+        padding: const EdgeInsets.only(bottom: 20),
         child: Column(
           children: [
             AppBar(
@@ -28,7 +28,7 @@ class SetupProfilePage extends BaseView<SetupProfileController> {
               child: Image.asset('assets/hoofzy/setup_profile_img.png',width: 220,height: 192,fit: BoxFit.fill),
             ),
             const Padding(
-              padding: EdgeInsets.only(top: 30),
+              padding: EdgeInsets.only(top: 50,bottom: 10),
               child: Text(
                 'Hey, Good morning',
                 style: textBlackBold22,
@@ -40,7 +40,7 @@ class SetupProfilePage extends BaseView<SetupProfileController> {
               style: headlineBlack20,
             ),
             const Padding(
-              padding: EdgeInsets.only(top : 16),
+              padding: EdgeInsets.only(top : 16,bottom: 32),
               child: Text(
                 'Bond with your pet and learn new skills at \nyour own place through guided training.',
                 textAlign: TextAlign.center,
@@ -53,7 +53,7 @@ class SetupProfilePage extends BaseView<SetupProfileController> {
                 ),
               ),
             ),
-            
+
             Expanded(child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -62,7 +62,7 @@ class SetupProfilePage extends BaseView<SetupProfileController> {
                   width: 170,
                   decoration: BoxDecoration(
                     border: Border.all(color: primaryColor,width: 2.0),
-                    borderRadius: BorderRadius.all(Radius.circular(16))
+                    borderRadius: BorderRadius.all(Radius.circular(20))
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -71,13 +71,29 @@ class SetupProfilePage extends BaseView<SetupProfileController> {
                         padding: const EdgeInsets.all(8.0),
                         child: Image.asset('assets/hoofzy/dog.png',width: 44,height: 60,fit: BoxFit.fill),
                       ),
-                      Padding(
+                      const Padding(
                         padding: const EdgeInsets.only(left: 8.0),
                         child: Text('Do you have a pet?',style: textBlackLight15),
-                      )
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 15.0),
+                        child: Container(
+                            height: 44,
+                            width: 170,
+                            decoration: const BoxDecoration(
+                                borderRadius: BorderRadius.all(Radius.circular(16)),
+                                color: primaryColor
+                            ),
+                            child: Align(alignment: Alignment.center,
+                              child: TextButton(onPressed: (){
+
+                              },child: Text('Set up a pet profile',style: textWhiteLight14400,),),
+                            )
+                        ),
+                      ),
                     ],
                   ),
-                  
+
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 22.0),
@@ -86,7 +102,7 @@ class SetupProfilePage extends BaseView<SetupProfileController> {
                     width: 170,
                     decoration: BoxDecoration(
                       border: Border.all(color: Colors.black,width: 2.0),
-                      borderRadius: BorderRadius.all(Radius.circular(16))
+                      borderRadius: BorderRadius.all(Radius.circular(20))
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -95,10 +111,26 @@ class SetupProfilePage extends BaseView<SetupProfileController> {
                           padding: const EdgeInsets.all(8.0),
                           child: Image.asset('assets/hoofzy/cat.png',width: 28,height: 60,fit: BoxFit.fill),
                         ),
-                        Padding(
+                        const Padding(
                           padding: const EdgeInsets.only(left: 8.0),
                           child: Text('Become a sitter?',style: textBlackLight15),
-                        )
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 15.0),
+                          child: Container(
+                              height: 44,
+                              width: 170,
+                              decoration: const BoxDecoration(
+                                  borderRadius: BorderRadius.all(Radius.circular(16)),
+                                  color: Colors.black
+                              ),
+                              child: Align(alignment: Alignment.center,
+                                child: TextButton(onPressed: (){
+                                  Get.offNamed(Routes.sitterProfile);
+                                },child: Text('Set up a sitter profile',style: textWhiteLight14400,),),
+                              )
+                          ),
+                        ),
                       ],
                     ),
 
@@ -115,6 +147,10 @@ class SetupProfilePage extends BaseView<SetupProfileController> {
                 TextButton(onPressed: (){
                   Get.offNamed(Routes.home);
                 },child: Text('Skip, I`m here to explore',style: textBlackLight15)),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 12.0),
+                  child: Image.asset('assets/hoofzy/emoji.png',width: 24,height: 24,fit: BoxFit.fill,),
+                )
               ],
             )
             )

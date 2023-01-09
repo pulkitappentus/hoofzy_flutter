@@ -36,6 +36,7 @@ dependencies:
   mailto: ^2.0.0-nullsafety.0
   lottie: ^2.1.0
   get_cli: ^0.2.30
+  flutter_otp_text_field: ^1.1.0+2
 
 dev_dependencies: 
   flutter_lints: 2.0.1
@@ -90,8 +91,18 @@ flutter:
     - assets/hoofzy/service_icon.png
 
     - assets/hoofzy/dog.png
+    - assets/hoofzy/question.png
     - assets/hoofzy/cat.png
+    - assets/hoofzy/emoji.png
     - assets/hoofzy/setup_profile_img.png
+
+    - assets/hoofzy/grey_bording.png
+    - assets/hoofzy/grey_doggy.png
+    - assets/hoofzy/grey_dogwalking.png
+    - assets/hoofzy/grey_dropin.png
+    - assets/hoofzy/grey_house_sitting.png
+    - assets/hoofzy/them_bording.png
+
     - assets/hoofzy/facebook.png
     - assets/hoofzy/google.png
     - assets/hoofzy/apple.png
