@@ -118,7 +118,7 @@ class VerificationPage extends BaseView<LoginController> {
                       child:TextButton
                         (
                         onPressed: (){
-                            Get.offNamed(Routes.setupprofile);
+                            Get.toNamed(Routes.setupprofile);
                         },
                         child: Text('Verify',style: textWhiteMedium15,),)
                   )

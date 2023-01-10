@@ -85,7 +85,7 @@ class LoginPage extends BaseView<LoginController> {
                         children: [
                            Image.asset('assets/hoofzy/message.png',height: 20,width: 22,),
                            TextButton(onPressed: (){
-                             Get.offNamed(Routes.mobile);
+                             Get.toNamed(Routes.mobile);
                            },child: Text('Login with mobile number',style: textWhiteMedium15,),)
                         ],
                       )

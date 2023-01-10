@@ -279,7 +279,7 @@ class SitterProfilePage extends BaseView<SitterProfileController> {
                             child:TextButton
                               (
                               onPressed: (){
-                                Get.offNamed(Routes.sitterProfile2);
+                                Get.toNamed(Routes.sitterProfile2);
                               },
                               child: Text('Save & Next',style: textWhiteMedium15,),)
                         )

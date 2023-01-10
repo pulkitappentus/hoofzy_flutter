@@ -90,7 +90,13 @@ flutter:
     - assets/hoofzy/shop_icon.png
     - assets/hoofzy/service_icon.png
 
+    - assets/hoofzy/query.png
     - assets/hoofzy/dog.png
+    - assets/hoofzy/checked.png
+    - assets/hoofzy/unchecked.png
+    - assets/hoofzy/un_checked.png
+    - assets/hoofzy/add.png
+    - assets/hoofzy/minus.png
     - assets/hoofzy/question.png
     - assets/hoofzy/cat.png
     - assets/hoofzy/emoji.png

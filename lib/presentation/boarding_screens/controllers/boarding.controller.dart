@@ -13,15 +13,17 @@ class BoardingController extends BaseController {
   var reviewAvailable = false;
   BoardingController({required FirebaseRepository firebaseRepository}) : _firebaseRepository = firebaseRepository;
 
+  var currentPage = 0.obs;
+
   //
-  PageController controller=PageController();
+  /*PageController controller=PageController();
   List<Widget> list=<Widget>[
     new Center(child:new BScreen1()),
     new Center(child:new BScreen2()),
     new Center(child:new BScreen3())
   ];
 
-  int curr=0;
+  int curr=0;*/
 
 
   @override

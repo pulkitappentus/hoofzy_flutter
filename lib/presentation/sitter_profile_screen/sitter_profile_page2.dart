@@ -1,7 +1,10 @@
 import 'package:Hoofzy_V2/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:sizer/sizer.dart';
 import '../../../infrastructure/base/base_view.dart';
+import '../../infrastructure/navigation/routes.dart';
 import '../sitter_profile_screens/controllers/sitterprofile.controller.dart';
 
 class SitterProfilePage2 extends BaseView<SitterProfileController> {
@@ -72,43 +75,48 @@ class SitterProfilePage2 extends BaseView<SitterProfileController> {
 
                   Padding(
                     padding: const EdgeInsets.only(left: 16.0,right: 16,top: 20),
-                    child: Container(
-                      width: MediaQuery.of(context).size.width,
-                      height: 80.sp,
-                      decoration: BoxDecoration(
-                        border: Border.all(color: primaryColor,width: 1),
-                        borderRadius: BorderRadius.all(Radius.circular(20))
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(15.0),
-                        child: Row(
-                          children: [
-                            Image.asset('assets/hoofzy/them_bording.png',width: 40,height: 40,fit: BoxFit.fill,),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 15.0),
-                              child: Expanded(child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.start,
+                    child: InkWell(
+                      child: Container(
+                        width: MediaQuery.of(context).size.width,
+                        height: 80.sp,
+                        decoration: BoxDecoration(
+                          border: Border.all(color: primaryColor,width: 1),
+                          borderRadius: BorderRadius.all(Radius.circular(20))
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(15.0),
+                          child: Row(
+                            children: [
+                              Image.asset('assets/hoofzy/them_bording.png',width: 40,height: 40,fit: BoxFit.fill,),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 15.0),
+                                child: Expanded(child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: const [
+                                    Text('Bording',style: textBlackMedium16,),
+                                    Padding(
+                                      padding: EdgeInsets.only(top: 8.0),
+                                      child: Text('Set your services preferences',style: textBlackMedium13,),
+                                    ),
+                                  ],
+                                )),
+                              ),
+                              Expanded(child: Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
                                 children: const [
-                                  Text('Bording',style: textBlackMedium16,),
-                                  Padding(
-                                    padding: EdgeInsets.only(top: 8.0),
-                                    child: Text('Set your services preferences',style: textBlackMedium13,),
-                                  ),
+                                  Text('3 min',style: textBlackMedium13,),
+                                  Icon(Icons.arrow_forward_ios,color: primaryColor,size: 15,)
                                 ],
-                              )),
-                            ),
-                            Expanded(child: Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: const [
-                                Text('3 min',style: textBlackMedium13,),
-                                Icon(Icons.arrow_forward_ios,color: primaryColor,size: 15,)
-                              ],
-                            ))
+                              ))
 
-                          ],
+                            ],
+                          ),
                         ),
                       ),
+                      onTap: (){
+                        Get.toNamed(Routes.sitterService);
+                      },
                     ),
                   ),
                   const Padding(

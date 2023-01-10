@@ -111,7 +111,7 @@ class MobileNumberPage extends BaseView<LoginController> {
                       child:TextButton
                         (
                         onPressed: (){
-                          Get.offNamed(Routes.verification);
+                          Get.toNamed(Routes.verification);
                         },
                         child: Text('Next',style: textWhiteMedium15,),)
                   )

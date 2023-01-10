@@ -15,7 +15,7 @@ class BScreen1 extends BaseView<BoardingController> {
         child: Column(
           children: [
             AppBar(
-              toolbarHeight: 60,
+              toolbarHeight: 0,
               backgroundColor: Colors.white,
               elevation: 0,
               title: Image.asset('assets/hoofzy/boarding_title.png',width: 130,height: 60,fit: BoxFit.contain),
@@ -53,13 +53,13 @@ class BScreen1 extends BaseView<BoardingController> {
               ),
             ),
 
-            Expanded(child: Column(
+           /* Expanded(child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: const [
                 Text('Swipe left to continue',style: textBlackLight15),
               ],
             )
-            )
+            )*/
           ],
         ),
       ),

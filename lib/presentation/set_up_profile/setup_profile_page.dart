@@ -126,7 +126,7 @@ class SetupProfilePage extends BaseView<SetupProfileController> {
                               ),
                               child: Align(alignment: Alignment.center,
                                 child: TextButton(onPressed: (){
-                                  Get.offNamed(Routes.sitterProfile);
+                                  Get.toNamed(Routes.sitterProfile);
                                 },child: Text('Set up a sitter profile',style: textWhiteLight14400,),),
                               )
                           ),
@@ -145,7 +145,7 @@ class SetupProfilePage extends BaseView<SetupProfileController> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget> [
                 TextButton(onPressed: (){
-                  Get.offNamed(Routes.home);
+                  Get.toNamed(Routes.home);
                 },child: Text('Skip, I`m here to explore',style: textBlackLight15)),
                 Padding(
                   padding: const EdgeInsets.only(bottom: 12.0),

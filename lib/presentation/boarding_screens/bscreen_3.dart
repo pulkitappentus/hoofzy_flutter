@@ -17,7 +17,7 @@ class BScreen3 extends BaseView<BoardingController> {
         child: Column(
           children: [
             AppBar(
-              toolbarHeight: 60,
+              toolbarHeight: 0,
               backgroundColor: Colors.white,
               elevation: 0,
               title: Image.asset('assets/hoofzy/boarding_title.png',width: 130,height: 60,fit: BoxFit.contain),
@@ -55,7 +55,7 @@ class BScreen3 extends BaseView<BoardingController> {
               ),
             ),
 
-            Expanded(child: Padding(
+            /*Expanded(child: Padding(
               padding: const EdgeInsets.only(left: 38.0,right: 38.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
@@ -77,7 +77,7 @@ class BScreen3 extends BaseView<BoardingController> {
                 ],
               ),
             )
-            )
+            )*/
           ],
         ),
       ),

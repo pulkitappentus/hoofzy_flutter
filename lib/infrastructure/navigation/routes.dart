@@ -22,6 +22,12 @@ class Routes {
   static const verification = '/verification_screen';
   static const sitterProfile = '/sitter_profile_screens';
   static const sitterProfile2 = '/sitter_profile_screen';
+  static const sitterService = '/sitter_service_setting';
+  static const rates = '/rates';
+  static const availability = '/availability';
+  static const petPreferences = '/pet_preferences';
+  static const aboutHome = '/about_home';
+  static const cancellationPolicy = '/cancellation_policy';
   static const mobile = '/mobile_number';
   static const PREVIEW = '/preview';
 }
