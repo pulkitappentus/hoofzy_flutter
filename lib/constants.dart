@@ -8,6 +8,7 @@ const primaryPinkColor = Color(0xffF8F2FF);
 const greyColor = Color(0xffBDB6C4);
 const lightGreyColor = Color(0xffBDB6C4);
 const lightPinkColor = Color(0xffEBE4F2);
+const offWhite = Color(0xffFDFBFF);
 // TextStyles
 const headlineBlack = TextStyle(
   color: Colors.black,
@@ -54,6 +55,7 @@ const textBlackLight13400 = TextStyle(fontSize: 13, fontWeight: FontWeight.w400,
 const textBlackLight15 = TextStyle(fontSize: 15, fontWeight: FontWeight.w400, color: Colors.black);
 const textBlackMedium16 = TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: Colors.black);
 const textBlackMedium13 = TextStyle(fontSize: 13, fontWeight: FontWeight.w400, color: Colors.black);
+const textBlackMedium14 = TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: Colors.black);
 const textBlackBold18 = TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.black);
 const textBlackBold18_500 = TextStyle(fontSize: 18, fontWeight: FontWeight.w500, color: Colors.black);
 const textBlackBold22 = TextStyle(fontSize: 22, fontWeight: FontWeight.w500, color: Colors.black);

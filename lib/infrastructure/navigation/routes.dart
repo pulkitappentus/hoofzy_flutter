@@ -30,4 +30,13 @@ class Routes {
   static const cancellationPolicy = '/cancellation_policy';
   static const mobile = '/mobile_number';
   static const PREVIEW = '/preview';
+
+  static const createProfile = '/sitter_build_trust_screens/sitter_profile';
+  static const requestTestimonials = '/sitter_build_trust_screens/request_testimonials';
+  static const safetyQuiz = '/sitter_build_trust_screens/safety_quiz';
+  static const finalDetails = '/sitter_build_trust_screens/final_details';
+
+  static const basicInfo = '/sitter_build_trust_screens/sitter_profile/profile_details/basic_info';
+  static const profileCoverPhoto = '/sitter_build_trust_screens/sitter_profile/profile_details/profile_cover_photo';
+  static const dateOfBirth = '/sitter_build_trust_screens/sitter_profile/profile_details/date_of_birth';
 }

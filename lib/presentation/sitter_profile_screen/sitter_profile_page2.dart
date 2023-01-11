@@ -124,137 +124,161 @@ class SitterProfilePage2 extends BaseView<SitterProfileController> {
                     child: Align(alignment: Alignment.topLeft,child: Text('Build Trust',style: headlineBlack20,)),
                   ),
 
-                  Padding(
-                    padding: const EdgeInsets.only(top: 15.0,bottom:15,right: 16),
-                    child: Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(left: 15.0),
-                          child: Expanded(child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                  InkWell(
+                    onTap: (){
+                      Get.toNamed(Routes.createProfile);
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 15.0,bottom:15,right: 16),
+                      child: Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 15.0),
+                            child: Expanded(child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: const [
+                                Text('Create Your profile',style: textBlackMedium16,),
+                                Padding(
+                                  padding: EdgeInsets.only(top: 8.0),
+                                  child: Text('Make a great first impression',style: textBlackMedium13,),
+                                ),
+                              ],
+                            )),
+                          ),
+                          Expanded(child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
                             children: const [
-                              Text('Create Your profile',style: textBlackMedium16,),
-                              Padding(
-                                padding: EdgeInsets.only(top: 8.0),
-                                child: Text('Make a great first impression',style: textBlackMedium13,),
-                              ),
+                              Text('10 min',style: textBlackMedium13,),
+                              Icon(Icons.arrow_forward_ios,color: primaryColor,size: 15,)
                             ],
-                          )),
-                        ),
-                        Expanded(child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: const [
-                            Text('10 min',style: textBlackMedium13,),
-                            Icon(Icons.arrow_forward_ios,color: primaryColor,size: 15,)
-                          ],
-                        ))
+                          ))
 
-                      ],
+                        ],
+                      ),
                     ),
                   ),
+
                   const Padding(
                     padding: const EdgeInsets.only(left: 16.0,right: 16.0),
                     child: Divider(color: greyColor,thickness: 1,),
                   ),
 
-                  Padding(
-                    padding: const EdgeInsets.only(top: 15.0,bottom:15,right: 16),
-                    child: Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(left: 15.0),
-                          child: Expanded(child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                  InkWell(
+                    onTap: (){
+                      Get.toNamed(Routes.requestTestimonials);
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 15.0,bottom:15,right: 16),
+                      child: Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 15.0),
+                            child: Expanded(child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: const [
+                                Text('Request Testimonials',style: textBlackMedium16,),
+                                Padding(
+                                  padding: EdgeInsets.only(top: 8.0),
+                                  child: Text('Use references to build with new potential clients',style: textBlackMedium13,),
+                                ),
+                              ],
+                            )),
+                          ),
+                          Expanded(child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
                             children: const [
-                              Text('Request Testimonials',style: textBlackMedium16,),
-                              Padding(
-                                padding: EdgeInsets.only(top: 8.0),
-                                child: Text('Use references to build with new potential clients',style: textBlackMedium13,),
-                              ),
+                              Text('3 min',style: textBlackMedium13,),
+                              Icon(Icons.arrow_forward_ios,color: primaryColor,size: 15,)
                             ],
-                          )),
-                        ),
-                        Expanded(child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: const [
-                            Text('3 min',style: textBlackMedium13,),
-                            Icon(Icons.arrow_forward_ios,color: primaryColor,size: 15,)
-                          ],
-                        ))
+                          ))
 
-                      ],
+                        ],
+                      ),
                     ),
                   ),
+
                   const Padding(
                     padding: const EdgeInsets.only(left: 16.0,right: 16.0),
                     child: Divider(color: greyColor,thickness: 1,),
                   ),
 
-                  Padding(
-                    padding: const EdgeInsets.only(top: 15.0,bottom:15,right: 16),
-                    child: Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(left: 15.0),
-                          child: Expanded(child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                  InkWell(
+                    onTap: (){
+                      Get.toNamed(Routes.safetyQuiz);
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 15.0,bottom:15,right: 16),
+                      child: Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 15.0),
+                            child: Expanded(child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: const [
+                                Text('Take the safety Quiz',style: textBlackMedium16,),
+                                Padding(
+                                  padding: EdgeInsets.only(top: 8.0),
+                                  child: Text('Safety tips to get you great reviews',style: textBlackMedium13,),
+                                ),
+                              ],
+                            )),
+                          ),
+                          Expanded(child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
                             children: const [
-                              Text('Take the safety Quiz',style: textBlackMedium16,),
-                              Padding(
-                                padding: EdgeInsets.only(top: 8.0),
-                                child: Text('Safety tips to get you great reviews',style: textBlackMedium13,),
-                              ),
+                              Text('2 min',style: textBlackMedium13,),
+                              Icon(Icons.arrow_forward_ios,color: primaryColor,size: 15,)
                             ],
-                          )),
-                        ),
-                        Expanded(child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: const [
-                            Text('2 min',style: textBlackMedium13,),
-                            Icon(Icons.arrow_forward_ios,color: primaryColor,size: 15,)
-                          ],
-                        ))
+                          ))
 
-                      ],
+                        ],
+                      ),
                     ),
                   ),
+
                   const Padding(
                     padding: const EdgeInsets.only(left: 16.0,right: 16.0),
                     child: Divider(color: greyColor,thickness: 1,),
                   ),
 
-                  Padding(
-                    padding: const EdgeInsets.only(top: 15.0,bottom:15,right: 16),
-                    child: Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(left: 15.0),
-                          child: Expanded(child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                  InkWell(
+                    onTap: (){
+                      Get.toNamed(Routes.finalDetails);
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 15.0,bottom:15,right: 16),
+                      child: Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 15.0),
+                            child: Expanded(child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: const [
+                                Text('Final Details',style: textBlackMedium16,),
+                                Padding(
+                                  padding: EdgeInsets.only(top: 8.0),
+                                  child: Text('Background check and review fee',style: textBlackMedium13,),
+                                ),
+                              ],
+                            )),
+                          ),
+                          Expanded(child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
                             children: const [
-                              Text('Final Details',style: textBlackMedium16,),
-                              Padding(
-                                padding: EdgeInsets.only(top: 8.0),
-                                child: Text('Background check and review fee',style: textBlackMedium13,),
-                              ),
+                              Text('1 min',style: textBlackMedium13,),
+                              Icon(Icons.arrow_forward_ios,color: primaryColor,size: 15,)
                             ],
-                          )),
-                        ),
-                        Expanded(child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: const [
-                            Text('1 min',style: textBlackMedium13,),
-                            Icon(Icons.arrow_forward_ios,color: primaryColor,size: 15,)
-                          ],
-                        ))
+                          ))
 
-                      ],
+                        ],
+                      ),
                     ),
                   ),
+
                   const Padding(
                     padding: const EdgeInsets.only(left: 16.0,right: 16.0),
                     child: Divider(color: greyColor,thickness: 1,),

@@ -11,17 +11,31 @@ import '../../presentation/login_screens/login_page.dart';
 import '../../presentation/pet_preferences/pet_preferences_page.dart';
 import '../../presentation/rates/rate_page.dart';
 import '../../presentation/screens.dart';
+import '../../presentation/sitter_build_trust_screens/final_details/final_details_page.dart';
+import '../../presentation/sitter_build_trust_screens/request_testimonials/request_testimonials_page.dart';
+import '../../presentation/sitter_build_trust_screens/safety_quiz/safety_quiz_page.dart';
+import '../../presentation/sitter_build_trust_screens/sitter_profile/create_profile_page.dart';
+import '../../presentation/sitter_build_trust_screens/sitter_profile/profile_details/basic_info/basic_info_page.dart';
+import '../../presentation/sitter_build_trust_screens/sitter_profile/profile_details/date_of_birth/dateofbirth_page.dart';
+import '../../presentation/sitter_build_trust_screens/sitter_profile/profile_details/profile_cover_photo/profile_cover_photo_page.dart';
 import '../../presentation/sitter_profile_screen/sitter_profile_page2.dart';
 import '../../presentation/sitter_service_setting/service_setting_page.dart';
 import 'bindings/controllers/SetupProfileControllerBinding.dart';
 import 'bindings/controllers/SitterProfileControllerBinding.dart';
 import 'bindings/controllers/abouthome.controllerBinding.dart';
 import 'bindings/controllers/availability.controllerBinding.dart';
+import 'bindings/controllers/basic.info.controllerBinding.dart';
 import 'bindings/controllers/cancelpolicy.controllerBinding.dart';
 import 'bindings/controllers/controllers_bindings.dart';
+import 'bindings/controllers/create.profile.controllerBinding.dart';
+import 'bindings/controllers/date.of.birth.controllerBinding.dart';
+import 'bindings/controllers/final.details.controllerBinding.dart';
 import 'bindings/controllers/login.controller.binding.dart';
 import 'bindings/controllers/petpreferences.controllerBinding.dart';
+import 'bindings/controllers/profile.cover.photo.controllerBinding.dart';
 import 'bindings/controllers/rate.controllerBinding.dart';
+import 'bindings/controllers/request.testimonials.controllerBinding.dart';
+import 'bindings/controllers/safety.quiz.controllerBinding.dart';
 import 'bindings/controllers/service.setting.controllerBinding.dart';
 import 'routes.dart';
 
@@ -101,6 +115,43 @@ class Nav {
       name: Routes.cancellationPolicy,
       page: () => CancelPolicyPage(),
       binding: CancelPolicyControllerBinding(),
+    ),
+
+    GetPage(
+      name: Routes.createProfile,
+      page: () => CreateProfilePage(),
+      binding: CreateProfileControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.requestTestimonials,
+      page: () => RequestTestimonialsPage(),
+      binding: RequestTestimonialsControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.safetyQuiz,
+      page: () => SafetyQuizPage(),
+      binding: SafetyQuizControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.finalDetails,
+      page: () => FinalDetailsPage(),
+      binding: FinalDetailsControllerBinding(),
+    ),
+
+    GetPage(
+      name: Routes.basicInfo,
+      page: () => BasicInfoPage(),
+      binding: BasicInfoControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.profileCoverPhoto,
+      page: () => DateofbirthPage(),
+      binding: DateOfBirthControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.dateOfBirth,
+      page: () => ProfileCoverPhotoPage(),
+      binding: ProfileCoverPhotoControllerBinding(),
     ),
   ];
 }
