@@ -166,7 +166,7 @@ class CreateProfilePage extends BaseView<CreateProfileController> {
 
                   InkWell(
                     onTap: (){
-                      //Get.toNamed(Routes.finalDetails);
+                      Get.toNamed(Routes.details);
                     },
                     child: Padding(
                       padding: const EdgeInsets.only(top: 15.0,bottom:15,right: 16),
@@ -205,7 +205,7 @@ class CreateProfilePage extends BaseView<CreateProfileController> {
 
                   InkWell(
                     onTap: (){
-                      //Get.toNamed(Routes.safetyQuiz);
+                      Get.toNamed(Routes.photos);
                     },
                     child: Padding(
                       padding: const EdgeInsets.only(top: 15.0,bottom:15,right: 16),
@@ -244,7 +244,7 @@ class CreateProfilePage extends BaseView<CreateProfileController> {
 
                   InkWell(
                     onTap: (){
-                      //Get.toNamed(Routes.finalDetails);
+                      Get.toNamed(Routes.yourPets);
                     },
                     child: Padding(
                       padding: const EdgeInsets.only(top: 15.0,bottom:15,right: 16),

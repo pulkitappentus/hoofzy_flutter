@@ -17,7 +17,10 @@ import '../../presentation/sitter_build_trust_screens/safety_quiz/safety_quiz_pa
 import '../../presentation/sitter_build_trust_screens/sitter_profile/create_profile_page.dart';
 import '../../presentation/sitter_build_trust_screens/sitter_profile/profile_details/basic_info/basic_info_page.dart';
 import '../../presentation/sitter_build_trust_screens/sitter_profile/profile_details/date_of_birth/dateofbirth_page.dart';
+import '../../presentation/sitter_build_trust_screens/sitter_profile/profile_details/details/details_page.dart';
+import '../../presentation/sitter_build_trust_screens/sitter_profile/profile_details/photos/photos_page.dart';
 import '../../presentation/sitter_build_trust_screens/sitter_profile/profile_details/profile_cover_photo/profile_cover_photo_page.dart';
+import '../../presentation/sitter_build_trust_screens/sitter_profile/profile_details/your_pets/your_pets_page.dart';
 import '../../presentation/sitter_profile_screen/sitter_profile_page2.dart';
 import '../../presentation/sitter_service_setting/service_setting_page.dart';
 import 'bindings/controllers/SetupProfileControllerBinding.dart';
@@ -29,14 +32,17 @@ import 'bindings/controllers/cancelpolicy.controllerBinding.dart';
 import 'bindings/controllers/controllers_bindings.dart';
 import 'bindings/controllers/create.profile.controllerBinding.dart';
 import 'bindings/controllers/date.of.birth.controllerBinding.dart';
+import 'bindings/controllers/details.controllerBinding.dart';
 import 'bindings/controllers/final.details.controllerBinding.dart';
 import 'bindings/controllers/login.controller.binding.dart';
 import 'bindings/controllers/petpreferences.controllerBinding.dart';
+import 'bindings/controllers/photos.controllerBinding.dart';
 import 'bindings/controllers/profile.cover.photo.controllerBinding.dart';
 import 'bindings/controllers/rate.controllerBinding.dart';
 import 'bindings/controllers/request.testimonials.controllerBinding.dart';
 import 'bindings/controllers/safety.quiz.controllerBinding.dart';
 import 'bindings/controllers/service.setting.controllerBinding.dart';
+import 'bindings/controllers/your.pets.controllerBinding.dart';
 import 'routes.dart';
 
 class Nav {
@@ -137,7 +143,6 @@ class Nav {
       page: () => FinalDetailsPage(),
       binding: FinalDetailsControllerBinding(),
     ),
-
     GetPage(
       name: Routes.basicInfo,
       page: () => BasicInfoPage(),
@@ -145,13 +150,28 @@ class Nav {
     ),
     GetPage(
       name: Routes.profileCoverPhoto,
+      page: () => ProfileCoverPhotoPage(),
+      binding: ProfileCoverPhotoControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.dateOfBirth,
       page: () => DateofbirthPage(),
       binding: DateOfBirthControllerBinding(),
     ),
     GetPage(
-      name: Routes.dateOfBirth,
-      page: () => ProfileCoverPhotoPage(),
-      binding: ProfileCoverPhotoControllerBinding(),
+      name: Routes.details,
+      page: () => DetailsPage(),
+      binding: DetailsControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.photos,
+      page: () => PhotosPage(),
+      binding: PhotosControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.yourPets,
+      page: () => YourPetsPage(),
+      binding: YourPetsControllerBinding(),
     ),
   ];
 }

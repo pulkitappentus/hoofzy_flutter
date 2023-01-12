@@ -8,6 +8,7 @@ class Assets {
   static const String fontsSfProRegular = 'assets/fonts/SfProRegular.OTF';
   static const String fontsSfProSemibold = 'assets/fonts/SfProSemibold.OTF';
   static const String hoofzyAdd = 'assets/hoofzy/add.png';
+  static const String hoofzyAppIcon = 'assets/hoofzy/app_icon.png';
   static const String hoofzyApple = 'assets/hoofzy/apple.png';
   static const String hoofzyArticalPet = 'assets/hoofzy/artical_pet.png';
   static const String hoofzyBoarding1Image = 'assets/hoofzy/boarding_1_image.png';

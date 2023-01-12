@@ -15,38 +15,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a1547f2-9a36-4846-96c0-e2f361532b0a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/infrastructure/navigation/bindings/controllers/basic.info.controllerBinding.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/infrastructure/navigation/bindings/controllers/create.profile.controllerBinding.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/infrastructure/navigation/bindings/controllers/date.of.birth.controllerBinding.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/infrastructure/navigation/bindings/controllers/final.details.controllerBinding.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/infrastructure/navigation/bindings/controllers/profile.cover.photo.controllerBinding.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/infrastructure/navigation/bindings/controllers/request.testimonials.controllerBinding.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/infrastructure/navigation/bindings/controllers/safety.quiz.controllerBinding.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/final_details/controllers/final.details.controller.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/final_details/final_details_page.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/request_testimonials/controllers/request.testimonials.controller.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/request_testimonials/request_testimonials_page.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/safety_quiz/controllers/safety.quiz.controller.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/safety_quiz/safety_quiz_page.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/controllers/create.profile.controller.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/create_profile_page.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/profile_details/basic_info/basic_info_page.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/profile_details/basic_info/controllers/basic.info.controller.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/profile_details/date_of_birth/controllers/date.of.birth.controller.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/profile_details/date_of_birth/dateofbirth_page.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/profile_details/profile_cover_photo/controllers/profile.cover.photo.controller.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/profile_details/profile_cover_photo/profile_cover_photo_page.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/hoofzy/app_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/infrastructure/navigation/bindings/controllers/details.controllerBinding.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/infrastructure/navigation/bindings/controllers/photos.controllerBinding.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/infrastructure/navigation/bindings/controllers/your.pets.controllerBinding.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/presentation/date_picker.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/presentation/quiz_screens/body_language2_page.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/presentation/quiz_screens/body_language3_page.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/presentation/quiz_screens/body_language_page.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/presentation/quiz_screens/quiz1_page.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/profile_details/details/controllers/details.controller.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/profile_details/details/details_page.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/profile_details/photos/controllers/photos.controller.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/profile_details/photos/photos_page.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/profile_details/your_pets/controllers/your.pets.controller.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/profile_details/your_pets/your_pets_page.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/f4a6b8802d87017c9e1c8da7d3700e00/.filecache" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/f4a6b8802d87017c9e1c8da7d3700e00/.filecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/f4a6b8802d87017c9e1c8da7d3700e00/app.dill" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/f4a6b8802d87017c9e1c8da7d3700e00/app.dill" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/f4a6b8802d87017c9e1c8da7d3700e00/debug_android_application.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/f4a6b8802d87017c9e1c8da7d3700e00/debug_android_application.stamp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/f4a6b8802d87017c9e1c8da7d3700e00/flutter_assets.d" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/f4a6b8802d87017c9e1c8da7d3700e00/flutter_assets.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/f4a6b8802d87017c9e1c8da7d3700e00/kernel_snapshot.d" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/f4a6b8802d87017c9e1c8da7d3700e00/kernel_snapshot.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/f4a6b8802d87017c9e1c8da7d3700e00/kernel_snapshot.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/f4a6b8802d87017c9e1c8da7d3700e00/kernel_snapshot.stamp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/f4a6b8802d87017c9e1c8da7d3700e00/outputs.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/f4a6b8802d87017c9e1c8da7d3700e00/outputs.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/4f2a58af27abc49ecf55570043bbf938.cache.dill.track.dill" beforeDir="false" afterPath="$PROJECT_DIR$/build/4f2a58af27abc49ecf55570043bbf938.cache.dill.track.dill" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/assets/debug/mergeDebugAssets/flutter_assets/AssetManifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/assets/debug/mergeDebugAssets/flutter_assets/AssetManifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/intermediates/assets/debug/mergeDebugAssets/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/assets/debug/mergeDebugAssets/flutter_assets/kernel_blob.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/AssetManifest.json.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/AssetManifest.json.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/kernel_blob.bin.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/kernel_blob.bin.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/AssetManifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/AssetManifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_build.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_build.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
@@ -54,10 +53,13 @@
       <change beforePath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app.apk.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app.apk.sha1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/constants.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/assets.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/assets.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/infrastructure/navigation/navigation.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/infrastructure/navigation/navigation.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/infrastructure/navigation/routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/infrastructure/navigation/routes.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/presentation/sitter_profile_screen/sitter_profile_page2.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/sitter_profile_screen/sitter_profile_page2.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/safety_quiz/safety_quiz_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/safety_quiz/safety_quiz_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/create_profile_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/create_profile_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/profile_details/date_of_birth/dateofbirth_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/profile_details/date_of_birth/dateofbirth_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +96,7 @@
     <property name="cidr.known.project.marker" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/infrastructure/navigation/bindings/controllers" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/presentation/quiz_screens" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -103,11 +105,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\lib\presentation\quiz_screens" />
+      <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\assets\hoofzy" />
       <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\lib\infrastructure\navigation\bindings\controllers" />
       <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\lib\presentation\sitter_build_trust_screens\sitter_profile\profile_details" />
-      <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\lib\presentation\sitter_build_trust_screens" />
-      <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\assets\hoofzy" />
-      <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\lib\presentation\sitter_service_setting\controllers" />
+      <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\lib\presentation\sitter_build_trust_screens\sitter_profile\profile_details\details\controllers" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\lib\presentation\sitter_build_trust_screens\sitter_profile" />

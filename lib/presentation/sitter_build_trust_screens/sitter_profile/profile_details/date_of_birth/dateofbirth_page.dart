@@ -1,6 +1,7 @@
 import 'package:Hoofzy_V2/constants.dart';
 import 'package:flutter/material.dart';
 import '../../../../../infrastructure/base/base_view.dart';
+import '../../../../date_picker.dart';
 import 'controllers/date.of.birth.controller.dart';
 
 class DateofbirthPage extends BaseView<DateOfBirthController> {
@@ -47,6 +48,12 @@ class DateofbirthPage extends BaseView<DateOfBirthController> {
                     child: Align(alignment:Alignment.topLeft,child: Text('We use this to conduct background checks when signing up to be a sitter.'
                         ' We won’t share or display this on your profile',style: textBlackMedium14,)),
                   ),
+
+                  /*DatePicker(
+                    dateChangedCallback: (date) {
+                      debugPrint("Selected date $date");
+                    },
+                  ),*/
 
                   Padding(
                     padding: const EdgeInsets.only(left: 32.0,right: 32.0,top: 90,bottom: 50),

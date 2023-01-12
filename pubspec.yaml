@@ -90,6 +90,7 @@ flutter:
     - assets/hoofzy/shop_icon.png
     - assets/hoofzy/service_icon.png
 
+    - assets/hoofzy/app_icon.png
     - assets/hoofzy/query.png
     - assets/hoofzy/dog.png
     - assets/hoofzy/checked.png
