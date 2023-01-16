@@ -4,11 +4,15 @@ import 'package:flutter/material.dart';
 const kBackgroundColor = Color(0xff191720);
 const kTextFieldFill = Color(0xff1E1C24);
 const primaryColor = Color(0xff6E00FC);
+const lightPrimaryColor = Color(0xffF0E1FF);
+const avtarBackground = Color(0xffFFE9DE);
 const primaryPinkColor = Color(0xffF8F2FF);
 const greyColor = Color(0xffBDB6C4);
+const greyLightColor = Color(0xffC5C1B6);
 const lightGreyColor = Color(0xffBDB6C4);
 const lightPinkColor = Color(0xffEBE4F2);
 const offWhite = Color(0xffFDFBFF);
+const offWhiteGrey = Color(0xffC5C1B6);
 // TextStyles
 const headlineBlack = TextStyle(
   color: Colors.black,
@@ -27,6 +31,11 @@ const headlineBlack20 = TextStyle(
 );
 const headlineWhite = TextStyle(
   color: Colors.white,
+  fontSize: 24,
+  fontWeight: FontWeight.bold,
+);
+const headlineBlack24 = TextStyle(
+  color: Colors.black,
   fontSize: 24,
   fontWeight: FontWeight.bold,
 );
@@ -63,3 +72,5 @@ const textBlackBold14 = TextStyle(fontSize: 14, fontWeight: FontWeight.bold, col
 const textBlackBold_14 = TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: Colors.black);
 const textBlackLight12 = TextStyle(fontSize: 12, fontWeight: FontWeight.w400, color: Colors.black);
 const textgreyLight13 = TextStyle(fontSize: 13, fontWeight: FontWeight.w400, color: Colors.grey);
+const textgreyLight15 = TextStyle(fontSize: 15, fontWeight: FontWeight.w400, color: Colors.grey);
+const textgreyLight14 = TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: offWhiteGrey);

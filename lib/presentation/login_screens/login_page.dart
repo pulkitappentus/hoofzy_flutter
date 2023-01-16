@@ -75,9 +75,9 @@ class LoginPage extends BaseView<LoginController> {
                 children: [
                   Container(
                       height: 56,
-                      width: 320,
+                      width: 280,
                       decoration: const BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                          borderRadius: BorderRadius.all(Radius.circular(30)),
                           color: primaryColor
                       ),
                       child: Align(alignment: Alignment.center,child:Row(
@@ -86,7 +86,7 @@ class LoginPage extends BaseView<LoginController> {
                            Image.asset('assets/hoofzy/message.png',height: 20,width: 22,),
                            TextButton(onPressed: (){
                              Get.toNamed(Routes.mobile);
-                           },child: Text('Login with mobile number',style: textWhiteMedium15,),)
+                           },child: Text('Continue with mobile number',style: textWhiteMedium15,),)
                         ],
                       )
                       )

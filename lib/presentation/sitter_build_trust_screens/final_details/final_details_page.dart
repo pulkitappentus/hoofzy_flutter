@@ -45,7 +45,7 @@ class FinalDetailsPage extends BaseView<FinalDetailsController> {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(left: 16.0,top: 20),
-                    child: Align(alignment: Alignment.topLeft,child: Image.asset('assets/hoofzy/dog.png',height: 50,width: 40,fit: BoxFit.fill,)),
+                    child: Align(alignment: Alignment.topLeft,child: Image.asset('assets/hoofzy/profile_review.png',height: 50,width: 50,fit: BoxFit.fill,)),
                   ),
                   const Padding(
                     padding: const EdgeInsets.only(left: 16.0,top: 10),
@@ -57,7 +57,7 @@ class FinalDetailsPage extends BaseView<FinalDetailsController> {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(left: 16.0,top: 20),
-                    child: Align(alignment: Alignment.topLeft,child: Image.asset('assets/hoofzy/dog.png',height: 50,width: 40,fit: BoxFit.fill,)),
+                    child: Align(alignment: Alignment.topLeft,child: Image.asset('assets/hoofzy/authro.png',height: 50,width: 50,fit: BoxFit.fill,)),
                   ),
                   const Padding(
                     padding: const EdgeInsets.only(left: 16.0,top: 10),
@@ -70,7 +70,7 @@ class FinalDetailsPage extends BaseView<FinalDetailsController> {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(left: 16.0,top: 20),
-                    child: Align(alignment: Alignment.topLeft,child: Image.asset('assets/hoofzy/dog.png',height: 50,width: 40,fit: BoxFit.fill,)),
+                    child: Align(alignment: Alignment.topLeft,child: Image.asset('assets/hoofzy/submit_pp.png',height: 50,width: 50,fit: BoxFit.fill,)),
                   ),
                   const Padding(
                     padding: const EdgeInsets.only(left: 16.0,top: 10),

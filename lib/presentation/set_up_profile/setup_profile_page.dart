@@ -25,10 +25,10 @@ class SetupProfilePage extends BaseView<SetupProfileController> {
 
             Padding(
               padding: const EdgeInsets.only(top: 46.0),
-              child: Image.asset('assets/hoofzy/setup_profile_img.png',width: 220,height: 192,fit: BoxFit.fill),
+              child: Image.asset('assets/hoofzy/setup_profile_img.png',width: 138,height: 120,fit: BoxFit.fill),
             ),
             const Padding(
-              padding: EdgeInsets.only(top: 50,bottom: 10),
+              padding: EdgeInsets.only(top: 20,bottom: 20),
               child: Text(
                 'Hey, Good morning',
                 style: textBlackBold22,
@@ -40,7 +40,7 @@ class SetupProfilePage extends BaseView<SetupProfileController> {
               style: headlineBlack20,
             ),
             const Padding(
-              padding: EdgeInsets.only(top : 16,bottom: 32),
+              padding: EdgeInsets.only(top : 20,bottom: 32),
               child: Text(
                 'Bond with your pet and learn new skills at \nyour own place through guided training.',
                 textAlign: TextAlign.center,
@@ -76,7 +76,7 @@ class SetupProfilePage extends BaseView<SetupProfileController> {
                         child: Text('Do you have a pet?',style: textBlackLight15),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(top: 15.0),
+                        padding: const EdgeInsets.only(top: 15),
                         child: Container(
                             height: 44,
                             width: 170,
@@ -86,7 +86,7 @@ class SetupProfilePage extends BaseView<SetupProfileController> {
                             ),
                             child: Align(alignment: Alignment.center,
                               child: TextButton(onPressed: (){
-
+                                Get.toNamed(Routes.petBasicDetails);
                               },child: Text('Set up a pet profile',style: textWhiteLight14400,),),
                             )
                         ),
@@ -116,7 +116,7 @@ class SetupProfilePage extends BaseView<SetupProfileController> {
                           child: Text('Become a sitter?',style: textBlackLight15),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(top: 15.0),
+                          padding: const EdgeInsets.only(top: 15),
                           child: Container(
                               height: 44,
                               width: 170,
@@ -152,8 +152,7 @@ class SetupProfilePage extends BaseView<SetupProfileController> {
                   child: Image.asset('assets/hoofzy/emoji.png',width: 24,height: 24,fit: BoxFit.fill,),
                 )
               ],
-            )
-            )
+            ))
           ],
         ),
       ),

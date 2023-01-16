@@ -37,6 +37,7 @@ dependencies:
   lottie: ^2.1.0
   get_cli: ^0.2.30
   flutter_otp_text_field: ^1.1.0+2
+  flutter_holo_date_picker: ^1.1.0
 
 dev_dependencies: 
   flutter_lints: 2.0.1
@@ -91,6 +92,7 @@ flutter:
     - assets/hoofzy/service_icon.png
 
     - assets/hoofzy/app_icon.png
+    - assets/hoofzy/profile_placeholder.png
     - assets/hoofzy/query.png
     - assets/hoofzy/dog.png
     - assets/hoofzy/checked.png
@@ -119,6 +121,11 @@ flutter:
     - assets/hoofzy/boarding_1_image.png
     - assets/hoofzy/boarding_2_image.png
     - assets/hoofzy/boarding_3_image.png
+    - assets/hoofzy/dog_quiz.png
+    - assets/hoofzy/cat_quiz.png
+    - assets/hoofzy/authro.png
+    - assets/hoofzy/profile_review.png
+    - assets/hoofzy/submit_pp.png
 
     - assets/lottie/cute_doggie.json
     - assets/lottie/super_sale_hang.json

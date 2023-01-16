@@ -9,6 +9,12 @@ import '../../presentation/boarding_screens/boarding_screen_view.dart';
 import '../../presentation/cancellation_policy/cancel_policy_page.dart';
 import '../../presentation/login_screens/login_page.dart';
 import '../../presentation/pet_preferences/pet_preferences_page.dart';
+import '../../presentation/pet_profile_screens/pet_avatar_screen/pet_avatar_page.dart';
+import '../../presentation/pet_profile_screens/pet_basic_details/pet_basic_details_page.dart';
+import '../../presentation/pet_profile_screens/pet_breed/pet_breed_page.dart';
+import '../../presentation/pet_profile_screens/pet_other_breed/pet_other_breed_page.dart';
+import '../../presentation/pet_profile_screens/pet_other_details/pet_other_details_page.dart';
+import '../../presentation/pet_profile_screens/pet_profile_image/pet_profile_image_page.dart';
 import '../../presentation/rates/rate_page.dart';
 import '../../presentation/screens.dart';
 import '../../presentation/sitter_build_trust_screens/final_details/final_details_page.dart';
@@ -35,6 +41,11 @@ import 'bindings/controllers/date.of.birth.controllerBinding.dart';
 import 'bindings/controllers/details.controllerBinding.dart';
 import 'bindings/controllers/final.details.controllerBinding.dart';
 import 'bindings/controllers/login.controller.binding.dart';
+import 'bindings/controllers/pet.avatar.controllerBinding.dart';
+import 'bindings/controllers/pet.breed.controllerBinding.dart';
+import 'bindings/controllers/pet.profile.detail.controllerBinding.dart';
+import 'bindings/controllers/pet.profile.image.controllerBinding.dart';
+import 'bindings/controllers/pet.profile.other.controllerBinding.dart';
 import 'bindings/controllers/petpreferences.controllerBinding.dart';
 import 'bindings/controllers/photos.controllerBinding.dart';
 import 'bindings/controllers/profile.cover.photo.controllerBinding.dart';
@@ -172,6 +183,36 @@ class Nav {
       name: Routes.yourPets,
       page: () => YourPetsPage(),
       binding: YourPetsControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.petBasicDetails,
+      page: () => PetBasicDetailsPage(),
+      binding: PetProfileDetailControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.petOtherDetails,
+      page: () => PetOtherDetailsPage(),
+      binding: PetProfileOtherControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.petProfileImage,
+      page: () => PetProfileImagePage(),
+      binding: PetProfileImageControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.petBreed,
+      page: () => PetBreedPage(),
+      binding: PetBreedControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.petOtherBreed,
+      page: () => PetOtherBreedPage(),
+      binding: PetBreedControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.petAvatar,
+      page: () => PetAvatarPage(),
+      binding: PetAvatarControllerBinding(),
     ),
   ];
 }

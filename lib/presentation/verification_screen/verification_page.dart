@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:sizer/sizer.dart';
 import '../../../infrastructure/base/base_view.dart';
 import '../../infrastructure/navigation/routes.dart';
 import '../login_screens/controllers/login.controller.dart';
@@ -86,45 +87,43 @@ class VerificationPage extends BaseView<LoginController> {
           ),
 
           const Padding(
-            padding: const EdgeInsets.only(top:30),
+            padding: const EdgeInsets.only(top:10),
             child: Align(
               alignment: Alignment.center,
               child: Text(
-                'Resend Code',
+                'Didn`t receive it? Tap to resend',
                 style: TextStyle(
                   fontSize: 15,
                   height: 1.8,
                   fontWeight: FontWeight.w400,
                   decoration: TextDecoration.none,
-                  color: primaryColor,
+                  color: Colors.black,
                 ),
               ),
             ),
           ),
 
-
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: Padding(
-              padding: const EdgeInsets.only(left: 40.0,right: 40.0,top: 100),
+          Expanded(
+            child: Align(
+              alignment: Alignment.bottomCenter,
               child: Container(
-                  height: 56,
-                  width: double.infinity,
-                  decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(20)),
-                      color: primaryColor
-                  ),
-                  child: Align(alignment: Alignment.center,
-                      child:TextButton
-                        (
-                        onPressed: (){
-                            Get.toNamed(Routes.setupprofile);
-                        },
-                        child: Text('Verify',style: textWhiteMedium15,),)
-                  )
+                height: 46.sp,
+                width: MediaQuery.of(context).size.width/1.5,
+                margin: const EdgeInsets.only(bottom: 16.0),
+                decoration: const BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(34)),
+                    color: primaryColor
+                ),
+                child: TextButton(
+                  onPressed: () {
+                    Get.toNamed(Routes.setupprofile);
+                  },
+                  child: const Text(
+                    'Verify',style: textWhiteMedium16,), // trying to move to the bottom
+                ),
               ),
             ),
-          )
+          ),
         ],
       ),
     );

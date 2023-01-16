@@ -11,15 +11,19 @@ class Assets {
   static const String hoofzyAppIcon = 'assets/hoofzy/app_icon.png';
   static const String hoofzyApple = 'assets/hoofzy/apple.png';
   static const String hoofzyArticalPet = 'assets/hoofzy/artical_pet.png';
+  static const String hoofzyAuthro = 'assets/hoofzy/authro.png';
   static const String hoofzyBoarding1Image = 'assets/hoofzy/boarding_1_image.png';
   static const String hoofzyBoarding2Image = 'assets/hoofzy/boarding_2_image.png';
   static const String hoofzyBoarding3Image = 'assets/hoofzy/boarding_3_image.png';
   static const String hoofzyBoardingTitle = 'assets/hoofzy/boarding_title.png';
   static const String hoofzyCat = 'assets/hoofzy/cat.png';
+  static const String hoofzyCatQuiz = 'assets/hoofzy/cat_quiz.png';
   static const String hoofzyChat = 'assets/hoofzy/chat.png';
   static const String hoofzyChecked = 'assets/hoofzy/checked.png';
   static const String hoofzyCommunityIcon = 'assets/hoofzy/community_icon.png';
+  static const String hoofzyDodPlace = 'assets/hoofzy/dod_place.png';
   static const String hoofzyDog = 'assets/hoofzy/dog.png';
+  static const String hoofzyDogQuiz = 'assets/hoofzy/dog_quiz.png';
   static const String hoofzyDogWalkingService = 'assets/hoofzy/dog_walking_service.png';
   static const String hoofzyEmoji = 'assets/hoofzy/emoji.png';
   static const String hoofzyEveryDawg = 'assets/hoofzy/every_dawg.png';
@@ -47,6 +51,8 @@ class Assets {
   static const String hoofzyPetService = 'assets/hoofzy/pet_service.png';
   static const String hoofzyPetTrainingService = 'assets/hoofzy/pet_training_service.png';
   static const String hoofzyProfile = 'assets/hoofzy/profile.png';
+  static const String hoofzyProfilePlaceholder = 'assets/hoofzy/profile_placeholder.png';
+  static const String hoofzyProfileReview = 'assets/hoofzy/profile_review.png';
   static const String hoofzyPrpp = 'assets/hoofzy/prpp.png';
   static const String hoofzyQuery = 'assets/hoofzy/query.png';
   static const String hoofzyQuestion = 'assets/hoofzy/question.png';
@@ -54,6 +60,7 @@ class Assets {
   static const String hoofzySettingUp = 'assets/hoofzy/setting_up.png';
   static const String hoofzySetupProfileImg = 'assets/hoofzy/setup_profile_img.png';
   static const String hoofzyShopIcon = 'assets/hoofzy/shop_icon.png';
+  static const String hoofzySubmitPp = 'assets/hoofzy/submit_pp.png';
   static const String hoofzySupperSale = 'assets/hoofzy/supper_sale.png';
   static const String hoofzyThemBording = 'assets/hoofzy/them_bording.png';
   static const String hoofzyTrainPet = 'assets/hoofzy/train_pet.png';

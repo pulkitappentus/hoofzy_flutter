@@ -20,7 +20,7 @@ class PetPreferencesPage extends BaseView<PetPreferencesController> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,//404717
-          children: [
+          children:[
             AppBar(
               toolbarHeight: 56,
               backgroundColor: Colors.white,
@@ -38,8 +38,7 @@ class PetPreferencesPage extends BaseView<PetPreferencesController> {
             ),
             Expanded(child: SingleChildScrollView(
               child: Column(
-                children: <Widget>[
-
+                children: [
                   const Padding(
                     padding: const EdgeInsets.only(left: 16.0),
                     child: Align(alignment: Alignment.topLeft,
@@ -208,27 +207,50 @@ class PetPreferencesPage extends BaseView<PetPreferencesController> {
                   ),
 
                   Padding(
-                  padding: const EdgeInsets.only(top: 138.0,left: 38.0,right: 38.0),
-                  child: Container(
-                      height: 56,
-                      width: double.infinity,
-                      decoration: const BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(20)),
-                          color: primaryColor
-                      ),
-                      child: Align(alignment: Alignment.center,
-                          child:TextButton
-                            (
-                            onPressed: (){
-                            },
-                            child: Text('Save & Continue',style: textWhiteMedium15,),)
-                      )
+                    padding: const EdgeInsets.only(top: 138.0,left: 38.0,right: 38.0),
+                    child: Container(
+                        height: 56,
+                        width: double.infinity,
+                        decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(20)),
+                            color: primaryColor
+                        ),
+                        child: Align(alignment: Alignment.bottomCenter,
+                            child:TextButton
+                              (
+                              onPressed: (){
+                              },
+                              child: Text('Save & Continue',style: textWhiteMedium15,),)
+                        )
+                    ),
                   ),
-                  )
-
+/*
+                  Expanded(
+                    child: Align(
+                      alignment: Alignment.bottomCenter,
+                      child: Container(
+                        height: 46.sp,
+                        width: MediaQuery.of(context).size.width/1.5,
+                        margin: const EdgeInsets.only(bottom: 16.0),
+                        decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(34)),
+                            color: primaryColor
+                        ),
+                        child: TextButton(
+                          onPressed: () {
+                            Get.toNamed(Routes.setupprofile);
+                          },
+                          child: const Text(
+                            'Verify',style: textWhiteMedium16,), // trying to move to the bottom
+                        ),
+                      ),
+                    ),
+                  ),*/
                 ],
               ),
-            ))
+            ),
+
+            )
           ],
         ),
       ),

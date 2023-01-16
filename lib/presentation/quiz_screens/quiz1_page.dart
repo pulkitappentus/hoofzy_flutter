@@ -1,11 +1,9 @@
-/*
 import 'package:Hoofzy_V2/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:sizer/sizer.dart';
 import '../../../infrastructure/base/base_view.dart';
-import 'controllers/safety.quiz.controller.dart';
+import '../sitter_build_trust_screens/safety_quiz/controllers/safety.quiz.controller.dart';
 
-class SafetyQuizPage extends BaseView<SafetyQuizController> {
+class Quiz1Page extends BaseView<SafetyQuizController> {
 
   @override
   Widget body(BuildContext context) {
@@ -28,7 +26,7 @@ class SafetyQuizPage extends BaseView<SafetyQuizController> {
                   Navigator.pop(context);
                 },
                 child: const Icon(
-                  Icons.arrow_back,
+                  Icons.close,
                   color: Colors.black,
                 ),
               ),
@@ -36,48 +34,25 @@ class SafetyQuizPage extends BaseView<SafetyQuizController> {
             Expanded(child: SingleChildScrollView(
               child: Column(
                 children: <Widget> [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 16.0,right: 16.0,top: 6),
+                    child: Container(
+                      width: double.infinity,
+                      height: 180,
+                      decoration: const BoxDecoration(
+                          image: DecorationImage(image: AssetImage('assets/hoofzy/trending_community_image.png',),fit: BoxFit.fill)
+                      ),
+                    ),
+                  ),
                   const Padding(
                     padding: const EdgeInsets.only(left: 16.0,top: 16),
-                    child: Align(alignment: Alignment.topLeft,child: Text('Concerning body language',style: headlineBlack20,)),
+                    child: Align(alignment: Alignment.topLeft,child: Text('Question 1 of 4',style: textBlackMedium14,)),
                   ),
-                  const Padding(
-                    padding: const EdgeInsets.only(left: 16.0,top: 15),
-                    child: Align(alignment: Alignment.topLeft,child: Text('Here`s what to look for',style: textBlackMedium14,)),
-                  ),
-                  const Padding(
-                    padding: const EdgeInsets.only(left: 16.0,top: 20),
-                    child: Align(alignment: Alignment.topLeft,child: Text('Avoiding scuffles and bites',style: textBlackMedium16,)),
-                  ),
+                  questionScreen(),
+                  //checkQuestionStatus(),
+
                   Padding(
-                    padding: const EdgeInsets.only(left: 16.0,top: 20),
-                    child: Align(alignment: Alignment.topLeft,child: Image.asset('assets/hoofzy/dog.png',width: 50,height: 60,fit: BoxFit.fill,),),
-                  ),
-                  const Padding(
-                    padding: const EdgeInsets.only(left: 16.0,top: 10),
-                    child: Align(alignment: Alignment.topLeft,child: Text('Dog',style: textBlackMedium16,)),
-                  ),
-                  const Padding(
-                    padding: const EdgeInsets.only(left: 16.0,top: 15,right: 16.0),
-                    child: Align(alignment: Alignment.topLeft,child: Text('If a dog displays concerning body language, '
-                        'avoid or remove them from the situation causing this behavior.'
-                        ' If you need to interrupt a dog scuffle, make a loud noise or put a barrier between the dogs.',style: textBlackMedium14,)),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 16.0,top: 20),
-                    child: Align(alignment: Alignment.topLeft,child: Image.asset('assets/hoofzy/cat.png',width: 36,height: 60,fit: BoxFit.fill,),),
-                  ),
-                  const Padding(
-                    padding: const EdgeInsets.only(left: 16.0,top: 10),
-                    child: Align(alignment: Alignment.topLeft,child: Text('Cat',style: textBlackMedium16,)),
-                  ),
-                  const Padding(
-                    padding: const EdgeInsets.only(left: 16.0,top: 15,right: 16.0),
-                    child: Align(alignment: Alignment.topLeft,child: Text('If you encounter a cat who is crouching or arching its back, '
-                        'especially with fur standing up, give them space.'
-                        ' Don`t crowd a nervous cat, pick them up, or force the cat to move or interact.',style: textBlackMedium14,)),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 88.0,left: 38,right: 38),
+                    padding: const EdgeInsets.only(top: 50.0,left: 38,right: 38),
                     child: Container(
                         height: 56,
                         width: double.infinity,
@@ -90,11 +65,10 @@ class SafetyQuizPage extends BaseView<SafetyQuizController> {
                               (
                               onPressed: (){
                               },
-                              child: Text('Start Quiz',style: textWhiteMedium15,),)
+                              child: Text('Next',style: textWhiteMedium15,),)
                         )
                     ),
                   ),
-
                 ],
               ),
             ))
@@ -104,10 +78,98 @@ class SafetyQuizPage extends BaseView<SafetyQuizController> {
     );
   }
 
+  questionScreen() {
+    return Column(
+      children: [
+        const Padding(
+          padding: const EdgeInsets.only(left: 16.0,top: 20,right: 16.0),
+          child: Align(alignment: Alignment.topLeft,child: Text('What are all the ways a dog shows they are stressed with their body language?',style: textBlackMedium16,)),
+        ),
+        const Padding(
+          padding: const EdgeInsets.only(left: 16.0,top:15),
+          child: Align(alignment: Alignment.topLeft,child: Text('(select all that apply)',style: textBlackMedium14,)),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(left: 16.0,top: 30,bottom: 14),
+          child: Column(
+            children: [
+              Row(
+                children: [
+                  Image.asset('assets/hoofzy/unchecked.png',height: 32,width: 32,),
+                  const Padding(
+                    padding: const EdgeInsets.only(left: 10.0),
+                    child: Text('Yawning',style: textBlackLight15,),
+                  )
+                ],
+
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 15.0),
+                child: Row(
+                  children: [
+                    Image.asset('assets/hoofzy/unchecked.png',height: 32,width: 32,),
+                    const Padding(
+                      padding: const EdgeInsets.only(left: 10.0),
+                      child: Text('Nose licking',style: textBlackLight15,),
+                    )
+                  ],
+
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 15.0),
+                child: Row(
+                  children: [
+                    Image.asset('assets/hoofzy/unchecked.png',height: 32,width: 32,),
+                    const Padding(
+                      padding: const EdgeInsets.only(left: 10.0),
+                      child: Text('Shaking it off',style: textBlackLight15,),
+                    )
+                  ],
+
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 15.0),
+                child: Row(
+                  children: [
+                    Image.asset('assets/hoofzy/unchecked.png',height: 32,width: 32,),
+                    const Padding(
+                      padding: const EdgeInsets.only(left: 10.0),
+                      child: Text('Wagging tail ',style: textBlackLight15,),
+                    )
+                  ],
+                ),
+              ),
+            ],
+
+          ),
+        ),
+      ],
+    );
+  }
+
+  checkQuestionStatus() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        Align(alignment:Alignment.topLeft,child: Image.asset('assets/hoofzy/dog.png',height: 80,width: 60,fit: BoxFit.fill,)),
+        const Padding(
+          padding: const EdgeInsets.only(left: 16.0,top: 20,right: 16.0),
+          child: Align(alignment: Alignment.topLeft,child: Text('Correct',style: textBlackMedium16,)),
+        ),
+        const Padding(
+          padding: const EdgeInsets.only(left: 16.0,top:15),
+          child: Align(alignment: Alignment.topLeft,child: Text('Yawning, nose licking, and shaking it off are all signs a dog is stressed, and should be removed from the situation.',style: textBlackMedium14,)),
+        ),
+      ],
+
+    );
+  }
 }
 
 
 
 
 
-*/

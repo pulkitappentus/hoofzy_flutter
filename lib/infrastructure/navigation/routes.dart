@@ -40,4 +40,11 @@ class Routes {
   static const details = '/sitter_build_trust_screens/sitter_profile/profile_details/details';
   static const photos = '/sitter_build_trust_screens/sitter_profile/profile_details/photos';
   static const yourPets = '/sitter_build_trust_screens/sitter_profile/profile_details/your_pets';
+
+  static const petBasicDetails = '/pet_profile_screens/pet_basic_details';
+  static const petOtherDetails = '/pet_profile_screens/pet_other_details';
+  static const petProfileImage = '/pet_profile_screens/pet_profile_image';
+  static const petBreed = '/pet_profile_screens/pet_breed';
+  static const petOtherBreed = '/pet_profile_screens/pet_other_breed';
+  static const petAvatar = '/pet_profile_screens/pet_avatar_screen';
 }
