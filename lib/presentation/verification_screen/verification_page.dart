@@ -12,9 +12,14 @@ class VerificationPage extends BaseView<LoginController> {
 
   @override
   Widget body(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: Column(
+    return Container(
+      decoration: const BoxDecoration(
+          color: Colors.white,
+          image: DecorationImage(image: AssetImage('assets/hoofzy/background.png'),fit: BoxFit.fill)
+      ),
+      width: double.infinity,
+      height: double.infinity,
+      child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           AppBar(
@@ -32,60 +37,79 @@ class VerificationPage extends BaseView<LoginController> {
               ),
             ),
           ),
-          const Padding(
-            padding: const EdgeInsets.only(left: 16.0),
-            child: Text(
-              'What`s your code',
-              style: TextStyle(
-                fontSize: 20,
-                height: 1.8,
-                fontWeight: FontWeight.w500,
-                decoration: TextDecoration.none,
-                color: Colors.black,
-              ),
+          Flexible(child: Container(
+            width: double.infinity,
+            height: 190,
+            decoration: const BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.only(bottomRight: Radius.circular(20),bottomLeft: Radius.circular(20)),
             ),
-          ),
-          const Padding(
-            padding: const EdgeInsets.only(top:8,left: 16.0),
-            child: Text(
-              'Please enter six digit code we will sent on \n+91-1234567890',
-              style: TextStyle(
-                fontSize: 15,
-                height: 1.8,
-                fontWeight: FontWeight.w400,
-                decoration: TextDecoration.none,
-                color: Colors.black,
-              ),
-            ),
-          ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                const Padding(
+                  padding: const EdgeInsets.only(left: 16.0),
+                  child: Text(
+                    'What`s your code',
+                    style: TextStyle(
+                      fontSize: 20,
+                      height: 1.8,
+                      fontWeight: FontWeight.w600,
+                      decoration: TextDecoration.none,
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
+                const Padding(
+                  padding: const EdgeInsets.only(top:20,left: 16.0),
+                  child: Text(
+                    'Please enter six digit code we will sent on \n+91-1234567890',
+                    style: TextStyle(
+                      fontSize: 14,
+                      height: 1.8,
+                      fontWeight: FontWeight.w400,
+                      decoration: TextDecoration.none,
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top:2,left: 16.0),
+                  child:  Container(
+                    height: 60,
+                    width: double.infinity,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: <Widget>[
+                        Expanded(
+                          child: TextField(
+                            style: textBlackMedium16,
+                            keyboardType: TextInputType.phone,
+                            decoration: const InputDecoration(
+                                border: InputBorder.none,
+                                hintText: "000000",
+                                hintStyle: textgreyLight18,
+                                fillColor: Colors.black
+                            ),
+                            onChanged: (value) {
+                              // this.phoneNo=value;
+                              print(value);
+                            },
+                          ),
+                        ),
 
-          Padding(
-            padding: const EdgeInsets.only(top: 74.0),
-            child: OtpTextField(
-              numberOfFields: 5,
-              borderColor: primaryColor,
-              textStyle: textBlackMedium16,
-              //set to true to show as box or false to show as dash
-              showFieldAsBox: false,
-              //runs when a code is typed in
-              onCodeChanged: (String code) {
-                //handle validation or checks here
-              },
-              //runs when every textfield is filled
-             /* onSubmit: (String verificationCode){
-                showDialog(
-                    context: context,
-                    builder: (context){
-                      return AlertDialog(
-                        title: Text("Verification Code"),
-                        content: Text('Code entered is $verificationCode'),
-                      );
-                    }
-                );
-              },*/ // end onSubmit
+                        Padding(
+                          padding: const EdgeInsets.only(right: 16.0),
+                          child: TextButton(onPressed: (){},child: Text('Oops! wrong code',style: textappThemeMedium15),),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              ],
             ),
-          ),
-
+          )),
           const Padding(
             padding: const EdgeInsets.only(top:10),
             child: Align(
@@ -107,9 +131,9 @@ class VerificationPage extends BaseView<LoginController> {
             child: Align(
               alignment: Alignment.bottomCenter,
               child: Container(
-                height: 46.sp,
+                height: 50.sp,
                 width: MediaQuery.of(context).size.width/1.5,
-                margin: const EdgeInsets.only(bottom: 16.0),
+                margin: const EdgeInsets.only(bottom: 0),
                 decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(34)),
                     color: primaryColor

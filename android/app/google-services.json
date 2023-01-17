@@ -1,34 +1,131 @@
 {
   "project_info": {
-    "project_number": "452482022929",
-    "project_id": "superheroes-wallpapers-b46f4",
-    "storage_bucket": "superheroes-wallpapers-b46f4.appspot.com"
+    "project_number": "437526855358",
+    "project_id": "hoofzy-461fa",
+    "storage_bucket": "hoofzy-461fa.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:452482022929:android:078f96af7601d4688d7bb0",
+        "mobilesdk_app_id": "1:437526855358:android:bf7de9eaec02efe1af28ef",
         "android_client_info": {
-          "package_name": "app.hoofzyflutter"
+          "package_name": "app.hoofzy"
         }
       },
       "oauth_client": [
         {
-          "client_id": "452482022929-04j1ulmbo7gkie7gv2uenfn5s06kpmdf.apps.googleusercontent.com",
+          "client_id": "437526855358-3vpoagb46vbnah4tnhjpsus5gr89fg5k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.hoofzy",
+            "certificate_hash": "c42518e51017fba2a8bc0f463755ba19b647c6f9"
+          }
+        },
+        {
+          "client_id": "437526855358-bkkp29hv4nvciqe30vrsbih8fo8fm4ev.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.hoofzy",
+            "certificate_hash": "d8a0d67210e5a753765a90d125f5d9b96f16dfaf"
+          }
+        },
+        {
+          "client_id": "437526855358-e87khem56cpftnakn4hm2q3dd9fvmte4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.hoofzy",
+            "certificate_hash": "5bfc68a21dc88590d59d76b2a729b33bc84de961"
+          }
+        },
+        {
+          "client_id": "437526855358-u7d4vm346iba3ms5kvs7j4bk6dr5uo9h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.hoofzy",
+            "certificate_hash": "f1fed0f0aefb5ec042672e90d28d7f9ab3868d99"
+          }
+        },
+        {
+          "client_id": "437526855358-uurghcd293836174nqbc85fl4kou9k26.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.hoofzy",
+            "certificate_hash": "09ddf6d87d84fee2cd2c0d22e0c77d085f3efcbf"
+          }
+        },
+        {
+          "client_id": "437526855358-976m5kae39l381f0spa2c14hic8i1gtm.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB75OQv_rCXbPMs5wYiVtjKmIlrgbzHYr0"
+          "current_key": "AIzaSyBWfLeXo5J-0QoFn06zX2W84PFtEorrNAw"
+        },
+        {
+          "current_key": "AIzaSyCWCr-A8fyPgtrLV5qVSHKseh5BprO-Fhw"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "452482022929-04j1ulmbo7gkie7gv2uenfn5s06kpmdf.apps.googleusercontent.com",
+              "client_id": "437526855358-976m5kae39l381f0spa2c14hic8i1gtm.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "437526855358-mmjhjp3l8un79jc425jjpg9g88k5c5qa.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "app.Hoofzy"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:437526855358:android:ccca3a64634b6c19af28ef",
+        "android_client_info": {
+          "package_name": "app.hoofzyflutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "437526855358-34b12opjv6p56tjsdke5bl45b1b0os23.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.hoofzyflutter",
+            "certificate_hash": "5bfc68a21dc88590d59d76b2a729b33bc84de961"
+          }
+        },
+        {
+          "client_id": "437526855358-976m5kae39l381f0spa2c14hic8i1gtm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWfLeXo5J-0QoFn06zX2W84PFtEorrNAw"
+        },
+        {
+          "current_key": "AIzaSyCWCr-A8fyPgtrLV5qVSHKseh5BprO-Fhw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "437526855358-976m5kae39l381f0spa2c14hic8i1gtm.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "437526855358-mmjhjp3l8un79jc425jjpg9g88k5c5qa.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "app.Hoofzy"
+              }
             }
           ]
         }

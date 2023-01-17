@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 // Colors
 const kBackgroundColor = Color(0xff191720);
 const kTextFieldFill = Color(0xff1E1C24);
-const primaryColor = Color(0xff6E00FC);
+const primaryColorSitter = Color(0xffF1A800);
+const primaryColor = Color(0xffB84201);
+const appThemeOrange = Color(0xffFF640E);
 const lightPrimaryColor = Color(0xffF0E1FF);
 const avtarBackground = Color(0xffFFE9DE);
 const primaryPinkColor = Color(0xffF8F2FF);
@@ -11,6 +13,7 @@ const greyColor = Color(0xffBDB6C4);
 const greyLightColor = Color(0xffC5C1B6);
 const lightGreyColor = Color(0xffBDB6C4);
 const lightPinkColor = Color(0xffEBE4F2);
+const lightThemeColor = Color(0xffFFE9DE);
 const offWhite = Color(0xffFDFBFF);
 const offWhiteGrey = Color(0xffC5C1B6);
 // TextStyles
@@ -69,8 +72,14 @@ const textBlackBold18 = TextStyle(fontSize: 18, fontWeight: FontWeight.bold, col
 const textBlackBold18_500 = TextStyle(fontSize: 18, fontWeight: FontWeight.w500, color: Colors.black);
 const textBlackBold22 = TextStyle(fontSize: 22, fontWeight: FontWeight.w500, color: Colors.black);
 const textBlackBold14 = TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.black);
+const textBlackMedium_14 = TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: Colors.black);
+const textBlackBold16 = TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.black);
 const textBlackBold_14 = TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: Colors.black);
 const textBlackLight12 = TextStyle(fontSize: 12, fontWeight: FontWeight.w400, color: Colors.black);
 const textgreyLight13 = TextStyle(fontSize: 13, fontWeight: FontWeight.w400, color: Colors.grey);
 const textgreyLight15 = TextStyle(fontSize: 15, fontWeight: FontWeight.w400, color: Colors.grey);
+const textgreyLight18 = TextStyle(fontSize: 18, fontWeight: FontWeight.w500, color: Colors.grey);
 const textgreyLight14 = TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: offWhiteGrey);
+const textappThemeMedium15 = TextStyle(fontSize: 15, fontWeight: FontWeight.w500, color: appThemeOrange);
+
+//basic pet profile

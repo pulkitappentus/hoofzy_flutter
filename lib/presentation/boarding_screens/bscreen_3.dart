@@ -1,9 +1,6 @@
 import 'package:Hoofzy_V2/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import '../../../infrastructure/base/base_view.dart';
-import '../../../infrastructure/navigation/routes.dart';
 import 'controllers/boarding.controller.dart';
 
 class BScreen3 extends BaseView<BoardingController> {
@@ -12,8 +9,14 @@ class BScreen3 extends BaseView<BoardingController> {
   Widget body(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Padding(
-        padding: const EdgeInsets.only(top: 20.0,bottom: 40),
+      body: Container(
+        margin: const EdgeInsets.only(top: 20.0,bottom: 130,left: 38,right: 38),
+        width: double.infinity,
+        height: double.infinity,
+        decoration: const BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.all(Radius.circular(30.0))
+        ),
         child: Column(
           children: [
             AppBar(
@@ -31,14 +34,9 @@ class BScreen3 extends BaseView<BoardingController> {
             const Padding(
               padding: EdgeInsets.only(top: 40),
               child: Text(
-                'Join our',
-                style: textBlackBold22,
+                'Join our Community',
+                style: headlineBlack24,
               ),
-            ),
-            const Text(
-              'Community',
-              textAlign: TextAlign.center,
-              style: headlineBlack36,
             ),
             const Padding(
               padding: EdgeInsets.only(top : 20),
@@ -46,7 +44,7 @@ class BScreen3 extends BaseView<BoardingController> {
                 'Share your training moments with other \ndog parents.',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 14,
+                  fontSize: 15,
                   height: 1.8,
                   fontWeight: FontWeight.normal,
                   decoration: TextDecoration.none,

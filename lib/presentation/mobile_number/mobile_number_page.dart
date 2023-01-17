@@ -12,7 +12,10 @@ class MobileNumberPage extends BaseView<LoginController> {
   @override
   Widget body(BuildContext context) {
     return Container(
-      color: Colors.white,
+      decoration: const BoxDecoration(
+        color: Colors.white,
+        image: DecorationImage(image: AssetImage('assets/hoofzy/background.png'),fit: BoxFit.fill)
+      ),
       width: double.infinity,
       height: double.infinity,
       child: Column(
@@ -34,72 +37,85 @@ class MobileNumberPage extends BaseView<LoginController> {
               ),
             ),
           ),
-          const Padding(
-            padding: const EdgeInsets.only(left: 16.0),
-            child: Text(
-              'What`s your mobile number',
-              style: TextStyle(
-                fontSize: 20,
-                height: 1.8,
-                fontWeight: FontWeight.w500,
-                decoration: TextDecoration.none,
-                color: Colors.black,
-              ),
+          Flexible(child: Container(
+            width: double.infinity,
+            height: 200,
+            decoration: const BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.only(bottomRight: Radius.circular(20),bottomLeft: Radius.circular(20)),
             ),
-          ),
-          const Padding(
-            padding: const EdgeInsets.only(top:12,left: 16.0),
-            child: Text(
-              'Please provide us with your mobile number. \nWe will find your account or create an account',
-              style: TextStyle(
-                fontSize: 15,
-                height: 1.8,
-                fontWeight: FontWeight.w400,
-                decoration: TextDecoration.none,
-                color: Colors.black,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+              const Padding(
+                padding: const EdgeInsets.only(left: 16.0),
+                child: Text(
+                  'What`s your mobile number',
+                  style: TextStyle(
+                    fontSize: 20,
+                    height: 1.8,
+                    fontWeight: FontWeight.w500,
+                    decoration: TextDecoration.none,
+                    color: Colors.black,
+                  ),
+                ),
               ),
-            ),
-          ),
-           Padding(
-            padding: const EdgeInsets.only(top:22,left: 16.0),
-            child:  Container(
-              height: 60,
-              width: double.infinity,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: <Widget>[
-                  InkWell(
-                    onTap: (){
-                      _countryCodeBottomSheet(context);
-                    },
-                    child: Row(
-                      children: const[
-                        Text('+91',style: textBlackMedium16,),
-                        Icon(Icons.keyboard_arrow_down,color: Colors.black,)
-                      ],
+              const Padding(
+                padding: const EdgeInsets.only(top:12,left: 16.0),
+                child: Text(
+                  'Please provide us with your mobile number. \nWe will find your account or create an account',
+                  style: TextStyle(
+                    fontSize: 15,
+                    height: 1.8,
+                    fontWeight: FontWeight.w400,
+                    decoration: TextDecoration.none,
+                    color: Colors.black,
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top:22,left: 16.0),
+                child:  Container(
+                  height: 60,
+                  width: double.infinity,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: <Widget>[
+                      InkWell(
+                        onTap: (){
+                          _countryCodeBottomSheet(context);
+                        },
+                        child: Row(
+                          children: const[
+                            Text('+91',style: textBlackMedium16,),
+                            Icon(Icons.keyboard_arrow_down,color: Colors.black,)
+                          ],
 
-                    ),
-                  ),
-                  Expanded(
-                    child: TextField(
-                      style: textBlackMedium16,
-                      keyboardType: TextInputType.phone,
-                      decoration: const InputDecoration(
-                        border: InputBorder.none,
-                        hintText: "Phone Number",
-                        hintStyle: textgreyLight15,
-                        fillColor: Colors.black
+                        ),
                       ),
-                      onChanged: (value) {
-                        // this.phoneNo=value;
-                        print(value);
-                      },
-                    ),
+                      Expanded(
+                        child: TextField(
+                          style: textBlackMedium16,
+                          keyboardType: TextInputType.phone,
+                          decoration: const InputDecoration(
+                              border: InputBorder.none,
+                              hintText: "Mobile Number",
+                              hintStyle: textgreyLight15,
+                              fillColor: Colors.black
+                          ),
+                          onChanged: (value) {
+                            // this.phoneNo=value;
+                            print(value);
+                          },
+                        ),
+                      ),
+                    ],
                   ),
-                ],
+                ),
               ),
-            ),
-          ),
+            ],),
+          )),
 
           Expanded(
             child: Align(
@@ -107,7 +123,7 @@ class MobileNumberPage extends BaseView<LoginController> {
               child: Container(
                 height: 46.sp,
                 width: MediaQuery.of(context).size.width/1.5,
-                margin: const EdgeInsets.only(bottom: 16.0),
+                margin: const EdgeInsets.only(bottom: 0),
                 decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(34)),
                     color: primaryColor

@@ -10,8 +10,15 @@ class BScreen2 extends BaseView<BoardingController> {
   Widget body(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Padding(
-        padding: const EdgeInsets.only(top: 20.0,bottom: 40),
+      body: Container(
+        margin: const EdgeInsets.only(top: 20.0,bottom: 130,left: 38,right: 38),
+        width: double.infinity,
+        height: double.infinity,
+        decoration: const BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.all(Radius.circular(30.0))
+
+        ),
         child: Column(
           children: [
             AppBar(
@@ -29,14 +36,9 @@ class BScreen2 extends BaseView<BoardingController> {
             const Padding(
               padding: EdgeInsets.only(top: 40),
               child: Text(
-                'Don’t buy!',
-                style: textBlackBold22,
+                'Don’t buy! Adopt',
+                style: headlineBlack24,
               ),
-            ),
-            const Text(
-              'Adopt',
-              textAlign: TextAlign.center,
-              style: headlineBlack36,
             ),
             const Padding(
               padding: EdgeInsets.only(top : 20),
@@ -44,7 +46,7 @@ class BScreen2 extends BaseView<BoardingController> {
                 'Find the best pet near you and \nadopt your favourite one',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 14,
+                  fontSize: 15,
                   height: 1.8,
                   fontWeight: FontWeight.normal,
                   decoration: TextDecoration.none,

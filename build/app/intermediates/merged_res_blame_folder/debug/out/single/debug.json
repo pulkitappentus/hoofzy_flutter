@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\hp\\Documents\\GitHub\\hoofzy_flutter\\build\\app\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_notification_icon.png.flat",
-        "source": "C:\\Users\\hp\\Documents\\GitHub\\hoofzy_flutter\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_notification_icon.png"
-    },
-    {
         "merged": "C:\\Users\\hp\\Documents\\GitHub\\hoofzy_flutter\\build\\app\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_adaptive_fore.png.flat",
         "source": "C:\\Users\\hp\\Documents\\GitHub\\hoofzy_flutter\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_adaptive_fore.png"
+    },
+    {
+        "merged": "C:\\Users\\hp\\Documents\\GitHub\\hoofzy_flutter\\build\\app\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_notification_icon.png.flat",
+        "source": "C:\\Users\\hp\\Documents\\GitHub\\hoofzy_flutter\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_notification_icon.png"
     },
     {
         "merged": "C:\\Users\\hp\\Documents\\GitHub\\hoofzy_flutter\\build\\app\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_adaptive_fore.png.flat",

@@ -39,6 +39,9 @@ dependencies:
   flutter_otp_text_field: ^1.1.0+2
   flutter_holo_date_picker: ^1.1.0
 
+  firebase_auth: ^4.2.1
+  google_sign_in: ^5.4.2
+
 dev_dependencies: 
   flutter_lints: 2.0.1
   #flutter_launcher_icons_maker: "^0.10.1"
@@ -90,6 +93,8 @@ flutter:
     - assets/hoofzy/community_icon.png
     - assets/hoofzy/shop_icon.png
     - assets/hoofzy/service_icon.png
+    - assets/hoofzy/male.svg
+    - assets/hoofzy/female.svg
 
     - assets/hoofzy/app_icon.png
     - assets/hoofzy/profile_placeholder.png
@@ -112,6 +117,7 @@ flutter:
     - assets/hoofzy/grey_house_sitting.png
     - assets/hoofzy/them_bording.png
 
+    - assets/hoofzy/background.png
     - assets/hoofzy/facebook.png
     - assets/hoofzy/google.png
     - assets/hoofzy/apple.png

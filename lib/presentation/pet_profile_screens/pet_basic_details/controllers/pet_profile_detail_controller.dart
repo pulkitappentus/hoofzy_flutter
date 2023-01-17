@@ -9,6 +9,12 @@ class PetProfileDetailController extends BaseController {
   var reviewAvailable = false;
   PetProfileDetailController({required FirebaseRepository firebaseRepository}) : _firebaseRepository = firebaseRepository;
 
+  var isDogSelect = false.obs;
+  var isCatSelect = false.obs;
+  var isMaleSelect = false.obs;
+  var isFemaleSelect = false.obs;
+
+
   @override
   void onConnectionChange(ConnectivityResult result) {
 

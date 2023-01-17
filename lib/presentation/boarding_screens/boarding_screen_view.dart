@@ -33,6 +33,10 @@ class BoardingScreenView extends BaseView<BoardingController> {
         centerTitle: true,
       ),
       body: Container(
+        decoration: const BoxDecoration(
+          color: Colors.black,
+          image: DecorationImage(image: AssetImage('assets/hoofzy/background.png'),fit: BoxFit.fill),
+        ),
         child: Stack(children: <Widget>[
           panels,
           Stack(
@@ -55,7 +59,7 @@ class BoardingScreenView extends BaseView<BoardingController> {
 
   nextButton(BuildContext context){
     return Padding(
-      padding: const EdgeInsets.all(40.0),
+      padding: const EdgeInsets.only(left: 60.0,right: 60.0,bottom: 40.0),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children:  [
@@ -65,7 +69,7 @@ class BoardingScreenView extends BaseView<BoardingController> {
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
               color: primaryColor,
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(30),
             ),
             child: Align(
                 alignment: Alignment.center,
@@ -78,43 +82,4 @@ class BoardingScreenView extends BaseView<BoardingController> {
     );
   }
 }
-
-/*Widget circleBar(bool isActive) {
-  return AnimatedContainer(
-    duration: Duration(milliseconds: 150),
-    margin: EdgeInsets.symmetric(horizontal: 8),
-    height: isActive ? 12 : 8,
-    width: isActive ? 12 : 8,
-    decoration: BoxDecoration(
-        color: isActive ? Colors.blue[700] : Colors.grey,
-        borderRadius: BorderRadius.all(Radius.circular(12))),
-  );
-}*/
-
-/*Align(
-alignment: Alignment.bottomCenter,
-child: Container(
-margin: EdgeInsets.only(bottom: 15),
-child: Row(
-mainAxisSize: MainAxisSize.min,
-mainAxisAlignment: MainAxisAlignment.center,
-children: <Widget>[
-for (int i = 0; i < 2; i++)
-(i == currentPage ? circleBar(true) : circleBar(false))
-],
-),
-),
-),*/
-
-/*return PageView(
-children: controller.list,
-scrollDirection: Axis.horizontal,
-pageSnapping: true,
-physics: BouncingScrollPhysics(),
-controller: controller.controller,
-onPageChanged: (num) {
-print("Current page number is " + num.toString());
-controller.curr = num;
-},
-);*/
 
