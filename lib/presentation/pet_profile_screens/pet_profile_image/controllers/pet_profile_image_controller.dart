@@ -12,6 +12,10 @@ class PetProfileImageController extends BaseController {
 
   List<KnowledgeProgramData> knowledgeList = KnowledgeProgramData.knowledgeList;
 
+  //
+  var selectedAvatar = 10.obs;
+  var lastSelectedAvatar = 10.obs;
+
   @override
   void onConnectionChange(ConnectivityResult result) {
 

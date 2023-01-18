@@ -5,10 +5,11 @@ import '../../../../infrastructure/base/base_controller.dart';
 
 class PetAvatarController extends BaseController {
   final FirebaseRepository _firebaseRepository;
-  var tabIndex = 0.obs;
-  var reviewAvailable = false;
+
   PetAvatarController({required FirebaseRepository firebaseRepository}) : _firebaseRepository = firebaseRepository;
 
+  var selectedAvatar = 10.obs;
+  var lastSelectedAvatar = 10.obs;
 
   @override
   void onConnectionChange(ConnectivityResult result) {

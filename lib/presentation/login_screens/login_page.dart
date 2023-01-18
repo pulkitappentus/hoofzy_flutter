@@ -113,7 +113,8 @@ class LoginPage extends BaseView<LoginController> {
                   children: <Widget> [
                     InkWell(
                       onTap: (){
-                        controller.handleGoogleSignIn(context);
+                         controller.handleGoogleSignIn(context);
+
                       },
                       child: Container(
                         height: 62,
@@ -181,7 +182,6 @@ class LoginPage extends BaseView<LoginController> {
       ),
     );
   }
-
 }
 
 /*Container(

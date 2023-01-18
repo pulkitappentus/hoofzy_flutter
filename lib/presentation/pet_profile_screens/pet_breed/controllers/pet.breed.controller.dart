@@ -9,6 +9,14 @@ class PetBreedController extends BaseController {
   var reviewAvailable = false;
   PetBreedController({required FirebaseRepository firebaseRepository}) : _firebaseRepository = firebaseRepository;
 
+  var breedSelected = false.obs;
+
+  var selectedIndex = 0.obs;
+  var lastItemSelectedIndex = 0.obs;
+
+  var selectedOtherIndex = 0.obs;
+  var lastItemSelectedOtherIndex = 0.obs;
+
 
   @override
   void onConnectionChange(ConnectivityResult result) {

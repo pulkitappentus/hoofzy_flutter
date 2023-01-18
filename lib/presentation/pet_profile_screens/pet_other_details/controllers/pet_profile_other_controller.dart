@@ -5,10 +5,19 @@ import '../../../../infrastructure/base/base_controller.dart';
 
 class PetProfileOtherController extends BaseController {
   final FirebaseRepository _firebaseRepository;
-  var tabIndex = 0.obs;
-  var reviewAvailable = false;
+
   PetProfileOtherController({required FirebaseRepository firebaseRepository}) : _firebaseRepository = firebaseRepository;
 
+  var selectedPetSizeIndex = 10.obs;
+  var lastPetSizeSelectedIndex = 10.obs;
+
+  var selectedPetFriendly = 10.obs;
+  var lastSelectedPetFriendly = 10.obs;
+
+  var selectedPetTemp = 10.obs;
+  var lastSelectedPetTemp = 10.obs;
+
+  var isValid = false.obs;
 
   @override
   void onConnectionChange(ConnectivityResult result) {
@@ -18,6 +27,21 @@ class PetProfileOtherController extends BaseController {
   @override
   void onTokenChange(String? result) {
 
+  }
+
+  checkValidation(){
+    if (selectedPetSizeIndex==10){
+      isValid.value = false;
+    }
+    else if(selectedPetFriendly==10){
+      isValid.value = false;
+    }
+    else if(selectedPetTemp==10){
+      isValid.value = false;
+    }
+    else{
+      isValid.value = true;
+    }
   }
 
 

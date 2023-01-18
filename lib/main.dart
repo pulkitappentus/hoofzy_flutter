@@ -16,10 +16,10 @@ Future<void> main() async {
   await Initializer.init();
   final initialRoute = await Routes.initialRoute;
 
-  await Firebase.initializeApp(
+  /*await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
 
-  );
+  );*/
 
   runApp(Main(initialRoute));
 }

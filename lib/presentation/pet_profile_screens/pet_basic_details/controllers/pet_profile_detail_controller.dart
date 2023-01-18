@@ -5,14 +5,18 @@ import '../../../../infrastructure/base/base_controller.dart';
 
 class PetProfileDetailController extends BaseController {
   final FirebaseRepository _firebaseRepository;
-  var tabIndex = 0.obs;
-  var reviewAvailable = false;
+
   PetProfileDetailController({required FirebaseRepository firebaseRepository}) : _firebaseRepository = firebaseRepository;
 
   var isDogSelect = false.obs;
   var isCatSelect = false.obs;
   var isMaleSelect = false.obs;
   var isFemaleSelect = false.obs;
+
+  var isValid = false.obs;
+
+  var selectedSuggestionName = 10.obs;
+  var lastselectedSuggestionName = 10.obs;
 
 
   @override
@@ -24,6 +28,25 @@ class PetProfileDetailController extends BaseController {
   void onTokenChange(String? result) {
 
   }
+
+  checkValidation(){
+    if (!isDogSelect.value){
+      isValid.value = false;
+    }
+    else if(!isCatSelect.value){
+      isValid.value = false;
+    }
+    else if(!isMaleSelect.value){
+      isValid.value = false;
+    }
+    else if(!isFemaleSelect.value){
+      isValid.value = false;
+    }
+    else{
+      isValid.value = true;
+    }
+  }
+
 
 
 }

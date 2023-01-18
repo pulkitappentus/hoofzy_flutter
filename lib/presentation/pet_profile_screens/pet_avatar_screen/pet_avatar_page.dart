@@ -1,10 +1,8 @@
 import 'package:Hoofzy_V2/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 import 'package:sizer/sizer.dart';
 import '../../../infrastructure/base/base_view.dart';
-import '../../../infrastructure/navigation/routes.dart';
 import 'controllers/pet.avatar.controller.dart';
 
 class PetAvatarPage extends BaseView<PetAvatarController> {
@@ -17,7 +15,7 @@ class PetAvatarPage extends BaseView<PetAvatarController> {
         padding: const EdgeInsets.only(bottom: 20),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,//404717
+          crossAxisAlignment: CrossAxisAlignment.start, //404717
           children: [
             Padding(
               padding: const EdgeInsets.only(bottom: 20.0),
@@ -35,7 +33,7 @@ class PetAvatarPage extends BaseView<PetAvatarController> {
                     color: Colors.black,
                   ),
                 ),
-                title: Text('Choose an avatar',style: headlineBlack20,),
+                title: Text('Choose an avatar', style: headlineBlack20,),
               ),
             ),
             Expanded(
@@ -52,25 +50,47 @@ class PetAvatarPage extends BaseView<PetAvatarController> {
                             crossAxisSpacing: 1.sp,
                             childAspectRatio: (80.sp / 80.sp),
                           ),
-                          delegate: SliverChildBuilderDelegate((BuildContext context, int index) {
+                          delegate: SliverChildBuilderDelegate((
+                              BuildContext context, int index) {
                             return InkWell(
-                              onTap: () {},
                               child: Padding(
-                                padding: const EdgeInsets.only(left: 8.0,right: 8.0,top: 8.0,bottom: 8.0,),
-                                child: Container(
-                                  decoration: const BoxDecoration(
-                                    color: avtarBackground,
-                                    shape: BoxShape.circle,
-                                    //border: Border.all(color: Colors.grey,width: 0.3)
-                                  ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(18.0),
-                                    child: ClipRRect(
-                                      child: Image.asset('assets/hoofzy/dog.png',width: 40,height: 44,fit: BoxFit.cover,),
+                                padding: const EdgeInsets.only(left: 8.0,
+                                  right: 8.0,
+                                  top: 8.0,
+                                  bottom: 8.0,),
+                                child: Obx(() =>
+                                   Container(
+                                    decoration: BoxDecoration(
+                                      color: avtarBackground,
+                                      shape: BoxShape.circle,
+                                      border: controller
+                                          .selectedAvatar
+                                          .value == index ? Border
+                                          .all(color: primaryColor,
+                                          width: 1.5) : Border.all(
+                                          color: avtarBackground, width: 1.5),
                                     ),
-                                  ),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(18.0),
+                                      child: ClipRRect(
+                                        child: Image.asset(
+                                          'assets/hoofzy/dog_avatar.png',
+                                          width: 40,
+                                          height: 44,
+                                          fit: BoxFit.cover,),
+                                      ),
+                                    ),
+                                  )
                                 ),
                               ),
+                              onTap: () {
+                                controller.selectedAvatar
+                                    .value = index;
+                                controller.lastSelectedAvatar
+                                    .value =
+                                    controller.selectedAvatar
+                                        .value;
+                              },
                             );
                           }, childCount: 20),
                         )
@@ -90,10 +110,10 @@ class PetAvatarPage extends BaseView<PetAvatarController> {
                         color: greyColor
                     ),
                     child: Align(alignment: Alignment.center,
-                        child:TextButton
+                        child: TextButton
                           (
-                          onPressed: (){},
-                          child: Text('Save',style: textWhiteMedium15,),)
+                          onPressed: () {},
+                          child: Text('Save', style: textWhiteMedium15,),)
                     )
                 ),
               ),

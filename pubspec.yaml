@@ -93,8 +93,14 @@ flutter:
     - assets/hoofzy/community_icon.png
     - assets/hoofzy/shop_icon.png
     - assets/hoofzy/service_icon.png
-    - assets/hoofzy/male.svg
-    - assets/hoofzy/female.svg
+    - assets/hoofzy/white_male.png
+    - assets/hoofzy/white_female.png
+    - assets/hoofzy/grey_male.png
+    - assets/hoofzy/grey_female.png
+    - assets/hoofzy/white_dog.png
+    - assets/hoofzy/white_cat.png
+    - assets/hoofzy/grey_dog.png
+    - assets/hoofzy/grey_cat.png
 
     - assets/hoofzy/app_icon.png
     - assets/hoofzy/profile_placeholder.png
@@ -110,6 +116,7 @@ flutter:
     - assets/hoofzy/emoji.png
     - assets/hoofzy/setup_profile_img.png
 
+    - assets/hoofzy/dog_avatar.png
     - assets/hoofzy/grey_bording.png
     - assets/hoofzy/grey_doggy.png
     - assets/hoofzy/grey_dogwalking.png

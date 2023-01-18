@@ -11,17 +11,26 @@ class PetOtherBreedPage extends BaseView<PetBreedController> {
 
   @override
   Widget body(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: Padding(
+    return Container(
+      width: double.infinity,
+      height: double.infinity,
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+            colors: [Color(0xFFFFFBF6), Color(0xFFFFFFFF)],
+            stops: [0.0, 1.0],
+            begin: FractionalOffset.topCenter,
+            end: FractionalOffset.bottomCenter,
+            tileMode: TileMode.repeated),
+      ),
+      child: Padding(
         padding: const EdgeInsets.only(bottom: 20),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,//404717
+          crossAxisAlignment: CrossAxisAlignment.start, //404717
           children: [
             AppBar(
               toolbarHeight: 56,
-              backgroundColor: Colors.white,
+              backgroundColor: Color(0xFFFFFBF6),
               elevation: 0,
               centerTitle: true,
               leading: InkWell(
@@ -33,22 +42,23 @@ class PetOtherBreedPage extends BaseView<PetBreedController> {
                   color: Colors.black,
                 ),
               ),
-              title: Text('All Pet breed',style: headlineBlack20,),
+              title: Text('All Pet breed', style: headlineBlack20,),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 16.0,right: 16.0,top: 16.0,bottom: 20.0),
+              padding: const EdgeInsets.only(
+                  left: 16.0, right: 16.0, top: 16.0, bottom: 20.0),
               child: Container(
                 width: double.infinity,
                 height: 44,
                 decoration: BoxDecoration(
-                  border: Border.all(width: 1,color: greyColor),
-                  borderRadius: BorderRadius.all(Radius.circular(22))
+                    border: Border.all(width: 1, color: greyColor),
+                    borderRadius: BorderRadius.all(Radius.circular(22))
                 ),
                 child: Padding(
                   padding: const EdgeInsets.only(left: 15.0),
                   child: Row(
                     children: const [
-                      Icon(Icons.search,color: Colors.black,size: 30,),
+                      Icon(Icons.search, color: Colors.black, size: 30,),
                       Padding(
                         padding: EdgeInsets.only(left: 8.0),
                         child: Text('Search Breed', style: textgreyLight14,),
@@ -75,17 +85,30 @@ class PetOtherBreedPage extends BaseView<PetBreedController> {
                                   //height: 80,
                                   //alignment: Alignment.center,
                                   child: Padding(
-                                    padding: const EdgeInsets.only(left: 8.0,right: 8.0,top: 4.0,bottom: 4.0),
-                                    child: Row(
-                                      children: [
-                                        Image.asset('assets/hoofzy/unchecked.png',height: 30,width: 30,),
-                                        const Padding(
-                                          padding: const EdgeInsets.only(left: 10.0),
-                                          child: Text('American Staffordshire terrier',style: textBlackLight15,),
-                                        )
-                                      ],
-
-                                    ),
+                                    padding: const EdgeInsets.only(left: 8.0,
+                                        right: 8.0,
+                                        top: 4.0,
+                                        bottom: 4.0),
+                                    child: Obx(() {
+                                      return InkWell(
+                                          child: Row(
+                                            children: [
+                                              controller.selectedOtherIndex.value == index
+                                                  ? updateIcon('assets/hoofzy/checked.png') : updateIcon('assets/hoofzy/unchecked.png'),
+                                              const Padding(
+                                                padding: const EdgeInsets.only(left: 10.0),
+                                                child: Text(
+                                                  'American Staffordshire terrier',
+                                                  style: textBlackLight15,),
+                                              )
+                                            ],
+                                          ),
+                                          onTap: () {
+                                            controller.selectedOtherIndex.value = index;
+                                            controller.lastItemSelectedOtherIndex.value = controller.selectedOtherIndex.value;
+                                          }
+                                      );
+                                    }),
                                   ),
                                 ),
                               );
@@ -101,7 +124,7 @@ class PetOtherBreedPage extends BaseView<PetBreedController> {
 
             Column(
               children: [
-                Divider(color: greyColor,thickness: 0.5,),
+                Divider(color: greyColor, thickness: 0.5,),
                 Padding(
                   padding: const EdgeInsets.only(top: 8.0),
                   child: Align(
@@ -114,12 +137,12 @@ class PetOtherBreedPage extends BaseView<PetBreedController> {
                             color: greyColor
                         ),
                         child: Align(alignment: Alignment.center,
-                            child:TextButton
+                            child: TextButton
                               (
-                              onPressed: (){
+                              onPressed: () {
                                 Get.toNamed(Routes.petOtherDetails);
                               },
-                              child: Text('Save',style: textWhiteMedium15,),)
+                              child: Text('Save', style: textWhiteMedium15,),)
                         )
                     ),
                   ),
@@ -133,7 +156,9 @@ class PetOtherBreedPage extends BaseView<PetBreedController> {
   }
 }
 
-
+Widget updateIcon(String image) {
+  return Image.asset(image, width: 30, height: 30, fit: BoxFit.fill,);
+}
 
 
 
