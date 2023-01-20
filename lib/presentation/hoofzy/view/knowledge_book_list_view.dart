@@ -1,3 +1,4 @@
+import 'package:Hoofzy_V2/constants.dart';
 import 'package:flutter/material.dart';
 
 import '../model/knowledge_program_data.dart';
@@ -47,7 +48,7 @@ class KnowledgeBookListView extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Text(knowledgeList!.title),
+                    child: Text(knowledgeList!.title,style: textBlackMedium_14,),
                   )
                 ],
               ),

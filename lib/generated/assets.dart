@@ -26,7 +26,10 @@ class Assets {
   static const String hoofzyDog = 'assets/hoofzy/dog.png';
   static const String hoofzyDogAvatar = 'assets/hoofzy/dog_avatar.png';
   static const String hoofzyDogQuiz = 'assets/hoofzy/dog_quiz.png';
+  static const String hoofzyDogWalking = 'assets/hoofzy/dog_walking.png';
   static const String hoofzyDogWalkingService = 'assets/hoofzy/dog_walking_service.png';
+  static const String hoofzyDoggyCare = 'assets/hoofzy/doggy_care.png';
+  static const String hoofzyDropVisit = 'assets/hoofzy/drop_visit.png';
   static const String hoofzyEmoji = 'assets/hoofzy/emoji.png';
   static const String hoofzyEveryDawg = 'assets/hoofzy/every_dawg.png';
   static const String hoofzyFacebook = 'assets/hoofzy/facebook.png';
@@ -42,8 +45,10 @@ class Assets {
   static const String hoofzyGreyHouseSitting = 'assets/hoofzy/grey_house_sitting.png';
   static const String hoofzyGreyMale = 'assets/hoofzy/grey_male.png';
   static const String hoofzyGrooming = 'assets/hoofzy/grooming.png';
+  static const String hoofzyHomeBackTitle = 'assets/hoofzy/home_back_title.png';
   static const String hoofzyHomeIcon = 'assets/hoofzy/home_icon.png';
   static const String hoofzyHot = 'assets/hoofzy/hot.png';
+  static const String hoofzyHouseSitting = 'assets/hoofzy/house_sitting.png';
   static const String hoofzyIAmPro = 'assets/hoofzy/i_am_pro.png';
   static const String hoofzyLegalCare = 'assets/hoofzy/legal_care.png';
   static const String hoofzyLike = 'assets/hoofzy/like.png';
@@ -86,6 +91,7 @@ class Assets {
   static const String imagesIcLogo = 'assets/images/ic_logo.png';
   static const String imagesIronMan = 'assets/images/iron-man.png';
   static const String imagesThor = 'assets/images/thor.png';
+  static const String lottieCreatePetProfile = 'assets/lottie/create_pet_profile.json';
   static const String lottieCuteDoggie = 'assets/lottie/cute_doggie.json';
   static const String lottieHang = 'assets/lottie/hang.json';
   static const String lottieSuperSaleHang = 'assets/lottie/super_sale_hang.json';

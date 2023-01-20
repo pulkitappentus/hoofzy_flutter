@@ -431,8 +431,7 @@ void _petNameSuggestionBottomSheet(context,
 
               ),
               const Padding(
-                padding: const EdgeInsets.only(
-                    top: 10.0, left: 16.0, bottom: 20),
+                padding: const EdgeInsets.only(top: 10.0, left: 16.0, bottom: 20),
                 child: Align(alignment: Alignment.topLeft,
                     child: Text(
                       'We Suggest some pet name', style: headlineBlack20,)),

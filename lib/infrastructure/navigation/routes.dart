@@ -47,4 +47,12 @@ class Routes {
   static const petBreed = '/pet_profile_screens/pet_breed';
   static const petOtherBreed = '/pet_profile_screens/pet_other_breed';
   static const petAvatar = '/pet_profile_screens/pet_avatar_screen';
+  static const petAnalyze = '/pet_profile_screens/pet_analyze_screen';
+
+  static const servicesIntro = '/user_app/boarding_screens/services_intro_screen';
+  static const serviceBookingPage1 = '/user_app/boarding_screens/services_booking_screen1';
+  static const serviceBookingPage2 = '/user_app/boarding_screens/services_booking_screen2';
+  static const serviceBookingPage3 = '/user_app/boarding_screens/services_booking_screen3';
+  static const sortAndFilter = '/user_app/boarding_screens/sort_filter_screen';
+  static const userPets = '/user_app/pet_screens';
 }

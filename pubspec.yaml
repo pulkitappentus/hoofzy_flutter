@@ -139,10 +139,16 @@ flutter:
     - assets/hoofzy/authro.png
     - assets/hoofzy/profile_review.png
     - assets/hoofzy/submit_pp.png
+    - assets/hoofzy/home_back_title.png
+    - assets/hoofzy/house_sitting.png
+    - assets/hoofzy/drop_visit.png
+    - assets/hoofzy/doggy_care.png
+    - assets/hoofzy/dog_walking.png
 
     - assets/lottie/cute_doggie.json
     - assets/lottie/super_sale_hang.json
     - assets/lottie/hang.json
+    - assets/lottie/create_pet_profile.json
   fonts:
     - family: SF Pro Display
       fonts:

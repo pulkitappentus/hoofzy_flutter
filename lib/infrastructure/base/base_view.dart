@@ -44,7 +44,7 @@ abstract class BaseView<Controller extends BaseController> extends GetView<Contr
     );
   }
 
-  Brightness statusBarBrightness() => Brightness.light;
+  Brightness statusBarBrightness() => Brightness.dark;
 
   Widget pageScaffold(BuildContext context) {
     return Scaffold(
@@ -69,7 +69,7 @@ abstract class BaseView<Controller extends BaseController> extends GetView<Contr
   Color pageBackgroundColor() => ColorsTheme.primary;
 
   //changed color transparent to
-  Color statusBarColor() => Color(0xFF121212);
+  Color statusBarColor() => Color(0xFFFFEADF);
 
   Widget? bottomNavigationBar() {
     return null;

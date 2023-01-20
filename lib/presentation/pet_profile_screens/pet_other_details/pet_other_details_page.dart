@@ -92,8 +92,7 @@ class PetOtherDetailsPage extends BaseView<PetProfileOtherController> {
                                                       height: 24, width: 24,),
                                                   ),
                                                   const Padding(
-                                                    padding: const EdgeInsets
-                                                        .only(left: 10.0),
+                                                    padding: const EdgeInsets.only(left: 10.0),
                                                     child: Text(
                                                       'Small dog (0-10 kg)',
                                                       style: textBlackLight15,),
@@ -167,8 +166,7 @@ class PetOtherDetailsPage extends BaseView<PetProfileOtherController> {
                                                       width: 1) : Border.all(
                                                       color: greyColor,
                                                       width: 1),
-                                                  borderRadius: BorderRadius
-                                                      .all(Radius.circular(30))
+                                                  borderRadius: BorderRadius.all(Radius.circular(30))
                                               ),
                                               child: Align(
                                                 alignment: Alignment.center,

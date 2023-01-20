@@ -1,12 +1,15 @@
 import 'dart:ui';
-
+import 'package:Hoofzy_V2/constants.dart';
 import 'package:Hoofzy_V2/presentation/hoofzy/view/popular_service_view.dart';
 import 'package:Hoofzy_V2/presentation/hoofzy/model/popular_service_data.dart';
 import 'package:Hoofzy_V2/presentation/hoofzy/model/training_program_data.dart';
 import 'package:Hoofzy_V2/presentation/hoofzy/view/training_program_view.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:lottie/lottie.dart';
 import 'package:sizer/sizer.dart';
+import '../../../infrastructure/navigation/routes.dart';
 import '../../hoofzy/model/best_selling_product_data.dart';
 import '../../hoofzy/view/best_selling_view.dart';
 import '../../hoofzy/view/knowledge_book_list_view.dart';
@@ -56,7 +59,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
 
     return  Scaffold(
-      backgroundColor: Colors.transparent,
+      backgroundColor: Colors.white,
       body: Column(
         children: <Widget>[
           SizedBox(
@@ -69,6 +72,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
                   welcomeHeading(),
+                  havePet(),
                   upcomingScheduleHeading("Services that we recommend"),
                   SizedBox(
                     height: 200.sp,
@@ -169,6 +173,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                     ),
                   ),
                   articalCard(context),
+                  becomeSitter(),
                   trendingCommunityHeading("Best selling products"),
                   SizedBox(
                     height: 200.sp,
@@ -199,7 +204,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                       },
                     ),
                   ),
-                  trendingCommunityHeading("Trending Community"),
+                  /*trendingCommunityHeading("Trending Community"),
                   SizedBox(
                     height: 200.sp,
                     child: ListView.builder(
@@ -228,7 +233,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                         );
                       },
                     ),
-                  ),
+                  ),*/
                 ],
               ),
             ),
@@ -241,7 +246,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
 
 Widget supperSaleOfferCard(BuildContext context) {
   return Padding(
-    padding: const EdgeInsets.only(top: 2),
+    padding: const EdgeInsets.only(top: 24),
     child: Container(
       height: 162,
       width: MediaQuery.of(context).size.width,
@@ -264,12 +269,12 @@ Widget supperSaleOfferCard(BuildContext context) {
 
 Widget articalCard(BuildContext context) {
   return Padding(
-    padding: const EdgeInsets.only(left:14,right:14,top: 8,bottom: 4),
+    padding: const EdgeInsets.only(top:8,left:14,right:14,bottom: 4),
     child: Container(
       height: 130,
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
-        color: Color(0xFF202020),
+        color: Color(0xFFFFF8F0),
           borderRadius: BorderRadius.circular(16),
       ),
       child: Row(
@@ -293,14 +298,19 @@ Widget articalCard(BuildContext context) {
   );
 }
 
-Widget welcomeHeading() {
+Widget havePet() {
   return Container(
-    decoration: BoxDecoration(
-      color: Color(0xFF121212),
-      borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20.0),bottomRight: Radius.circular(20.0))
+    margin: EdgeInsets.only(top: 16.0,left: 16.0,right: 16.0),
+    decoration: const BoxDecoration(
+        gradient: LinearGradient(colors: [Color(0xFFFFE9DE), Color(0xFFFF9253)],
+            stops: [0.0, 1.0],
+            begin: FractionalOffset.topCenter,
+            end: FractionalOffset.bottomCenter,
+            tileMode: TileMode.repeated),
+        borderRadius: BorderRadius.all(Radius.circular(22))
     ),
     child: Padding(
-      padding: const EdgeInsets.only(left: 20,bottom: 16),
+      padding: const EdgeInsets.only(left: 16,bottom: 16),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
@@ -308,24 +318,152 @@ Widget welcomeHeading() {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children:  [
-              welcomWithUserName(),
+              //welcomWithUserName(),
               const Padding(
-                padding: EdgeInsets.only(top: 20.0,bottom: 10),
-                child: Text('The Fun Place', style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 24,
-                      color: Color(0xFFFFFFFF)),),
+                padding: EdgeInsets.only(top: 10.0,bottom: 10),
+                child: Text('Do you have a pet?', style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Color(0xFF000000)),),
               ),
-              const Text('for your pet "Mecca"', style: TextStyle(
-                    fontWeight: FontWeight.w300,
-                    fontSize: 14,
-                    color: Color(0xFFFFFFFF)),),
-              playButton()
+              const Text('Creating a pet profile, training your pet, playing games, and exploring other services are all easy to do.', style: TextStyle(
+                  fontWeight: FontWeight.w400,
+                  fontSize: 14,
+                  color: Color(0xFF000000)),),
+              createProfileButton('Create a Pet Profile',primaryColor)
             ],
           )
           ),
-          Lottie.asset('assets/lottie/cute_doggie.json',width: 200,height: 140,fit: BoxFit.fill),
-        /*  Image.asset('assets/hoofzy/welcome_pet.png',width: 180,height: 160,)*/
+          Padding(
+            padding: const EdgeInsets.only(right: 10.0),
+            child: Expanded(child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children:  <Widget>[
+                Image.asset('assets/hoofzy/dog.png',width: 86,height: 110,fit: BoxFit.fill),
+                const Padding(
+                  padding: EdgeInsets.only(top: 34.0),
+                  child: Text('I don`t have a pet', style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      fontSize: 15,
+                      color: Color(0xFF000000)),),
+                ),
+              ],
+            )
+            ),
+          ),
+        ],
+      )
+    ),
+  );
+}
+
+Widget becomeSitter() {
+  return Container(
+    margin: EdgeInsets.only(top: 16.0,left: 16.0,right: 16.0),
+    decoration: const BoxDecoration(
+        gradient: LinearGradient(colors: [Color(0xFFFFF3D8), Color(0xFFFEC238)],
+            stops: [0.0, 1.0],
+            begin: FractionalOffset.topCenter,
+            end: FractionalOffset.bottomCenter,
+            tileMode: TileMode.repeated),
+        borderRadius: BorderRadius.all(Radius.circular(22))
+    ),
+    child: Padding(
+      padding: const EdgeInsets.only(left: 16,bottom: 16),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          Expanded(child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children:  [
+              //welcomWithUserName(),
+              const Padding(
+                padding: EdgeInsets.only(top: 10.0,bottom: 10),
+                child: Text('Become a sitter?', style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Color(0xFF000000)),),
+              ),
+              const Text('Creating a sitter profile allows you to set your rates, availability, photos, and personal information.', style: TextStyle(
+                  fontWeight: FontWeight.w400,
+                  fontSize: 14,
+                  height: 1.8,
+                  color: Color(0xFF000000)),),
+              createProfileButton('Create a Sitter Profile',primaryColorSitter)
+            ],
+          )
+          ),
+          Padding(
+            padding: const EdgeInsets.only(right: 10.0),
+            child: Expanded(child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children:  <Widget>[
+                Image.asset('assets/hoofzy/dog.png',width: 86,height: 110,fit: BoxFit.fill),
+              ],
+            )
+            ),
+          ),
+        ],
+      )
+    ),
+  );
+}
+
+Widget welcomeHeading() {
+  return Container(
+    decoration: const BoxDecoration(
+        image: DecorationImage(image: AssetImage('assets/hoofzy/home_back_title.png'),fit: BoxFit.fill)
+    ),
+    child: Padding(
+      padding: const EdgeInsets.only(left: 20,bottom: 16),
+      child: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(top: 10.0,right: 22,bottom: 10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(children: [
+                  Image.asset('assets/hoofzy/profile.png',width: 42,height: 42,fit: BoxFit.fill),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10.0),
+                    child: welcomWithUserName(),
+                  ),
+                ],),
+                Image.asset('assets/hoofzy/notification.png',width: 24,height: 28,fit: BoxFit.fill,color: Colors.black,)
+              ],
+            ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Expanded(child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children:  [
+                  //welcomWithUserName(),
+                  const Padding(
+                    padding: EdgeInsets.only(top: 10.0,bottom: 10),
+                    child: Text('Add Your Pet', style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 24,
+                        color: Color(0xFF000000)),),
+                  ),
+                  const Text('Add pet to explore all services', style: TextStyle(
+                      fontWeight: FontWeight.w400,
+                      fontSize: 14,
+                      color: Color(0xFF000000)),),
+                  addPetButton()
+                ],
+              )
+              ),
+              Lottie.asset('assets/lottie/cute_doggie.json',width: 200,height: 140,fit: BoxFit.fill),
+              /*  Image.asset('assets/hoofzy/welcome_pet.png',width: 180,height: 160,)*/
+            ],
+          )
         ],
       )
     ),
@@ -343,7 +481,7 @@ Widget articalDetails() {
           child: Text('What walkies says about your \nrelationship with your dog?', style: TextStyle(
               fontWeight: FontWeight.w500,
               fontSize: 14,
-              color: Color(0xFFFFFFFF)),),
+              color: Color(0xFF000000)),),
         ),
         const Padding(
           padding: EdgeInsets.only(top: 10.0),
@@ -351,8 +489,7 @@ Widget articalDetails() {
             style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 13,
-              color: Color(0xFFFFFFFF)),
-
+              color: Color(0xFF000000)),
           ),
         ),
         one()
@@ -373,7 +510,7 @@ Widget one() {
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 13,
-                color: Color(0xFFFFFFFF)),
+                color: Color(0xFF000000)),
           ),
         ),
       ],
@@ -381,27 +518,28 @@ Widget one() {
   );
 }
 
-Widget playButton() {
+Widget addPetButton() {
   return Padding(
     padding: const EdgeInsets.only(top: 20),
     child: Container(
+      width: 116,
+      height: 36,
       decoration: BoxDecoration(
-        color: Color(0xFF202020),
-        borderRadius: BorderRadius.circular(22),
-        border: Border.all(color: Color(0xFF303030),width: 1)
+        color: primaryColor,
+        borderRadius: BorderRadius.circular(30),
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           const Padding(
             padding: const EdgeInsets.only(left: 18.0,right: 2),
-            child: Text('Play Now', style: TextStyle(
+            child: Text('Add Pet', style: TextStyle(
                 fontWeight: FontWeight.normal,
                 fontSize: 13,
                 color: Color(0xFFFFFFFF)),),
           ),
           IconButton(
-            icon: const Icon(Icons.arrow_forward),
+            icon: const Icon(Icons.arrow_forward,color: Colors.white,),
             onPressed: () {},
           )
         ],
@@ -410,23 +548,67 @@ Widget playButton() {
   );
 }
 
-Widget welcomWithUserName() {
-  return Row(
-    mainAxisAlignment: MainAxisAlignment.start,
-    children: const [
-      Text('Welcome, ', style: TextStyle(
-          fontWeight: FontWeight.w300,
-          fontSize: 18,
-          color: Color(0xFFFFFFFF)),),
-      Text('Milena', style: TextStyle(
-          fontWeight: FontWeight.w800,
-          fontSize: 18,
-          color: Color(0xFFFFFFFF)),),
-    ],
+Widget createProfileButton(String s, Color color) {
+  return Padding(
+    padding: const EdgeInsets.only(top: 20),
+    child: Container(
+      width: 196,
+      height: 44,
+      decoration: BoxDecoration(
+        color: color,
+        borderRadius: BorderRadius.circular(30),
+      ),
+      child: InkWell(
+        onTap: (){
+          Get.toNamed(Routes.servicesIntro);
+        },
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.only(left: 18.0,right: 2),
+              child: Text(s, style: TextStyle(
+                  fontWeight: FontWeight.normal,
+                  fontSize: 13,
+                  color: Color(0xFFFFFFFF)),),
+            ),
+            IconButton(
+              icon: const Icon(Icons.arrow_forward,color: Colors.white,),
+              onPressed: () {},
+            )
+          ],
+        ),
+      ),
+    ),
   );
 }
 
+Widget welcomWithUserName() {
+  return const Text('Hello, Guest', style: TextStyle(
+      fontWeight: FontWeight.w400,
+      fontSize: 20,
+      color: Color(0xFF000000)),);
+}
+
 Widget upcomingScheduleHeading(String arg1) {
+  return Padding(
+    padding: const EdgeInsets.only(left: 20,right: 20,top: 30,bottom: 12),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: <Widget>[
+        Text(arg1,
+          style: const TextStyle(
+              fontWeight: FontWeight.w600,
+              fontSize: 18,
+              color: Color(0xFF000000)
+          ),
+        ),
+      ],
+    )
+  );
+}
+
+Widget articalsHeading(String arg1) {
   return Padding(
     padding: const EdgeInsets.only(left: 20,right: 20,top: 20,bottom: 16),
     child: Row(
@@ -434,26 +616,9 @@ Widget upcomingScheduleHeading(String arg1) {
       children: <Widget>[
         Text(arg1,
           style: const TextStyle(
-              fontWeight: FontWeight.w400,
+              fontWeight: FontWeight.w600,
               fontSize: 18,
-              color: Color(0xFFFFFFFF)
-          ),
-        ),
-      ],
-    )
-  );
-}
-Widget articalsHeading(String arg1) {
-  return Padding(
-    padding: const EdgeInsets.only(left: 20,right: 20,top: 10,bottom: 16),
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: <Widget>[
-        Text(arg1,
-          style: const TextStyle(
-              fontWeight: FontWeight.w400,
-              fontSize: 18,
-              color: Color(0xFFFFFFFF)
+              color: Color(0xFF000000)
           ),
         ),
       ],
@@ -463,15 +628,15 @@ Widget articalsHeading(String arg1) {
 
 Widget trendingCommunityHeading(String arg1) {
   return Padding(
-    padding: const EdgeInsets.only(left: 20,right: 20,top: 16,bottom: 16),
+    padding: const EdgeInsets.only(left: 20,right: 20,top: 26,bottom: 12),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
         Text(arg1,
           style: const TextStyle(
-              fontWeight: FontWeight.w400,
+              fontWeight: FontWeight.w600,
               fontSize: 18,
-              color: Color(0xFFFFFFFF)
+              color: Color(0xFF000000)
           ),
         ),
         seeAllButton()
@@ -482,25 +647,17 @@ Widget trendingCommunityHeading(String arg1) {
 
 Widget seeAllButton() {
   return Container(
-    decoration: BoxDecoration(
-        color: Color(0xFF000000),
-        borderRadius: BorderRadius.circular(22),
-        border: Border.all(color: Colors.white,width: 1)
-    ),
     child: Row(
       mainAxisSize: MainAxisSize.min,
-      children: <Widget>[
-        const Padding(
-          padding: const EdgeInsets.only(left: 18.0,right: 2),
-          child: Text('See All', style: TextStyle(
-              fontWeight: FontWeight.w400,
-              fontSize: 14,
-              color: Color(0xFFFFFFFF)),),
+      children: const [
+        Text('See All', style: TextStyle(
+            fontWeight: FontWeight.w400,
+            fontSize: 14,
+            color: Color(0xFF000000)),),
+        Padding(
+          padding: EdgeInsets.only(left: 4.0),
+          child: Icon(Icons.arrow_forward_ios_sharp,color: Colors.black,size: 15,),
         ),
-        IconButton(
-          icon: const Icon(Icons.arrow_forward_ios_sharp),
-          onPressed: () {},
-        )
       ],
     ),
   );

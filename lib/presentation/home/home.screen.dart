@@ -22,8 +22,11 @@ class HomeScreen extends BaseView<HomeController> {
         mainAxisAlignment: MainAxisAlignment.start,
         mainAxisSize: MainAxisSize.max,
         children: [
-          Container(
-            color: Color(0xFF121212),
+          /*Container(
+            decoration: const BoxDecoration(
+              color: Color(0xFFFFEADF),
+              //image: DecorationImage(image: AssetImage('assets/hoofzy/home_back_title.png'),fit: BoxFit.fill)
+            ),
             child: Padding(
               padding: EdgeInsets.all(15.sp),
               //Obx(()), =>
@@ -42,17 +45,10 @@ class HomeScreen extends BaseView<HomeController> {
                         child: Image.asset('assets/hoofzy/notification.png',width: 18,height: 20,fit: BoxFit.fill),
                       )
                   ),
-                  /*Text(controller.labels[controller.tabIndex.value],
-                      style: TextStyle(
-                        color: ColorsTheme.primary,
-                        fontSize: 40,
-                        height: 0.50,
-                      )
-                    ),*/
                 ],
               )
             ),
-          ),
+          ),*/
           Expanded(
               child: Obx(() => IndexedStack(
                     index: controller.tabIndex.value,

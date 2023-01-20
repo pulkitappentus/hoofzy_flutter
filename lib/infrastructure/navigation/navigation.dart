@@ -9,6 +9,7 @@ import '../../presentation/boarding_screens/boarding_screen_view.dart';
 import '../../presentation/cancellation_policy/cancel_policy_page.dart';
 import '../../presentation/login_screens/login_page.dart';
 import '../../presentation/pet_preferences/pet_preferences_page.dart';
+import '../../presentation/pet_profile_screens/pet_analyze_screen/pet_analyze_page.dart';
 import '../../presentation/pet_profile_screens/pet_avatar_screen/pet_avatar_page.dart';
 import '../../presentation/pet_profile_screens/pet_basic_details/pet_basic_details_page.dart';
 import '../../presentation/pet_profile_screens/pet_breed/pet_breed_page.dart';
@@ -29,6 +30,12 @@ import '../../presentation/sitter_build_trust_screens/sitter_profile/profile_det
 import '../../presentation/sitter_build_trust_screens/sitter_profile/profile_details/your_pets/your_pets_page.dart';
 import '../../presentation/sitter_profile_screen/sitter_profile_page2.dart';
 import '../../presentation/sitter_service_setting/service_setting_page.dart';
+import '../../presentation/user_app/boarding_screens/services_booking_screen1/services_booking_page1.dart';
+import '../../presentation/user_app/boarding_screens/services_booking_screen2/services_booking_page2.dart';
+import '../../presentation/user_app/boarding_screens/services_booking_screen3/services_booking_page3.dart';
+import '../../presentation/user_app/boarding_screens/services_intro_screen/services_intro_page.dart';
+import '../../presentation/user_app/boarding_screens/sort_filter_screen/sort_filter_page.dart';
+import '../../presentation/user_app/pets_screens/pet_page.dart';
 import 'bindings/controllers/SetupProfileControllerBinding.dart';
 import 'bindings/controllers/SitterProfileControllerBinding.dart';
 import 'bindings/controllers/abouthome.controllerBinding.dart';
@@ -41,8 +48,10 @@ import 'bindings/controllers/date.of.birth.controllerBinding.dart';
 import 'bindings/controllers/details.controllerBinding.dart';
 import 'bindings/controllers/final.details.controllerBinding.dart';
 import 'bindings/controllers/login.controller.binding.dart';
+import 'bindings/controllers/pet.analyze.controllerBinding.dart';
 import 'bindings/controllers/pet.avatar.controllerBinding.dart';
 import 'bindings/controllers/pet.breed.controllerBinding.dart';
+import 'bindings/controllers/pet.controllerBinding.dart';
 import 'bindings/controllers/pet.profile.detail.controllerBinding.dart';
 import 'bindings/controllers/pet.profile.image.controllerBinding.dart';
 import 'bindings/controllers/pet.profile.other.controllerBinding.dart';
@@ -53,6 +62,9 @@ import 'bindings/controllers/rate.controllerBinding.dart';
 import 'bindings/controllers/request.testimonials.controllerBinding.dart';
 import 'bindings/controllers/safety.quiz.controllerBinding.dart';
 import 'bindings/controllers/service.setting.controllerBinding.dart';
+import 'bindings/controllers/services.booking.controllerBinding.dart';
+import 'bindings/controllers/services.intro.controllerBinding.dart';
+import 'bindings/controllers/sort.filter.controllerBinding.dart';
 import 'bindings/controllers/your.pets.controllerBinding.dart';
 import 'routes.dart';
 
@@ -213,6 +225,41 @@ class Nav {
       name: Routes.petAvatar,
       page: () => PetAvatarPage(),
       binding: PetAvatarControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.petAnalyze,
+      page: () => PetAnalyzePage(),
+      binding: PetAnalyzeControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.servicesIntro,
+      page: () => ServicesIntroPage(),
+      binding: ServicesIntroControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.serviceBookingPage1,
+      page: () => ServicesBookingPage1(),
+      binding: ServicesBookingControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.serviceBookingPage2,
+      page: () => ServicesBookingPage2(),
+      binding: ServicesBookingControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.serviceBookingPage3,
+      page: () => ServicesBookingPage3(),
+      binding: ServicesBookingControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.userPets,
+      page: () => PetsPage(),
+      binding: PetControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.sortAndFilter,
+      page: () => SortFilterPage(),
+      binding: SortFilterControllerBinding(),
     ),
   ];
 }

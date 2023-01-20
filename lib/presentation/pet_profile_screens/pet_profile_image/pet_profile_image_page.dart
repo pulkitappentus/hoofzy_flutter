@@ -209,7 +209,9 @@ class PetProfileImagePage extends BaseView<PetProfileImageController> {
                         child: Align(alignment: Alignment.center,
                             child: TextButton
                               (
-                              onPressed: () {},
+                              onPressed: () {
+                                Get.toNamed(Routes.petAnalyze);
+                              },
                               child: Text(
                                 'Save & Continue', style: textWhiteMedium15,),)
                         )
