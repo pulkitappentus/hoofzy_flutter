@@ -138,7 +138,7 @@ class ServicesIntroPage extends BaseView<HomeController> {
                             child:TextButton
                               (
                               onPressed: (){
-                                Get.toNamed(Routes.serviceBookingPage1);
+                                _trustInfoBottomSheet(context);
                               },
                               child: Text('Book a Sitter Now',style: textWhiteMedium15,),)
                         )
@@ -153,8 +153,107 @@ class ServicesIntroPage extends BaseView<HomeController> {
       ),
     );
   }
-
 }
+
+void _trustInfoBottomSheet(context) {
+  showModalBottomSheet(
+      context: context,
+      builder: (BuildContext bc) {
+        return Scaffold(
+          backgroundColor: Colors.white,
+          body: Column(
+            children: <Widget>[
+              Container(
+                width: double.infinity,
+                height: 6,
+                decoration: const BoxDecoration(
+                    color: lightThemeColor,
+                    borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(30),
+                        topLeft: Radius.circular(30))
+
+                ),
+
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left:20,top: 20.0,right: 16),
+                child: Align(alignment:Alignment.topLeft,
+                    child: Image.asset('assets/hoofzy/boarding_heart.png',width: 58,height: 65,fit: BoxFit.fill,)),
+              ),
+              const Padding(
+                padding: const EdgeInsets.only(top: 20.0, left: 16.0, bottom: 20),
+                child: Align(alignment: Alignment.topLeft,
+                    child: Text(
+                      'Book with pet sitters you can trust', style: headlineBlack20,)),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 16.0),
+                child: Row(
+                  children: [
+                    Image.asset('assets/hoofzy/checked.png',width: 24,height: 24,fit: BoxFit.fill,),
+                    const Padding(
+                      padding: EdgeInsets.only(left: 10.0),
+                      child: Text('All sitters pass a background check.', style: textBlackLight15,),
+                    )
+                  ],
+
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 16.0,top: 20),
+                child: Row(
+                  children: [
+                    Image.asset('assets/hoofzy/checked.png',width: 24,height: 24,fit: BoxFit.fill,),
+                    const Padding(
+                      padding: EdgeInsets.only(left: 10.0),
+                      child: Text('All sitters provide a detailed profile and \npersonal information.', style: textBlackLight15,),
+                    )
+                  ],
+
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 16.0,top: 20),
+                child: Row(
+                  children: [
+                    Image.asset('assets/hoofzy/checked.png',width: 24,height: 24,fit: BoxFit.fill,),
+                    const Padding(
+                      padding: EdgeInsets.only(left: 10.0),
+                      child: Text('All sitters are approved by our team of sitter \nspecialists.', style: textBlackLight15,),
+                    )
+                  ],
+
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 40.0),
+                child: Align(
+                  alignment: Alignment.center,
+                  child: Container(
+                      height: 56,
+                      width: 260,
+                      decoration: const BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(30)),
+                          color: primaryColor
+                      ),
+                      child: Align(alignment: Alignment.center,
+                          child: TextButton
+                            (
+                            onPressed: () {
+                              Get.toNamed(Routes.serviceBookingPage1);
+                            },
+                            child: Text('Book a Sitter Now', style: textWhiteMedium15,),)
+                      )
+                  ),
+                ),
+              ),
+            ],
+          ),
+        );
+      }
+  );
+}
+
 
 
 

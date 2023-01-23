@@ -181,6 +181,49 @@ class ServicesBookingPage2 extends BaseView<ServicesBookingController> {
                                                   decoration: const BoxDecoration(
                                                       image: DecorationImage(image: AssetImage('assets/hoofzy/trending_community_image.png'),fit: BoxFit.fill)
                                                   ),
+                                                  child: Padding(
+                                                    padding: const EdgeInsets.only(left: 2.0,right: 2.0,bottom: 4),
+                                                    child: Row(
+                                                      crossAxisAlignment: CrossAxisAlignment.end,
+                                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                      children: [
+                                                        Container(
+                                                          width: 70,
+                                                          height: 30,
+                                                          decoration: const BoxDecoration(
+                                                              color: Colors.white,
+                                                              borderRadius: BorderRadius.all(Radius.circular(13))
+                                                          ),
+                                                          child: Row(
+                                                            mainAxisAlignment: MainAxisAlignment.center,
+                                                            children: <Widget> [
+                                                              Image.asset('assets/hoofzy/verified.png',width: 16,height:16,fit: BoxFit.fill,),
+                                                              const Padding(
+                                                                padding: EdgeInsets.only(left:2),
+                                                                child: Text('Verified',style: textBlackLight13400,),
+                                                              )
+                                                            ],),
+                                                        ),
+                                                        Padding(
+                                                          padding: const EdgeInsets.only(left: 4.0),
+                                                          child: Container(
+                                                            width: 24,
+                                                            height: 30,
+                                                            decoration: const BoxDecoration(
+                                                                color: Colors.white,
+                                                                borderRadius: BorderRadius.all(Radius.circular(20))
+                                                            ),
+                                                            child: Column(
+                                                              mainAxisAlignment: MainAxisAlignment.center,
+                                                              children: [
+                                                                Image.asset('assets/hoofzy/like.png',width: 14,height: 11,fit: BoxFit.fill,),
+                                                              ],
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ),
                                                 ),
                                                 Padding(
                                                   padding: const EdgeInsets.only(left: 12.0),
@@ -201,8 +244,8 @@ class ServicesBookingPage2 extends BaseView<ServicesBookingController> {
                                                         child: Row(
                                                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                           children: [
-                                                            Row(children: const [
-                                                              Icon(Icons.location_on,color: primaryColor,),
+                                                            Row(children: <Widget> [
+                                                              Image.asset('assets/hoofzy/location_primary.png',width: 14,height: 14,fit: BoxFit.fill,),
                                                               Padding(
                                                                 padding: EdgeInsets.only(left:2),
                                                                 child: Text('1.5 km',style: textBlackMedium14,),
@@ -210,8 +253,8 @@ class ServicesBookingPage2 extends BaseView<ServicesBookingController> {
                                                             ],),
                                                             Padding(
                                                               padding: const EdgeInsets.only(left: 20.0),
-                                                              child: Row(children: const [
-                                                                Icon(Icons.star,color: Colors.green,),
+                                                              child: Row(children: <Widget> [
+                                                                Image.asset('assets/hoofzy/star.png',width: 14,height: 14,fit: BoxFit.fill,),
                                                                 Padding(
                                                                   padding: EdgeInsets.only(left:2),
                                                                   child: Text('4.5 | 2.5 K Revies',style: textBlackMedium14,),
@@ -222,8 +265,8 @@ class ServicesBookingPage2 extends BaseView<ServicesBookingController> {
                                                       ),
                                                       Padding(
                                                         padding: const EdgeInsets.only(top: 8.0),
-                                                        child: Row(children: const [
-                                                          Icon(Icons.star,color: Colors.green,),
+                                                        child: Row(children: <Widget> [
+                                                          Image.asset('assets/hoofzy/repeat.png',width: 16,height: 16,fit: BoxFit.fill,),
                                                           Padding(
                                                             padding: EdgeInsets.only(left:2),
                                                             child: Text('184 Repeat Clients',style: textBlackMedium14,),

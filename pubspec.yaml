@@ -144,6 +144,22 @@ flutter:
     - assets/hoofzy/drop_visit.png
     - assets/hoofzy/doggy_care.png
     - assets/hoofzy/dog_walking.png
+    - assets/hoofzy/service_dog.png
+
+    - assets/hoofzy/verified.png
+    - assets/hoofzy/star.png
+    - assets/hoofzy/repeat.png
+    - assets/hoofzy/location_primary.png
+    - assets/hoofzy/grp_chat.png
+    - assets/hoofzy/chat_white.png
+
+    - assets/hoofzy/small_dog.png
+    - assets/hoofzy/medium_dog.png
+    - assets/hoofzy/large_dog.png
+    - assets/hoofzy/gaint_dog.png
+    - assets/hoofzy/cancel.png
+    - assets/hoofzy/report.png
+    - assets/hoofzy/boarding_heart.png
 
     - assets/lottie/cute_doggie.json
     - assets/lottie/super_sale_hang.json

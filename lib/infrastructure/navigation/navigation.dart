@@ -30,6 +30,7 @@ import '../../presentation/sitter_build_trust_screens/sitter_profile/profile_det
 import '../../presentation/sitter_build_trust_screens/sitter_profile/profile_details/your_pets/your_pets_page.dart';
 import '../../presentation/sitter_profile_screen/sitter_profile_page2.dart';
 import '../../presentation/sitter_service_setting/service_setting_page.dart';
+import '../../presentation/user_app/boarding_screens/service_detail_screen/service_detail_page.dart';
 import '../../presentation/user_app/boarding_screens/services_booking_screen1/services_booking_page1.dart';
 import '../../presentation/user_app/boarding_screens/services_booking_screen2/services_booking_page2.dart';
 import '../../presentation/user_app/boarding_screens/services_booking_screen3/services_booking_page3.dart';
@@ -61,6 +62,7 @@ import 'bindings/controllers/profile.cover.photo.controllerBinding.dart';
 import 'bindings/controllers/rate.controllerBinding.dart';
 import 'bindings/controllers/request.testimonials.controllerBinding.dart';
 import 'bindings/controllers/safety.quiz.controllerBinding.dart';
+import 'bindings/controllers/service.detail.controllerBinding.dart';
 import 'bindings/controllers/service.setting.controllerBinding.dart';
 import 'bindings/controllers/services.booking.controllerBinding.dart';
 import 'bindings/controllers/services.intro.controllerBinding.dart';
@@ -260,6 +262,11 @@ class Nav {
       name: Routes.sortAndFilter,
       page: () => SortFilterPage(),
       binding: SortFilterControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.serviceDetails,
+      page: () => ServiceDetailPage(),
+      binding: ServiceDetailControllerBinding(),
     ),
   ];
 }

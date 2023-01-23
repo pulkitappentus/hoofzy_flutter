@@ -54,5 +54,6 @@ class Routes {
   static const serviceBookingPage2 = '/user_app/boarding_screens/services_booking_screen2';
   static const serviceBookingPage3 = '/user_app/boarding_screens/services_booking_screen3';
   static const sortAndFilter = '/user_app/boarding_screens/sort_filter_screen';
+  static const serviceDetails = '/user_app/boarding_screens/service_detail_screen';
   static const userPets = '/user_app/pet_screens';
 }

@@ -1,8 +1,11 @@
 import 'package:Hoofzy_V2/constants.dart';
 import 'package:Hoofzy_V2/presentation/home/controllers/home.controller.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:sizer/sizer.dart';
 import '../../../../infrastructure/base/base_view.dart';
+import '../../../../infrastructure/navigation/routes.dart';
 
 class ServicesBookingPage3 extends BaseView<HomeController> {
 
@@ -49,6 +52,49 @@ class ServicesBookingPage3 extends BaseView<HomeController> {
                         decoration: const BoxDecoration(
                             image: DecorationImage(image: AssetImage('assets/hoofzy/trending_community_image.png'),fit: BoxFit.fill)
                         ),
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 2.0,right: 2.0,bottom: 4),
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Container(
+                                width: 70,
+                                height: 30,
+                                decoration: const BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.all(Radius.circular(13))
+                                ),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget> [
+                                    Image.asset('assets/hoofzy/verified.png',width: 16,height:16,fit: BoxFit.fill,),
+                                    const Padding(
+                                      padding: EdgeInsets.only(left:2),
+                                      child: Text('Verified',style: textBlackLight13400,),
+                                    )
+                                  ],),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 4.0),
+                                child: Container(
+                                  width: 24,
+                                  height: 30,
+                                  decoration: const BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.all(Radius.circular(20))
+                                  ),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Image.asset('assets/hoofzy/like.png',width: 14,height: 11,fit: BoxFit.fill,),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(left: 12.0),
@@ -69,8 +115,8 @@ class ServicesBookingPage3 extends BaseView<HomeController> {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Row(children: const [
-                                    Icon(Icons.location_on,color: primaryColor,),
+                                  Row(children: <Widget> [
+                                    Image.asset('assets/hoofzy/location_primary.png',width: 14,height: 14,fit: BoxFit.fill,),
                                     Padding(
                                       padding: EdgeInsets.only(left:2),
                                       child: Text('1.5 km',style: textBlackMedium14,),
@@ -78,8 +124,8 @@ class ServicesBookingPage3 extends BaseView<HomeController> {
                                   ],),
                                   Padding(
                                     padding: const EdgeInsets.only(left: 20.0),
-                                    child: Row(children: const [
-                                      Icon(Icons.star,color: Colors.green,),
+                                    child: Row(children: <Widget> [
+                                      Image.asset('assets/hoofzy/star.png',width: 14,height: 14,fit: BoxFit.fill,),
                                       Padding(
                                         padding: EdgeInsets.only(left:2),
                                         child: Text('4.5 | 2.5 K Revies',style: textBlackMedium14,),
@@ -90,8 +136,8 @@ class ServicesBookingPage3 extends BaseView<HomeController> {
                             ),
                             Padding(
                               padding: const EdgeInsets.only(top: 8.0),
-                              child: Row(children: const [
-                                Icon(Icons.star,color: Colors.green,),
+                              child: Row(children: <Widget> [
+                                Image.asset('assets/hoofzy/repeat.png',width: 16,height: 16,fit: BoxFit.fill,),
                                 Padding(
                                   padding: EdgeInsets.only(left:2),
                                   child: Text('184 Repeat Clients',style: textBlackMedium14,),
@@ -114,15 +160,20 @@ class ServicesBookingPage3 extends BaseView<HomeController> {
 
                 Padding(
                   padding: const EdgeInsets.only(left: 38.0,right: 38.0,top: 20.0,bottom: 20.0),
-                  child: Container(
-                    width: double.infinity,
-                    height: 60,
-                    decoration: const BoxDecoration(
-                      color: primaryColor,
-                      borderRadius: BorderRadius.all(Radius.circular(30))
-                    ),
-                    child: Align(alignment:Alignment.center,child: Text('Book Now',style: textWhiteMedium16,)),
+                  child: InkWell(
+                    onTap: (){
+                      Get.toNamed(Routes.serviceDetails);
+                    },
+                    child: Container(
+                      width: double.infinity,
+                      height: 60,
+                      decoration: const BoxDecoration(
+                        color: primaryColor,
+                        borderRadius: BorderRadius.all(Radius.circular(30))
+                      ),
+                      child: Align(alignment:Alignment.center,child: Text('Book Now',style: textWhiteMedium16,)),
 
+                    ),
                   ),
                 ),
               ],
