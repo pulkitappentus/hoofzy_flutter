@@ -15,6 +15,8 @@ class ServiceDetailController extends BaseController {
   var selectedDays = 10.obs;
   var lastSelectedDays = 10.obs;
 
+  var tabValue = 1.obs;
+
   @override
   void onConnectionChange(ConnectivityResult result) {
 

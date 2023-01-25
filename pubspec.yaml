@@ -160,6 +160,9 @@ flutter:
     - assets/hoofzy/cancel.png
     - assets/hoofzy/report.png
     - assets/hoofzy/boarding_heart.png
+    - assets/hoofzy/razor.png
+    - assets/hoofzy/strip.png
+    - assets/hoofzy/google_play.png
 
     - assets/lottie/cute_doggie.json
     - assets/lottie/super_sale_hang.json

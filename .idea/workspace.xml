@@ -15,23 +15,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a1547f2-9a36-4846-96c0-e2f361532b0a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/hoofzy/boarding_heart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/hoofzy/cancel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/hoofzy/chat_white.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/hoofzy/gaint_dog.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/hoofzy/grp_chat.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/hoofzy/large_dog.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/hoofzy/location_primary.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/hoofzy/medium_dog.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/hoofzy/repeat.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/hoofzy/report.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/hoofzy/service_dog.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/hoofzy/small_dog.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/hoofzy/star.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/hoofzy/verified.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/infrastructure/navigation/bindings/controllers/service.detail.controllerBinding.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/presentation/user_app/boarding_screens/service_detail_screen/controllers/service.detail.controller.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/presentation/user_app/boarding_screens/service_detail_screen/service_detail_page.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/hoofzy/google_play.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/hoofzy/razor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/hoofzy/strip.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/infrastructure/navigation/bindings/controllers/service.booking.controllerBinding.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/presentation/user_app/boarding_screens/photos_screen/photos_page.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/presentation/user_app/boarding_screens/services_booking_detail_screen/service_booking_detail_page.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/presentation/user_app/boarding_screens/services_booking_payment_screen/service_booking_payment_page.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/presentation/user_app/boarding_screens/services_booking_screen/controllers/service.booking.controller.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/presentation/user_app/boarding_screens/services_booking_screen/service_booking_page.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/f4a6b8802d87017c9e1c8da7d3700e00/.filecache" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/f4a6b8802d87017c9e1c8da7d3700e00/.filecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/f4a6b8802d87017c9e1c8da7d3700e00/app.dill" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/f4a6b8802d87017c9e1c8da7d3700e00/app.dill" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/f4a6b8802d87017c9e1c8da7d3700e00/debug_android_application.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/f4a6b8802d87017c9e1c8da7d3700e00/debug_android_application.stamp" afterDir="false" />
@@ -59,9 +51,8 @@
       <change beforePath="$PROJECT_DIR$/lib/generated/assets.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/assets.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/infrastructure/navigation/navigation.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/infrastructure/navigation/navigation.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/infrastructure/navigation/routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/infrastructure/navigation/routes.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/presentation/user_app/boarding_screens/services_booking_screen2/services_booking_page2.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/user_app/boarding_screens/services_booking_screen2/services_booking_page2.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/presentation/user_app/boarding_screens/services_booking_screen3/services_booking_page3.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/user_app/boarding_screens/services_booking_screen3/services_booking_page3.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/presentation/user_app/boarding_screens/services_intro_screen/services_intro_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/user_app/boarding_screens/services_intro_screen/services_intro_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/user_app/boarding_screens/service_detail_screen/controllers/service.detail.controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/user_app/boarding_screens/service_detail_screen/controllers/service.detail.controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/user_app/boarding_screens/service_detail_screen/service_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/user_app/boarding_screens/service_detail_screen/service_detail_page.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +90,7 @@
     <property name="cidr.known.project.marker" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/hoofzy" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/presentation/user_app/boarding_screens" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -108,9 +99,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\lib\presentation\user_app\boarding_screens" />
       <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\assets\hoofzy" />
       <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\lib\infrastructure\navigation\bindings\controllers" />
-      <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\lib\presentation\user_app\boarding_screens" />
       <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\assets\lottie" />
       <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\android\app" />
     </key>
