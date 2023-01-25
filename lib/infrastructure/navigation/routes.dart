@@ -32,9 +32,14 @@ class Routes {
   static const PREVIEW = '/preview';
   static const createProfile = '/sitter_build_trust_screens/sitter_profile';
   static const requestTestimonials = '/sitter_build_trust_screens/request_testimonials';
-  static const safetyQuiz = '/sitter_build_trust_screens/safety_quiz';
+  static const safetyQuiz = '/sitter_build_trust_screens/sitter_profile/profile_details/safety_quiz';
+  static const startQuiz = '/sitter_build_trust_screens/sitter_profile/profile_details/quiz_screens';
+  static const resultQuiz = '/sitter_build_trust_screens/sitter_profile/profile_details/quiz_result_screens';
+  static const congratulation = '/sitter_build_trust_screens/sitter_profile/profile_details/congratulations_screens';
+  static const quizExplanation = '/sitter_build_trust_screens/sitter_profile/profile_details/safety_quiz/quiz_explanation_screens';
   static const finalDetails = '/sitter_build_trust_screens/final_details';
   static const basicInfo = '/sitter_build_trust_screens/sitter_profile/profile_details/basic_info';
+  static const aboutYou = '/sitter_build_trust_screens/sitter_profile/profile_details/about_you';
   static const profileCoverPhoto = '/sitter_build_trust_screens/sitter_profile/profile_details/profile_cover_photo';
   static const dateOfBirth = '/sitter_build_trust_screens/sitter_profile/profile_details/date_of_birth';
   static const details = '/sitter_build_trust_screens/sitter_profile/profile_details/details';

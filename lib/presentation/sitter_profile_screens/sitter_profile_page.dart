@@ -34,7 +34,7 @@ class SitterProfilePage extends BaseView<SitterProfileController> {
                   color: Colors.black,
                 ),
               ),
-              title: Text('Set up sitter profile',style: headlineBlack20,),
+              title: Text('Add Services',style: headlineBlack20,),
             ),
             Expanded(child: SingleChildScrollView(
               child: Column(
@@ -56,25 +56,61 @@ class SitterProfilePage extends BaseView<SitterProfileController> {
                     padding: const EdgeInsets.only(left: 16.0,top: 14.0),
                     child: Flexible(child: Row(
                       children: <Widget> [
-                        Image.asset('assets/hoofzy/question.png',width: 20,height: 20,fit: BoxFit.fill,),
+                        Image.asset('assets/hoofzy/question.png',width: 20,height: 20,fit: BoxFit.fill,color: primaryColorSitter,),
                         const Padding(
                           padding: EdgeInsets.only(left: 8.0),
-                          child: Text('Which service should I choose?',style:TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: primaryColor) ,),
+                          child: Text('Which service should I choose?',style:TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: primaryColorSitter) ,),
+                        )
+                      ],
+                    )),
+                  ),
+
+                  const Padding(
+                    padding: const EdgeInsets.only(left: 16.0,top: 16),
+                    child: Align(alignment: Alignment.topLeft,child: Text('Complete the required steps to get approved.',style: textBlackMedium16,)),
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.only(left: 16.0,top: 14.0),
+                    child: Flexible(child: Row(
+                      children: <Widget> [
+                        Image.asset('assets/hoofzy/question.png',width: 20,height: 20,fit: BoxFit.fill,color: primaryColorSitter,),
+                        const Padding(
+                          padding: EdgeInsets.only(left: 8.0),
+                          child: Text('How does approval work?',style:TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: primaryColorSitter) ,),
+                        )
+                      ],
+                    )),
+                  ),
+
+                  const Padding(
+                    padding: const EdgeInsets.only(left: 16.0,top: 16),
+                    child: Align(alignment: Alignment.topLeft,child: Text('Service setup',style: textBlackMedium16,)),
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.only(left: 16.0,top: 14.0),
+                    child: Flexible(child: Row(
+                      children: <Widget> [
+                        Image.asset('assets/hoofzy/question.png',width: 20,height: 20,fit: BoxFit.fill,color: primaryColorSitter,),
+                        const Padding(
+                          padding: EdgeInsets.only(left: 8.0),
+                          child: Text('How do I add or modify my services?',style:TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: primaryColorSitter) ,),
                         )
                       ],
                     )),
                   ),
 
                   Padding(
-                    padding: const EdgeInsets.only(left: 16.0,top: 14.0,right: 16.0),
+                    padding: const EdgeInsets.only(left: 16.0,top: 22.0,right: 16.0),
                     child: Flexible(child: Row(
                       children: <Widget> [
                         Container(
                           height: 160.sp,
                           width: MediaQuery.of(context).size.width/2.3,
                           decoration: BoxDecoration(
-                              borderRadius: BorderRadius.all(Radius.circular(16)),
-                              border: Border.all(width: 1.5,color: greyColor)
+                              borderRadius: BorderRadius.all(Radius.circular(30)),
+                              border: Border.all(width: 1.5,color: greyLightColor)
                           ),
                           child: Padding(
                             padding: const EdgeInsets.only(left: 15.0,bottom: 24),
@@ -91,8 +127,8 @@ class SitterProfilePage extends BaseView<SitterProfileController> {
                                         width: MediaQuery.of(context).size.width/4,
                                         height: 40,
                                         decoration: const BoxDecoration(
-                                            color: primaryColor,
-                                            borderRadius: BorderRadius.only(topRight: Radius.circular(14),bottomLeft: Radius.circular(20))
+                                            color: primaryColorSitter,
+                                            borderRadius: BorderRadius.only(topRight: Radius.circular(26),bottomLeft: Radius.circular(20))
                                         ),
                                         child: Align(alignment:Alignment.center,child: Text('HIGHEST \nEARNINGS',style: textWhiteLight12,)),
                                       )),
@@ -110,7 +146,7 @@ class SitterProfilePage extends BaseView<SitterProfileController> {
                                 ),
                                 const Padding(
                                   padding: const EdgeInsets.only(top: 10.0),
-                                  child: Text('Avg. ₹399/night',style: TextStyle(fontSize: 13, fontWeight: FontWeight.w400, color: primaryColor,)),
+                                  child: Text('Avg. ₹399/night',style: TextStyle(fontSize: 13, fontWeight: FontWeight.w400, color: primaryColorSitter,)),
                                 ),
 
                               ],
@@ -124,8 +160,8 @@ class SitterProfilePage extends BaseView<SitterProfileController> {
                             height: 160.sp,
                             width: MediaQuery.of(context).size.width/2.3,
                             decoration: BoxDecoration(
-                                borderRadius: BorderRadius.all(Radius.circular(16)),
-                                border: Border.all(width: 1.5,color: greyColor)
+                                borderRadius: BorderRadius.all(Radius.circular(30)),
+                                border: Border.all(width: 1.5,color: greyLightColor)
                             ),
                             child: Padding(
                               padding: const EdgeInsets.all(15.0),
@@ -143,7 +179,7 @@ class SitterProfilePage extends BaseView<SitterProfileController> {
                                   ),
                                   const Padding(
                                     padding: const EdgeInsets.only(top: 10.0),
-                                    child: Text('Avg. ₹399/night',style: TextStyle(fontSize: 13, fontWeight: FontWeight.w400, color: primaryColor,)),
+                                    child: Text('Avg. ₹399/night',style: TextStyle(fontSize: 13, fontWeight: FontWeight.w400, color: primaryColorSitter,)),
                                   ),
 
                                 ],
@@ -163,8 +199,8 @@ class SitterProfilePage extends BaseView<SitterProfileController> {
                           height: 160.sp,
                           width: MediaQuery.of(context).size.width/2.3,
                           decoration: BoxDecoration(
-                              borderRadius: BorderRadius.all(Radius.circular(16)),
-                              border: Border.all(width: 1.5,color: greyColor)
+                              borderRadius: BorderRadius.all(Radius.circular(30)),
+                              border: Border.all(width: 1.5,color: greyLightColor)
                           ),
                           child: Padding(
                             padding: const EdgeInsets.all(15.0),
@@ -182,7 +218,7 @@ class SitterProfilePage extends BaseView<SitterProfileController> {
                                 ),
                                 const Padding(
                                   padding: const EdgeInsets.only(top: 10.0),
-                                  child: Text('Avg. ₹399/night',style: TextStyle(fontSize: 13, fontWeight: FontWeight.w400, color: primaryColor,)),
+                                  child: Text('Avg. ₹399/night',style: TextStyle(fontSize: 13, fontWeight: FontWeight.w400, color: primaryColorSitter,)),
                                 ),
 
                               ],
@@ -196,8 +232,8 @@ class SitterProfilePage extends BaseView<SitterProfileController> {
                             height: 160.sp,
                             width: MediaQuery.of(context).size.width/2.3,
                             decoration: BoxDecoration(
-                                borderRadius: BorderRadius.all(Radius.circular(16)),
-                                border: Border.all(width: 1.5,color: greyColor)
+                                borderRadius: BorderRadius.all(Radius.circular(30)),
+                                border: Border.all(width: 1.5,color: greyLightColor)
                             ),
                             child: Padding(
                               padding: const EdgeInsets.all(15.0),
@@ -215,7 +251,7 @@ class SitterProfilePage extends BaseView<SitterProfileController> {
                                   ),
                                   const Padding(
                                     padding: const EdgeInsets.only(top: 10.0),
-                                    child: Text('Avg. ₹399/night',style: TextStyle(fontSize: 13, fontWeight: FontWeight.w400, color: primaryColor,)),
+                                    child: Text('Avg. ₹399/night',style: TextStyle(fontSize: 13, fontWeight: FontWeight.w400, color: primaryColorSitter,)),
                                   ),
 
                                 ],
@@ -235,8 +271,8 @@ class SitterProfilePage extends BaseView<SitterProfileController> {
                           height: 160.sp,
                           width: MediaQuery.of(context).size.width/2.3,
                           decoration: BoxDecoration(
-                              borderRadius: BorderRadius.all(Radius.circular(16)),
-                              border: Border.all(width: 1.5,color: greyColor)
+                              borderRadius: BorderRadius.all(Radius.circular(30)),
+                              border: Border.all(width: 1.5,color: greyLightColor)
                           ),
                           child: Padding(
                             padding: const EdgeInsets.all(15.0),
@@ -254,7 +290,7 @@ class SitterProfilePage extends BaseView<SitterProfileController> {
                                 ),
                                 const Padding(
                                   padding: const EdgeInsets.only(top: 10.0),
-                                  child: Text('Avg. ₹199/night',style: TextStyle(fontSize: 13, fontWeight: FontWeight.w400, color: primaryColor,)),
+                                  child: Text('Avg. ₹199/night',style: TextStyle(fontSize: 13, fontWeight: FontWeight.w400, color: primaryColorSitter,)),
                                 ),
 
                               ],
@@ -266,14 +302,53 @@ class SitterProfilePage extends BaseView<SitterProfileController> {
                     )),
                   ),
 
+                  InkWell(
+                    onTap: (){
+                      Get.toNamed(Routes.cancellationPolicy);
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 30.0,bottom:15,right: 16),
+                      child: Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 15.0),
+                            child: Expanded(child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: const [
+                                Text('Cancellation Policy',style: textBlackMedium16,),
+                                Padding(
+                                  padding: EdgeInsets.only(top: 8.0),
+                                  child: Text('Setup your cancellation policy',style: textBlackMedium13,),
+                                ),
+                              ],
+                            )),
+                          ),
+                          Expanded(child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: const [
+                              Icon(Icons.arrow_forward_ios,color: Colors.black,size: 15,)
+                            ],
+                          ))
+
+                        ],
+                      ),
+                    ),
+                  ),
+
+                  const Padding(
+                    padding: const EdgeInsets.only(left: 16.0,right: 16.0),
+                    child: Divider(color: greyColor,thickness: 1,),
+                  ),
+
                   Padding(
-                    padding: const EdgeInsets.all(16.0),
+                    padding: const EdgeInsets.only(left: 58.0,right: 58.0,top: 40.0,bottom: 20.0),
                     child: Container(
                         height: 56,
                         width: double.infinity,
                         decoration: const BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(20)),
-                            color: greyColor
+                            borderRadius: BorderRadius.all(Radius.circular(40)),
+                            color: greyLightColor
                         ),
                         child: Align(alignment: Alignment.center,
                             child:TextButton
@@ -281,7 +356,7 @@ class SitterProfilePage extends BaseView<SitterProfileController> {
                               onPressed: (){
                                 Get.toNamed(Routes.sitterProfile2);
                               },
-                              child: Text('Save & Next',style: textWhiteMedium15,),)
+                              child: Text('Save',style: textWhiteMedium15,),)
                         )
                     ),
                   ),

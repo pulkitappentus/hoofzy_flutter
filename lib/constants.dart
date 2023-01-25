@@ -85,6 +85,7 @@ const textBlackBold16 = TextStyle(fontSize: 16, fontWeight: FontWeight.bold, col
 const textBlackBold_14 = TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: Colors.black);
 const textBlackLight12 = TextStyle(fontSize: 12, fontWeight: FontWeight.w400, color: Colors.black);
 const textgreyLight13 = TextStyle(fontSize: 13, fontWeight: FontWeight.w400, color: Colors.grey);
+const textgreyLight_14 = TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: greyLightColor);
 const textgreyLight15 = TextStyle(fontSize: 15, fontWeight: FontWeight.w400, color: Colors.grey);
 const textgreyLight18 = TextStyle(fontSize: 18, fontWeight: FontWeight.w500, color: Colors.grey);
 const textgreyLight14 = TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: offWhiteGrey);

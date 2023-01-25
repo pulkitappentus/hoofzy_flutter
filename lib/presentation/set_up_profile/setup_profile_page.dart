@@ -149,7 +149,7 @@ class SetupProfilePage extends BaseView<SetupProfileController> {
                               ),
                               child: Align(alignment: Alignment.center,
                                 child: TextButton(onPressed: (){
-                                  Get.toNamed(Routes.sitterProfile);
+                                  Get.toNamed(Routes.createProfile);
                                 },child: Text('Create a Sitter Profile',style: textWhiteLight14400,),),
                               )
                           ),

@@ -8,9 +8,17 @@ class BasicInfoPage extends BaseView<BasicInfoController> {
   @override
   Widget body(BuildContext context) {
 
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: Padding(
+    return Container(
+      width: double.infinity,
+      height: double.infinity,
+      decoration: const BoxDecoration(
+          gradient: LinearGradient(colors: [Color(0xFFFFFBF6), Color(0xFFFFFFFF)],
+              stops: [0.0, 1.0],
+              begin: FractionalOffset.topCenter,
+              end: FractionalOffset.bottomCenter,
+              tileMode: TileMode.repeated),
+      ),
+      child: Padding(
         padding: const EdgeInsets.only(bottom: 20),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -18,7 +26,7 @@ class BasicInfoPage extends BaseView<BasicInfoController> {
           children: [
             AppBar(
               toolbarHeight: 56,
-              backgroundColor: Colors.white,
+              backgroundColor: Color(0xFFFFFBF6),
               elevation: 0,
               centerTitle: true,
               leading: InkWell(
@@ -48,43 +56,48 @@ class BasicInfoPage extends BaseView<BasicInfoController> {
                   ),
                   const Padding(
                     padding: EdgeInsets.only(left:16,top: 20.0,right: 16),
+                    child: Align(alignment:Alignment.topLeft,child: Text('Full Name',style: textBlackMedium13,)),
+                  ),
+                  // Note: Same code is applied for the TextFormField as well
+                  Container(
+                  padding: const EdgeInsets.only(left: 16,right: 16),
+                  child: const TextField(
+                    decoration: InputDecoration(
+                        hintStyle: textgreyLight_14,
+                        border: UnderlineInputBorder(),
+                        hintText: "Enter your full name"),
+                    style: textBlackMedium14,
+                  ),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.only(left:16,top: 20.0,right: 16),
                     child: Align(alignment:Alignment.topLeft,child: Text('Address',style: textBlackMedium13,)),
                   ),
                   // Note: Same code is applied for the TextFormField as well
-                  Padding(
-                    padding: const EdgeInsets.only(top:15.0,left: 16.0,right: 16.0),
-                    child: TextFormField(
-                      obscureText: true,
-                      style: textBlackMedium13,
-                      decoration: InputDecoration(
-                        labelText: 'Enter your address',hintStyle: textgreyLight13,
-                        enabledBorder: OutlineInputBorder(
-                          borderSide:
-                          BorderSide(width: 1, color: lightGreyColor), //<-- SEE HERE
-                          borderRadius: BorderRadius.circular(14.0),
-                        ),
-                      ),
-                    ),
+                  Container(
+                  padding: const EdgeInsets.only(left: 16,right: 16),
+                  child: const TextField(
+                    decoration: InputDecoration(
+                        hintStyle: textgreyLight_14,
+                        border: UnderlineInputBorder(),
+                        hintText: "Enter your address"),
+                    style: textBlackMedium14,
+                  ),
                   ),
                   const Padding(
                     padding: EdgeInsets.only(left:16,top: 20.0,right: 16),
                     child: Align(alignment:Alignment.topLeft,child: Text('City',style: textBlackMedium13,)),
                   ),
                   // Note: Same code is applied for the TextFormField as well
-                  Padding(
-                    padding: const EdgeInsets.only(top:15.0,left: 16.0,right: 16.0),
-                    child: TextFormField(
-                      obscureText: true,
-                      style: textBlackMedium13,
-                      decoration: InputDecoration(
-                        labelText: 'Enter your city',hintStyle: textgreyLight13,
-                        enabledBorder: OutlineInputBorder(
-                          borderSide:
-                          BorderSide(width: 1, color: lightGreyColor), //<-- SEE HERE
-                          borderRadius: BorderRadius.circular(14.0),
-                        ),
-                      ),
-                    ),
+                  Container(
+                  padding: const EdgeInsets.only(left: 16,right: 16),
+                  child: const TextField(
+                    decoration: InputDecoration(
+                        hintStyle: textgreyLight_14,
+                        border: UnderlineInputBorder(),
+                        hintText: "Enter your city"),
+                    style: textBlackMedium14,
+                  ),
                   ),
                   const Padding(
                     padding: EdgeInsets.only(left:16,top: 20.0,right: 16),
@@ -92,35 +105,32 @@ class BasicInfoPage extends BaseView<BasicInfoController> {
                   ),
                   // Note: Same code is applied for the TextFormField as well
                   Padding(
-                    padding: const EdgeInsets.only(top:15.0,left: 16.0,right: 16.0),
+                    padding: const EdgeInsets.only(left: 16.0,right: 16.0,top: 6),
                     child: Container(
                       width: double.infinity,
-                      height: 60,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(14.0)),
-                        border: Border.all(color: greyColor,width: 1)
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 15.0,right: 15.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: const [
-                            Text('Select your state',style: textBlackMedium14,),
-                            Icon(Icons.keyboard_arrow_down,color: primaryColor,size: 25,)
-                          ],
-                        ),
+                      height: 40,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: const [
+                          Text('Select state',style: textBlackMedium14,),
+                          Icon(Icons.keyboard_arrow_down,color: Colors.black,size: 25,)
+                        ],
                       ),
                     )
                   ),
+                  const Padding(
+                    padding: const EdgeInsets.only(left: 16.0,right: 16.0),
+                    child: Divider(color: Color(0xffF5F5F5),thickness: 1,),
+                  ),
 
                   Padding(
-                    padding: const EdgeInsets.only(left: 32.0,right: 32.0,top: 90,bottom: 50),
+                    padding: const EdgeInsets.only(left: 58.0,right: 58.0,top: 90,bottom: 50),
                     child: Container(
                         height: 56,
                         width: double.infinity,
                         decoration: const BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(20)),
-                            color: greyColor
+                            borderRadius: BorderRadius.all(Radius.circular(30)),
+                            color: greyLightColor
                         ),
                         child: Align(alignment: Alignment.center,
                             child:TextButton

@@ -163,11 +163,13 @@ flutter:
     - assets/hoofzy/razor.png
     - assets/hoofzy/strip.png
     - assets/hoofzy/google_play.png
+    - assets/hoofzy/pet_foot_placeholder.png
 
     - assets/lottie/cute_doggie.json
     - assets/lottie/super_sale_hang.json
     - assets/lottie/hang.json
     - assets/lottie/create_pet_profile.json
+    - assets/lottie/congratulation_success_batch.json
   fonts:
     - family: SF Pro Display
       fonts:

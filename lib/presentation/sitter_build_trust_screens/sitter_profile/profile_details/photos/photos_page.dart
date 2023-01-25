@@ -1,5 +1,6 @@
 import 'package:Hoofzy_V2/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
 import '../../../../../infrastructure/base/base_view.dart';
 import 'controllers/photos.controller.dart';
 
@@ -8,9 +9,17 @@ class PhotosPage extends BaseView<PhotosController> {
   @override
   Widget body(BuildContext context) {
 
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: Padding(
+    return Container(
+      width: double.infinity,
+      height: double.infinity,
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(colors: [Color(0xFFFFFBF6), Color(0xFFFFFFFF)],
+            stops: [0.0, 1.0],
+            begin: FractionalOffset.topCenter,
+            end: FractionalOffset.bottomCenter,
+            tileMode: TileMode.repeated),
+      ),
+      child: Padding(
         padding: const EdgeInsets.only(bottom: 20),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -18,7 +27,7 @@ class PhotosPage extends BaseView<PhotosController> {
           children: [
             AppBar(
               toolbarHeight: 56,
-              backgroundColor: Colors.white,
+              backgroundColor: Color(0xFFFFFBF6),
               elevation: 0,
               centerTitle: true,
               leading: InkWell(
@@ -44,154 +53,52 @@ class PhotosPage extends BaseView<PhotosController> {
                         ' try to include photos of yourself walking or playing with pets. We suggest 10-12 of your best photos.',style: textBlackMedium14,)),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 20.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Container(
-                          width: 106,
-                          height: 130,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(14)),
-                            border: Border.all(color: greyColor,width: 1)
-                          ),
-                          child: Image.asset('assets/hoofzy/grey_dropin.png',height: 24,width: 24,),
-                        ),
-                        Container(
-                          width: 106,
-                          height: 130,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(14)),
-                            border: Border.all(color: greyColor,width: 1)
-                          ),
-                          child: Image.asset('assets/hoofzy/grey_dropin.png',height: 24,width: 24,),
-                        ),
-                        Container(
-                          width: 106,
-                          height: 130,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(14)),
-                            border: Border.all(color: greyColor,width: 1)
-                          ),
-                          child: Image.asset('assets/hoofzy/grey_dropin.png',height: 24,width: 24,),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 12.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Container(
-                          width: 106,
-                          height: 130,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(14)),
-                            border: Border.all(color: greyColor,width: 1)
-                          ),
-                          child: Image.asset('assets/hoofzy/grey_dropin.png',height: 24,width: 24,),
-                        ),
-                        Container(
-                          width: 106,
-                          height: 130,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(14)),
-                            border: Border.all(color: greyColor,width: 1)
-                          ),
-                          child: Image.asset('assets/hoofzy/grey_dropin.png',height: 24,width: 24,),
-                        ),
-                        Container(
-                          width: 106,
-                          height: 130,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(14)),
-                            border: Border.all(color: greyColor,width: 1)
-                          ),
-                          child: Image.asset('assets/hoofzy/grey_dropin.png',height: 24,width: 24,),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 12.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Container(
-                          width: 106,
-                          height: 130,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(14)),
-                            border: Border.all(color: greyColor,width: 1)
-                          ),
-                          child: Image.asset('assets/hoofzy/grey_dropin.png',height: 24,width: 24,),
-                        ),
-                        Container(
-                          width: 106,
-                          height: 130,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(14)),
-                            border: Border.all(color: greyColor,width: 1)
-                          ),
-                          child: Image.asset('assets/hoofzy/grey_dropin.png',height: 24,width: 24,),
-                        ),
-                        Container(
-                          width: 106,
-                          height: 130,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(14)),
-                            border: Border.all(color: greyColor,width: 1)
-                          ),
-                          child: Image.asset('assets/hoofzy/grey_dropin.png',height: 24,width: 24,),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 12.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Container(
-                          width: 106,
-                          height: 130,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(14)),
-                            border: Border.all(color: greyColor,width: 1)
-                          ),
-                          child: Image.asset('assets/hoofzy/grey_dropin.png',height: 24,width: 24,),
-                        ),
-                        Container(
-                          width: 106,
-                          height: 130,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(14)),
-                            border: Border.all(color: greyColor,width: 1)
-                          ),
-                          child: Image.asset('assets/hoofzy/grey_dropin.png',height: 24,width: 24,),
-                        ),
-                        Container(
-                          width: 106,
-                          height: 130,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(14)),
-                            border: Border.all(color: greyColor,width: 1)
-                          ),
-                          child: Image.asset('assets/hoofzy/grey_dropin.png',height: 24,width: 24,),
-                        ),
-                      ],
-                    ),
+                    padding: const EdgeInsets.only(left: 16.0,right: 16.0,top: 20),
+                    child: Expanded(
+                        child: CustomScrollView(
+                          physics: const BouncingScrollPhysics(),
+                          shrinkWrap: true,
+                          slivers: [
+                            SliverPadding(
+                                padding: EdgeInsets.symmetric(horizontal: 1.sp),
+                                sliver: SliverGrid(
+                                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                                    crossAxisCount: 3,
+                                    mainAxisSpacing: 12.sp,
+                                    crossAxisSpacing: 12.sp,
+                                    childAspectRatio: (106.sp / 130.sp),
+                                  ),
+                                  delegate: SliverChildBuilderDelegate((
+                                      BuildContext context, int index) {
+                                    return Container(
+                                        width: 106,
+                                        height: 130,
+                                        decoration: BoxDecoration(
+                                            color: Colors.white,
+                                            borderRadius: BorderRadius.all(Radius.circular(14)),
+                                            border: Border.all(color: greyColor,width: 1)
+                                        ),
+                                        child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          children: [
+                                            Image.asset('assets/hoofzy/profile_placeholder.png',height: 34,width: 34,),
+                                          ],)
+                                    );
+                                  }, childCount: 12),
+                                )
+                            )
+                          ],
+                        )),
                   ),
 
                   Padding(
-                    padding: const EdgeInsets.only(left: 32.0,right: 32.0,top: 90,bottom: 50),
+                    padding: const EdgeInsets.only(left: 58.0,right: 58.0,top: 90,bottom: 50),
                     child: Container(
-                        height: 56,
+                        height: 60,
                         width: double.infinity,
                         decoration: const BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(20)),
-                            color: greyColor
+                            borderRadius: BorderRadius.all(Radius.circular(30)),
+                            color: greyLightColor
                         ),
                         child: Align(alignment: Alignment.center,
                             child:TextButton

@@ -68,6 +68,7 @@ class Assets {
   static const String hoofzyNotification = 'assets/hoofzy/notification.png';
   static const String hoofzyNutram = 'assets/hoofzy/nutram.png';
   static const String hoofzyNutrition = 'assets/hoofzy/nutrition.png';
+  static const String hoofzyPetFootPlaceholder = 'assets/hoofzy/pet_foot_placeholder.png';
   static const String hoofzyPetService = 'assets/hoofzy/pet_service.png';
   static const String hoofzyPetTrainingService = 'assets/hoofzy/pet_training_service.png';
   static const String hoofzyProfile = 'assets/hoofzy/profile.png';
@@ -108,6 +109,7 @@ class Assets {
   static const String imagesIcLogo = 'assets/images/ic_logo.png';
   static const String imagesIronMan = 'assets/images/iron-man.png';
   static const String imagesThor = 'assets/images/thor.png';
+  static const String lottieCongratulationSuccessBatch = 'assets/lottie/congratulation_success_batch.json';
   static const String lottieCreatePetProfile = 'assets/lottie/create_pet_profile.json';
   static const String lottieCuteDoggie = 'assets/lottie/cute_doggie.json';
   static const String lottieHang = 'assets/lottie/hang.json';

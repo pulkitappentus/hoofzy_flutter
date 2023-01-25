@@ -1,4 +1,4 @@
-#Wed Jan 18 18:30:43 IST 2023
+#Wed Jan 25 17:47:32 IST 2023
 base.1=C\:\\Users\\hp\\Documents\\GitHub\\hoofzy_flutter\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes2.dex
 path.1=classes2.dex
 base.0=C\:\\Users\\hp\\Documents\\GitHub\\hoofzy_flutter\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex

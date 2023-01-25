@@ -9,9 +9,17 @@ class ProfileCoverPhotoPage extends BaseView<ProfileCoverPhotoController> {
   @override
   Widget body(BuildContext context) {
 
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: Padding(
+    return Container(
+      width: double.infinity,
+      height: double.infinity,
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(colors: [Color(0xFFFFFBF6), Color(0xFFFFFFFF)],
+            stops: [0.0, 1.0],
+            begin: FractionalOffset.topCenter,
+            end: FractionalOffset.bottomCenter,
+            tileMode: TileMode.repeated),
+      ),
+      child: Padding(
         padding: const EdgeInsets.only(bottom: 20),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -19,7 +27,7 @@ class ProfileCoverPhotoPage extends BaseView<ProfileCoverPhotoController> {
           children: [
             AppBar(
               toolbarHeight: 56,
-              backgroundColor: Colors.white,
+              backgroundColor: Color(0xFFFFFBF6),
               elevation: 0,
               centerTitle: true,
               leading: InkWell(
@@ -53,9 +61,9 @@ class ProfileCoverPhotoPage extends BaseView<ProfileCoverPhotoController> {
                     child: Container(width: 160.sp,height: 160.sp,decoration: BoxDecoration(
                         border: Border.all(color: lightPinkColor,width: 1),
                         shape: BoxShape.circle,
-                        color: offWhite
+                        color: Colors.white
                     ),
-                    child: Image.asset('assets/hoofzy/grey_doggy.png',),
+                    child: Image.asset('assets/hoofzy/pet_foot_placeholder.png',),
                     ),
                   ),
                   const Padding(
@@ -83,9 +91,9 @@ class ProfileCoverPhotoPage extends BaseView<ProfileCoverPhotoController> {
                     padding: const EdgeInsets.only(left:16.0,right:16.0,top: 20.0),
                     child: Container(width: double.infinity,height: 160.sp,decoration: BoxDecoration(
                         border: Border.all(color: lightPinkColor,width: 1),
-                        color: offWhite
+                        color: Colors.white
                     ),
-                      child: Image.asset('assets/hoofzy/grey_doggy.png',),
+                      child: Image.asset('assets/hoofzy/pet_foot_placeholder.png',),
                     ),
                   ),
                   const Padding(
@@ -95,20 +103,20 @@ class ProfileCoverPhotoPage extends BaseView<ProfileCoverPhotoController> {
 
 
                   Padding(
-                    padding: const EdgeInsets.only(left: 32.0,right: 32.0,top: 90,bottom: 50),
+                    padding: const EdgeInsets.only(left: 58.0,right: 58.0,top: 90,bottom: 50),
                     child: Container(
-                        height: 56,
+                        height: 60,
                         width: double.infinity,
                         decoration: const BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(20)),
-                            color: greyColor
+                            borderRadius: BorderRadius.all(Radius.circular(30)),
+                            color: greyLightColor
                         ),
                         child: Align(alignment: Alignment.center,
                             child:TextButton
                               (
                               onPressed: (){
                               },
-                              child: Text('Send Email',style: textWhiteMedium15,),)
+                              child: Text('Save & Continue',style: textWhiteMedium15,),)
                         )
                     ),
                   ),

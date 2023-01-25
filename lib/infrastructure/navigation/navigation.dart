@@ -20,13 +20,18 @@ import '../../presentation/rates/rate_page.dart';
 import '../../presentation/screens.dart';
 import '../../presentation/sitter_build_trust_screens/final_details/final_details_page.dart';
 import '../../presentation/sitter_build_trust_screens/request_testimonials/request_testimonials_page.dart';
-import '../../presentation/sitter_build_trust_screens/safety_quiz/safety_quiz_page.dart';
 import '../../presentation/sitter_build_trust_screens/sitter_profile/create_profile_page.dart';
+import '../../presentation/sitter_build_trust_screens/sitter_profile/profile_details/about_you/about_you_page.dart';
 import '../../presentation/sitter_build_trust_screens/sitter_profile/profile_details/basic_info/basic_info_page.dart';
+import '../../presentation/sitter_build_trust_screens/sitter_profile/profile_details/congratulations_screens/congratulation_page.dart';
 import '../../presentation/sitter_build_trust_screens/sitter_profile/profile_details/date_of_birth/dateofbirth_page.dart';
 import '../../presentation/sitter_build_trust_screens/sitter_profile/profile_details/details/details_page.dart';
 import '../../presentation/sitter_build_trust_screens/sitter_profile/profile_details/photos/photos_page.dart';
 import '../../presentation/sitter_build_trust_screens/sitter_profile/profile_details/profile_cover_photo/profile_cover_photo_page.dart';
+import '../../presentation/sitter_build_trust_screens/sitter_profile/profile_details/quiz_result_screens/quiz_result_page.dart';
+import '../../presentation/sitter_build_trust_screens/sitter_profile/profile_details/quiz_screens/quiz1_page.dart';
+import '../../presentation/sitter_build_trust_screens/sitter_profile/profile_details/safety_quiz/quiz_explanation_screens/quiz_explanation_screen_view.dart';
+import '../../presentation/sitter_build_trust_screens/sitter_profile/profile_details/safety_quiz/safety_quiz_page.dart';
 import '../../presentation/sitter_build_trust_screens/sitter_profile/profile_details/your_pets/your_pets_page.dart';
 import '../../presentation/sitter_profile_screen/sitter_profile_page2.dart';
 import '../../presentation/sitter_service_setting/service_setting_page.dart';
@@ -169,6 +174,26 @@ class Nav {
       binding: SafetyQuizControllerBinding(),
     ),
     GetPage(
+      name: Routes.resultQuiz,
+      page: () => QuizResultPage(),
+      binding: SafetyQuizControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.congratulation,
+      page: () => CongratulationPage(),
+      binding: SafetyQuizControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.startQuiz,
+      page: () => Quiz1Page(),
+      binding: SafetyQuizControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.quizExplanation,
+      page: () => QuizExplanationScreenView(),
+      binding: SafetyQuizControllerBinding(),
+    ),
+    GetPage(
       name: Routes.finalDetails,
       page: () => FinalDetailsPage(),
       binding: FinalDetailsControllerBinding(),
@@ -176,6 +201,11 @@ class Nav {
     GetPage(
       name: Routes.basicInfo,
       page: () => BasicInfoPage(),
+      binding: BasicInfoControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.aboutYou,
+      page: () => AboutYouPage(),
       binding: BasicInfoControllerBinding(),
     ),
     GetPage(

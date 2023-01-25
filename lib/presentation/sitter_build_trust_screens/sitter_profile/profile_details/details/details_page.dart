@@ -8,9 +8,17 @@ class DetailsPage extends BaseView<DetailsController> {
   @override
   Widget body(BuildContext context) {
 
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: Padding(
+    return Container(
+      width: double.infinity,
+      height: double.infinity,
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(colors: [Color(0xFFFFFBF6), Color(0xFFFFFFFF)],
+            stops: [0.0, 1.0],
+            begin: FractionalOffset.topCenter,
+            end: FractionalOffset.bottomCenter,
+            tileMode: TileMode.repeated),
+      ),
+      child: Padding(
         padding: const EdgeInsets.only(bottom: 20),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -18,7 +26,7 @@ class DetailsPage extends BaseView<DetailsController> {
           children: [
             AppBar(
               toolbarHeight: 56,
-              backgroundColor: Colors.white,
+              backgroundColor: Color(0xFFFFFBF6),
               elevation: 0,
               centerTitle: true,
               leading: InkWell(
@@ -49,7 +57,7 @@ class DetailsPage extends BaseView<DetailsController> {
                   const Padding(
                     padding: EdgeInsets.only(left:16,top: 15.0,right: 16),
                     child: Align(alignment:Alignment.topLeft,child: Text('We recommend keeping personal identifiers—like your last name or workplace—out of your profile.'
-                        ' Please click `Save & Continue` below to prevent any updates from being lost.',style: textBlackMedium14,)),
+                        '\nPlease click `Save & Continue` below to prevent any \nupdates from being lost.',style: textBlackMedium14,)),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(left: 16.0,right: 16.0,top: 30.0),
@@ -86,16 +94,23 @@ class DetailsPage extends BaseView<DetailsController> {
                     padding: EdgeInsets.only(left:16,top: 15.0,right: 16),
                     child: Align(alignment:Alignment.topLeft,child: Text('Make your headline short, descriptive and genuine.',style: textBlackMedium14,)),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Container(
-                      width: double.infinity,
-                      height: 70,
-                      decoration: BoxDecoration(
-                        border: Border.all(color: greyColor,width: 1),
+                  Container(
+                    margin: EdgeInsets.only(left: 16.0,top: 20,right: 16),
+                    height: 70,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(color: gColor,width: 1),
                         borderRadius: BorderRadius.all(Radius.circular(16))
-                      ),
-                      child: const TextField(),
+                    ),
+                    padding: const EdgeInsets.only(left: 16,right: 16),
+                    child: const TextField(
+                      decoration: InputDecoration(
+                          hintStyle: textgreyLight_14,
+                          border: InputBorder.none,
+                          hintText: "Write here"),
+                      style: textBlackMedium14,
+                      maxLines: 4,
                     ),
                   ),
                   const Padding(
@@ -106,21 +121,28 @@ class DetailsPage extends BaseView<DetailsController> {
                     padding: EdgeInsets.only(left:16,top: 15.0,right: 16),
                     child: Align(alignment:Alignment.topLeft,child: Text('What sets you apart from other sitters? Be sure to include any special skills like training puppies or senior care.',style: textBlackMedium14,)),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Container(
-                      width: double.infinity,
-                      height: 100,
-                      decoration: BoxDecoration(
-                        border: Border.all(color: greyColor,width: 1),
+                  Container(
+                    margin: EdgeInsets.only(left: 16.0,top: 20,right: 16),
+                    height: 100,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(color: gColor,width: 1),
                         borderRadius: BorderRadius.all(Radius.circular(16))
-                      ),
-                      child: const TextField(),
+                    ),
+                    padding: const EdgeInsets.only(left: 16,right: 16),
+                    child: const TextField(
+                      decoration: InputDecoration(
+                          hintStyle: textgreyLight_14,
+                          border: InputBorder.none,
+                          hintText: "Write here"),
+                      style: textBlackMedium14,
+                      maxLines: 5,
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 16.0),
-                    child: Align(alignment:Alignment.topLeft,child: Image.asset('assets/hoofzy/checked.png',width: 24,height: 24,fit: BoxFit.fill,)),
+                  const Padding(
+                    padding: const EdgeInsets.only(left: 16.0,top:10.0),
+                    child: Align(alignment:Alignment.topLeft,child: Text('25 word minimum',style: textgreyLight_14,)),
                   ),
                   const Padding(
                     padding: EdgeInsets.only(left: 16.0,top: 12),
@@ -130,21 +152,28 @@ class DetailsPage extends BaseView<DetailsController> {
                     padding: EdgeInsets.only(left:16,top: 15.0,right: 16),
                     child: Align(alignment:Alignment.topLeft,child: Text('How does pet care fit into your daily or weekly routine?',style: textBlackMedium14,)),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Container(
-                      width: double.infinity,
-                      height: 100,
-                      decoration: BoxDecoration(
-                        border: Border.all(color: greyColor,width: 1),
+                  Container(
+                    margin: EdgeInsets.only(left: 16.0,top: 20,right: 16),
+                    height: 110,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(color: gColor,width: 1),
                         borderRadius: BorderRadius.all(Radius.circular(16))
-                      ),
-                      child: const TextField(),
+                    ),
+                    padding: const EdgeInsets.only(left: 16,right: 16),
+                    child: const TextField(
+                      decoration: InputDecoration(
+                          hintStyle: textgreyLight_14,
+                          border: InputBorder.none,
+                          hintText: "Write here"),
+                      style: textBlackMedium14,
+                      maxLines: 5,
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 16.0),
-                    child: Align(alignment:Alignment.topLeft,child: Image.asset('assets/hoofzy/checked.png',width: 24,height: 24,fit: BoxFit.fill,)),
+                  const Padding(
+                    padding: const EdgeInsets.only(left: 16.0,top:10.0),
+                    child: Align(alignment:Alignment.topLeft,child: Text('25 word minimum',style: textgreyLight_14,)),
                   ),
                   const Padding(
                     padding: EdgeInsets.only(left: 16.0,top: 12),
@@ -154,30 +183,37 @@ class DetailsPage extends BaseView<DetailsController> {
                     padding: EdgeInsets.only(left:16,top: 15.0,right: 16),
                     child: Align(alignment:Alignment.topLeft,child: Text('How do you care for pets in your home and/or your client`s home? This will vary depending on which service you offer.',style: textBlackMedium14,)),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Container(
-                      width: double.infinity,
-                      height: 100,
-                      decoration: BoxDecoration(
-                        border: Border.all(color: greyColor,width: 1),
+                  Container(
+                    margin: EdgeInsets.only(left: 16.0,top: 20,right: 16),
+                    height: 110,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(color: gColor,width: 1),
                         borderRadius: BorderRadius.all(Radius.circular(16))
-                      ),
-                      child: const TextField(),
+                    ),
+                    padding: const EdgeInsets.only(left: 16,right: 16),
+                    child: const TextField(
+                      decoration: InputDecoration(
+                          hintStyle: textgreyLight_14,
+                          border: InputBorder.none,
+                          hintText: "Write here"),
+                      style: textBlackMedium14,
+                      maxLines: 5,
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 16.0),
-                    child: Align(alignment:Alignment.topLeft,child: Image.asset('assets/hoofzy/checked.png',width: 24,height: 24,fit: BoxFit.fill,)),
+                  const Padding(
+                    padding: const EdgeInsets.only(left: 16.0,top:10.0),
+                    child: Align(alignment:Alignment.topLeft,child: Text('25 word minimum',style: textgreyLight_14,)),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 32.0,left: 38.0,right: 38.0,bottom: 38),
+                    padding: const EdgeInsets.only(top: 58.0,left: 58.0,right: 38.0,bottom: 38),
                     child: Container(
-                        height: 56,
+                        height: 60,
                         width: double.infinity,
                         decoration: const BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(20)),
-                            color: primaryColor
+                            borderRadius: BorderRadius.all(Radius.circular(30)),
+                            color: greyLightColor
                         ),
                         child: Align(alignment: Alignment.center,
                             child:TextButton

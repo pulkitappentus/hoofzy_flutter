@@ -1,17 +1,26 @@
 import 'package:Hoofzy_V2/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_holo_date_picker/date_picker_theme.dart';
+import 'package:flutter_holo_date_picker/widget/date_picker_widget.dart';
 import '../../../../../infrastructure/base/base_view.dart';
-import '../../../../date_picker.dart';
 import 'controllers/date.of.birth.controller.dart';
 
 class DateofbirthPage extends BaseView<DateOfBirthController> {
 
   @override
   Widget body(BuildContext context) {
-
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: Padding(
+    DateTime _selectedDate;
+    return Container(
+      width: double.infinity,
+      height: double.infinity,
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(colors: [Color(0xFFFFFBF6), Color(0xFFFFFFFF)],
+            stops: [0.0, 1.0],
+            begin: FractionalOffset.topCenter,
+            end: FractionalOffset.bottomCenter,
+            tileMode: TileMode.repeated),
+      ),
+      child: Padding(
         padding: const EdgeInsets.only(bottom: 20),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -19,7 +28,7 @@ class DateofbirthPage extends BaseView<DateOfBirthController> {
           children: [
             AppBar(
               toolbarHeight: 56,
-              backgroundColor: Colors.white,
+              backgroundColor: Color(0xFFFFFBF6),
               elevation: 0,
               centerTitle: true,
               leading: InkWell(
@@ -49,28 +58,44 @@ class DateofbirthPage extends BaseView<DateOfBirthController> {
                         ' We won’t share or display this on your profile',style: textBlackMedium14,)),
                   ),
 
-                  /*DatePicker(
-                    dateChangedCallback: (date) {
-                      debugPrint("Selected date $date");
-                    },
-                  ),*/
+                  Padding(
+                    padding: const EdgeInsets.only(left: 46.0, right: 46.0),
+                    child: DatePickerWidget(
+                      looping: false,
+                      // default is not looping
+                      firstDate: DateTime(1990, 01, 01),
+                      lastDate: DateTime(2030, 1, 1),
+                      initialDate: DateTime(2023, 01, 16),
+                      dateFormat: "MMMM-dd-yyyy",
+                      //  locale: DatePicker.localeFromString('en'),
+                      onChange: (DateTime newDate, _) => _selectedDate = newDate,
+                      pickerTheme: const DateTimePickerTheme(
+                        itemTextStyle: TextStyle(color: Colors.black, fontSize: 18),
+                        dividerColor: Color(0xFFF5F5F5),
+                        backgroundColor: Color(0xFFFFFBF6),
+
+                      ),
+                    ),
+                  ),
+
 
                   Padding(
-                    padding: const EdgeInsets.only(left: 32.0,right: 32.0,top: 90,bottom: 50),
-                    child: Container(
-                        height: 56,
-                        width: double.infinity,
-                        decoration: const BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(20)),
-                            color: primaryColor
-                        ),
-                        child: Align(alignment: Alignment.center,
-                            child:TextButton
-                              (
-                              onPressed: (){
-                              },
-                              child: Text('Save & Continue',style: textWhiteMedium15,),)
-                        )
+                    padding: const EdgeInsets.only(left: 58.0,right: 58.0,top: 90,bottom: 50),
+                    child: InkWell(
+                      onTap: (){
+
+                      },
+                      child: Container(
+                          height: 60,
+                          width: double.infinity,
+                          decoration: const BoxDecoration(
+                              borderRadius: BorderRadius.all(Radius.circular(30)),
+                              color: primaryColorSitter
+                          ),
+                          child: const Align(alignment: Alignment.center,
+                              child:Text('Save & Continue',style: textWhiteMedium15,)
+                          )
+                      ),
                     ),
                   ),
                 ],

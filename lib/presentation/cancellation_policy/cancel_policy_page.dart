@@ -42,24 +42,25 @@ class CancelPolicyPage extends BaseView<CancelPolicyController> {
                 children: <Widget>[
 
                   const Padding(
-                    padding: const EdgeInsets.only(left: 16.0,top: 16),
+                    padding: const EdgeInsets.only(left: 16.0,top: 10),
                     child: Align(alignment: Alignment.topLeft,
                         child: Text('Cancellation Policy', style: headlineBlack20,)),
                   ),
 
                   Padding(
-                    padding: const EdgeInsets.only(left: 16.0, top: 32.0),
+                    padding: const EdgeInsets.only(left: 16.0, top: 30.0),
                     child: Flexible(child: Row(
                       children: <Widget>[
                         Image.asset('assets/hoofzy/question.png', width: 20,
                           height: 20,
-                          fit: BoxFit.fill,),
+                          fit: BoxFit.fill,color: primaryColorSitter,),
                         const Padding(
                           padding: EdgeInsets.only(left: 8.0),
                           child: Text('What do these mean?', style: TextStyle(
                               fontSize: 14,
                               fontWeight: FontWeight.w400,
-                              color: primaryColor),),
+                              color: primaryColorSitter),
+                          ),
                         )
                       ],
                     )),
@@ -136,21 +137,22 @@ class CancelPolicyPage extends BaseView<CancelPolicyController> {
                   ),
 
                   Padding(
-                    padding: const EdgeInsets.only(top: 138.0,left: 38.0,right: 38.0),
-                    child: Container(
-                        height: 56,
-                        width: double.infinity,
-                        decoration: const BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(20)),
-                            color: primaryColor
-                        ),
-                        child: Align(alignment: Alignment.center,
-                            child:TextButton
-                              (
-                              onPressed: (){
-                              },
-                              child: Text('Save & Continue',style: textWhiteMedium15,),)
-                        )
+                    padding: const EdgeInsets.only(top: 138.0,left: 58.0,right: 58.0),
+                    child: InkWell(
+                      onTap: (){
+
+                      },
+                      child: Container(
+                          height: 60,
+                          width: double.infinity,
+                          decoration: const BoxDecoration(
+                              borderRadius: BorderRadius.all(Radius.circular(30)),
+                              color: primaryColorSitter
+                          ),
+                          child: const Align(alignment: Alignment.center,
+                              child:Text('Save',style: textWhiteMedium15,),
+                          )
+                      ),
                     ),
                   )
 

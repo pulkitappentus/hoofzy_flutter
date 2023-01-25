@@ -10,6 +10,9 @@ class YourPetsController extends BaseController {
   var reviewAvailable = false;
   YourPetsController({required FirebaseRepository firebaseRepository}) : _firebaseRepository = firebaseRepository;
 
+  var isPetHave = false.obs;
+  var isDonthavePet = false.obs;
+
 
   @override
   void onConnectionChange(ConnectivityResult result) {

@@ -15,15 +15,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a1547f2-9a36-4846-96c0-e2f361532b0a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/hoofzy/google_play.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/hoofzy/razor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/hoofzy/strip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/infrastructure/navigation/bindings/controllers/service.booking.controllerBinding.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/presentation/user_app/boarding_screens/photos_screen/photos_page.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/presentation/user_app/boarding_screens/services_booking_detail_screen/service_booking_detail_page.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/presentation/user_app/boarding_screens/services_booking_payment_screen/service_booking_payment_page.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/presentation/user_app/boarding_screens/services_booking_screen/controllers/service.booking.controller.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/presentation/user_app/boarding_screens/services_booking_screen/service_booking_page.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/hoofzy/pet_foot_placeholder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/lottie/congratulation_success_batch.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/profile_details/about_you/about_you_page.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/profile_details/congratulations_screens/congratulation_page.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/profile_details/safety_quiz/quiz_explanation_screens/body_language4_page.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/profile_details/safety_quiz/quiz_explanation_screens/quiz_explanation_screen_view.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/f4a6b8802d87017c9e1c8da7d3700e00/.filecache" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/f4a6b8802d87017c9e1c8da7d3700e00/.filecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/f4a6b8802d87017c9e1c8da7d3700e00/app.dill" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/f4a6b8802d87017c9e1c8da7d3700e00/app.dill" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/f4a6b8802d87017c9e1c8da7d3700e00/debug_android_application.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/f4a6b8802d87017c9e1c8da7d3700e00/debug_android_application.stamp" afterDir="false" />
@@ -49,10 +46,27 @@
       <change beforePath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app.apk.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app.apk.sha1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/constants.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/generated/assets.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/assets.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/infrastructure/navigation/bindings/controllers/safety.quiz.controllerBinding.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/infrastructure/navigation/bindings/controllers/safety.quiz.controllerBinding.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/infrastructure/navigation/navigation.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/infrastructure/navigation/navigation.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/infrastructure/navigation/routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/infrastructure/navigation/routes.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/presentation/user_app/boarding_screens/service_detail_screen/controllers/service.detail.controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/user_app/boarding_screens/service_detail_screen/controllers/service.detail.controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/presentation/user_app/boarding_screens/service_detail_screen/service_detail_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/user_app/boarding_screens/service_detail_screen/service_detail_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/cancellation_policy/cancel_policy_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/cancellation_policy/cancel_policy_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/quiz_screens/body_language2_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/profile_details/safety_quiz/quiz_explanation_screens/body_language2_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/quiz_screens/body_language3_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/profile_details/safety_quiz/quiz_explanation_screens/body_language3_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/quiz_screens/body_language_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/profile_details/safety_quiz/quiz_explanation_screens/body_language_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/quiz_screens/quiz1_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/profile_details/quiz_screens/quiz1_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/quiz_screens/quiz_result_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/profile_details/quiz_result_screens/quiz_result_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/set_up_profile/setup_profile_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/set_up_profile/setup_profile_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/safety_quiz/controllers/safety.quiz.controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/profile_details/safety_quiz/controllers/safety.quiz.controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/safety_quiz/safety_quiz_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/profile_details/safety_quiz/safety_quiz_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/create_profile_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/create_profile_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/profile_details/basic_info/basic_info_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/profile_details/basic_info/basic_info_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/profile_details/date_of_birth/dateofbirth_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/profile_details/date_of_birth/dateofbirth_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/profile_details/details/details_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/profile_details/details/details_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/profile_details/photos/photos_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/profile_details/photos/photos_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/profile_details/profile_cover_photo/profile_cover_photo_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/profile_details/profile_cover_photo/profile_cover_photo_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/profile_details/your_pets/controllers/your.pets.controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/profile_details/your_pets/controllers/your.pets.controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/profile_details/your_pets/your_pets_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/sitter_build_trust_screens/sitter_profile/profile_details/your_pets/your_pets_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/presentation/sitter_profile_screens/sitter_profile_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/sitter_profile_screens/sitter_profile_page.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,7 +104,7 @@
     <property name="cidr.known.project.marker" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/presentation/user_app/boarding_screens" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/lottie" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -99,18 +113,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\lib\presentation\user_app\boarding_screens" />
-      <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\assets\hoofzy" />
-      <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\lib\infrastructure\navigation\bindings\controllers" />
       <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\assets\lottie" />
-      <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\android\app" />
+      <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\lib\presentation\sitter_build_trust_screens\sitter_profile\profile_details" />
+      <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\lib\presentation\sitter_build_trust_screens\sitter_profile\profile_details\safety_quiz\quiz_explanation_screens" />
+      <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\lib\presentation\sitter_build_trust_screens\sitter_profile\profile_details\safety_quiz" />
+      <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\assets\hoofzy" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\lib\presentation\sitter_build_trust_screens\sitter_profile\profile_details\quiz_result_screens" />
+      <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\lib\presentation\sitter_build_trust_screens\sitter_profile\profile_details" />
+      <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\lib\presentation\sitter_build_trust_screens\sitter_profile\profile_details\safety_quiz\quiz_explanation_screens" />
       <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\lib\presentation\sitter_build_trust_screens\sitter_profile" />
       <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\lib\presentation\sitter_profile_screen" />
-      <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\lib\presentation\verification_page" />
-      <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\lib\presentation\boarding_screens\controllers" />
-      <recent name="C:\Users\hp\Documents\GitHub\hoofzy_flutter\lib\presentation" />
     </key>
   </component>
   <component name="RunManager">
