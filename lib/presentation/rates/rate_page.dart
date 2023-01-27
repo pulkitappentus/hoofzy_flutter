@@ -11,9 +11,16 @@ class RatePage extends BaseView<RateController> {
   @override
   Widget body(BuildContext context) {
 
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: Padding(
+    return Container(
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(colors: [Color(0xFFFFFBF6), Color(0xFFFFFFFF)],
+            stops: [0.0, 1.0],
+            begin: FractionalOffset.topCenter,
+            end: FractionalOffset.bottomCenter,
+            tileMode: TileMode.repeated),
+
+      ),
+      child: Padding(
         padding: const EdgeInsets.only(bottom: 20),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -21,7 +28,7 @@ class RatePage extends BaseView<RateController> {
           children: [
             AppBar(
               toolbarHeight: 56,
-              backgroundColor: Colors.white,
+              backgroundColor: Color(0xFFFFFBF6),
               elevation: 0,
               centerTitle: true,
               leading: InkWell(
@@ -46,21 +53,13 @@ class RatePage extends BaseView<RateController> {
                     padding: const EdgeInsets.only(left: 16.0,top: 14.0),
                     child: Flexible(child: Row(
                       children: <Widget> [
-                        Image.asset('assets/hoofzy/question.png',width: 20,height: 20,fit: BoxFit.fill,),
+                        Image.asset('assets/hoofzy/question.png',width: 20,height: 20,fit: BoxFit.fill,color: primaryColorSitter,),
                         const Padding(
                           padding: EdgeInsets.only(left: 8.0),
-                          child: Text('Need helps with rates',style:TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: primaryColor) ,),
+                          child: Text('Need helps with rates',style:TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: primaryColorSitter) ,),
                         )
                       ],
                     )),
-                  ),
-
-                  const Padding(
-                    padding: const EdgeInsets.only(left: 16.0,top: 15,right: 16),
-                    child: Align(alignment: Alignment.topLeft,
-                      child: Text('What you want clients to pay per service:',style:
-                      TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: Colors.black,height: 1.8)),
-                    ),
                   ),
 
                   Padding(
@@ -68,26 +67,27 @@ class RatePage extends BaseView<RateController> {
                     child: Container(
                       width: double.infinity,
                       height: 50,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(16)),
-                        border: Border.all(color: greyColor,width: 1)
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 8.0,right: 8.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: const [
-                            Icon(Icons.currency_rupee,color: Colors.black,),
-                            Text('/night',style: textBlackMedium13,)
-                          ],
-                        ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: const [
+                          Text('What you want clients to pay \nper service:',style:
+                          TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: Colors.black,height: 1.8)),
+                          Text('₹449/night',style: textBlackMedium13,)
+                        ],
                       ),
 
                     ),
                   ),
+                  const Padding(
+                    padding: const EdgeInsets.only(left: 16.0,right: 16.0),
+                    child: Divider(
+                      color: greyColor,
+                      thickness: 1,
+                    ),
+                  ),
 
                   const Padding(
-                    padding: const EdgeInsets.only(left: 16.0,top: 15,right: 16),
+                    padding: const EdgeInsets.only(left: 16.0,top: 8,right: 16),
                     child: Align(alignment: Alignment.topLeft,
                       child: Text('What you’ll earn per service: ₹399',style:
                       TextStyle(fontSize: 13, fontWeight: FontWeight.w400, color: lightGreyColor,height: 1.8)),
@@ -120,10 +120,10 @@ class RatePage extends BaseView<RateController> {
                   Padding(
                     padding: const EdgeInsets.only(left: 56.0,right: 56.0,top: 50.0),
                     child: Container(
-                      width: double.infinity,
+                      width: 200,
                       height: 50,
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(16)),
+                          borderRadius: BorderRadius.all(Radius.circular(30)),
                           border: Border.all(color: greyColor,width: 1)
                       ),
                       child: Padding(
@@ -131,7 +131,7 @@ class RatePage extends BaseView<RateController> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: const [
-                            Icon(Icons.keyboard_arrow_down,color: primaryColor,size: 30,),
+                            Icon(Icons.keyboard_arrow_down,color: Colors.black,size: 30,),
                             Text('Hide additional rates',style: textBlackLight15,)
                           ],
                         ),
@@ -141,13 +141,13 @@ class RatePage extends BaseView<RateController> {
                   ),
 
                   Padding(
-                    padding: const EdgeInsets.all(38.0),
+                    padding: const EdgeInsets.all(58.0),
                     child: Container(
-                        height: 56,
+                        height: 60,
                         width: double.infinity,
                         decoration: const BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(20)),
-                            color: primaryColor
+                            borderRadius: BorderRadius.all(Radius.circular(30)),
+                            color: greyLightColor
                         ),
                         child: Align(alignment: Alignment.center,
                             child:TextButton
@@ -405,10 +405,10 @@ Widget extraWidgets(BuildContext context){
         padding: const EdgeInsets.only(left: 16.0,top: 14.0),
         child: Flexible(child: Row(
           children: <Widget> [
-            Image.asset('assets/hoofzy/question.png',width: 20,height: 20,fit: BoxFit.fill,),
+            Image.asset('assets/hoofzy/question.png',width: 20,height: 20,fit: BoxFit.fill,color: primaryColorSitter,),
             const Padding(
               padding: EdgeInsets.only(left: 8.0),
-              child: Text('How are additional rates used?',style:TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: primaryColor) ,),
+              child: Text('How are additional rates used?',style:TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: primaryColorSitter) ,),
             )
           ],
         )),

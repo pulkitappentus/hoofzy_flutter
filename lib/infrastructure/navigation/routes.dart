@@ -22,9 +22,14 @@ class Routes {
   static const verification = '/verification_screen';
   static const sitterProfile = '/sitter_profile_screens';
   static const sitterProfile2 = '/sitter_profile_screen';
-  static const sitterService = '/sitter_service_setting';
+  static const boardingService = '/sitter_service_setting/boarding_screen';
+  static const houseSittingService = '/sitter_service_setting/house_sitting_screen';
+  static const dropinVisitService = '/sitter_service_setting/dropin_visit_screen';
+  static const doggyCareService = '/sitter_service_setting/doggy_care_screen';
+  static const dogWalkingService = '/sitter_service_setting/dogwalking_screen';
   static const rates = '/rates';
   static const availability = '/availability';
+  static const serviceArea = '/service_area_screen';
   static const petPreferences = '/pet_preferences';
   static const aboutHome = '/about_home';
   static const cancellationPolicy = '/cancellation_policy';
@@ -65,4 +70,8 @@ class Routes {
   static const bookingPayment = '/user_app/boarding_screens/services_booking_payment_screen';
   static const photoScreen = '/user_app/boarding_screens/photos_screen';
   static const userPets = '/user_app/pet_screens';
+
+  static const sitterHome = '/sitter_app/home_sitter';
+  static const upcommingBooking = '/sitter_app/booking/up_comming_booking';
+  static const bookingDetails = '/sitter_app/booking/booking_details';
 }

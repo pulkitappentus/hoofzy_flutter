@@ -13,9 +13,16 @@ class PetPreferencesPage extends BaseView<PetPreferencesController> {
 
   @override
   Widget body(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: Padding(
+    return Container(
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(colors: [Color(0xFFFFFBF6), Color(0xFFFFFFFF)],
+            stops: [0.0, 1.0],
+            begin: FractionalOffset.topCenter,
+            end: FractionalOffset.bottomCenter,
+            tileMode: TileMode.repeated),
+
+      ),
+      child: Padding(
         padding: const EdgeInsets.only(bottom: 20),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -23,7 +30,7 @@ class PetPreferencesPage extends BaseView<PetPreferencesController> {
           children:[
             AppBar(
               toolbarHeight: 56,
-              backgroundColor: Colors.white,
+              backgroundColor: Color(0xFFFFFBF6),
               elevation: 0,
               centerTitle: true,
               leading: InkWell(
@@ -51,13 +58,14 @@ class PetPreferencesPage extends BaseView<PetPreferencesController> {
                       children: <Widget>[
                         Image.asset('assets/hoofzy/question.png', width: 20,
                           height: 20,
+                          color: primaryColorSitter,
                           fit: BoxFit.fill,),
                         const Padding(
                           padding: EdgeInsets.only(left: 8.0),
                           child: Text('How should I set preferences?', style: TextStyle(
                               fontSize: 14,
                               fontWeight: FontWeight.w400,
-                              color: primaryColor),),
+                              color: primaryColorSitter),),
                         )
                       ],
                     )),
@@ -124,7 +132,7 @@ class PetPreferencesPage extends BaseView<PetPreferencesController> {
                             Image.asset('assets/hoofzy/unchecked.png',height: 24,width: 24,),
                             Padding(
                               padding: const EdgeInsets.only(left: 10.0),
-                              child: Image.asset('assets/hoofzy/grey_doggy.png',height: 24,width: 24,),
+                              child: Image.asset('assets/hoofzy/small_grey_dog.png',height: 24,width: 24,),
                             ),
                             const Padding(
                               padding: const EdgeInsets.only(left: 10.0),
@@ -140,7 +148,7 @@ class PetPreferencesPage extends BaseView<PetPreferencesController> {
                               Image.asset('assets/hoofzy/unchecked.png',height: 24,width: 24,),
                               Padding(
                                 padding: const EdgeInsets.only(left: 10.0),
-                                child: Image.asset('assets/hoofzy/grey_doggy.png',height: 24,width: 24,),
+                                child: Image.asset('assets/hoofzy/medium_grey_dog.png',height: 24,width: 24,),
                               ),
                               const Padding(
                                 padding: const EdgeInsets.only(left: 10.0),
@@ -157,7 +165,7 @@ class PetPreferencesPage extends BaseView<PetPreferencesController> {
                               Image.asset('assets/hoofzy/unchecked.png',height: 24,width: 24,),
                               Padding(
                                 padding: const EdgeInsets.only(left: 10.0),
-                                child: Image.asset('assets/hoofzy/grey_doggy.png',height: 24,width: 24,),
+                                child: Image.asset('assets/hoofzy/large_grey_dog.png',height: 24,width: 24,),
                               ),
                               const Padding(
                                 padding: const EdgeInsets.only(left: 10.0),
@@ -174,7 +182,7 @@ class PetPreferencesPage extends BaseView<PetPreferencesController> {
                               Image.asset('assets/hoofzy/unchecked.png',height: 24,width: 24,),
                               Padding(
                                 padding: const EdgeInsets.only(left: 10.0),
-                                child: Image.asset('assets/hoofzy/grey_doggy.png',height: 24,width: 24,),
+                                child: Image.asset('assets/hoofzy/gaint_grey_dog.png',height: 24,width: 24,),
                               ),
                               const Padding(
                                 padding: const EdgeInsets.only(left: 10.0),
@@ -191,7 +199,7 @@ class PetPreferencesPage extends BaseView<PetPreferencesController> {
                               Image.asset('assets/hoofzy/unchecked.png',height: 24,width: 24,),
                               Padding(
                                 padding: const EdgeInsets.only(left: 10.0),
-                                child: Image.asset('assets/hoofzy/grey_doggy.png',height: 24,width: 24,),
+                                child: Image.asset('assets/hoofzy/grey_cat.png',height: 24,width: 24,),
                               ),
                               const Padding(
                                 padding: const EdgeInsets.only(left: 10.0),
@@ -207,15 +215,15 @@ class PetPreferencesPage extends BaseView<PetPreferencesController> {
                   ),
 
                   Padding(
-                    padding: const EdgeInsets.only(top: 138.0,left: 38.0,right: 38.0),
+                    padding: const EdgeInsets.only(top: 138.0,left: 58.0,right: 58.0),
                     child: Container(
-                        height: 56,
+                        height: 60,
                         width: double.infinity,
                         decoration: const BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(20)),
-                            color: primaryColor
+                            borderRadius: BorderRadius.all(Radius.circular(30)),
+                            color: greyLightColor
                         ),
-                        child: Align(alignment: Alignment.bottomCenter,
+                        child: Align(alignment: Alignment.center,
                             child:TextButton
                               (
                               onPressed: (){

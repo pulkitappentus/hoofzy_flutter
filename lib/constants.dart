@@ -6,12 +6,15 @@ const kTextFieldFill = Color(0xff1E1C24);
 const primaryColorSitter = Color(0xffF1A800);
 const primaryColor = Color(0xffB84201);
 const greenColor = Color(0xff62C13A);
+const greenCall = Color(0xff62C13A);
 const appThemeOrange = Color(0xffFF640E);
 const lightPrimaryColor = Color(0xffF0E1FF);
 const lightPrimaryColorUser = Color(0xffFFF1EB);
 const avtarBackground = Color(0xffFFE9DE);
 const primaryPinkColor = Color(0xffF8F2FF);
+const primaryThemeColor = Color(0xffFFE8B5);
 const greyColor = Color(0xffBDB6C4);
+const lightGColor = Color(0xffE9E7E3);
 const gColor = Color(0xffB5ADA9);
 const greyLightColor = Color(0xffC5C1B6);
 const lightGreyColor = Color(0xffBDB6C4);
@@ -19,6 +22,8 @@ const lightPinkColor = Color(0xffEBE4F2);
 const lightThemeColor = Color(0xffFFE9DE);
 const offWhite = Color(0xffFDFBFF);
 const offWhiteGrey = Color(0xffC5C1B6);
+const bookingBackColor = Color(0xffF9F4EA);
+const bookingBackSubColor = Color(0xffFFFCF8);
 // TextStyles
 const headlineBlack = TextStyle(
   color: Colors.black,

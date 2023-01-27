@@ -115,7 +115,7 @@ class SitterProfilePage2 extends BaseView<SitterProfileController> {
                         ),
                       ),
                       onTap: (){
-                        Get.toNamed(Routes.sitterService);
+                        Get.toNamed(Routes.boardingService);
                       },
                     ),
                   ),

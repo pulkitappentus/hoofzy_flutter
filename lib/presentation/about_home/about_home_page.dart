@@ -399,11 +399,11 @@ class AboutHomePage extends BaseView<AboutHomeController> {
                   Padding(
                     padding: const EdgeInsets.all(38.0),
                     child: Container(
-                        height: 56,
+                        height: 60,
                         width: double.infinity,
                         decoration: const BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(20)),
-                            color: primaryColor
+                            borderRadius: BorderRadius.all(Radius.circular(30)),
+                            color: greyLightColor
                         ),
                         child: Align(alignment: Alignment.center,
                             child:TextButton

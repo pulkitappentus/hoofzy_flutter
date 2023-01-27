@@ -165,6 +165,24 @@ flutter:
     - assets/hoofzy/google_play.png
     - assets/hoofzy/pet_foot_placeholder.png
 
+    - assets/hoofzy/small_grey_dog.png
+    - assets/hoofzy/medium_grey_dog.png
+    - assets/hoofzy/large_grey_dog.png
+    - assets/hoofzy/gaint_grey_dog.png
+    - assets/hoofzy/dummy_dog.png
+    - assets/hoofzy/pet_activity.png
+    - assets/hoofzy/pee.png
+    - assets/hoofzy/poop.png
+    - assets/hoofzy/water.png
+    - assets/hoofzy/food.png
+    - assets/hoofzy/add_d.png
+    - assets/hoofzy/booking_detail.png
+    - assets/hoofzy/message_chat.png
+    - assets/hoofzy/owner.png
+    - assets/hoofzy/call.png
+    - assets/hoofzy/mess.png
+    - assets/hoofzy/cash.png
+
     - assets/lottie/cute_doggie.json
     - assets/lottie/super_sale_hang.json
     - assets/lottie/hang.json
