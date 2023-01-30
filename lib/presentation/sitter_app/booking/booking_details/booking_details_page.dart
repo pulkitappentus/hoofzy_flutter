@@ -1,6 +1,9 @@
 import 'package:Hoofzy_V2/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import '../../../../infrastructure/base/base_view.dart';
+import '../../../../infrastructure/navigation/routes.dart';
 import 'controllers/booking_details_controller.dart';
 
 class BookingDetailsPage extends BaseView<BookingDetailsController> {
@@ -207,6 +210,40 @@ class BookingDetailsPage extends BaseView<BookingDetailsController> {
                       Image.asset('assets/hoofzy/booking_detail.png',width: 24,height: 24,fit: BoxFit.fill,),
                       const Padding(
                         padding: const EdgeInsets.only(left: 7.0),
+                        child: Text('Walking', style: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            fontSize: 18,
+                            color: Color(0xFF000000)),),
+                      ),
+                    ],),
+                  ),
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 21.0,left: 16,right: 16),
+                      child:  InkWell(
+                        onTap: (){
+                          Get.toNamed(Routes.petWalking);
+                        },
+                        child: Container(
+                          height: 40,
+                          width: 92,
+                          decoration: const BoxDecoration(
+                              borderRadius: BorderRadius.all(Radius.circular(40)),
+                              color: primaryColorSitter
+                          ),
+                          child: const Align(alignment:Alignment.center,child: Text('1st Walk',style: textWhiteLight14,)),
+                        ),
+                      ),
+                    ),
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.only(left: 16.0,top: 21),
+                    child: Row(children: <Widget> [
+                      Image.asset('assets/hoofzy/booking_detail.png',width: 24,height: 24,fit: BoxFit.fill,),
+                      const Padding(
+                        padding: const EdgeInsets.only(left: 7.0),
                         child: Text('Booking Details', style: TextStyle(
                             fontWeight: FontWeight.w500,
                             fontSize: 18,
@@ -277,6 +314,41 @@ class BookingDetailsPage extends BaseView<BookingDetailsController> {
                             ),
                           ),
                         ],
+                      ),
+                    ),
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.only(left: 16.0,top: 21),
+                    child: Row(children: const [
+                      Icon(Icons.location_on_outlined,color: Colors.black,size: 24,),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 7.0),
+                        child: Text('Location', style: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            fontSize: 18,
+                            color: Color(0xFF000000)),),
+                      ),
+                    ],),
+                  ),
+                  const Align(
+                    alignment: Alignment.topLeft,
+                    child: Padding(
+                      padding: EdgeInsets.only(left: 16.0,top: 10.0),
+                      child: Text('S-94, Shanti Nagar, Civil Lines, Jaipur', style: TextStyle(
+                          fontWeight: FontWeight.w400,
+                          fontSize: 15,
+                          color: Color(0xFF000000)),),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 21.0,left: 16,right: 16),
+                    child: Container(
+                      width: double.infinity,
+                      height: 116,
+                      decoration: const BoxDecoration(
+                        color: lightGColor,
+                        borderRadius: BorderRadius.all(Radius.circular(16))
                       ),
                     ),
                   ),
@@ -610,6 +682,7 @@ class BookingDetailsPage extends BaseView<BookingDetailsController> {
                             child:TextButton
                               (
                               onPressed: (){
+                                Get.toNamed(Routes.finishService);
                               },
                               child: Text('Finish Service',style: textWhiteMedium15,),)
                         )

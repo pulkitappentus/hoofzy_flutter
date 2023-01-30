@@ -82,7 +82,6 @@ class UpcommingBookingPage extends BaseView<UpcommingBookingController> {
                                           },
                                           child: Container(
                                             width: double.infinity,
-                                            height: 242,
                                             decoration: const BoxDecoration(
                                                 color: bookingBackColor,
                                                 borderRadius: BorderRadius.all(Radius.circular(18))
@@ -94,25 +93,59 @@ class UpcommingBookingPage extends BaseView<UpcommingBookingController> {
                                                   child: Row(
                                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                     children: <Widget> [
-                                                      Row(children: [
-                                                        Image.asset('assets/hoofzy/profile_placeholder.png',height: 24,width: 24,fit: BoxFit.fill,color: primaryColorSitter,),
-                                                        const Padding(
-                                                          padding: const EdgeInsets.only(left: 10.0),
-                                                          child: Text('Dog Walking', style: TextStyle(
-                                                              fontWeight: FontWeight.w500,
-                                                              fontSize: 16,
-                                                              color: Color(0xFF000000)),),
+                                                      Column(
+                                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                                        children: [
+                                                          Row(children: [
+                                                            Image.asset('assets/hoofzy/profile_placeholder.png',height: 24,width: 24,fit: BoxFit.fill,color: upcommingOrange,),
+                                                            const Padding(
+                                                              padding: const EdgeInsets.only(left: 10.0),
+                                                              child: Text('Boarding', style: TextStyle(
+                                                                  fontWeight: FontWeight.w500,
+                                                                  fontSize: 16,
+                                                                  color: Color(0xFF000000)),),
+                                                            ),
+                                                          ],),
+                                                          Padding(
+                                                            padding: const EdgeInsets.only(top: 15.0),
+                                                            child: Row(children: [
+                                                              Image.asset('assets/hoofzy/profile_placeholder.png',height: 24,width: 24,fit: BoxFit.fill,color: upcommingOrange,),
+                                                              const Padding(
+                                                                padding: const EdgeInsets.only(left: 10.0),
+                                                                child: Text('8:00 pm, Tue, 24 January', style: TextStyle(
+                                                                    fontWeight: FontWeight.w400,
+                                                                    fontSize: 15,
+                                                                    color: Color(0xFF000000)),),
+                                                              ),
+                                                            ],),
+                                                          ),
+
+                                                        ],
+
+                                                      ),
+                                                      Padding(
+                                                        padding: const EdgeInsets.only(bottom: 20.0),
+                                                        child: Container(
+                                                          width: 80,
+                                                          height: 32,
+                                                          decoration: const BoxDecoration(
+                                                            color: upcommingOrange,
+                                                            borderRadius: BorderRadius.all(Radius.circular(16))
+                                                          ),
+                                                          child: const Align(
+                                                            alignment: Alignment.center,
+                                                            child: Text('upcoming', style: TextStyle(
+                                                                fontWeight: FontWeight.w400,
+                                                                fontSize: 14,
+                                                                color: Color(0xFFFFFFFF)),),
+                                                          ),
                                                         ),
-                                                      ],),
-                                                      const Text('Tue, 23 Jan', style: TextStyle(
-                                                          fontWeight: FontWeight.w400,
-                                                          fontSize: 14,
-                                                          color: Color(0xFF000000)),),
+                                                      )
                                                     ],
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: const EdgeInsets.only(top: 14.0,left: 10,right: 10),
+                                                  padding: const EdgeInsets.only(top: 14.0,left: 10,right: 10,bottom: 15),
                                                   child: Container(
                                                     height: 176,
                                                     decoration: const BoxDecoration(

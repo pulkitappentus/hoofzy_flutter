@@ -3,15 +3,21 @@ import 'package:Hoofzy_V2/presentation/home/controllers/home.controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:sizer/sizer.dart';
 import '../../../../infrastructure/base/base_view.dart';
 import '../../../../infrastructure/navigation/routes.dart';
 
 class ServicesBookingPage3 extends BaseView<HomeController> {
 
+  static final LatLng _kMapCenter =
+  LatLng(19.018255973653343, 72.84793849278007);
+
+  static final CameraPosition _kInitialPosition =
+  CameraPosition(target: _kMapCenter, zoom: 11.0, tilt: 0, bearing: 0);
+
   @override
   Widget body(BuildContext context) {
-
     return Container(
       width: double.infinity,
       height: double.infinity,
@@ -168,8 +174,8 @@ class ServicesBookingPage3 extends BaseView<HomeController> {
                       width: double.infinity,
                       height: 60,
                       decoration: const BoxDecoration(
-                        color: primaryColor,
-                        borderRadius: BorderRadius.all(Radius.circular(30))
+                          color: primaryColor,
+                          borderRadius: BorderRadius.all(Radius.circular(30))
                       ),
                       child: Align(alignment:Alignment.center,child: Text('Book Now',style: textWhiteMedium16,)),
 
@@ -182,11 +188,16 @@ class ServicesBookingPage3 extends BaseView<HomeController> {
         ),
       ),
     );
+
   }
 
 }
-
-
-
+/*
+Scaffold(
+backgroundColor: Colors.white,
+body: GoogleMap(
+initialCameraPosition: _kInitialPosition,
+)
+);*/
 
 

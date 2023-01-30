@@ -1,13 +1,6 @@
 import 'package:Hoofzy_V2/constants.dart';
-import 'package:Hoofzy_V2/presentation/availability/controllers/availability.controller.dart';
-import 'package:Hoofzy_V2/presentation/pet_preferences/controllers/petpreferences.controller.dart';
-import 'package:Hoofzy_V2/presentation/rates/controllers/rate.controllers.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:sizer/sizer.dart';
 import '../../../infrastructure/base/base_view.dart';
-import '../../infrastructure/navigation/routes.dart';
 import 'controllers/cancelpolicy.controller.dart';
 
 class CancelPolicyPage extends BaseView<CancelPolicyController> {

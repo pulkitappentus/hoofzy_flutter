@@ -71,7 +71,9 @@ class Routes {
   static const photoScreen = '/user_app/boarding_screens/photos_screen';
   static const userPets = '/user_app/pet_screens';
 
-  static const sitterHome = '/sitter_app/home_sitter';
+  static const sitterHome = '/sitter_app/sitter_home_screens';
   static const upcommingBooking = '/sitter_app/booking/up_comming_booking';
   static const bookingDetails = '/sitter_app/booking/booking_details';
+  static const finishService = '/sitter_app/booking/finish_service';
+  static const petWalking = '/sitter_app/booking/walking_page';
 }

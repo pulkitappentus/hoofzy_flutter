@@ -272,7 +272,6 @@ class SitterProfilePage extends BaseView<SitterProfileController> {
                                       padding: const EdgeInsets.only(top: 10.0),
                                       child: Text('Avg. ₹399/night',style: TextStyle(fontSize: 13, fontWeight: FontWeight.w400, color: primaryColorSitter,)),
                                     ),
-
                                   ],
                                 ),
                               ),
@@ -320,7 +319,6 @@ class SitterProfilePage extends BaseView<SitterProfileController> {
                                 ],
                               ),
                             ),
-
                           ),
                         ),
                       ],
@@ -380,7 +378,7 @@ class SitterProfilePage extends BaseView<SitterProfileController> {
                               (
                               onPressed: (){
                                 //Get.toNamed(Routes.sitterProfile2);
-                                //Get.toNamed(Routes.sitterHome);
+                                Get.toNamed(Routes.sitterHome);
                               },
                               child: Text('Save',style: textWhiteMedium15,),)
                         )

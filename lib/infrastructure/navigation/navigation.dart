@@ -20,8 +20,10 @@ import '../../presentation/rates/rate_page.dart';
 import '../../presentation/screens.dart';
 import '../../presentation/service_area_screen/service_area_page.dart';
 import '../../presentation/sitter_app/booking/booking_details/booking_details_page.dart';
+import '../../presentation/sitter_app/booking/finish_service/finish_service_page.dart';
 import '../../presentation/sitter_app/booking/up_comming_booking/upcomming_booking_page.dart';
-import '../../presentation/sitter_app/home_sitter/home_sitter_page.dart';
+import '../../presentation/sitter_app/booking/walking_page/pet_walking_page.dart';
+import '../../presentation/sitter_app/sitter_home_screens/sitter.home.screen.dart';
 import '../../presentation/sitter_build_trust_screens/final_details/final_details_page.dart';
 import '../../presentation/sitter_build_trust_screens/request_testimonials/request_testimonials_page.dart';
 import '../../presentation/sitter_build_trust_screens/sitter_profile/create_profile_page.dart';
@@ -66,7 +68,7 @@ import 'bindings/controllers/create.profile.controllerBinding.dart';
 import 'bindings/controllers/date.of.birth.controllerBinding.dart';
 import 'bindings/controllers/details.controllerBinding.dart';
 import 'bindings/controllers/final.details.controllerBinding.dart';
-import 'bindings/controllers/home.sitter.controllerBinding.dart';
+import 'bindings/controllers/finish.service.controllerBinding.dart';
 import 'bindings/controllers/login.controller.binding.dart';
 import 'bindings/controllers/pet.analyze.controllerBinding.dart';
 import 'bindings/controllers/pet.avatar.controllerBinding.dart';
@@ -87,8 +89,10 @@ import 'bindings/controllers/boarding.service.controllerBinding.dart';
 import 'bindings/controllers/servicearea.controllerBinding.dart';
 import 'bindings/controllers/services.booking.controllerBinding.dart';
 import 'bindings/controllers/services.intro.controllerBinding.dart';
+import 'bindings/controllers/sitter.home.controllerBinding.dart';
 import 'bindings/controllers/sort.filter.controllerBinding.dart';
 import 'bindings/controllers/upcomming.booking.controllerBinding.dart';
+import 'bindings/controllers/walking.service.controllerBinding.dart';
 import 'bindings/controllers/your.pets.controllerBinding.dart';
 import 'routes.dart';
 
@@ -360,12 +364,6 @@ class Nav {
       page: () => PhotosPages(),
       binding: ServiceBookingControllerBinding(),
     ),
-
-    GetPage(
-      name: Routes.sitterHome,
-      page: () => HomeSitterPage(),
-      binding: HomeSitterControllerBinding(),
-    ),
     GetPage(
       name: Routes.upcommingBooking,
       page: () => UpcommingBookingPage(),
@@ -375,6 +373,22 @@ class Nav {
       name: Routes.bookingDetails,
       page: () => BookingDetailsPage(),
       binding: BookingDetailsControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.finishService,
+      page: () => FinishServicePage(),
+      binding: FinishServiceControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.petWalking,
+      page: () => PetWalkingPage(),
+      binding: WalkingServiceControllerBinding(),
+    ),
+
+    GetPage(
+      name: Routes.sitterHome,
+      page: () => SitterHomeScreen(),
+      binding: SitterHomeControllerBinding(),
     ),
   ];
 }
