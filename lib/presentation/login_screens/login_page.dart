@@ -114,7 +114,6 @@ class LoginPage extends BaseView<LoginController> {
                     InkWell(
                       onTap: (){
                          controller.handleGoogleSignIn(context);
-
                       },
                       child: Container(
                         height: 62,
@@ -130,7 +129,7 @@ class LoginPage extends BaseView<LoginController> {
                         ),
                       ),
                     ),
-                    Padding(
+                   /* Padding(
                       padding: const EdgeInsets.only(left: 20.0),
                       child: Container(
                         height: 62,
@@ -145,7 +144,7 @@ class LoginPage extends BaseView<LoginController> {
                           child: Image.asset('assets/hoofzy/apple.png'),
                         ),
                       ),
-                    ),
+                    ),*/
                     Padding(
                       padding: const EdgeInsets.only(left: 20.0),
                       child: Container(

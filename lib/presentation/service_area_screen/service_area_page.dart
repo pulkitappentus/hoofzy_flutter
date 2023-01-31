@@ -1,6 +1,7 @@
+import 'dart:async';
 import 'package:Hoofzy_V2/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:sizer/sizer.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import '../../../infrastructure/base/base_view.dart';
 import 'controllers/servicearea.controller.dart';
 
@@ -8,6 +9,12 @@ class ServiceAreaPage extends BaseView<ServiceareaController> {
 
   @override
   Widget body(BuildContext context) {
+
+    final Completer<GoogleMapController> _controller = Completer();
+    const LatLng _center = LatLng(26.8549, 75.8243);
+    void _onMapCreated(GoogleMapController controller) {
+      _controller.complete(controller);
+    }
     return Container(
       decoration: const BoxDecoration(
         gradient: LinearGradient(colors: [Color(0xFFFFFBF6), Color(0xFFFFFFFF)],
@@ -42,13 +49,13 @@ class ServiceAreaPage extends BaseView<ServiceareaController> {
                 children: <Widget>[
 
                   const Padding(
-                    padding: const EdgeInsets.only(left: 16.0),
+                    padding: EdgeInsets.only(left: 16.0),
                     child: Align(alignment: Alignment.topLeft,
                         child: Text('Service Area', style: headlineBlack20,)),
                   ),
 
                   const Padding(
-                    padding: const EdgeInsets.only(left: 16.0, top: 15, right: 16),
+                    padding: EdgeInsets.only(left: 16.0, top: 15, right: 16),
                     child: Align(alignment: Alignment.topLeft,
                       child: Text(
                           'The distance you define here will be the same for the house sitting, walking and drop-in services.', style:
@@ -63,7 +70,13 @@ class ServiceAreaPage extends BaseView<ServiceareaController> {
                     margin: const EdgeInsets.only(left: 20.0, top: 16, right: 16),
                     width: double.infinity,
                     height: 344,
-                    color: greyColor,
+                    child: GoogleMap(
+                      onMapCreated: _onMapCreated,
+                      initialCameraPosition: const CameraPosition(
+                        target: _center,
+                        zoom: 15.0,
+                      ),
+                  )
                   ),
 
                   Padding(
@@ -71,7 +84,7 @@ class ServiceAreaPage extends BaseView<ServiceareaController> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget> [
-                        Text('Use my home address',style: textBlackMedium14,),
+                        const Text('Use my home address',style: textBlackMedium14,),
                       Switch(
                         value: true,
                         activeColor: Colors.green,
@@ -99,7 +112,7 @@ class ServiceAreaPage extends BaseView<ServiceareaController> {
                               (
                               onPressed: (){
                               },
-                              child: Text('Save & Continue',style: textWhiteMedium15,),)
+                              child: const Text('Save & Continue',style: textWhiteMedium15,),)
                         )
                     ),
                   ),

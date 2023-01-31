@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 application
-INJECTED from C:\Users\hp\Documents\GitHub\hoofzy_flutter\android\app\src\main\AndroidManifest.xml:5:4-49:19
+INJECTED from C:\Users\hp\Documents\GitHub\hoofzy_flutter\android\app\src\main\AndroidManifest.xml:5:4-51:19
 MERGED from [:cloud_firestore] C:\Users\hp\Documents\GitHub\hoofzy_flutter\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
 MERGED from [:cloud_firestore] C:\Users\hp\Documents\GitHub\hoofzy_flutter\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
 MERGED from [:firebase_analytics] C:\Users\hp\Documents\GitHub\hoofzy_flutter\build\firebase_analytics\intermediates\merged_manifest\debug\AndroidManifest.xml:13:5-19:19
@@ -112,11 +112,11 @@ MERGED from [com.google.android.play:core-common:2.0.2] C:\Users\hp\.gradle\cach
 	android:name
 		INJECTED from C:\Users\hp\Documents\GitHub\hoofzy_flutter\android\app\src\main\AndroidManifest.xml
 manifest
-ADDED from C:\Users\hp\Documents\GitHub\hoofzy_flutter\android\app\src\main\AndroidManifest.xml:1:1-50:12
-INJECTED from C:\Users\hp\Documents\GitHub\hoofzy_flutter\android\app\src\main\AndroidManifest.xml:1:1-50:12
-INJECTED from C:\Users\hp\Documents\GitHub\hoofzy_flutter\android\app\src\main\AndroidManifest.xml:1:1-50:12
-INJECTED from C:\Users\hp\Documents\GitHub\hoofzy_flutter\android\app\src\main\AndroidManifest.xml:1:1-50:12
-MERGED from C:\Users\hp\Documents\GitHub\hoofzy_flutter\android\app\src\main\AndroidManifest.xml:1:1-50:12
+ADDED from C:\Users\hp\Documents\GitHub\hoofzy_flutter\android\app\src\main\AndroidManifest.xml:1:1-52:12
+INJECTED from C:\Users\hp\Documents\GitHub\hoofzy_flutter\android\app\src\main\AndroidManifest.xml:1:1-52:12
+INJECTED from C:\Users\hp\Documents\GitHub\hoofzy_flutter\android\app\src\main\AndroidManifest.xml:1:1-52:12
+INJECTED from C:\Users\hp\Documents\GitHub\hoofzy_flutter\android\app\src\main\AndroidManifest.xml:1:1-52:12
+MERGED from C:\Users\hp\Documents\GitHub\hoofzy_flutter\android\app\src\main\AndroidManifest.xml:1:1-52:12
 MERGED from [:store_redirect] C:\Users\hp\Documents\GitHub\hoofzy_flutter\build\store_redirect\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:cloud_firestore] C:\Users\hp\Documents\GitHub\hoofzy_flutter\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
 MERGED from [:firebase_analytics] C:\Users\hp\Documents\GitHub\hoofzy_flutter\build\firebase_analytics\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-21:12
@@ -229,11 +229,11 @@ INJECTED from C:\Users\hp\Documents\GitHub\hoofzy_flutter\android\app\src\debug\
 		INJECTED from C:\Users\hp\Documents\GitHub\hoofzy_flutter\android\app\src\debug\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\hp\Documents\GitHub\hoofzy_flutter\android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\hp\Documents\GitHub\hoofzy_flutter\android\app\src\main\AndroidManifest.xml:1:1-50:12
+		ADDED from C:\Users\hp\Documents\GitHub\hoofzy_flutter\android\app\src\main\AndroidManifest.xml:1:1-52:12
 		INJECTED from C:\Users\hp\Documents\GitHub\hoofzy_flutter\android\app\src\debug\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\hp\Documents\GitHub\hoofzy_flutter\android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\hp\Documents\GitHub\hoofzy_flutter\android\app\src\main\AndroidManifest.xml:1:1-50:12
+		ADDED from C:\Users\hp\Documents\GitHub\hoofzy_flutter\android\app\src\main\AndroidManifest.xml:1:1-52:12
 		INJECTED from C:\Users\hp\Documents\GitHub\hoofzy_flutter\android\app\src\debug\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\hp\Documents\GitHub\hoofzy_flutter\android\app\src\main\AndroidManifest.xml:1:11-69

@@ -26,6 +26,7 @@ class LoginController extends BaseController {
   }
 
   Future<User?> handleGoogleSignIn(context) async {
+    showLoading();
     final GoogleSignIn googleSignIn = GoogleSignIn(scopes: [
       'email',
     ]);
@@ -42,12 +43,14 @@ class LoginController extends BaseController {
       var userDetails = await _auth.signInWithCredential(credential);
       if (userDetails.user != null) {
       //  Utils.progressDialogShow(context);
+        hideLoading();
         print("google token==>${userDetails.user}");
         Get.toNamed(Routes.setupprofile);
         changePage(userDetails.user);
       return userDetails.user;
     }
     } catch (error) {
+      hideLoading();
       print('loginerror:----${error}');
     }
     return null;

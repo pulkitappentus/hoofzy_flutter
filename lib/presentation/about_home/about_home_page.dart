@@ -1,12 +1,8 @@
 import 'package:Hoofzy_V2/constants.dart';
-import 'package:Hoofzy_V2/presentation/availability/controllers/availability.controller.dart';
-import 'package:Hoofzy_V2/presentation/rates/controllers/rate.controllers.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 import 'package:sizer/sizer.dart';
 import '../../../infrastructure/base/base_view.dart';
-import '../../infrastructure/navigation/routes.dart';
 import 'controllers/abouthome.controllers.dart';
 
 class AboutHomePage extends BaseView<AboutHomeController> {
@@ -58,52 +54,58 @@ class AboutHomePage extends BaseView<AboutHomeController> {
                   ),
 
                   Padding(
-                    padding: const EdgeInsets.only(left: 16.0,top: 20),
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            Image.asset('assets/hoofzy/un_checked.png',height: 24,width: 24,),
-                            const Padding(
-                              padding: const EdgeInsets.only(left: 10.0),
-                              child: Text('House',style: textBlackLight15,),
+                    padding: const EdgeInsets.only(top: 10.0, left: 8, right: 8),
+                    child: Expanded(
+                        child: CustomScrollView(
+                          physics: const BouncingScrollPhysics(),
+                          shrinkWrap: true,
+                          slivers: [
+                            SliverPadding(
+                                padding: EdgeInsets.symmetric(vertical: 1.sp),
+                                sliver: SliverList(
+                                  delegate: SliverChildBuilderDelegate(
+                                        (BuildContext context, int index) {
+                                      return Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Container(
+                                          child: Obx(() {
+                                            return InkWell(
+                                              child: Row(
+                                                children: [
+                                                  controller.selectedHomeType.value == index
+                                                      ? updateIcon(
+                                                      'assets/hoofzy/checked.png')
+                                                      : updateIcon(
+                                                      'assets/hoofzy/un_checked.png'),
+                                                  Padding(
+                                                    padding: const EdgeInsets.only(left: 10.0),
+                                                    child: Text(
+                                                      controller.homeTypeList[index], style: textBlackLight15,),
+                                                  )
+                                                ],
+
+                                              ),
+                                              onTap: () {
+                                                controller.selectedHomeType.value = index;
+                                                controller.lastSelectedHomeType.value = controller.selectedHomeType.value;
+                                              },
+                                            );
+                                          }),
+                                        ),
+                                      );
+                                    },
+                                    // 40 list items
+                                    childCount: 3,
+                                  ),
+                                )
                             )
                           ],
-
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 15.0),
-                          child: Row(
-                            children: [
-                              Image.asset('assets/hoofzy/un_checked.png',height: 24,width: 24,),
-                              const Padding(
-                                padding: const EdgeInsets.only(left: 10.0),
-                                child: Text('Apartment',style: textBlackLight15,),
-                              )
-                            ],
-
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 15.0),
-                          child: Row(
-                            children: [
-                              Image.asset('assets/hoofzy/un_checked.png',height: 24,width: 24,),
-                              const Padding(
-                                padding: const EdgeInsets.only(left: 10.0),
-                                child: Text('Farm',style: textBlackLight15,),
-                              )
-                            ],
-
-                          ),
-                        ),
-                      ],
-
+                        )
                     ),
                   ),
 
                   const Padding(
-                    padding: const EdgeInsets.only(left: 16.0, top: 30, right: 16),
+                    padding: const EdgeInsets.only(left: 16.0, top: 20, right: 16),
                     child: Align(alignment: Alignment.topLeft,
                       child: Text('What type of yard do you have?', style:
                       TextStyle(fontSize: 14,
@@ -114,52 +116,58 @@ class AboutHomePage extends BaseView<AboutHomeController> {
                   ),
 
                   Padding(
-                    padding: const EdgeInsets.only(left: 16.0,top: 20),
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            Image.asset('assets/hoofzy/un_checked.png',height: 24,width: 24,),
-                            const Padding(
-                              padding: const EdgeInsets.only(left: 10.0),
-                              child: Text('Fenced yard',style: textBlackLight15,),
+                    padding: const EdgeInsets.only(top: 10.0, left: 8, right: 8),
+                    child: Expanded(
+                        child: CustomScrollView(
+                          physics: const BouncingScrollPhysics(),
+                          shrinkWrap: true,
+                          slivers: [
+                            SliverPadding(
+                                padding: EdgeInsets.symmetric(vertical: 1.sp),
+                                sliver: SliverList(
+                                  delegate: SliverChildBuilderDelegate(
+                                        (BuildContext context, int index) {
+                                      return Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Container(
+                                          child: Obx(() {
+                                            return InkWell(
+                                              child: Row(
+                                                children: [
+                                                  controller.selectedYardType.value == index
+                                                      ? updateIcon(
+                                                      'assets/hoofzy/checked.png')
+                                                      : updateIcon(
+                                                      'assets/hoofzy/un_checked.png'),
+                                                  Padding(
+                                                    padding: const EdgeInsets.only(left: 10.0),
+                                                    child: Text(
+                                                      controller.yardTypeList[index], style: textBlackLight15,),
+                                                  )
+                                                ],
+
+                                              ),
+                                              onTap: () {
+                                                controller.selectedYardType.value = index;
+                                                controller.lastSelectedYardType.value = controller.selectedYardType.value;
+                                              },
+                                            );
+                                          }),
+                                        ),
+                                      );
+                                    },
+                                    // 40 list items
+                                    childCount: 3,
+                                  ),
+                                )
                             )
                           ],
-
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 15.0),
-                          child: Row(
-                            children: [
-                              Image.asset('assets/hoofzy/un_checked.png',height: 24,width: 24,),
-                              const Padding(
-                                padding: const EdgeInsets.only(left: 10.0),
-                                child: Text('Unfenced yard',style: textBlackLight15,),
-                              )
-                            ],
-
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 15.0),
-                          child: Row(
-                            children: [
-                              Image.asset('assets/hoofzy/un_checked.png',height: 24,width: 24,),
-                              const Padding(
-                                padding: const EdgeInsets.only(left: 10.0),
-                                child: Text('No yard',style: textBlackLight15,),
-                              )
-                            ],
-
-                          ),
-                        ),
-                      ],
-
+                        )
                     ),
                   ),
 
                   const Padding(
-                    padding: const EdgeInsets.only(left: 16.0, top: 23, right: 16),
+                    padding: const EdgeInsets.only(left: 16.0, top: 13, right: 16),
                     child: Align(alignment: Alignment.topLeft,
                       child: Text('What can pet owners expect when boarding at your home?', style:
                       TextStyle(fontSize: 14,
@@ -181,117 +189,58 @@ class AboutHomePage extends BaseView<AboutHomeController> {
                   ),
 
                   Padding(
-                    padding: const EdgeInsets.only(left: 16.0,top: 20,bottom: 14),
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            Image.asset('assets/hoofzy/unchecked.png',height: 24,width: 24,),
-                            const Padding(
-                              padding: const EdgeInsets.only(left: 10.0),
-                              child: Text('Smoking inside home',style: textBlackLight15,),
+                    padding: const EdgeInsets.only(top: 10.0, left: 8, right: 8),
+                    child: Expanded(
+                        child: CustomScrollView(
+                          physics: const BouncingScrollPhysics(),
+                          shrinkWrap: true,
+                          slivers: [
+                            SliverPadding(
+                                padding: EdgeInsets.symmetric(vertical: 1.sp),
+                                sliver: SliverList(
+                                  delegate: SliverChildBuilderDelegate(
+                                        (BuildContext context, int index) {
+                                      return Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Container(
+                                          child: Obx(() {
+                                            return InkWell(
+                                              child: Row(
+                                                children: [
+                                                  controller.selectedExpectation.value == index
+                                                      ? updateIcon(
+                                                      'assets/hoofzy/checked.png')
+                                                      : updateIcon(
+                                                      'assets/hoofzy/un_checked.png'),
+                                                  Padding(
+                                                    padding: const EdgeInsets.only(left: 10.0),
+                                                    child: Text(
+                                                      controller.expectationList[index], style: textBlackLight15,),
+                                                  )
+                                                ],
+
+                                              ),
+                                              onTap: () {
+                                                controller.selectedExpectation.value = index;
+                                                controller.lastSelectedExpectation.value = controller.selectedExpectation.value;
+                                              },
+                                            );
+                                          }),
+                                        ),
+                                      );
+                                    },
+                                    // 40 list items
+                                    childCount: 8,
+                                  ),
+                                )
                             )
                           ],
-
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 15.0),
-                          child: Row(
-                            children: [
-                              Image.asset('assets/hoofzy/unchecked.png',height: 24,width: 24,),
-                              const Padding(
-                                padding: const EdgeInsets.only(left: 10.0),
-                                child: Text('Children age 0-5',style: textBlackLight15,),
-                              )
-                            ],
-
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 15.0),
-                          child: Row(
-                            children: [
-                              Image.asset('assets/hoofzy/unchecked.png',height: 24,width: 24,),
-                              const Padding(
-                                padding: const EdgeInsets.only(left: 10.0),
-                                child: Text('Children age 6-12',style: textBlackLight15,),
-                              )
-                            ],
-
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 15.0),
-                          child: Row(
-                            children: [
-                              Image.asset('assets/hoofzy/unchecked.png',height: 24,width: 24,),
-                              const Padding(
-                                padding: const EdgeInsets.only(left: 10.0),
-                                child: Text('Dogs are allowed on furniture',style: textBlackLight15,),
-                              )
-                            ],
-
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 15.0),
-                          child: Row(
-                            children: [
-                              Image.asset('assets/hoofzy/unchecked.png',height: 24,width: 24,),
-                              const Padding(
-                                padding: const EdgeInsets.only(left: 10.0),
-                                child: Text('Dogs are allowed on bed',style: textBlackLight15,),
-                              )
-                            ],
-
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 15.0),
-                          child: Row(
-                            children: [
-                              Image.asset('assets/hoofzy/unchecked.png',height: 24,width: 24,),
-                              const Padding(
-                                padding: const EdgeInsets.only(left: 10.0),
-                                child: Text('Cats at home',style: textBlackLight15,),
-                              )
-                            ],
-
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 15.0),
-                          child: Row(
-                            children: [
-                              Image.asset('assets/hoofzy/unchecked.png',height: 24,width: 24,),
-                              const Padding(
-                                padding: const EdgeInsets.only(left: 10.0),
-                                child: Text('Caged pets in home',style: textBlackLight15,),
-                              )
-                            ],
-
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 15.0),
-                          child: Row(
-                            children: [
-                              Image.asset('assets/hoofzy/unchecked.png',height: 24,width: 24,),
-                              const Padding(
-                                padding: const EdgeInsets.only(left: 10.0),
-                                child: Text('None of the above',style: textBlackLight15,),
-                              )
-                            ],
-
-                          ),
-                        ),
-                      ],
-
+                        )
                     ),
                   ),
 
                   const Padding(
-                    padding: const EdgeInsets.only(left: 16.0, top: 23, right: 16),
+                    padding: const EdgeInsets.only(left: 16.0, top: 13, right: 16),
                     child: Align(alignment: Alignment.topLeft,
                       child: Text('Are you able to host any of the following?', style:
                       TextStyle(fontSize: 14,
@@ -313,86 +262,53 @@ class AboutHomePage extends BaseView<AboutHomeController> {
                   ),
 
                   Padding(
-                    padding: const EdgeInsets.only(left: 16.0,top: 20,bottom: 14),
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            Image.asset('assets/hoofzy/unchecked.png',height: 24,width: 24,),
-                            const Padding(
-                              padding: const EdgeInsets.only(left: 10.0),
-                              child: Text('Pets from different families at the same time',style: textBlackLight15,),
+                    padding: const EdgeInsets.only(top: 10.0, left: 8, right: 8),
+                    child: Expanded(
+                        child: CustomScrollView(
+                          physics: const BouncingScrollPhysics(),
+                          shrinkWrap: true,
+                          slivers: [
+                            SliverPadding(
+                                padding: EdgeInsets.symmetric(vertical: 1.sp),
+                                sliver: SliverList(
+                                  delegate: SliverChildBuilderDelegate(
+                                        (BuildContext context, int index) {
+                                      return Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Container(
+                                          child: Obx(() {
+                                            return InkWell(
+                                              child: Row(
+                                                children: [
+                                                  controller.selectedSitterExpectation.value == index
+                                                      ? updateIcon(
+                                                      'assets/hoofzy/checked.png')
+                                                      : updateIcon(
+                                                      'assets/hoofzy/un_checked.png'),
+                                                  Padding(
+                                                    padding: const EdgeInsets.only(left: 10.0),
+                                                    child: Text(
+                                                      controller.sitterExpectationList[index], style: textBlackLight15,),
+                                                  )
+                                                ],
+
+                                              ),
+                                              onTap: () {
+                                                controller.selectedSitterExpectation.value = index;
+                                                controller.lastSelectedSitterExpectation.value = controller.selectedSitterExpectation.value;
+                                              },
+                                            );
+                                          }),
+                                        ),
+                                      );
+                                    },
+                                    // 40 list items
+                                    childCount: 6,
+                                  ),
+                                )
                             )
                           ],
-
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 15.0),
-                          child: Row(
-                            children: [
-                              Image.asset('assets/hoofzy/unchecked.png',height: 24,width: 24,),
-                              const Padding(
-                                padding: const EdgeInsets.only(left: 10.0),
-                                child: Text('Puppies under 1 year old',style: textBlackLight15,),
-                              )
-                            ],
-
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 15.0),
-                          child: Row(
-                            children: [
-                              Image.asset('assets/hoofzy/unchecked.png',height: 24,width: 24,),
-                              const Padding(
-                                padding: const EdgeInsets.only(left: 10.0),
-                                child: Text('Dogs that are not create trained',style: textBlackLight15,),
-                              )
-                            ],
-
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 15.0),
-                          child: Row(
-                            children: [
-                              Image.asset('assets/hoofzy/unchecked.png',height: 24,width: 24,),
-                              const Padding(
-                                padding: const EdgeInsets.only(left: 10.0),
-                                child: Text('Unneutered male dogs',style: textBlackLight15,),
-                              )
-                            ],
-
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 15.0),
-                          child: Row(
-                            children: [
-                              Image.asset('assets/hoofzy/unchecked.png',height: 24,width: 24,),
-                              const Padding(
-                                padding: const EdgeInsets.only(left: 10.0),
-                                child: Text('Female dogs in heat',style: textBlackLight15,),
-                              )
-                            ],
-
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 15.0),
-                          child: Row(
-                            children: [
-                              Image.asset('assets/hoofzy/unchecked.png',height: 24,width: 24,),
-                              const Padding(
-                                padding: const EdgeInsets.only(left: 10.0),
-                                child: Text('None of the above',style: textBlackLight15,),
-                              )
-                            ],
-
-                          ),
-                        ),
-                      ],
-
+                        )
                     ),
                   ),
 
@@ -424,6 +340,9 @@ class AboutHomePage extends BaseView<AboutHomeController> {
   }
 }
 
+Widget updateIcon(String image) {
+  return Image.asset(image, width: 24, height: 24, fit: BoxFit.fill,);
+}
 
 
 

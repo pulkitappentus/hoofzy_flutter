@@ -56,9 +56,8 @@ class Bookings extends BaseView<SitterHomeController> {
                   Row(
                     children: const[
                       Text('All',style: TextStyle(fontSize: 17, fontWeight: FontWeight.w500, color: primaryColorSitter)),
-                    //  totalBookingCountWidget()
+                      //  totalBookingCountWidget()
                     ],
-
                   ),
                   Row(
                     children: <Widget>[

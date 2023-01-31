@@ -9,6 +9,11 @@ class CancelPolicyController extends BaseController {
   var reviewAvailable = false;
   CancelPolicyController({required FirebaseRepository firebaseRepository}) : _firebaseRepository = firebaseRepository;
 
+  //availability
+  var selectedCancelReason = 10.obs;
+  var lastSelectedCancelReason = 10.obs;
+  var cancelReasonsList = ['Same day', 'One Day', 'Three days', 'Seven Days'];
+
 
   @override
   void onConnectionChange(ConnectivityResult result) {

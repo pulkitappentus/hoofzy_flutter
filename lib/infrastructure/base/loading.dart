@@ -12,11 +12,11 @@ class Loading extends StatelessWidget {
         children: <Widget>[
           ModalBarrier(
             dismissible: false,
-            color: Colors.grey.withOpacity(.3),
+            color: Colors.grey.withOpacity(.4),
           ),
           Center(
             child: CircularProgressIndicator(
-              valueColor: AlwaysStoppedAnimation(ColorsTheme.primary),
+              valueColor: AlwaysStoppedAnimation(ColorsTheme.primaryUserApp),
             ),
           ),
         ],

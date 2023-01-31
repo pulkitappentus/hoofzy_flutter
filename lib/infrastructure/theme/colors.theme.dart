@@ -8,4 +8,7 @@ class ColorsTheme {
   static Color background = HexColor("#F2F2F2");
   static Color white = HexColor("#FFFFFF");
   static Color black = HexColor("#000000");
+
+  static Color primaryUserApp = HexColor("#B84201");
+  static Color sitterUserApp = HexColor("#F1A800");
 }

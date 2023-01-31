@@ -110,6 +110,9 @@
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
             android:resource="@mipmap/ic_launcher" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCYDqA2nq03v_qMgCy_gMRzDMliD3BRnYQ" />
 
         <service
             android:name="com.google.firebase.components.ComponentDiscoveryService"

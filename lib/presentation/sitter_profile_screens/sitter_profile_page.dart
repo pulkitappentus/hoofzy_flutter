@@ -52,17 +52,22 @@ class SitterProfilePage extends BaseView<SitterProfileController> {
                     TextStyle(fontSize: 13, fontWeight: FontWeight.w400, color: Colors.black,height: 1.8)),
                   ),
 
-                  Padding(
-                    padding: const EdgeInsets.only(left: 16.0,top: 14.0),
-                    child: Flexible(child: Row(
-                      children: <Widget> [
-                        Image.asset('assets/hoofzy/question.png',width: 20,height: 20,fit: BoxFit.fill,color: primaryColorSitter,),
-                        const Padding(
-                          padding: EdgeInsets.only(left: 8.0),
-                          child: Text('Which service should I choose?',style:TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: primaryColorSitter) ,),
-                        )
-                      ],
-                    )),
+                  InkWell(
+                    onTap: (){
+                      _bottomsheetServiceSelection(context);
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 16.0,top: 14.0),
+                      child: Flexible(child: Row(
+                        children: <Widget> [
+                          Image.asset('assets/hoofzy/question.png',width: 20,height: 20,fit: BoxFit.fill,color: primaryColorSitter,),
+                          const Padding(
+                            padding: EdgeInsets.only(left: 8.0),
+                            child: Text('Which service should I choose?',style:TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: primaryColorSitter) ,),
+                          )
+                        ],
+                      )),
+                    ),
                   ),
 
                   const Padding(
@@ -70,17 +75,22 @@ class SitterProfilePage extends BaseView<SitterProfileController> {
                     child: Align(alignment: Alignment.topLeft,child: Text('Complete the required steps to get approved.',style: textBlackMedium16,)),
                   ),
 
-                  Padding(
-                    padding: const EdgeInsets.only(left: 16.0,top: 14.0),
-                    child: Flexible(child: Row(
-                      children: <Widget> [
-                        Image.asset('assets/hoofzy/question.png',width: 20,height: 20,fit: BoxFit.fill,color: primaryColorSitter,),
-                        const Padding(
-                          padding: EdgeInsets.only(left: 8.0),
-                          child: Text('How does approval work?',style:TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: primaryColorSitter) ,),
-                        )
-                      ],
-                    )),
+                  InkWell(
+                    onTap: (){
+                      _bottomsheetApproval(context);
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 16.0,top: 14.0),
+                      child: Flexible(child: Row(
+                        children: <Widget> [
+                          Image.asset('assets/hoofzy/question.png',width: 20,height: 20,fit: BoxFit.fill,color: primaryColorSitter,),
+                          const Padding(
+                            padding: EdgeInsets.only(left: 8.0),
+                            child: Text('How does approval work?',style:TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: primaryColorSitter) ,),
+                          )
+                        ],
+                      )),
+                    ),
                   ),
 
                   const Padding(
@@ -88,17 +98,22 @@ class SitterProfilePage extends BaseView<SitterProfileController> {
                     child: Align(alignment: Alignment.topLeft,child: Text('Service setup',style: textBlackMedium16,)),
                   ),
 
-                  Padding(
-                    padding: const EdgeInsets.only(left: 16.0,top: 14.0),
-                    child: Flexible(child: Row(
-                      children: <Widget> [
-                        Image.asset('assets/hoofzy/question.png',width: 20,height: 20,fit: BoxFit.fill,color: primaryColorSitter,),
-                        const Padding(
-                          padding: EdgeInsets.only(left: 8.0),
-                          child: Text('How do I add or modify my services?',style:TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: primaryColorSitter) ,),
-                        )
-                      ],
-                    )),
+                  InkWell(
+                    onTap: (){
+                      _bottomsheetModifyService(context);
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 16.0,top: 14.0),
+                      child: Flexible(child: Row(
+                        children: <Widget> [
+                          Image.asset('assets/hoofzy/question.png',width: 20,height: 20,fit: BoxFit.fill,color: primaryColorSitter,),
+                          const Padding(
+                            padding: EdgeInsets.only(left: 8.0),
+                            child: Text('How do I add or modify my services?',style:TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: primaryColorSitter) ,),
+                          )
+                        ],
+                      )),
+                    ),
                   ),
 
                   Padding(
@@ -394,6 +409,233 @@ class SitterProfilePage extends BaseView<SitterProfileController> {
   }
 
 }
+
+void _bottomsheetServiceSelection(BuildContext context) {
+  showModalBottomSheet<int>(
+    backgroundColor: Colors.transparent,
+    context: context,
+    builder: (context) {
+      return Container(
+          height: double.infinity,
+          decoration: const BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.only(topRight: Radius.circular(6),topLeft: Radius.circular(6))
+          ),
+          child: Column(
+              children: [
+                Container(
+                  height: 5,
+                  decoration: const BoxDecoration(
+                      color: primaryThemeColor,
+                      borderRadius: BorderRadius.only(topRight: Radius.circular(20),topLeft: Radius.circular(20))
+                  ),
+                ),
+                Divider(color: Colors.white,thickness: 10,),
+                Expanded(child: SingleChildScrollView(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: <Widget> [
+                      const Padding(
+                        padding: EdgeInsets.only(top: 10.0,left: 20.0,right: 20.0),
+                        child: Align(alignment:Alignment.topLeft,child: Text('Which services should I choose?',style: textBlackBold18)),
+                      ),
+                      const Padding(
+                          padding: EdgeInsets.only(top: 20.0,left: 20.0,right: 20.0),
+                          child: Align(alignment:Alignment.topLeft,child: Text('Able to host pets in your home?',
+                              style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: Colors.black,height: 2)),)
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 20.0,right: 20.0),
+                        child: Align(alignment:Alignment.topLeft,child: Text('We recommend choosing Boarding and Doggy Day Care for the best chance at top earnings.',
+                            style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: Colors.black,height: 2)),),
+                      ),
+
+                      const Padding(
+                        padding: EdgeInsets.only(left: 20.0,right: 20.0),
+                        child: Align(alignment:Alignment.topLeft,child: Text('Unable to host pets in your?',
+                            style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: Colors.black,height: 2)),),
+                      ),
+
+                      const Padding(
+                        padding: EdgeInsets.only(left: 20.0,right: 20.0),
+                        child: Align(alignment:Alignment.topLeft,child: Text('We suggest you offer a mix of House Sitting, Drop-in Visits, and Dog Walking.'
+                            ' The variety of services can help in filling up your schedule with more bookings.',
+                            style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: Colors.black,height: 2)),),
+                      ),
+
+                      const Padding(
+                        padding: EdgeInsets.only(left: 20.0,right: 20.0),
+                        child: Align(alignment:Alignment.topLeft,child: Text('Only available occasionally? Got free time around lunch? ',
+                            style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: Colors.black,height: 2)),),
+                      ),
+
+                      const Padding(
+                        padding: EdgeInsets.only(left: 20.0,right: 20.0),
+                        child: Align(alignment:Alignment.topLeft,child: Text('You`d be a great fit for Dog Walking and Drop-in Visits. '
+                            'Pet owners are often looking for a little extra help, especially around mid-day. Work as much or as little as you`d like.',
+                            style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: Colors.black,height: 2)),),
+                      ),
+
+                      Padding(
+                        padding: const EdgeInsets.only(top:30.0,bottom: 30.0),
+                        child: Align(
+                          alignment: Alignment.center,
+                          child: Container(
+                              height: 60,
+                              width: 260,
+                              decoration: const BoxDecoration(
+                                  borderRadius: BorderRadius.all(Radius.circular(30)),
+                                  color: primaryColorSitter
+                              ),
+                              child: Align(alignment: Alignment.center,
+                                  child: TextButton
+                                    (
+                                    onPressed: () {},
+                                    child: Text('Got It', style: textWhiteMedium15,),)
+                              )
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ))
+              ]
+
+          )
+      );
+    },
+  );
+}
+
+void _bottomsheetApproval(BuildContext context) {
+  showModalBottomSheet<int>(
+    backgroundColor: Colors.transparent,
+    context: context,
+    builder: (context) {
+      return Container(
+          height: double.infinity,
+          decoration: const BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.only(topRight: Radius.circular(6),topLeft: Radius.circular(6))
+          ),
+          child: Column(
+              children: [
+                Container(
+                  height: 5,
+                  decoration: const BoxDecoration(
+                      color: primaryThemeColor,
+                      borderRadius: BorderRadius.only(topRight: Radius.circular(20),topLeft: Radius.circular(20))
+                  ),
+                ),
+                Divider(color: Colors.white,thickness: 10,),
+                Expanded(child: SingleChildScrollView(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: <Widget> [
+                      const Padding(
+                        padding: EdgeInsets.only(top: 10.0,left: 20.0,right: 20.0),
+                        child: Align(alignment:Alignment.topLeft,child: Text('How does approval work?',style: textBlackBold18)),
+                      ),
+                      const Padding(
+                          padding: EdgeInsets.only(top: 20.0,left: 20.0,right: 20.0),
+                          child: Align(alignment:Alignment.topLeft,child: Text('Rover selects a single service for you to complete during sign up. '
+                              'Once approved, you can deactivate any services you no longer wish to offer or add additional services at any time.'
+                              ' \nOnce you`ve completed the required sign-up steps, your profile will be auto-submitted and reviewed to ensure accuracy and quality.'
+                              ' You will receive an email from us within 24-48 hours that you`ve been approved or that you need to complete'
+                              ' additional steps and resubmit in order to be approved. \nFor faster approval, make sure you upload high quality photos, '
+                              'write a descriptive description of yourself and your services, and be sure to proofread everything!',
+                              style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: Colors.black,height: 2)),)
+                      ),
+
+                      Padding(
+                        padding: const EdgeInsets.only(top:30.0,bottom: 30.0),
+                        child: Align(
+                          alignment: Alignment.center,
+                          child: Container(
+                              height: 60,
+                              width: 260,
+                              decoration: const BoxDecoration(
+                                  borderRadius: BorderRadius.all(Radius.circular(30)),
+                                  color: primaryColorSitter
+                              ),
+                              child: Align(alignment: Alignment.center,
+                                  child: TextButton
+                                    (
+                                    onPressed: () {},
+                                    child: Text('Got It', style: textWhiteMedium15,),)
+                              )
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ))
+              ]
+
+          )
+      );
+    },
+  );
+}
+
+void _bottomsheetModifyService(BuildContext context) {
+  showModalBottomSheet<int>(
+    backgroundColor: Colors.transparent,
+    context: context,
+    builder: (context) {
+      return Container(
+        height: 280,
+        decoration: const BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.only(topRight: Radius.circular(6),topLeft: Radius.circular(6))
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: <Widget> [
+            Container(
+              height: 5,
+              decoration: const BoxDecoration(
+                  color: primaryThemeColor,
+                  borderRadius: BorderRadius.only(topRight: Radius.circular(20),topLeft: Radius.circular(20))
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.only(top: 20.0,left: 20.0,right: 20.0),
+              child: Align(alignment:Alignment.topLeft,child: Text('How do I add or modify my services?',style: textBlackBold18)),
+            ),
+            const Padding(
+                padding: EdgeInsets.all(20.0),
+                child: Align(alignment:Alignment.topLeft,child: Text('Once you complete the sign-up process, you’ll have the opportunity to add, '
+                    'modify, or turn off any of your services.',
+                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: Colors.black,height: 2)),)
+            ),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 30.0),
+              child: Align(
+                alignment: Alignment.center,
+                child: Container(
+                    height: 60,
+                    width: 260,
+                    decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(30)),
+                        color: primaryColorSitter
+                    ),
+                    child: Align(alignment: Alignment.center,
+                        child: TextButton
+                          (
+                          onPressed: () {},
+                          child: Text('Got It', style: textWhiteMedium15,),)
+                    )
+                ),
+              ),
+            ),
+          ],
+        ),
+      );
+    },
+  );
+}
+
 
 
 

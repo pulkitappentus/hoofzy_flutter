@@ -409,8 +409,7 @@ Widget updateIcon(String image) {
 }
 
 
-void _petNameSuggestionBottomSheet(context,
-    PetProfileDetailController controller) {
+void _petNameSuggestionBottomSheet(context, PetProfileDetailController controller) {
   showModalBottomSheet(
       context: context,
       builder: (BuildContext bc) {
