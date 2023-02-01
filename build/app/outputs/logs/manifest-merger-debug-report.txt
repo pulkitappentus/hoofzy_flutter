@@ -57,14 +57,14 @@ MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\hp\.gradle\caches\tr
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\hp\.gradle\caches\transforms-3\12c886f954f82aca534230837ba89491\transformed\jetified-picasso-2.71828\AndroidManifest.xml:7:5-12:19
 MERGED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\hp\.gradle\caches\transforms-3\2d343665ade3289abaa799768a8e9f4d\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:36:5-42:19
 MERGED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\hp\.gradle\caches\transforms-3\2d343665ade3289abaa799768a8e9f4d\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:36:5-42:19
-MERGED from [com.google.android.gms:play-services-auth:20.4.0] C:\Users\hp\.gradle\caches\transforms-3\295557e222aa376ac1fd7f3fea7f8a00\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:22:5-38:19
-MERGED from [com.google.android.gms:play-services-auth:20.4.0] C:\Users\hp\.gradle\caches\transforms-3\295557e222aa376ac1fd7f3fea7f8a00\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:22:5-38:19
+MERGED from [com.google.android.gms:play-services-auth:20.4.1] C:\Users\hp\.gradle\caches\transforms-3\d67c0481b664637a952e3ebb105ffa53\transformed\jetified-play-services-auth-20.4.1\AndroidManifest.xml:22:5-38:19
+MERGED from [com.google.android.gms:play-services-auth:20.4.1] C:\Users\hp\.gradle\caches\transforms-3\d67c0481b664637a952e3ebb105ffa53\transformed\jetified-play-services-auth-20.4.1\AndroidManifest.xml:22:5-38:19
 MERGED from [com.google.android.play:review:2.0.1] C:\Users\hp\.gradle\caches\transforms-3\699ff32d26992ffa738ead03ff16b941\transformed\jetified-review-2.0.1\AndroidManifest.xml:11:5-12:19
 MERGED from [com.google.android.play:review:2.0.1] C:\Users\hp\.gradle\caches\transforms-3\699ff32d26992ffa738ead03ff16b941\transformed\jetified-review-2.0.1\AndroidManifest.xml:11:5-12:19
 MERGED from [com.google.android.play:app-update:2.0.1] C:\Users\hp\.gradle\caches\transforms-3\f9ec6fac0fe3937deb9533df87c8483c\transformed\jetified-app-update-2.0.1\AndroidManifest.xml:11:5-12:19
 MERGED from [com.google.android.play:app-update:2.0.1] C:\Users\hp\.gradle\caches\transforms-3\f9ec6fac0fe3937deb9533df87c8483c\transformed\jetified-app-update-2.0.1\AndroidManifest.xml:11:5-12:19
-MERGED from [com.google.android.gms:play-services-fido:19.0.0] C:\Users\hp\.gradle\caches\transforms-3\ed90d37fea1fc3a997847fe054b7de36\transformed\jetified-play-services-fido-19.0.0\AndroidManifest.xml:7:5-8:19
-MERGED from [com.google.android.gms:play-services-fido:19.0.0] C:\Users\hp\.gradle\caches\transforms-3\ed90d37fea1fc3a997847fe054b7de36\transformed\jetified-play-services-fido-19.0.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-fido:19.0.1] C:\Users\hp\.gradle\caches\transforms-3\4e90a1471e0901acb6a7fcba47214bf8\transformed\jetified-play-services-fido-19.0.1\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-fido:19.0.1] C:\Users\hp\.gradle\caches\transforms-3\4e90a1471e0901acb6a7fcba47214bf8\transformed\jetified-play-services-fido-19.0.1\AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.android.gms:play-services-appset:16.0.1] C:\Users\hp\.gradle\caches\transforms-3\c32753348d5b72b93aa476f41daf1f61\transformed\jetified-play-services-appset-16.0.1\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-appset:16.0.1] C:\Users\hp\.gradle\caches\transforms-3\c32753348d5b72b93aa476f41daf1f61\transformed\jetified-play-services-appset-16.0.1\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] C:\Users\hp\.gradle\caches\transforms-3\5e81da19e7089e645935920d2e16cce7\transformed\jetified-play-services-safetynet-17.0.0\AndroidManifest.xml:22:5-20
@@ -163,12 +163,12 @@ MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\hp\.gradle\caches\tr
 MERGED from [androidx.media:media:1.1.0] C:\Users\hp\.gradle\caches\transforms-3\a4ed1ce2c78e6f1fa3bc8096ec5afc4b\transformed\media-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-ads:21.3.0] C:\Users\hp\.gradle\caches\transforms-3\f301317e4c32dada50b6476c55295f80\transformed\jetified-play-services-ads-21.3.0\AndroidManifest.xml:17:1-25:12
 MERGED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\hp\.gradle\caches\transforms-3\2d343665ade3289abaa799768a8e9f4d\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:17:1-44:12
-MERGED from [com.google.android.gms:play-services-auth:20.4.0] C:\Users\hp\.gradle\caches\transforms-3\295557e222aa376ac1fd7f3fea7f8a00\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:17:1-40:12
+MERGED from [com.google.android.gms:play-services-auth:20.4.1] C:\Users\hp\.gradle\caches\transforms-3\d67c0481b664637a952e3ebb105ffa53\transformed\jetified-play-services-auth-20.4.1\AndroidManifest.xml:17:1-40:12
 MERGED from [com.google.android.play:review:2.0.1] C:\Users\hp\.gradle\caches\transforms-3\699ff32d26992ffa738ead03ff16b941\transformed\jetified-review-2.0.1\AndroidManifest.xml:2:1-14:12
 MERGED from [com.google.android.play:app-update:2.0.1] C:\Users\hp\.gradle\caches\transforms-3\f9ec6fac0fe3937deb9533df87c8483c\transformed\jetified-app-update-2.0.1\AndroidManifest.xml:2:1-14:12
 MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.1] C:\Users\hp\.gradle\caches\transforms-3\a0eff2278a6bfc36fddc77064e3c80f4\transformed\jetified-play-services-auth-api-phone-18.0.1\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] C:\Users\hp\.gradle\caches\transforms-3\b54c30be46eadd43c7f10d4e42a497af\transformed\jetified-play-services-auth-base-18.0.4\AndroidManifest.xml:2:1-7:12
-MERGED from [com.google.android.gms:play-services-fido:19.0.0] C:\Users\hp\.gradle\caches\transforms-3\ed90d37fea1fc3a997847fe054b7de36\transformed\jetified-play-services-fido-19.0.0\AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.gms:play-services-fido:19.0.1] C:\Users\hp\.gradle\caches\transforms-3\4e90a1471e0901acb6a7fcba47214bf8\transformed\jetified-play-services-fido-19.0.1\AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.android.gms:play-services-appset:16.0.1] C:\Users\hp\.gradle\caches\transforms-3\c32753348d5b72b93aa476f41daf1f61\transformed\jetified-play-services-appset-16.0.1\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] C:\Users\hp\.gradle\caches\transforms-3\5e81da19e7089e645935920d2e16cce7\transformed\jetified-play-services-safetynet-17.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:firebase-database-collection:18.0.1] C:\Users\hp\.gradle\caches\transforms-3\a68dbdfb4820e2e1424e2b205888aae5\transformed\jetified-firebase-database-collection-18.0.1\AndroidManifest.xml:2:1-9:12
@@ -345,8 +345,8 @@ MERGED from [com.google.android.gms:play-services-ads:21.3.0] C:\Users\hp\.gradl
 MERGED from [com.google.android.gms:play-services-ads:21.3.0] C:\Users\hp\.gradle\caches\transforms-3\f301317e4c32dada50b6476c55295f80\transformed\jetified-play-services-ads-21.3.0\AndroidManifest.xml:21:5-23:52
 MERGED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\hp\.gradle\caches\transforms-3\2d343665ade3289abaa799768a8e9f4d\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\hp\.gradle\caches\transforms-3\2d343665ade3289abaa799768a8e9f4d\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-auth:20.4.0] C:\Users\hp\.gradle\caches\transforms-3\295557e222aa376ac1fd7f3fea7f8a00\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-auth:20.4.0] C:\Users\hp\.gradle\caches\transforms-3\295557e222aa376ac1fd7f3fea7f8a00\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:20.4.1] C:\Users\hp\.gradle\caches\transforms-3\d67c0481b664637a952e3ebb105ffa53\transformed\jetified-play-services-auth-20.4.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:20.4.1] C:\Users\hp\.gradle\caches\transforms-3\d67c0481b664637a952e3ebb105ffa53\transformed\jetified-play-services-auth-20.4.1\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.play:review:2.0.1] C:\Users\hp\.gradle\caches\transforms-3\699ff32d26992ffa738ead03ff16b941\transformed\jetified-review-2.0.1\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.android.play:review:2.0.1] C:\Users\hp\.gradle\caches\transforms-3\699ff32d26992ffa738ead03ff16b941\transformed\jetified-review-2.0.1\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.android.play:app-update:2.0.1] C:\Users\hp\.gradle\caches\transforms-3\f9ec6fac0fe3937deb9533df87c8483c\transformed\jetified-app-update-2.0.1\AndroidManifest.xml:7:5-9:41
@@ -355,8 +355,8 @@ MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.1] C:\User
 MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.1] C:\Users\hp\.gradle\caches\transforms-3\a0eff2278a6bfc36fddc77064e3c80f4\transformed\jetified-play-services-auth-api-phone-18.0.1\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] C:\Users\hp\.gradle\caches\transforms-3\b54c30be46eadd43c7f10d4e42a497af\transformed\jetified-play-services-auth-base-18.0.4\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] C:\Users\hp\.gradle\caches\transforms-3\b54c30be46eadd43c7f10d4e42a497af\transformed\jetified-play-services-auth-base-18.0.4\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-fido:19.0.0] C:\Users\hp\.gradle\caches\transforms-3\ed90d37fea1fc3a997847fe054b7de36\transformed\jetified-play-services-fido-19.0.0\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-fido:19.0.0] C:\Users\hp\.gradle\caches\transforms-3\ed90d37fea1fc3a997847fe054b7de36\transformed\jetified-play-services-fido-19.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-fido:19.0.1] C:\Users\hp\.gradle\caches\transforms-3\4e90a1471e0901acb6a7fcba47214bf8\transformed\jetified-play-services-fido-19.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-fido:19.0.1] C:\Users\hp\.gradle\caches\transforms-3\4e90a1471e0901acb6a7fcba47214bf8\transformed\jetified-play-services-fido-19.0.1\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-appset:16.0.1] C:\Users\hp\.gradle\caches\transforms-3\c32753348d5b72b93aa476f41daf1f61\transformed\jetified-play-services-appset-16.0.1\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-appset:16.0.1] C:\Users\hp\.gradle\caches\transforms-3\c32753348d5b72b93aa476f41daf1f61\transformed\jetified-play-services-appset-16.0.1\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] C:\Users\hp\.gradle\caches\transforms-3\5e81da19e7089e645935920d2e16cce7\transformed\jetified-play-services-safetynet-17.0.0\AndroidManifest.xml:20:5-44
@@ -1014,25 +1014,25 @@ ADDED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\hp\.gradl
 	android:name
 		ADDED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\hp\.gradle\caches\transforms-3\2d343665ade3289abaa799768a8e9f4d\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:40:13-50
 activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
-ADDED from [com.google.android.gms:play-services-auth:20.4.0] C:\Users\hp\.gradle\caches\transforms-3\295557e222aa376ac1fd7f3fea7f8a00\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:23:9-27:75
+ADDED from [com.google.android.gms:play-services-auth:20.4.1] C:\Users\hp\.gradle\caches\transforms-3\d67c0481b664637a952e3ebb105ffa53\transformed\jetified-play-services-auth-20.4.1\AndroidManifest.xml:23:9-27:75
 	android:excludeFromRecents
-		ADDED from [com.google.android.gms:play-services-auth:20.4.0] C:\Users\hp\.gradle\caches\transforms-3\295557e222aa376ac1fd7f3fea7f8a00\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:25:13-46
+		ADDED from [com.google.android.gms:play-services-auth:20.4.1] C:\Users\hp\.gradle\caches\transforms-3\d67c0481b664637a952e3ebb105ffa53\transformed\jetified-play-services-auth-20.4.1\AndroidManifest.xml:25:13-46
 	android:exported
-		ADDED from [com.google.android.gms:play-services-auth:20.4.0] C:\Users\hp\.gradle\caches\transforms-3\295557e222aa376ac1fd7f3fea7f8a00\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:26:13-37
+		ADDED from [com.google.android.gms:play-services-auth:20.4.1] C:\Users\hp\.gradle\caches\transforms-3\d67c0481b664637a952e3ebb105ffa53\transformed\jetified-play-services-auth-20.4.1\AndroidManifest.xml:26:13-37
 	android:theme
-		ADDED from [com.google.android.gms:play-services-auth:20.4.0] C:\Users\hp\.gradle\caches\transforms-3\295557e222aa376ac1fd7f3fea7f8a00\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:27:13-72
+		ADDED from [com.google.android.gms:play-services-auth:20.4.1] C:\Users\hp\.gradle\caches\transforms-3\d67c0481b664637a952e3ebb105ffa53\transformed\jetified-play-services-auth-20.4.1\AndroidManifest.xml:27:13-72
 	android:name
-		ADDED from [com.google.android.gms:play-services-auth:20.4.0] C:\Users\hp\.gradle\caches\transforms-3\295557e222aa376ac1fd7f3fea7f8a00\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:24:13-93
+		ADDED from [com.google.android.gms:play-services-auth:20.4.1] C:\Users\hp\.gradle\caches\transforms-3\d67c0481b664637a952e3ebb105ffa53\transformed\jetified-play-services-auth-20.4.1\AndroidManifest.xml:24:13-93
 service#com.google.android.gms.auth.api.signin.RevocationBoundService
-ADDED from [com.google.android.gms:play-services-auth:20.4.0] C:\Users\hp\.gradle\caches\transforms-3\295557e222aa376ac1fd7f3fea7f8a00\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:33:9-37:51
+ADDED from [com.google.android.gms:play-services-auth:20.4.1] C:\Users\hp\.gradle\caches\transforms-3\d67c0481b664637a952e3ebb105ffa53\transformed\jetified-play-services-auth-20.4.1\AndroidManifest.xml:33:9-37:51
 	android:exported
-		ADDED from [com.google.android.gms:play-services-auth:20.4.0] C:\Users\hp\.gradle\caches\transforms-3\295557e222aa376ac1fd7f3fea7f8a00\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:35:13-36
+		ADDED from [com.google.android.gms:play-services-auth:20.4.1] C:\Users\hp\.gradle\caches\transforms-3\d67c0481b664637a952e3ebb105ffa53\transformed\jetified-play-services-auth-20.4.1\AndroidManifest.xml:35:13-36
 	android:visibleToInstantApps
-		ADDED from [com.google.android.gms:play-services-auth:20.4.0] C:\Users\hp\.gradle\caches\transforms-3\295557e222aa376ac1fd7f3fea7f8a00\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:37:13-48
+		ADDED from [com.google.android.gms:play-services-auth:20.4.1] C:\Users\hp\.gradle\caches\transforms-3\d67c0481b664637a952e3ebb105ffa53\transformed\jetified-play-services-auth-20.4.1\AndroidManifest.xml:37:13-48
 	android:permission
-		ADDED from [com.google.android.gms:play-services-auth:20.4.0] C:\Users\hp\.gradle\caches\transforms-3\295557e222aa376ac1fd7f3fea7f8a00\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:36:13-107
+		ADDED from [com.google.android.gms:play-services-auth:20.4.1] C:\Users\hp\.gradle\caches\transforms-3\d67c0481b664637a952e3ebb105ffa53\transformed\jetified-play-services-auth-20.4.1\AndroidManifest.xml:36:13-107
 	android:name
-		ADDED from [com.google.android.gms:play-services-auth:20.4.0] C:\Users\hp\.gradle\caches\transforms-3\295557e222aa376ac1fd7f3fea7f8a00\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:34:13-89
+		ADDED from [com.google.android.gms:play-services-auth:20.4.1] C:\Users\hp\.gradle\caches\transforms-3\d67c0481b664637a952e3ebb105ffa53\transformed\jetified-play-services-auth-20.4.1\AndroidManifest.xml:34:13-89
 activity#com.google.android.gms.common.api.GoogleApiActivity
 ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\hp\.gradle\caches\transforms-3\1a2cb69c9228e95e429c828957f3a3b6\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
 	android:exported

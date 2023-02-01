@@ -8,10 +8,18 @@ class SplashScreen extends BaseView<SplashController> {
 
   @override
   Widget body(BuildContext context) {
-    return SafeArea(
-      top: false,
+    return Container(
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(colors: [Color(0xFFFFFBF6), Color(0xFFFFFFFF)],
+            stops: [0.0, 1.0],
+            begin: FractionalOffset.topCenter,
+            end: FractionalOffset.bottomCenter,
+            tileMode: TileMode.repeated),
+
+      ),
       child: Center(
-        child: Padding(padding: const EdgeInsets.all(60), child: FadeTransition(opacity: controller.animation, child: Image.asset(Assets.imagesIcLogo))),
+        child: Padding(padding: const EdgeInsets.all(60), child: ScaleTransition( scale: controller.animation,
+        child: Image.asset(Assets.imagesIcLogo,height: 140,width: 140,))),
       ),
     );
   }

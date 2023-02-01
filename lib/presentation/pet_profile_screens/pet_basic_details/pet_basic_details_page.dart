@@ -6,7 +6,6 @@ import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 import '../../../infrastructure/base/base_view.dart';
 import '../../../infrastructure/navigation/routes.dart';
-import '../../date_picker.dart';
 import 'controllers/pet_profile_detail_controller.dart';
 
 class PetBasicDetailsPage extends BaseView<PetProfileDetailController> {
@@ -32,7 +31,7 @@ class PetBasicDetailsPage extends BaseView<PetProfileDetailController> {
           children: [
             AppBar(
               toolbarHeight: 56,
-              backgroundColor: Color(0xFFFFFBF6),
+              backgroundColor: const Color(0xFFFFFBF6),
               elevation: 0,
               centerTitle: true,
               leading: InkWell(
@@ -44,14 +43,15 @@ class PetBasicDetailsPage extends BaseView<PetProfileDetailController> {
                   color: Colors.black,
                 ),
               ),
-              title: Text('Create a Pet Profile', style: headlineBlack20,),
+              title: const Text(
+                'Create a Pet Profile', style: headlineBlack20,),
             ),
             Expanded(child: SingleChildScrollView(
               child: Column(
                 children: <Widget>[
 
                   const Padding(
-                    padding: const EdgeInsets.only(left: 16.0),
+                    padding: EdgeInsets.only(left: 16.0),
                     child: Align(alignment: Alignment.topLeft,
                         child: Text(
                           'Which one your pet', style: textBlackMedium14,)),
@@ -76,7 +76,7 @@ class PetBasicDetailsPage extends BaseView<PetProfileDetailController> {
                                         color: primaryColor, width: 1)
                                         : Border.all(
                                         color: greyColor, width: 1),
-                                    borderRadius: BorderRadius.all(
+                                    borderRadius: const BorderRadius.all(
                                         Radius.circular(30))
                                 ),
                                 child: Row(
@@ -119,7 +119,7 @@ class PetBasicDetailsPage extends BaseView<PetProfileDetailController> {
                                         color: primaryColor, width: 1)
                                         : Border.all(
                                         color: greyColor, width: 1),
-                                    borderRadius: BorderRadius.all(
+                                    borderRadius: const BorderRadius.all(
                                         Radius.circular(30))
                                 ),
                                 child: Row(
@@ -153,7 +153,7 @@ class PetBasicDetailsPage extends BaseView<PetProfileDetailController> {
                   ),
 
                   const Padding(
-                    padding: const EdgeInsets.only(top: 20.0, left: 16.0),
+                    padding: EdgeInsets.only(top: 20.0, left: 16.0),
                     child: Align(alignment: Alignment.topLeft,
                         child: Text('Pet breed', style: textBlackMedium14,)),
                   ),
@@ -176,19 +176,17 @@ class PetBasicDetailsPage extends BaseView<PetProfileDetailController> {
                     ),
                   ),
                   const Padding(
-                    padding: const EdgeInsets.only(
-                        left: 16.0, right: 16.0, top: 12),
+                    padding: EdgeInsets.only(left: 16.0, right: 16.0, top: 12),
                     child: Divider(color: greyColor, thickness: 1,),
                   ),
 
                   const Padding(
-                    padding: const EdgeInsets.only(top: 20.0, left: 16.0),
+                    padding: EdgeInsets.only(top: 20.0, left: 16.0),
                     child: Align(alignment: Alignment.topLeft,
                         child: Text('Pet name', style: textBlackMedium14,)),
                   ),
                   const Padding(
-                    padding: const EdgeInsets.only(
-                        top: 5.0, left: 16.0, right: 16.0),
+                    padding: EdgeInsets.only(top: 5.0, left: 16.0, right: 16.0),
                     child: TextField(
                       decoration: InputDecoration(
                           hintText: 'Enter your pet name',
@@ -217,7 +215,7 @@ class PetBasicDetailsPage extends BaseView<PetProfileDetailController> {
                                 borderRadius: BorderRadius.all(
                                     Radius.circular(30.0))
                             ),
-                            child: Align(alignment: Alignment.center,
+                            child: const Align(alignment: Alignment.center,
                                 child: Text(
                                   'Suggest name', style: textWhiteLight_12,)),
                           ),
@@ -226,7 +224,7 @@ class PetBasicDetailsPage extends BaseView<PetProfileDetailController> {
                     ),
                   ),
                   const Padding(
-                    padding: const EdgeInsets.only(top: 20.0, left: 16.0),
+                    padding: EdgeInsets.only(top: 20.0, left: 16.0),
                     child: Align(alignment: Alignment.topLeft,
                         child: Text(
                           'Pet date of birth', style: textBlackMedium14,)),
@@ -234,28 +232,29 @@ class PetBasicDetailsPage extends BaseView<PetProfileDetailController> {
 
                   InkWell(
                     onTap: () {
-                      _petDobBottomSheet(context);
+                      _petDobBottomSheet(context,controller);
                     },
                     child: Padding(
                       padding: const EdgeInsets.only(
                           left: 16.0, right: 16.0, top: 15.0),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: const [
-                          Text('Add your pet date of birth',
-                            style: textBlackMedium14,)
+                        children: [
+                          Obx(() {
+                            return Text(controller.dob.value,
+                              style: textBlackMedium14,);
+                          })
                         ],
                       ),
                     ),
                   ),
                   const Padding(
-                    padding: const EdgeInsets.only(
-                        left: 16.0, right: 16.0, top: 12),
+                    padding: EdgeInsets.only(left: 16.0, right: 16.0, top: 12),
                     child: Divider(color: greyColor, thickness: 1,),
                   ),
 
                   const Padding(
-                    padding: const EdgeInsets.only(top: 20.0, left: 16.0),
+                    padding: EdgeInsets.only(top: 20.0, left: 16.0),
                     child: Align(alignment: Alignment.topLeft,
                         child: Text('Pet gender', style: textBlackMedium14,)),
                   ),
@@ -304,7 +303,7 @@ class PetBasicDetailsPage extends BaseView<PetProfileDetailController> {
                               },
                             ),
                             const Padding(
-                              padding: const EdgeInsets.only(left: 12.0),
+                              padding: EdgeInsets.only(left: 12.0),
                               child: Text('Male', style: textBlackMedium14,),
                             )
                           ],
@@ -320,8 +319,9 @@ class PetBasicDetailsPage extends BaseView<PetProfileDetailController> {
                                     height: 60,
                                     width: 60,
                                     decoration: BoxDecoration(
-                                      image: DecorationImage(image: AssetImage(
-                                          'assets/hoofzy/male.svg')),
+                                      image: const DecorationImage(
+                                          image: AssetImage(
+                                              'assets/hoofzy/male.svg')),
                                       shape: BoxShape.circle,
                                       color: controller.isFemaleSelect.value
                                           ? primaryColor
@@ -353,19 +353,15 @@ class PetBasicDetailsPage extends BaseView<PetProfileDetailController> {
                                 },
                               ),
                               const Padding(
-                                padding: const EdgeInsets.only(left: 12.0),
+                                padding: EdgeInsets.only(left: 12.0),
                                 child: Text('Male', style: textBlackMedium14,),
                               )
                             ],
-
                           ),
                         ),
                       ],
-
                     ),
                   ),
-
-
                   Padding(
                     padding: const EdgeInsets.only(
                         top: 118.0, left: 38.0, right: 38.0),
@@ -373,7 +369,7 @@ class PetBasicDetailsPage extends BaseView<PetProfileDetailController> {
                       return Container(
                           height: 56,
                           width: double.infinity,
-                          decoration:  BoxDecoration(
+                          decoration: BoxDecoration(
                               borderRadius: const BorderRadius.all(
                                   Radius.circular(30)),
                               color: controller.isValid.value
@@ -386,14 +382,12 @@ class PetBasicDetailsPage extends BaseView<PetProfileDetailController> {
                                 onPressed: () {
                                   Get.toNamed(Routes.petOtherDetails);
                                 },
-                                child: Text('Save & Continue',
+                                child: const Text('Save & Continue',
                                   style: textWhiteMedium15,),)
                           )
                       );
                     }),
                   ),
-
-
                 ],
               ),
             ))
@@ -409,13 +403,19 @@ Widget updateIcon(String image) {
 }
 
 
-void _petNameSuggestionBottomSheet(context, PetProfileDetailController controller) {
+void _petNameSuggestionBottomSheet(context,
+    PetProfileDetailController controller) {
   showModalBottomSheet(
       context: context,
       builder: (BuildContext bc) {
-        return Scaffold(
-          backgroundColor: Colors.white,
-          body: Column(
+        return Container(
+          height: 371,
+          decoration: const BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(4), topRight: Radius.circular(4))
+          ),
+          child: Column(
             children: <Widget>[
               Container(
                 width: double.infinity,
@@ -423,14 +423,15 @@ void _petNameSuggestionBottomSheet(context, PetProfileDetailController controlle
                 decoration: const BoxDecoration(
                     color: lightThemeColor,
                     borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(30),
-                        topLeft: Radius.circular(30))
+                        topRight: Radius.circular(40),
+                        topLeft: Radius.circular(40))
 
                 ),
 
               ),
               const Padding(
-                padding: const EdgeInsets.only(top: 10.0, left: 16.0, bottom: 20),
+                padding: const EdgeInsets.only(
+                    top: 10.0, left: 16.0, bottom: 20),
                 child: Align(alignment: Alignment.topLeft,
                     child: Text(
                       'We Suggest some pet name', style: headlineBlack20,)),
@@ -441,12 +442,12 @@ void _petNameSuggestionBottomSheet(context, PetProfileDetailController controlle
                     shrinkWrap: true,
                     slivers: [
                       SliverPadding(
-                          padding: EdgeInsets.symmetric(horizontal: 1.sp),
+                          padding: EdgeInsets.symmetric(horizontal: 8.sp),
                           sliver: SliverGrid(
                             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                                 crossAxisCount: 3,
                                 mainAxisSpacing: 8.sp,
-                                crossAxisSpacing: 1.sp,
+                                crossAxisSpacing: 8.sp,
                                 childAspectRatio: (84.sp / 40.sp)
                             ),
                             delegate: SliverChildBuilderDelegate((
@@ -454,8 +455,6 @@ void _petNameSuggestionBottomSheet(context, PetProfileDetailController controlle
                               return InkWell(
                                 child: Obx(() =>
                                     Container(
-                                      margin: const EdgeInsets.only(
-                                          left: 8.0, right: 8),
                                       width: 84,
                                       height: 50,
                                       decoration: BoxDecoration(
@@ -502,19 +501,21 @@ void _petNameSuggestionBottomSheet(context, PetProfileDetailController controlle
                 padding: const EdgeInsets.only(bottom: 30.0),
                 child: Align(
                   alignment: Alignment.center,
-                  child: Container(
-                      height: 56,
-                      width: 260,
-                      decoration: const BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(30)),
-                          color: greyColor
-                      ),
-                      child: Align(alignment: Alignment.center,
-                          child: TextButton
-                            (
-                            onPressed: () {},
-                            child: Text('Save', style: textWhiteMedium15,),)
-                      )
+                  child: InkWell(
+                    onTap: () {
+
+                    },
+                    child: Container(
+                        height: 60,
+                        width: 260,
+                        decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(30)),
+                            color: greyColor
+                        ),
+                        child: const Align(alignment: Alignment.center,
+                            child: Text('Save', style: textWhiteMedium15)
+                        )
+                    ),
                   ),
                 ),
               ),
@@ -525,15 +526,19 @@ void _petNameSuggestionBottomSheet(context, PetProfileDetailController controlle
   );
 }
 
-void _petDobBottomSheet(context) {
+void _petDobBottomSheet(context, PetProfileDetailController controller) {
   DateTime _selectedDate;
 
   showModalBottomSheet(
       context: context,
       builder: (BuildContext bc) {
         return Container(
-          height: 285.sp,
-          color: Colors.white,
+          height: 288.sp,
+          decoration: const BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(4), topRight: Radius.circular(4))
+          ),
           child: Column(
             children: <Widget>[
               Container(
@@ -544,19 +549,17 @@ void _petDobBottomSheet(context) {
                     borderRadius: BorderRadius.only(
                         topRight: Radius.circular(30),
                         topLeft: Radius.circular(30))
-
                 ),
 
               ),
               const Padding(
-                padding: const EdgeInsets.only(
-                    top: 10.0, left: 16.0, bottom: 20),
+                padding: EdgeInsets.only(top: 20.0, left: 16.0, bottom: 20),
                 child: Align(alignment: Alignment.topLeft,
                     child: Text('Pet date of birth', style: headlineBlack20,)),
               ),
 
               Padding(
-                padding: const EdgeInsets.only(left: 16.0, right: 16.0),
+                padding: const EdgeInsets.only(left: 46.0, right: 46.0),
                 child: DatePickerWidget(
                   looping: false,
                   // default is not looping
@@ -565,10 +568,12 @@ void _petDobBottomSheet(context) {
                   initialDate: DateTime(2023, 01, 16),
                   dateFormat: "MMMM-dd-yyyy",
                   //  locale: DatePicker.localeFromString('en'),
-                  onChange: (DateTime newDate, _) => _selectedDate = newDate,
+                  onChange: (DateTime newDate, _) => controller.dobb(newDate),
                   pickerTheme: const DateTimePickerTheme(
                     itemTextStyle: TextStyle(color: Colors.black, fontSize: 18),
-                    dividerColor: greyLightColor,
+                    dividerColor: Color(0xFFF5F5F5),
+                    backgroundColor: Color(0xFFFFFFFF),
+
                   ),
                 ),
               ),
@@ -577,19 +582,21 @@ void _petDobBottomSheet(context) {
                 padding: const EdgeInsets.only(bottom: 30.0, top: 40),
                 child: Align(
                   alignment: Alignment.center,
-                  child: Container(
-                      height: 56,
-                      width: 260,
-                      decoration: const BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(30)),
-                          color: primaryColor
-                      ),
-                      child: Align(alignment: Alignment.center,
-                          child: TextButton
-                            (
-                            onPressed: () {},
-                            child: Text('Save', style: textWhiteMedium15,),)
-                      )
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: Container(
+                        height: 60,
+                        width: 260,
+                        decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(30)),
+                            color: primaryColor
+                        ),
+                        child: const Align(alignment: Alignment.center,
+                            child: Text('Save', style: textWhiteMedium15,)
+                        )
+                    ),
                   ),
                 ),
               ),

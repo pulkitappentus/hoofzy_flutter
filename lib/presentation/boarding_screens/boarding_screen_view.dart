@@ -1,3 +1,4 @@
+import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -10,6 +11,7 @@ import 'bscreen_3.dart';
 import 'controllers/boarding.controller.dart';
 
 class BoardingScreenView extends BaseView<BoardingController> {
+
   @override
   Widget body(BuildContext context) {
     final panels = PageView(
@@ -23,63 +25,98 @@ class BoardingScreenView extends BaseView<BoardingController> {
         BScreen3(),
       ],
     );
-    return Scaffold(
-      backgroundColor: Colors.white,
-      appBar:  AppBar(
-        toolbarHeight: 100,
-        backgroundColor: Colors.white,
-        elevation: 0,
-        title: Image.asset('assets/hoofzy/boarding_title.png',width: 130,height: 60,fit: BoxFit.contain),
-        centerTitle: true,
-      ),
-      body: Container(
+    return Container(
         decoration: const BoxDecoration(
-          color: Colors.black,
-          image: DecorationImage(image: AssetImage('assets/hoofzy/background.png'),fit: BoxFit.fill),
+          color: Colors.white,
+          image: DecorationImage(
+              image: AssetImage('assets/hoofzy/background.png'),
+              fit: BoxFit.fill),
         ),
-        child: Stack(children: <Widget>[
-          panels,
-          Stack(
-            children: <Widget>[
-              //nextButton(context)
-              Obx(() => (2 == controller.currentPage.value ? nextButton(context) : skipText()))
-
-            ],
+        child: Scaffold(
+          backgroundColor: Colors.transparent,
+          appBar: AppBar(
+            toolbarHeight: 80,
+            backgroundColor: Colors.transparent,
+            elevation: 0,
+            title: Image.asset('assets/hoofzy/boarding_title.png', width: 130,
+                height: 60,
+                fit: BoxFit.contain),
+            centerTitle: true,
           ),
-        ]),
-      ),
+          body: Stack(children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.only(
+                  top: 50.0, bottom: 120, left: 38, right: 38),
+              child: Stack(
+                children: <Widget>[
+                  panels,
+                  Obx(() {
+                    return Padding(
+                      padding: const EdgeInsets.only(bottom: 30.0),
+                      child: Align(
+                        alignment: Alignment.bottomCenter,
+                        child: DotsIndicator(
+                          dotsCount: 3,
+                          position: controller.currentPage.value.toDouble(),
+                          decorator: DotsDecorator(
+                            color: avtarBackground,
+                            activeColor: primaryColor,
+                            size: const Size(13.0, 6.0),
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
+                            activeSize: const Size(24.0, 6.0),
+                            activeShape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
+                          ),),
+                      ),
+                    );
+                  })
+                ],),
+            ),
+            Stack(
+              children: <Widget>[
+                Obx(() =>
+                (2 == controller.currentPage.value
+                    ? nextButton(context)
+                    : skipText()))
+              ],
+            ),
+          ]),
+        )
     );
   }
-  skipText(){
+
+  skipText() {
     return const Padding(
       padding: EdgeInsets.all(40.0),
-      child: Align(alignment:Alignment.bottomCenter,child: Text('Swipe left to continue',style: textBlackLight15)),
+      child: Align(alignment: Alignment.bottomCenter,
+          child: Text('Swipe left to continue', style: textBlackLight15)),
     );
   }
 
-  nextButton(BuildContext context){
+  nextButton(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 60.0,right: 60.0,bottom: 40.0),
+      padding: const EdgeInsets.only(left: 60.0, right: 60.0, bottom: 40.0),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.end,
-        children:  [
+        children: [
           //Text('Swipe left to continue',style: textBlackLight15),
           Container(
             height: 56,
-            width: MediaQuery.of(context).size.width,
+            width: MediaQuery
+                .of(context)
+                .size
+                .width,
             decoration: BoxDecoration(
               color: primaryColor,
               borderRadius: BorderRadius.circular(30),
             ),
             child: Align(
                 alignment: Alignment.center,
-                child: TextButton(onPressed: (){
+                child: TextButton(onPressed: () {
                   Get.offNamed(Routes.login);
-                },child: Text('Get Started',style: textWhiteMedium16,))),
+                }, child: Text('Get Started', style: textWhiteMedium16,))),
           )
         ],
       ),
     );
   }
 }
-

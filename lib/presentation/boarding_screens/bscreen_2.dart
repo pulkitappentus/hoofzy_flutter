@@ -8,16 +8,23 @@ class BScreen2 extends BaseView<BoardingController> {
 
   @override
   Widget body(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: Container(
-        margin: const EdgeInsets.only(top: 20.0,bottom: 130,left: 38,right: 38),
-        width: double.infinity,
-        height: double.infinity,
-        decoration: const BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.all(Radius.circular(30.0))
+    return Container(
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(colors: [Color(0xffFEFAF7), Color(0xFFFFF4EF)],
+            stops: [0.0, 1.0],
+            begin: FractionalOffset.topCenter,
+            end: FractionalOffset.bottomCenter,
+            tileMode: TileMode.repeated),
 
+      ),
+      child: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(colors: [Color(0xffFFFBF6), Color(0xFFFFFFFF)],
+              stops: [0.0, 1.0],
+              begin: FractionalOffset.topCenter,
+              end: FractionalOffset.bottomCenter,
+              tileMode: TileMode.repeated),
+          borderRadius: BorderRadius.all(Radius.circular(30.0)),
         ),
         child: Column(
           children: [
@@ -41,9 +48,9 @@ class BScreen2 extends BaseView<BoardingController> {
               ),
             ),
             const Padding(
-              padding: EdgeInsets.only(top : 20),
+              padding: EdgeInsets.only(top : 20,left: 30,right: 30),
               child: Text(
-                'Find the best pet near you and \nadopt your favourite one',
+                'Find the best pet near you and adopt your favourite one',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 15,

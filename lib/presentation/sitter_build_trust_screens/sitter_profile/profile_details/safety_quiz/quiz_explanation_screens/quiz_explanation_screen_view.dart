@@ -1,3 +1,4 @@
+import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -47,18 +48,39 @@ class QuizExplanationScreenView extends BaseView<SafetyQuizController> {
           color: Colors.black,
         ),
         child: Stack(children: <Widget>[
-          panels,
+          Stack(children: [
+            panels,
+            Obx(() {
+              return Padding(
+                padding: const EdgeInsets.only(bottom: 0),
+                child: Align(
+                  alignment: Alignment.bottomCenter,
+                  child: DotsIndicator(
+                    dotsCount: 4,
+                    position: controller.currentPage.value.toDouble(),
+                    decorator: DotsDecorator(
+                      color: Colors.black12,
+                      activeColor: Colors.black,
+                      size: const Size(13.0, 6.0),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
+                      activeSize: const Size(24.0, 6.0),
+                      activeShape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
+                    ),),
+                ),
+              );
+            })
+          ],),
           Stack(
             children: <Widget>[
               //nextButton(context)
-              Obx(() => (3 == controller.currentPage.value ? nextButton(context) : skipText(context)))
+              Obx(() => (3 == controller.currentPage.value ? nextButton(context) : startQuizButton(context)))
             ],
           ),
         ]),
       ),
     );
   }
-  skipText(BuildContext context){
+  startQuizButton(BuildContext context){
     return Padding(
       padding: const EdgeInsets.only(left: 60.0,right: 60.0,bottom: 40.0),
       child: Column(

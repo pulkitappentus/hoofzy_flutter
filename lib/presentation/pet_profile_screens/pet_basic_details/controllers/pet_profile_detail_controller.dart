@@ -18,7 +18,13 @@ class PetProfileDetailController extends BaseController {
   var selectedSuggestionName = 10.obs;
   var lastselectedSuggestionName = 10.obs;
 
-
+  //date of birth
+  var dob = 'Add your pet date of bith'.obs;
+  
+  dobb(DateTime newDate){
+    dob.value = newDate.toIso8601String().split("T")[0];
+  }
+  
   @override
   void onConnectionChange(ConnectivityResult result) {
 

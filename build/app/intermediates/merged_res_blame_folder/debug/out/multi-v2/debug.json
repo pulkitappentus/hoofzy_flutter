@@ -4975,7 +4975,7 @@
             "outputFile": "C:\\Users\\hp\\Documents\\GitHub\\hoofzy_flutter\\build\\app\\intermediates\\merged_res\\debug\\values-watch-v20_values-watch-v20.arsc.flat",
             "map": [
                 {
-                    "source": "C:\\Users\\hp\\.gradle\\caches\\transforms-3\\295557e222aa376ac1fd7f3fea7f8a00\\transformed\\jetified-play-services-auth-20.4.0\\res\\values-watch-v20\\values.xml",
+                    "source": "C:\\Users\\hp\\.gradle\\caches\\transforms-3\\d67c0481b664637a952e3ebb105ffa53\\transformed\\jetified-play-services-auth-20.4.1\\res\\values-watch-v20\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11",
                         "startColumns": "0,0,0,0,0,0,0,0",

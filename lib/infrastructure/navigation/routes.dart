@@ -14,7 +14,6 @@ class Routes {
 
   static const CONTENT = '/content';
   static const SPLASH = '/splash';
-  static const WALLPAPERS = '/wallpapers';
   static const home = '/home';
   static const boarding = '/boarding_screens';
   static const login = '/login_screens';

@@ -4,6 +4,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 
+import 'app/routes/app_pages.dart';
 import 'config.dart';
 import 'firebase_options.dart';
 import 'infrastructure/navigation/navigation.dart';

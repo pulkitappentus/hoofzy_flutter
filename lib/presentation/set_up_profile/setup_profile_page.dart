@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import '../../../infrastructure/base/base_view.dart';
+import '../../app/routes/app_pages.dart';
 import '../../infrastructure/navigation/routes.dart';
 import 'controllers/setupprofile.controller.dart';
 
@@ -66,7 +67,7 @@ class SetupProfilePage extends BaseView<SetupProfileController> {
                 height: 310,
                 width: 170,
                 decoration: const BoxDecoration(
-                    gradient: const LinearGradient(colors: [Color(0xFFFFE9DE), Color(0xFFFF9253)],
+                    gradient: LinearGradient(colors: [Color(0xFFFFE9DE), Color(0xFFFF9253)],
                         stops: [0.0, 1.0],
                         begin: FractionalOffset.topCenter,
                         end: FractionalOffset.bottomCenter,
@@ -81,28 +82,31 @@ class SetupProfilePage extends BaseView<SetupProfileController> {
                       child: Image.asset('assets/hoofzy/dog.png',width: 44,height: 60,fit: BoxFit.fill),
                     ),
                     const Padding(
-                      padding: const EdgeInsets.only(left: 12.0,top: 10.0),
+                      padding:  EdgeInsets.only(left: 12.0,top: 10.0),
                       child: Text('Do you have a pet?',style: textBlackBold16),
                     ),
                     const Padding(
-                      padding: const EdgeInsets.only(left: 12.0,top: 10.0,right: 12),
+                      padding: EdgeInsets.only(left: 12.0,top: 10.0,right: 12),
                       child: Text('Creating a pet profile, training your pet, playing games, and exploring other services are all easy to do.',style: textBlackMedium_14),
                     ),
                     Expanded(child: Column(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        Container(
-                            height: 50,
-                            width: 170,
-                            decoration: const BoxDecoration(
-                                borderRadius: BorderRadius.only(bottomLeft: Radius.circular(16),bottomRight: Radius.circular(16)),
-                                color: primaryColor
-                            ),
-                            child: Align(alignment: Alignment.center,
-                              child: TextButton(onPressed: (){
-                                Get.toNamed(Routes.petBasicDetails);
-                              },child: Text('Create a Pet Profile',style: textWhiteLight14400,),),
-                            )
+                        InkWell(
+                          child: Container(
+                              height: 50,
+                              width: 170,
+                              decoration: const BoxDecoration(
+                                  borderRadius: BorderRadius.only(bottomLeft: Radius.circular(16),bottomRight: Radius.circular(16)),
+                                  color: primaryColor
+                              ),
+                              child: const Align(alignment: Alignment.center,
+                                child: Text('Create a Pet Profile',style: textWhiteLight14400,)
+                              )
+                          ),
+                          onTap: (){
+                            Get.toNamed(Routes.petBasicDetails);
+                          },
                         ),
                       ],
                     ))
@@ -140,18 +144,22 @@ class SetupProfilePage extends BaseView<SetupProfileController> {
                       Expanded(child: Column(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          Container(
-                              height: 50,
-                              width: 170,
-                              decoration: const BoxDecoration(
-                                  borderRadius: BorderRadius.only(bottomLeft: Radius.circular(16),bottomRight: Radius.circular(16)),
-                                  color: primaryColorSitter
-                              ),
-                              child: Align(alignment: Alignment.center,
-                                child: TextButton(onPressed: (){
-                                  Get.toNamed(Routes.createProfile);
-                                },child: Text('Create a Sitter Profile',style: textWhiteLight14400,),),
-                              )
+                          InkWell(
+                            child: Container(
+                                height: 50,
+                                width: 170,
+                                decoration: const BoxDecoration(
+                                    borderRadius: BorderRadius.only(bottomLeft: Radius.circular(16),bottomRight: Radius.circular(16)),
+                                    color: primaryColorSitter
+                                ),
+                                child: const Align(alignment: Alignment.center,
+                                  child: Text('Create a Sitter Profile',style: textWhiteLight14400,)
+                                )
+                            ),
+                            onTap: (){
+                              Get.toNamed(Routes.createProfile);
+                              //Get.toNamed(AppRoutes.ANOTHER);
+                            },
                           ),
                         ],
                       ))
@@ -165,18 +173,18 @@ class SetupProfilePage extends BaseView<SetupProfileController> {
 
           Padding(
             padding: const EdgeInsets.only(bottom: 30.0),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget> [
-                TextButton(onPressed: (){
-                  Get.toNamed(Routes.home);
-                },child: Text('Skip, I`m here to explore',style: textBlackMedium16)),
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 12.0),
-                  child: Image.asset('assets/hoofzy/emoji.png',width: 24,height: 24,fit: BoxFit.fill,),
-                )
-              ],
+            child: InkWell(
+              onTap: (){
+                Get.toNamed(Routes.home);
+              },
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget> [
+                  const Text('Skip, I`m here to explore',style: textBlackMedium16),
+                  Image.asset('assets/hoofzy/emoji.png',width: 24,height: 24,fit: BoxFit.fill,)
+                ],
+              ),
             ),
           )
         ],
