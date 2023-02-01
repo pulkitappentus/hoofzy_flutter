@@ -58,12 +58,17 @@ class ProfileCoverPhotoPage extends BaseView<ProfileCoverPhotoController> {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 20.0),
-                    child: Container(width: 160.sp,height: 160.sp,decoration: BoxDecoration(
-                        border: Border.all(color: lightPinkColor,width: 1),
-                        shape: BoxShape.circle,
-                        color: Colors.white
-                    ),
-                    child: Image.asset('assets/hoofzy/pet_foot_placeholder.png',),
+                    child: InkWell(
+                      onTap: (){
+
+                      },
+                      child: Container(width: 160.sp,height: 160.sp,decoration: BoxDecoration(
+                          border: Border.all(color: lightPinkColor,width: 1),
+                          shape: BoxShape.circle,
+                          color: Colors.white
+                      ),
+                      child: Image.asset('assets/hoofzy/pet_foot_placeholder.png',),
+                      ),
                     ),
                   ),
                   const Padding(
