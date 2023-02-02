@@ -1,5 +1,8 @@
+import 'dart:async';
+
 import 'package:Hoofzy_V2/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import '../../../../infrastructure/base/base_view.dart';
 import 'controllers/walking_service_controller.dart';
 
@@ -7,6 +10,13 @@ class PetWalkingPage extends BaseView<WalkingServiceController> {
 
   @override
   Widget body(BuildContext context) {
+
+    final Completer<GoogleMapController> _controller = Completer();
+    const LatLng _center = LatLng(26.8549, 75.8243);
+    void _onMapCreated(GoogleMapController controller) {
+      _controller.complete(controller);
+    }
+
     return Container(
       decoration: const BoxDecoration(
         gradient: LinearGradient(colors: [Color(0xFFFFFBF6), Color(0xFFFFFFFF)],
@@ -61,6 +71,13 @@ class PetWalkingPage extends BaseView<WalkingServiceController> {
                       decoration: const BoxDecoration(
                           color: lightGColor,
                           borderRadius: BorderRadius.all(Radius.circular(16))
+                      ),
+                      child: GoogleMap(
+                        onMapCreated: _onMapCreated,
+                        initialCameraPosition: CameraPosition(
+                          target: _center,
+                          zoom: 15.0,
+                        ),
                       ),
                     ),
                   ),
