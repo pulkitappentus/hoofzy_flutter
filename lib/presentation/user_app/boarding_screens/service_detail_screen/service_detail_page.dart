@@ -1,14 +1,17 @@
+import 'dart:async';
+
 import 'package:Hoofzy_V2/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:sizer/sizer.dart';
 import '../../../../infrastructure/base/base_view.dart';
 import '../../../../infrastructure/navigation/routes.dart';
 import 'controllers/service.detail.controller.dart';
 
 class ServiceDetailPage extends BaseView<ServiceDetailController> {
-
+   
   @override
   Widget body(BuildContext context) {
     return Container(
@@ -233,8 +236,7 @@ class ServiceDetailPage extends BaseView<ServiceDetailController> {
                     ],
                   ),
                   const Padding(
-                    padding: const EdgeInsets.only(
-                        left: 16.0, right: 16.0, top: 15.0),
+                    padding: EdgeInsets.only(left: 16.0, right: 16.0, top: 15.0),
                     child: Divider(color: greyColor, thickness: 1,),
                   ),
                   Padding(
@@ -257,10 +259,10 @@ class ServiceDetailPage extends BaseView<ServiceDetailController> {
                         }, child: Obx(() {
                           return Text(
                             'About', style: controller
-                              .tabValue.value ==
-                              2
+                              .tabValue.value == 2
                               ? textBlackBold18Primary
-                              : textBlackBold18);
+                              : textBlackBold18
+                          );
                         })),
                         TextButton(onPressed: () {
                           controller.tabValue.value = 3;
@@ -282,7 +284,7 @@ class ServiceDetailPage extends BaseView<ServiceDetailController> {
                 }),
 
                 Obx(() {
-                  return controller.tabValue.value == 2 ? about() : emptyView();
+                  return controller.tabValue.value == 2 ? about(controller) : emptyView();
                 }),
 
                 Obx(() {
@@ -763,12 +765,12 @@ Widget availibility() {
   );
 }
 
-Widget about() {
+Widget about(ServiceDetailController controller) {
   return Column(
     children: [
       description(),
-      aboutHome(),
-      additionalSkills(),
+      aboutHome(controller),
+      additionalSkills(controller),
       photos(),
       location()
 
@@ -812,7 +814,7 @@ Widget description() {
   );
 }
 
-Widget aboutHome() {
+Widget aboutHome(ServiceDetailController controller) {
   return Padding(
     padding: const EdgeInsets.only(left: 16.0, right: 16.0, top: 20.0),
     child: Column(
@@ -843,11 +845,9 @@ Widget aboutHome() {
                                       'assets/hoofzy/checked.png', width: 30,
                                       height: 30,
                                       fit: BoxFit.fill,),
-                                    const Padding(
-                                      padding: const EdgeInsets.only(
-                                          left: 10.0),
-                                      child: Text(
-                                        'Lives in an Apartment',
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 10.0),
+                                      child: Text(controller.aboutHomeList[index],
                                         style: textBlackLight15,),
                                     )
                                   ],
@@ -865,14 +865,14 @@ Widget aboutHome() {
           ),
         ),
         const Padding(
-          padding: const EdgeInsets.only(top: 15.0),
+          padding: EdgeInsets.only(top: 15.0),
           child: Divider(color: greyColor, thickness: 1,),
         ),
       ],),
   );
 }
 
-Widget additionalSkills() {
+Widget additionalSkills(ServiceDetailController controller) {
   return Padding(
     padding: const EdgeInsets.only(left: 16.0, right: 16.0, top: 20.0),
     child: Column(
@@ -880,7 +880,7 @@ Widget additionalSkills() {
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         const Align(alignment: Alignment.topLeft,
-            child: Text('About home', style: textBlackMedium16,)),
+            child: Text('Additional Skills', style: textBlackMedium16,)),
         Padding(
           padding: const EdgeInsets.only(
               top: 0.0, left: 0, right: 0),
@@ -903,11 +903,11 @@ Widget additionalSkills() {
                                       'assets/hoofzy/checked.png', width: 30,
                                       height: 30,
                                       fit: BoxFit.fill,),
-                                    const Padding(
+                                    Padding(
                                       padding: const EdgeInsets.only(
                                           left: 10.0),
                                       child: Text(
-                                        'Oral Medication Administration',
+                                        controller.additionalSkillsList[index],
                                         style: textBlackLight15,),
                                     )
                                   ],
@@ -916,7 +916,7 @@ Widget additionalSkills() {
                             );
                           },
                           // 40 list items
-                          childCount: 6,
+                          childCount: 5,
                         ),
                       )
                   )
@@ -989,6 +989,11 @@ Widget photos() {
 }
 
 Widget location() {
+  final Completer<GoogleMapController> _controller = Completer();
+  const LatLng _center = LatLng(26.8549, 75.8243);
+  void _onMapCreated(GoogleMapController controller) {
+    _controller.complete(controller);
+  }
   return Padding(
     padding: const EdgeInsets.only(left: 16.0, right: 16.0, top: 20.0),
     child: Column(
@@ -1006,13 +1011,13 @@ Widget location() {
                 color: Colors.grey,
                 borderRadius: BorderRadius.all(Radius.circular(8))
             ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.asset('assets/hoofzy/location_primary.png', height: 36,
-                  width: 36,
-                  fit: BoxFit.fill,)
-              ],),
+            child: GoogleMap(
+              onMapCreated: _onMapCreated,
+              initialCameraPosition: CameraPosition(
+                target: _center,
+                zoom: 15.0,
+              ),
+            )
           ),
         )
       ],),

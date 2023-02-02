@@ -47,18 +47,23 @@ class ServiceBookingPage extends BaseView<ServiceBookingController> {
                       children: <Widget>[
                         const Align(alignment: Alignment.topLeft, child: Text(
                           'Select pet', style: textBlackBold18,)),
-                        Container(
-                          height: 34,
-                          width: 84,
-                          decoration: BoxDecoration(
-                              borderRadius: const BorderRadius.all(
-                                  Radius.circular(30)),
-                              border: Border.all(width: 1, color: greyColor)
-                          ),
-                          child: const Align(alignment: Alignment.center,
-                              child: Text(
-                                '+Add Pet', style: textBlackMedium14,)),
+                        InkWell(
+                          onTap: (){
+                            Get.toNamed(Routes.petBasicDetails);
+                          },
+                          child: Container(
+                            height: 34,
+                            width: 84,
+                            decoration: BoxDecoration(
+                                borderRadius: const BorderRadius.all(
+                                    Radius.circular(30)),
+                                border: Border.all(width: 1, color: greyColor)
+                            ),
+                            child: const Align(alignment: Alignment.center,
+                                child: Text(
+                                  '+Add Pet', style: textBlackMedium14,)),
 
+                          ),
                         )
                       ],
                     ),
@@ -188,9 +193,9 @@ class ServiceBookingPage extends BaseView<ServiceBookingController> {
                         child: Text('How many days do you need service',
                           style: textBlackMedium16,)),
                   ),
+
                   Padding(
-                    padding: const EdgeInsets.only(
-                        left: 16.0, right: 16.0, top: 20),
+                    padding: const EdgeInsets.only(left: 16.0, right: 16.0, top: 20),
                     child: CustomScrollView(
                       physics: const BouncingScrollPhysics(),
                       shrinkWrap: true,
@@ -244,6 +249,65 @@ class ServiceBookingPage extends BaseView<ServiceBookingController> {
                       ],
                     ),
                   ),
+
+                  /*Padding(
+                    padding: const EdgeInsets.only(left: 16, right: 16,top: 20),
+                    child: Expanded(
+                        child: CustomScrollView(
+                          //scrollDirection: Axis.vertical,
+                          physics: const BouncingScrollPhysics(),
+                          shrinkWrap: false,
+                          slivers: [
+                            SliverPadding(
+                                padding: EdgeInsets.symmetric(vertical: 1.sp),
+                                sliver: SliverList(
+                                  delegate: SliverChildBuilderDelegate(
+                                        (BuildContext context, int index) {
+                                          //return const Text('data',style: textBlackLight15,);
+                                      return InkWell(
+                                        onTap: () {
+                                          controller.selectedDays.value =
+                                              index;
+                                          controller.lastSelectedDays.value =
+                                              controller.selectedDays.value;
+                                        },
+                                        child: Obx(() {
+                                          return Container(
+                                            height: 60,
+                                              width: 60,
+                                              decoration: BoxDecoration(
+                                                shape: BoxShape.circle,
+                                                color: controller
+                                                    .selectedDays
+                                                    .value == index
+                                                    ? primaryColor
+                                                    : Colors.white,
+                                                border: controller
+                                                    .selectedDays
+                                                    .value == index ? Border
+                                                    .all(color: primaryColor,
+                                                    width: 1) : Border.all(
+                                                    color: greyColor, width: 1),
+                                              ),
+                                              child: Align(
+                                                  alignment: Alignment.center,
+                                                  child: Text(
+                                                      '1', style: controller
+                                                      .selectedDays
+                                                      .value == index ? textWhiteLight14400 : textBlackMedium14))
+                                          );
+                                        }),
+                                      );
+                                    },
+                                    // 40 list items
+                                    childCount: 6,
+                                  ),
+                                )
+                            ),
+                          ],
+                        )
+                    ),
+                  ),*/
 
                   const Padding(
                     padding: EdgeInsets.only(left: 16, top: 20.0, right: 16),
@@ -385,13 +449,16 @@ class ServiceBookingPage extends BaseView<ServiceBookingController> {
                         borderRadius: BorderRadius.all(Radius.circular(16)),
                         border: Border.all(color: gColor,width: 1)
                       ),
-                      child: const TextField(
-                        style: textBlackMedium16,
-                        decoration: InputDecoration(
-                            border: InputBorder.none,
-                            hintText: "Write here...",
-                            hintStyle: textgreyLight15,
-                            fillColor: Colors.black
+                      child: const Padding(
+                        padding: EdgeInsets.only(left: 8.0,right: 8.0),
+                        child: TextField(
+                          style: textBlackMedium16,
+                          decoration: InputDecoration(
+                              border: InputBorder.none,
+                              hintText: "Write here...",
+                              hintStyle: textgreyLight15,
+                              fillColor: Colors.black
+                          ),
                         ),
                       ),
                     ),

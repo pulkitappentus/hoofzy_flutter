@@ -11,6 +11,10 @@ class PetController extends BaseController {
   var selectedPet = 10.obs;
   var lastSelectedPet = 10.obs;
 
+  //changed algo
+  var selected_pet = false.obs;
+  var alreadySelected = false.obs;
+
   @override
   void onConnectionChange(ConnectivityResult result) {
 

@@ -53,8 +53,8 @@ class PetBasicDetailsPage extends BaseView<PetProfileDetailController> {
                   const Padding(
                     padding: EdgeInsets.only(left: 16.0),
                     child: Align(alignment: Alignment.topLeft,
-                        child: Text(
-                          'Which one your pet', style: textBlackMedium14,)),
+                        child: Text
+                          ('Which one your pet', style: textBlackMedium14,)),
                   ),
 
                   Padding(

@@ -81,6 +81,7 @@ const textBlackMedium13 = TextStyle(fontSize: 13, fontWeight: FontWeight.w400, c
 const textBlackMedium13Primary = TextStyle(fontSize: 13, fontWeight: FontWeight.w400, color: primaryColor);
 const textBlackMediumPrimary = TextStyle(fontSize: 13, fontWeight: FontWeight.w400, color: primaryColor);
 const textBlackMedium14 = TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: Colors.black);
+const textBlackMedium14_primarycolor = TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: primaryColor);
 const textBlackBold18 = TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.black);
 const textBlackBold18Primary = TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: primaryColor);
 const textBlackBold18_500 = TextStyle(fontSize: 18, fontWeight: FontWeight.w500, color: Colors.black);

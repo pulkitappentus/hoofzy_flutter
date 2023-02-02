@@ -33,7 +33,7 @@ class PetsPage extends BaseView<PetController> {
                   color: Colors.black,
                 ),
               ),
-              title: Text('Pet`s', style: headlineBlack20,),
+              title: const Text('Pet`s', style: headlineBlack20,),
             ),
             Expanded(child: SingleChildScrollView(
               child: Column(
@@ -44,20 +44,23 @@ class PetsPage extends BaseView<PetController> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
-                        Align(alignment: Alignment.topLeft, child: Text(
+                        const Align(alignment: Alignment.topLeft, child: Text(
                           'Select pet', style: textBlackBold18,)),
-                        Container(
-                          height: 34,
-                          width: 84,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.all(
-                                  Radius.circular(30)),
-                              border: Border.all(width: 1, color: greyColor)
-                          ),
-                          child: Align(alignment: Alignment.center,
-                              child: Text(
-                                '+Add Pet', style: textBlackMedium14,)),
+                        InkWell(
+                          onTap: (){
+                            Get.toNamed(Routes.petBasicDetails);
+                          },
+                          child: Container(
+                            height: 34,
+                            width: 84,
+                            decoration: BoxDecoration(
+                                borderRadius: const BorderRadius.all(Radius.circular(30)),
+                                border: Border.all(width: 1, color: greyColor)
+                            ),
+                            child: const Align(alignment: Alignment.center,
+                                child: Text('+Add Pet', style: textBlackMedium14,)),
 
+                          ),
                         )
                       ],
                     ),
@@ -75,24 +78,25 @@ class PetsPage extends BaseView<PetController> {
                                   delegate: SliverChildBuilderDelegate(
                                         (BuildContext context, int index) {
                                       return InkWell(
+
                                         onTap: () {
-                                          controller.selectedPet.value = index;
-                                          controller.lastSelectedPet.value =
-                                              controller.selectedPet.value;
+                                         controller.selectedPet.value = index;
+                                         /* controller.lastSelectedPet.value =
+                                              controller.selectedPet.value;*/
+
+                                          controller.selected_pet.value = !controller.selected_pet.value;
                                         },
                                         child: Obx(() {
                                           return Padding(
-                                            padding: const EdgeInsets.only(
-                                                top: 20.0),
+                                            padding: const EdgeInsets.only(top: 20.0),
                                             child: Column(
-                                              crossAxisAlignment: CrossAxisAlignment
-                                                  .start,
+                                              crossAxisAlignment: CrossAxisAlignment.start,
                                               children: [
                                                 Container(
                                                   width: double.infinity,
                                                   height: 70,
                                                   decoration: BoxDecoration(
-                                                    borderRadius: BorderRadius.all(Radius.circular(30)),
+                                                    borderRadius: const BorderRadius.all(Radius.circular(30)),
                                                     border: controller
                                                         .selectedPet
                                                         .value == index ? Border.all(
@@ -106,41 +110,27 @@ class PetsPage extends BaseView<PetController> {
                                                         .only(left: 16.0,
                                                         right: 16.0),
                                                     child: Row(
-                                                      mainAxisAlignment: MainAxisAlignment
-                                                          .spaceBetween,
+                                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                       children: [
                                                         Row(
                                                           children: [
-                                                            Container(width: 50,
+                                                            Container(
+                                                              width: 50,
                                                               height: 50,
                                                               decoration: const BoxDecoration(
                                                                   image: DecorationImage(
-                                                                      image: AssetImage(
-                                                                          'assets/hoofzy/trending_community_image.png'),
-                                                                      fit: BoxFit
-                                                                          .fill),
-                                                                  shape: BoxShape
-                                                                      .circle
+                                                                      image: AssetImage('assets/hoofzy/trending_community_image.png'),
+                                                                      fit: BoxFit.fill), shape: BoxShape.circle
                                                               ),),
                                                             Padding(
-                                                              padding: const EdgeInsets
-                                                                  .only(
-                                                                  left: 10.0),
+                                                              padding: const EdgeInsets.only(left: 10.0),
                                                               child: Column(
-                                                                crossAxisAlignment: CrossAxisAlignment
-                                                                    .start,
-                                                                mainAxisAlignment: MainAxisAlignment
-                                                                    .center,
-                                                                children: const [
-                                                                  Text('King',
-                                                                    style: textBlackMedium16,),
+                                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                                children: const [Text('King', style: textBlackMedium16,),
                                                                   Padding(
-                                                                    padding: EdgeInsets
-                                                                        .only(
-                                                                        top: 8.0),
-                                                                    child: Text(
-                                                                      'Airedale Terrier',
-                                                                      style: textBlackMedium14,),
+                                                                    padding: EdgeInsets.only(top: 8.0),
+                                                                    child: Text('Airedale Terrier', style: textBlackMedium14,),
                                                                   )
                                                                 ],
                                                               ),
@@ -148,23 +138,27 @@ class PetsPage extends BaseView<PetController> {
                                                           ],
 
                                                         ),
-                                                        controller
-                                                            .selectedPet
-                                                            .value == index
+
+                                                        controller.selectedPet.value == index ? controller.selected_pet.value ? updateIcon(
+                                                            'assets/hoofzy/checked.png')
+                                                            : updateIcon(
+                                                            'assets/hoofzy/unchecked.png') : updateIcon(
+                                                            'assets/hoofzy/checked.png')
+
+                                                        /*controller
+                                                            .selected_pet
+                                                            .value
                                                             ? updateIcon(
                                                             'assets/hoofzy/checked.png')
                                                             : updateIcon(
-                                                            'assets/hoofzy/unchecked.png'),
+                                                            'assets/hoofzy/unchecked.png'),*/
                                                         //Image.asset('assets/hoofzy/unchecked.png', width: 32, height: 32,)
                                                       ],
 
                                                     ),
                                                   ),
                                                 ),
-                                                controller
-                                                    .selectedPet
-                                                    .value == index
-                                                    ? petQuestions():petEmptyQuestions()
+                                                //controller.selectedPet.value == index ? petQuestions():petEmptyQuestions()
                                                 //petQuestions()
                                               ],
                                             ),
@@ -197,8 +191,7 @@ class PetsPage extends BaseView<PetController> {
                               onPressed: () {
                                 Get.toNamed(Routes.serviceBookingPage2);
                               },
-                              child: Text(
-                                'View Bording', style: textWhiteMedium15,),)
+                              child: const Text('View Bording', style: textWhiteMedium15,),)
                         )
                     ),
                   ),
@@ -352,6 +345,10 @@ class PetsPage extends BaseView<PetController> {
 
 Widget updateIcon(String image) {
   return Image.asset(image, width: 30, height: 30, fit: BoxFit.fill,);
+}
+
+Widget empty(){
+  return Column();
 }
 
 

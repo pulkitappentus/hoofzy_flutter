@@ -246,7 +246,7 @@ class ServicesBookingPage2 extends BaseView<ServicesBookingController> {
                                                           children: [
                                                             Row(children: <Widget> [
                                                               Image.asset('assets/hoofzy/location_primary.png',width: 14,height: 14,fit: BoxFit.fill,),
-                                                              Padding(
+                                                              const Padding(
                                                                 padding: EdgeInsets.only(left:2),
                                                                 child: Text('1.5 km',style: textBlackMedium14,),
                                                               )

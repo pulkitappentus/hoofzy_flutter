@@ -57,7 +57,7 @@ class ServicesBookingPage3 extends BaseView<HomeController> {
           alignment: Alignment.bottomCenter,
           child: Container(
             width: double.infinity,
-            height: 313,
+            height: 315,
             decoration: const BoxDecoration(
               gradient: LinearGradient(colors: [Color(0xFFFFFBF6), Color(0xFFFFFFFF)],
                   stops: [0.0, 1.0],

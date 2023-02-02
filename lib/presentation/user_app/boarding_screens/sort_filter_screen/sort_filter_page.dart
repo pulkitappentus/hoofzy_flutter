@@ -1,4 +1,5 @@
 import 'package:Hoofzy_V2/constants.dart';
+import 'package:Hoofzy_V2/presentation/about_home/about_home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -29,7 +30,7 @@ class SortFilterPage extends BaseView<SortFilterController> {
           children: [
             AppBar(
               toolbarHeight: 56,
-              backgroundColor: Color(0xFFFFFBF6),
+              backgroundColor: const Color(0xFFFFFBF6),
               elevation: 0,
               centerTitle: true,
               leading: InkWell(
@@ -41,7 +42,7 @@ class SortFilterPage extends BaseView<SortFilterController> {
                   color: Colors.black,
                 ),
               ),
-              title: Text('Sort & Filter', style: headlineBlack20,),
+              title: const Text('Sort & Filter', style: headlineBlack20,),
             ),
             Expanded(child: SingleChildScrollView(
               child: Column(
@@ -74,7 +75,7 @@ class SortFilterPage extends BaseView<SortFilterController> {
                                   child: Obx(() {
                                     return Container(
                                       decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.all(
+                                        borderRadius: const BorderRadius.all(
                                             Radius.circular(16)),
                                         border: controller
                                             .selectedService
@@ -98,7 +99,8 @@ class SortFilterPage extends BaseView<SortFilterController> {
                                             Padding(
                                               padding: const EdgeInsets.only(
                                                   top: 10.0),
-                                              child: Text('Most \npopular',
+                                              child: Text(
+                                                controller.serviceList[index],
                                                 style: controller
                                                     .selectedService.value ==
                                                     index
@@ -117,7 +119,7 @@ class SortFilterPage extends BaseView<SortFilterController> {
                                         controller.selectedService.value;
                                   },
                                 );
-                              }, childCount: 6),
+                              }, childCount: 5),
                             )
                         )
                       ],
@@ -157,25 +159,27 @@ class SortFilterPage extends BaseView<SortFilterController> {
                                   child: Obx(() {
                                     return Container(
                                         decoration: BoxDecoration(
-                                            shape: BoxShape.circle,
-                                            color: controller
-                                                .selectedDays
-                                                .value == index
-                                                ? primaryColor
-                                                : Colors.white,
-                                            border: controller
-                                                .selectedDays
-                                                .value == index ? Border
-                                                .all(color: primaryColor,
-                                                width: 1) : Border.all(
-                                                color: greyColor, width: 1),
+                                          shape: BoxShape.circle,
+                                          color: controller
+                                              .selectedDays
+                                              .value == index
+                                              ? primaryColor
+                                              : Colors.white,
+                                          border: controller
+                                              .selectedDays
+                                              .value == index ? Border
+                                              .all(color: primaryColor,
+                                              width: 1) : Border.all(
+                                              color: greyColor, width: 1),
                                         ),
                                         child: Align(
                                             alignment: Alignment.center,
                                             child: Text(
-                                              '1', style: controller
+                                                '1', style: controller
                                                 .selectedDays
-                                                .value == index ? textWhiteLight14400 : textBlackMedium14))
+                                                .value == index
+                                                ? textWhiteLight14400
+                                                : textBlackMedium14))
                                     );
                                   }),
                                 );
@@ -233,17 +237,17 @@ class SortFilterPage extends BaseView<SortFilterController> {
                       ],),
                   ),
                   const Padding(
-                    padding: const EdgeInsets.only(top: 8.0,left: 16,right: 16),
-                    child: Divider(thickness: 1.5,color: greyColor,),
+                    padding: EdgeInsets.only(top: 8.0, left: 16, right: 16),
+                    child: Divider(thickness: 1.5, color: greyColor,),
                   ),
                   rate(),
                   distance(),
-                  rating(),
-                  housingConditions(),
-                  petsHome(),
-                  childrenInHome(),
-                  additionalService(),
-                  buttons()
+                  rating(controller),
+                  housingConditions(controller),
+                  petsHome(controller),
+                  childrenInHome(controller),
+                  additionalService(controller),
+                  buttons(controller)
 
                 ],
               ),
@@ -256,38 +260,38 @@ class SortFilterPage extends BaseView<SortFilterController> {
 
 }
 
-Widget rate(){
+Widget rate() {
   return Column(
     children: const [
-      const Padding(
+      Padding(
         padding: EdgeInsets.only(left: 16, top: 10.0, right: 16),
         child: Align(alignment: Alignment.topLeft,
             child: Text(
               'Rate', style: textBlackMedium16,)),
       ),
-      const Padding(
+      Padding(
         padding: EdgeInsets.only(left: 16, top: 15.0, right: 16),
         child: Align(alignment: Alignment.topLeft,
             child: Text(
               'Choose your custom price range', style: textBlackMedium14,)),
       ),
-      const Padding(
+      Padding(
         padding: EdgeInsets.only(left: 16, top: 15.0, right: 16),
         child: Align(alignment: Alignment.topLeft,
             child: Text(
               '₹0 - ₹1,000', style: textBlackBold18,)),
       ),
-      const Padding(
-        padding: const EdgeInsets.only(top: 8.0,left: 16,right: 16),
-        child: Divider(thickness: 1.5,color: greyColor,),
+      Padding(
+        padding: EdgeInsets.only(top: 8.0, left: 16, right: 16),
+        child: Divider(thickness: 1.5, color: greyColor,),
       )
     ],
   );
 }
 
-Widget distance(){
+Widget distance() {
   return Column(
-    children: const <Widget> [
+    children: const <Widget>[
       Padding(
         padding: EdgeInsets.only(left: 16, top: 10.0, right: 16),
         child: Align(alignment: Alignment.topLeft,
@@ -307,15 +311,16 @@ Widget distance(){
               '0 km - 100+ km', style: textBlackBold18,)),
       ),
       Padding(
-        padding: EdgeInsets.only(top: 8.0,left: 16,right: 16),
-        child: Divider(thickness: 1.5,color: greyColor,),
+        padding: EdgeInsets.only(top: 8.0, left: 16, right: 16),
+        child: Divider(thickness: 1.5, color: greyColor,),
       )
     ],
   );
 }
-Widget rating(){
+
+Widget rating(SortFilterController controller) {
   return Column(
-    children: <Widget> [
+    children: <Widget>[
       const Padding(
         padding: EdgeInsets.only(left: 16, top: 10.0, right: 16),
         child: Align(alignment: Alignment.topLeft,
@@ -338,22 +343,43 @@ Widget rating(){
                       crossAxisSpacing: 10.sp,
                       childAspectRatio: (100.sp / 40.sp)
                   ),
-                  delegate: SliverChildBuilderDelegate((
-                      BuildContext context, int index) {
-                    return Container(
-                      height: 40,
-                      width: 100,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(30)),
-                          border: Border.all(width: 1,color: greyColor)
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
-                          Icon(Icons.star,color: greyColor,),
-                          Text('1Star',style: textBlackMedium14,)
-                        ],
-                      ),
+                  delegate: SliverChildBuilderDelegate((BuildContext context,
+                      int index) {
+                    return InkWell(
+                      onTap: () {
+                        controller.selectedRating.value = index;
+                        controller.lastSelectedRating.value =
+                            controller.selectedRating.value;
+                      },
+                      child: Obx(() {
+                        return Container(
+                            height: 40,
+                            width: 100,
+                            decoration: BoxDecoration(
+                                borderRadius: const BorderRadius.all(
+                                    Radius.circular(30)),
+                                border: controller.selectedRating.value == index
+                                    ? Border.all(width: 1, color: primaryColor)
+                                    : Border.all(width: 1, color: gColor)
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                controller.selectedRating.value ==
+                                    index
+                                    ? const Icon(
+                                    Icons.star, color: primaryColor)
+                                    : const Icon(
+                                    Icons.star_border, color: gColor),
+                                Text(controller.distanceRatingList[index],
+                                    style: controller.selectedRating.value ==
+                                        index
+                                        ? textBlackMedium14_primarycolor
+                                        : textBlackMedium14)
+                              ],
+                            )
+                        );
+                      }),
                     );
                   }, childCount: 5),
                 )
@@ -363,16 +389,16 @@ Widget rating(){
       ),
 
       const Padding(
-        padding: EdgeInsets.only(top: 8.0,left: 16,right: 16),
-        child: Divider(thickness: 1.5,color: greyColor,),
+        padding: EdgeInsets.only(top: 8.0, left: 16, right: 16),
+        child: Divider(thickness: 1.5, color: greyColor,),
       )
     ],
   );
 }
 
-Widget housingConditions(){
+Widget housingConditions(SortFilterController controller) {
   return Column(
-    children: <Widget> [
+    children: <Widget>[
       const Padding(
         padding: EdgeInsets.only(left: 16, top: 10.0, right: 16),
         child: Align(alignment: Alignment.topLeft,
@@ -392,25 +418,40 @@ Widget housingConditions(){
                     sliver: SliverList(
                       delegate: SliverChildBuilderDelegate(
                             (BuildContext context, int index) {
-                          return Container(
-                            margin: EdgeInsets.only(top:8.0),
-                            height: 40,
-                            width: double.infinity,
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: <Widget> [
-                                Image.asset('assets/hoofzy/unchecked.png',height: 30,width: 30,),
-                                const Padding(
-                                  padding: const EdgeInsets.only(left: 8.0,top: 4),
-                                  child: Text('Has house (excludes apartments)',style: textBlackMedium14,),
-                                )
-                              ],
+                          return InkWell(
+                            onTap: () {
+                              controller.selectedCondition.value = index;
+                              controller.lastSelectedCondition.value =
+                                  controller.selectedCondition.value;
+                            },
+                            child: Container(
+                              margin: const EdgeInsets.only(top: 8.0),
+                              height: 40,
+                              width: double.infinity,
+                              child: Obx(() {
+                                return Row(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: <Widget>[
+                                    controller.selectedCondition.value == index
+                                        ? updateIcon_30(
+                                        'assets/hoofzy/checked.png')
+                                        : updateIcon_30(
+                                        'assets/hoofzy/unchecked.png'),
+                                    Padding(padding: const EdgeInsets.only(
+                                        left: 8.0, top: 4),
+                                      child: Text(
+                                        controller.conditionList[index],
+                                        style: textBlackMedium14,),
+                                    )
+                                  ],
+                                );
+                              }),
                             ),
                           );
                         },
                         // 40 list items
-                        childCount: 4,
+                        childCount: 5,
                       ),
                     )
                 )
@@ -420,15 +461,16 @@ Widget housingConditions(){
       ),
 
       const Padding(
-        padding: EdgeInsets.only(top: 8.0,left: 16,right: 16),
-        child: Divider(thickness: 1.5,color: greyColor,),
+        padding: EdgeInsets.only(top: 8.0, left: 16, right: 16),
+        child: Divider(thickness: 1.5, color: greyColor,),
       )
     ],
   );
 }
-Widget petsHome(){
+
+Widget petsHome(SortFilterController controller) {
   return Column(
-    children: <Widget> [
+    children: <Widget>[
       const Padding(
         padding: EdgeInsets.only(left: 16, top: 10.0, right: 16),
         child: Align(alignment: Alignment.topLeft,
@@ -448,20 +490,36 @@ Widget petsHome(){
                     sliver: SliverList(
                       delegate: SliverChildBuilderDelegate(
                             (BuildContext context, int index) {
-                          return Container(
-                            margin: EdgeInsets.only(top:8.0),
-                            height: 40,
-                            width: double.infinity,
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: <Widget> [
-                                Image.asset('assets/hoofzy/unchecked.png',height: 30,width: 30,),
-                                const Padding(
-                                  padding: const EdgeInsets.only(left: 8.0,top: 4),
-                                  child: Text('Doesn`t own a dog',style: textBlackMedium14,),
-                                )
-                              ],
+                          return InkWell(
+                            onTap: () {
+                              controller.selectedPetsCount.value = index;
+                              controller.lastSelectedPetsCount.value =
+                                  controller.selectedPetsCount.value;
+                            },
+                            child: Container(
+                              margin: const EdgeInsets.only(top: 8.0),
+                              height: 40,
+                              width: double.infinity,
+                              child: Obx(() {
+                                return Row(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: <Widget>[
+                                    controller.selectedPetsCount.value == index
+                                        ? updateIcon_30(
+                                        'assets/hoofzy/checked.png')
+                                        : updateIcon_30(
+                                        'assets/hoofzy/unchecked.png'),
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          left: 8.0, top: 4),
+                                      child: Text(
+                                        controller.petsCountList[index],
+                                        style: textBlackMedium14,),
+                                    )
+                                  ],
+                                );
+                              }),
                             ),
                           );
                         },
@@ -476,16 +534,16 @@ Widget petsHome(){
       ),
 
       const Padding(
-        padding: EdgeInsets.only(top: 8.0,left: 16,right: 16),
-        child: Divider(thickness: 1.5,color: greyColor,),
+        padding: EdgeInsets.only(top: 8.0, left: 16, right: 16),
+        child: Divider(thickness: 1.5, color: greyColor,),
       )
     ],
   );
 }
 
-Widget childrenInHome(){
+Widget childrenInHome(SortFilterController controller) {
   return Column(
-    children: <Widget> [
+    children: <Widget>[
       const Padding(
         padding: EdgeInsets.only(left: 16, top: 10.0, right: 16),
         child: Align(alignment: Alignment.topLeft,
@@ -505,20 +563,37 @@ Widget childrenInHome(){
                     sliver: SliverList(
                       delegate: SliverChildBuilderDelegate(
                             (BuildContext context, int index) {
-                          return Container(
-                            margin: EdgeInsets.only(top:8.0),
-                            height: 40,
-                            width: double.infinity,
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: <Widget> [
-                                Image.asset('assets/hoofzy/unchecked.png',height: 30,width: 30,),
-                                const Padding(
-                                  padding: const EdgeInsets.only(left: 8.0,top: 4),
-                                  child: Text('Has no children',style: textBlackMedium14,),
-                                )
-                              ],
+                          return InkWell(
+                            onTap: () {
+                              controller.selectedChildrenCount.value = index;
+                              controller.lastSelectedChildrenCount.value =
+                                  controller.selectedChildrenCount.value;
+                            },
+                            child: Container(
+                              margin: const EdgeInsets.only(top: 8.0),
+                              height: 40,
+                              width: double.infinity,
+                              child: Obx(() {
+                                return Row(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: <Widget>[
+                                    controller.selectedChildrenCount.value ==
+                                        index
+                                        ? updateIcon_30(
+                                        'assets/hoofzy/checked.png')
+                                        : updateIcon_30(
+                                        'assets/hoofzy/unchecked.png'),
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          left: 8.0, top: 4),
+                                      child: Text(
+                                        controller.childrenCountList[index],
+                                        style: textBlackMedium14,),
+                                    )
+                                  ],
+                                );
+                              }),
                             ),
                           );
                         },
@@ -533,16 +608,16 @@ Widget childrenInHome(){
       ),
 
       const Padding(
-        padding: EdgeInsets.only(top: 8.0,left: 16,right: 16),
-        child: Divider(thickness: 1.5,color: greyColor,),
+        padding: EdgeInsets.only(top: 8.0, left: 16, right: 16),
+        child: Divider(thickness: 1.5, color: greyColor,),
       )
     ],
   );
 }
 
-Widget additionalService(){
+Widget additionalService(SortFilterController controller) {
   return Column(
-    children: <Widget> [
+    children: <Widget>[
       const Padding(
         padding: EdgeInsets.only(left: 16, top: 10.0, right: 16),
         child: Align(alignment: Alignment.topLeft,
@@ -562,20 +637,32 @@ Widget additionalService(){
                     sliver: SliverList(
                       delegate: SliverChildBuilderDelegate(
                             (BuildContext context, int index) {
-                          return Container(
-                            margin: EdgeInsets.only(top:8.0),
-                            height: 40,
-                            width: double.infinity,
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: <Widget> [
-                                Image.asset('assets/hoofzy/unchecked.png',height: 30,width: 30,),
-                                const Padding(
-                                  padding: const EdgeInsets.only(left: 8.0,top: 4),
-                                  child: Text('Puppy care',style: textBlackMedium14,),
-                                )
-                              ],
+                          return InkWell(
+                            onTap: () {
+                              controller.selectedASCount.value = index;
+                              controller.lastSelectedASCount.value =
+                                  controller.selectedASCount.value;
+                            },
+                            child: Container(
+                              margin: const EdgeInsets.only(top: 8.0),
+                              height: 40,
+                              width: double.infinity,
+                              child: Obx(() {
+                                return Row(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: <Widget>[
+                                    controller.selectedASCount.value == index ? updateIcon_30('assets/hoofzy/checked.png') : updateIcon_30('assets/hoofzy/unchecked.png'),
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          left: 8.0, top: 4),
+                                      child: Text(
+                                         controller.additionalServiceCountList[index],
+                                        style: textBlackMedium14,),
+                                    )
+                                  ],
+                                );
+                              }),
                             ),
                           );
                         },
@@ -590,36 +677,53 @@ Widget additionalService(){
       ),
 
       const Padding(
-        padding: EdgeInsets.only(top: 8.0,left: 16,right: 16),
-        child: Divider(thickness: 1.5,color: greyColor,),
+        padding: EdgeInsets.only(top: 8.0, left: 16, right: 16),
+        child: Divider(thickness: 1.5, color: greyColor,),
       )
     ],
   );
 }
 
-Widget buttons(){
+Widget buttons(SortFilterController controller) {
   return Padding(
-    padding: const EdgeInsets.only(left: 16.0,right: 16,bottom: 8,top: 8),
+    padding: const EdgeInsets.only(left: 16.0, right: 16, bottom: 8, top: 8),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Container(
-          width: 100,
-          height: 60,
-          child: Align(alignment:Alignment.center,child: Text('Clear All',style: textBlackMedium16,)),
+      children: <Widget>[
+        InkWell(
+          onTap: (){
+            controller.selectedService.value = 10;
+            controller.selectedDays.value = 10;
+            controller.selectedRating.value = 10;
+            controller.selectedCondition.value = 10;
+            controller.selectedPetsCount.value = 10;
+            controller.selectedChildrenCount.value = 10;
+            controller.selectedASCount.value = 10;
+          },
+          child: Container(
+            width: 100,
+            height: 60,
+            child: const Align(alignment: Alignment.center,
+                child: Text('Clear All', style: textBlackMedium16,)),
+          ),
         ),
         Container(
           width: 160,
           height: 60,
-          decoration: BoxDecoration(
-            color: primaryColor,
-            borderRadius: BorderRadius.all(Radius.circular(30))
+          decoration: const BoxDecoration(
+              color: primaryColor,
+              borderRadius: BorderRadius.all(Radius.circular(30))
           ),
-          child: Align(alignment:Alignment.center,child: Text('Apply',style: textWhiteMedium16,)),
+          child: const Align(alignment: Alignment.center,
+              child: Text('Apply', style: textWhiteMedium16,)),
         )
       ],
     ),
   );
+}
+
+Widget updateIcon_30(String image) {
+  return Image.asset(image, width: 30, height: 30, fit: BoxFit.fill,);
 }
 
 
