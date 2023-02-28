@@ -43,8 +43,6 @@ dependencies:
   google_sign_in: ^5.4.2
   google_maps_flutter: ^2.0.1
 
-  dots_indicator: ^2.1.0
-
 dev_dependencies: 
   flutter_lints: 2.0.1
   #flutter_launcher_icons_maker: "^0.10.1"
