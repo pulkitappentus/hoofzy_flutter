@@ -15,7 +15,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a1547f2-9a36-4846-96c0-e2f361532b0a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/lib/presentation/sitter_app/booking/walking_page/pet_walking_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/presentation/sitter_app/booking/walking_page/pet_walking_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\hp\\Documents\\GitHub\\hoofzy_flutter\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-mk\\values-mk.xml",
+            "outputFile": "D:\\hoofzy_flutter\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-mk\\values-mk.xml",
             "map": [
                 {
                     "source": "C:\\Users\\hp\\.gradle\\caches\\transforms-3\\f301317e4c32dada50b6476c55295f80\\transformed\\jetified-play-services-ads-21.3.0\\res\\values-mk\\values.xml",
