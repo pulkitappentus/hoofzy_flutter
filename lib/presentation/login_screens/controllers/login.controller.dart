@@ -2,14 +2,9 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import '../../../../domain/firebase/firebase.repository.dart';
-import '../../../../infrastructure/base/base_controller.dart';
 import '../../../infrastructure/navigation/routes.dart';
 
-class LoginController extends BaseController {
-  final FirebaseRepository _firebaseRepository;
-
-  LoginController({required FirebaseRepository firebaseRepository}) : _firebaseRepository = firebaseRepository;
+class LoginController extends GetxController {
 
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final GoogleSignIn googleSignIn = GoogleSignIn();
@@ -26,7 +21,7 @@ class LoginController extends BaseController {
   }
 
   Future<User?> handleGoogleSignIn(context) async {
-    showLoading();
+    //showLoading();
     final GoogleSignIn googleSignIn = GoogleSignIn(scopes: [
       'email',
     ]);
@@ -43,14 +38,14 @@ class LoginController extends BaseController {
       var userDetails = await _auth.signInWithCredential(credential);
       if (userDetails.user != null) {
       //  Utils.progressDialogShow(context);
-        hideLoading();
+      //  hideLoading();
         print("google token==>${userDetails.user}");
         Get.toNamed(Routes.setupprofile);
         changePage(userDetails.user);
       return userDetails.user;
     }
     } catch (error) {
-      hideLoading();
+    //  hideLoading();
       print('loginerror:----${error}');
     }
     return null;

@@ -1,12 +1,7 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:get/get.dart';
-import '../../../../domain/firebase/firebase.repository.dart';
-import '../../../../infrastructure/base/base_controller.dart';
 
-class PetProfileOtherController extends BaseController {
-  final FirebaseRepository _firebaseRepository;
-
-  PetProfileOtherController({required FirebaseRepository firebaseRepository}) : _firebaseRepository = firebaseRepository;
+class PetProfileOtherController extends GetxController {
 
   var selectedPetSizeIndex = 10.obs;
   var lastPetSizeSelectedIndex = 10.obs;

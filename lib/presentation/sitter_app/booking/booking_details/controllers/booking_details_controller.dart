@@ -1,13 +1,9 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:get/get.dart';
-import '../../../../../domain/firebase/firebase.repository.dart';
-import '../../../../../infrastructure/base/base_controller.dart';
 
-class BookingDetailsController extends BaseController {
-  final FirebaseRepository _firebaseRepository;
+class BookingDetailsController extends GetxController {
   var tabIndex = 0.obs;
   var reviewAvailable = false;
-  BookingDetailsController({required FirebaseRepository firebaseRepository}) : _firebaseRepository = firebaseRepository;
 
 
   @override

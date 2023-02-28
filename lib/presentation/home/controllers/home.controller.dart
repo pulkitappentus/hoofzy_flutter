@@ -3,20 +3,10 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:get/get.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:in_app_review/in_app_review.dart';
-import 'package:mailto/mailto.dart';
-import 'package:package_info_plus/package_info_plus.dart';
-import 'package:store_redirect/store_redirect.dart';
-import 'package:url_launcher/url_launcher.dart';
 
-import '../../../domain/core/utils/snackbar.util.dart';
-import '../../../domain/firebase/firebase.repository.dart';
-import '../../../infrastructure/base/base_controller.dart';
-
-class HomeController extends BaseController {
-  final FirebaseRepository _firebaseRepository;
+class HomeController extends GetxController {
   var tabIndex = 0.obs;
   var reviewAvailable = false;
-  HomeController({required FirebaseRepository firebaseRepository}) : _firebaseRepository = firebaseRepository;
   final heroes = Rxn<List<DocumentSnapshot>>([]);
   final featured = Rxn<List<DocumentSnapshot>>([]);
   List<String> labels = ["Home", "Services", "Shop", "Training", "Community"];
@@ -111,12 +101,5 @@ class HomeController extends BaseController {
       }else if(result == ConnectivityResult.none){
         SnackbarUtil.showError(message: "No Internet Connection. Please check your internet");
       }*/
-  }
-
-  @override
-  Future<void> onTokenChange(String? result) async {
-    if(result != null){
-      await _firebaseRepository.saveFCMToken(result);
-    }
   }
 }

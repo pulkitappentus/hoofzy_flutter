@@ -1,13 +1,9 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:get/get.dart';
-import '../../../../domain/firebase/firebase.repository.dart';
-import '../../../../infrastructure/base/base_controller.dart';
 
-class CreateProfileController extends BaseController {
-  final FirebaseRepository _firebaseRepository;
+class CreateProfileController extends GetxController {
   var tabIndex = 0.obs;
   var reviewAvailable = false;
-  CreateProfileController({required FirebaseRepository firebaseRepository}) : _firebaseRepository = firebaseRepository;
 
 
   @override

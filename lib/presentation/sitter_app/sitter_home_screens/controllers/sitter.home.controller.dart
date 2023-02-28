@@ -4,14 +4,9 @@ import 'package:get/get.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:in_app_review/in_app_review.dart';
 
-import '../../../../domain/firebase/firebase.repository.dart';
-import '../../../../infrastructure/base/base_controller.dart';
-
-class SitterHomeController extends BaseController {
-  final FirebaseRepository _firebaseRepository;
+class SitterHomeController extends GetxController {
   var tabIndex = 0.obs;
   var reviewAvailable = false;
-  SitterHomeController({required FirebaseRepository firebaseRepository}) : _firebaseRepository = firebaseRepository;
   final heroes = Rxn<List<DocumentSnapshot>>([]);
   final featured = Rxn<List<DocumentSnapshot>>([]);
   List<String> labels = ["Home", "Bookings", "Messages", "Settings"];

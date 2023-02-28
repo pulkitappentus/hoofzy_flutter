@@ -1,13 +1,7 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:get/get.dart';
 
-import '../../../../../domain/firebase/firebase.repository.dart';
-import '../../../../../infrastructure/base/base_controller.dart';
-
-class ServiceDetailController extends BaseController {
-  final FirebaseRepository _firebaseRepository;
-
-  ServiceDetailController({required FirebaseRepository firebaseRepository}) : _firebaseRepository = firebaseRepository;
+class ServiceDetailController extends GetxController{
 
   var selectedService = 10.obs;
   var lastSelectedService = 10.obs;

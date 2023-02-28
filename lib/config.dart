@@ -6,7 +6,7 @@ class Environments {
 }
 
 class ConfigEnvironments {
-  static const String _currentEnvironments = Environments.production;
+  static const String _currentEnvironments = Environments.develop;
   static const List<Map<String, String>> _availableEnvironments = [
     {
       'env': Environments.local,
@@ -28,7 +28,9 @@ class ConfigEnvironments {
 
   static Map<String, String> getEnvironments() {
     return _availableEnvironments.firstWhere(
-      (d) => d['env'] == _currentEnvironments,
+          (d) => d['env'] == _currentEnvironments,
     );
   }
+
+
 }

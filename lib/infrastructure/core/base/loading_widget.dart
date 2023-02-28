@@ -1,8 +1,9 @@
-import 'package:flutter/material.dart';
-import '../../infrastructure/theme/colors.theme.dart';
 
-class Loading extends StatelessWidget {
-  const Loading({Key? key}) : super(key: key);
+import 'package:flutter/material.dart';
+
+
+class LoadingWidget extends StatelessWidget {
+  const LoadingWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,11 +13,11 @@ class Loading extends StatelessWidget {
         children: <Widget>[
           ModalBarrier(
             dismissible: false,
-            color: Colors.grey.withOpacity(.4),
+            color: Colors.grey.withOpacity(.3),
           ),
-          Center(
+          const Center(
             child: CircularProgressIndicator(
-              valueColor: AlwaysStoppedAnimation(ColorsTheme.primaryUserApp),
+              valueColor: AlwaysStoppedAnimation(Colors.grey),
             ),
           ),
         ],
