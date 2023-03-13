@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:sizer/sizer.dart';
-import '../../../infrastructure/base/base_view.dart';
+import '../../../infrastructure/core/base/base_view.dart';
 import '../../../infrastructure/navigation/routes.dart';
 
 class PetsPage extends BaseView<PetController> {

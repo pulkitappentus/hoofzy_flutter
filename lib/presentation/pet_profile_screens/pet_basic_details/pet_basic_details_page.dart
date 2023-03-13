@@ -4,7 +4,7 @@ import 'package:flutter_holo_date_picker/date_picker_theme.dart';
 import 'package:flutter_holo_date_picker/widget/date_picker_widget.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
-import '../../../infrastructure/base/base_view.dart';
+import '../../../infrastructure/core/base/base_view.dart';
 import '../../../infrastructure/navigation/routes.dart';
 import 'controllers/pet_profile_detail_controller.dart';
 

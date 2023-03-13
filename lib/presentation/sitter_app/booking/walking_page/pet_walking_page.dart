@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:Hoofzy_V2/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import '../../../../infrastructure/base/base_view.dart';
+import '../../../../infrastructure/core/base/base_view.dart';
 import 'controllers/walking_service_controller.dart';
 
 class PetWalkingPage extends BaseView<WalkingServiceController> {

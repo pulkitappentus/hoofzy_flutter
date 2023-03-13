@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 import 'package:sizer/sizer.dart';
 
-import '../../../../infrastructure/base/base_view.dart';
+import '../../../../infrastructure/core/base/base_view.dart';
 import '../../../../infrastructure/navigation/routes.dart';
 import '../controllers/sitter.home.controller.dart';
 

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:lottie/lottie.dart';
-import '../../../../../infrastructure/base/base_view.dart';
+import '../../../../../infrastructure/core/base/base_view.dart';
 import '../../../../../infrastructure/navigation/routes.dart';
 import '../safety_quiz/controllers/safety.quiz.controller.dart';
 

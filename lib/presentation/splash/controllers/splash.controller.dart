@@ -6,10 +6,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:in_app_update/in_app_update.dart';
 
-import '../../../infrastructure/base/base_controller.dart';
 import '../../../infrastructure/navigation/routes.dart';
 
-class SplashController extends BaseController with GetTickerProviderStateMixin {
+class SplashController extends GetxController with GetTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<double> animation;
 

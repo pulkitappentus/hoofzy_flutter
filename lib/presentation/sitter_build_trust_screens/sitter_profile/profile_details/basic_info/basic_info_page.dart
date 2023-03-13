@@ -1,6 +1,6 @@
 import 'package:Hoofzy_V2/constants.dart';
 import 'package:flutter/material.dart';
-import '../../../../../infrastructure/base/base_view.dart';
+import '../../../../../infrastructure/core/base/base_view.dart';
 import 'controllers/basic.info.controller.dart';
 
 class BasicInfoPage extends BaseView<BasicInfoController> {

@@ -1,4 +1,3 @@
-import 'bindings/domains/firebase.repository.binding.dart';
 
 class Routes {
   static Future<String> get initialRoute async {

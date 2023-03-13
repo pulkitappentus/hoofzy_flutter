@@ -3,12 +3,10 @@ import 'package:Hoofzy_V2/presentation/home/widgets/shop.dart';
 import 'package:Hoofzy_V2/presentation/home/widgets/training.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
-import 'package:sizer/sizer.dart';
 import 'package:flutter/cupertino.dart';
 import 'widgets/home.dart';
 import 'widgets/services.dart';
-import '../../infrastructure/base/base_view.dart';
+import '../../infrastructure/core/base/base_view.dart';
 import './controllers/home.controller.dart';
 import '../../infrastructure/theme/colors.theme.dart';
 
@@ -117,7 +115,7 @@ class HomeScreen extends BaseView<HomeController> {
     );
   }
 
-  @override
+  /*@override
   Future<bool> onBackPressed() async {
     if (controller.tabIndex.value != 0) {
       controller.tabIndex.value = 0;
@@ -125,5 +123,5 @@ class HomeScreen extends BaseView<HomeController> {
     }  else {
       return super.onBackPressed();
     }
-  }
+  }*/
 }

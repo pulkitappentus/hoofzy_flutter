@@ -6,7 +6,7 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:sizer/sizer.dart';
 import '../../../../constants.dart';
-import '../../../../infrastructure/base/base_view.dart';
+import '../../../../infrastructure/core/base/base_view.dart';
 import '../../../../infrastructure/navigation/routes.dart';
 
 class ServicesBookingPage3 extends BaseView<HomeController> {

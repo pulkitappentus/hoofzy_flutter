@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../generated/assets.dart';
-import '../../infrastructure/base/base_view.dart';
+import '../../infrastructure/core/base/base_view.dart';
 import 'controllers/splash.controller.dart';
 
 // ignore: use_key_in_widget_constructors

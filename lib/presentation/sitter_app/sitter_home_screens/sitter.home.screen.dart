@@ -6,7 +6,7 @@ import 'package:Hoofzy_V2/presentation/sitter_app/sitter_home_screens/widgets/si
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter/cupertino.dart';
-import '../../../infrastructure/base/base_view.dart';
+import '../../../infrastructure/core/base/base_view.dart';
 import '../../../infrastructure/theme/colors.theme.dart';
 import 'controllers/sitter.home.controller.dart';
 
@@ -110,7 +110,7 @@ class SitterHomeScreen extends BaseView<SitterHomeController> {
     );
   }
 
-  @override
+/*  @override
   Future<bool> onBackPressed() async {
     if (controller.tabIndex.value != 0) {
       controller.tabIndex.value = 0;
@@ -118,5 +118,5 @@ class SitterHomeScreen extends BaseView<SitterHomeController> {
     }  else {
       return super.onBackPressed();
     }
-  }
+  }*/
 }

@@ -1,9 +1,6 @@
-import 'package:Hoofzy_V2/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 import 'package:lottie/lottie.dart';
-import 'package:sizer/sizer.dart';
-import '../../../infrastructure/base/base_view.dart';
+import '../../../infrastructure/core/base/base_view.dart';
 import '../pet_avatar_screen/controllers/pet.avatar.controller.dart';
 
 class PetAnalyzePage extends BaseView<PetAvatarController> {

@@ -1,0 +1,39 @@
+ syntax = "proto3";
+
+package hoofzy.policy;
+
+service ContentApiService {
+    rpc GetAppLegalContent (ContentRequest) returns (ContentResponse) {}
+    rpc GetFaq (FaqRequest) returns (FaqResponse) {}
+}
+
+message ContentRequest {
+    string accessToken = 1;
+}
+  
+message ContentResponse {
+    bool error = 1;
+    string message = 2;
+    ContentResult data = 3;
+}
+
+message ContentResult {
+    string about = 1;
+    string terms = 2;
+    string policy = 3;
+}
+
+message FaqRequest {
+    string accessToken = 1;
+}
+  
+message FaqResponse {
+    bool error = 1;
+    string message = 2;
+    repeated FaqResult data = 3;
+}
+
+message FaqResult {
+    string question = 1;
+    string answer = 2;
+}

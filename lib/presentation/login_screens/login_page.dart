@@ -2,8 +2,7 @@ import 'package:Hoofzy_V2/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import 'package:google_sign_in/google_sign_in.dart';
-import '../../../infrastructure/base/base_view.dart';
+import '../../../infrastructure/core/base/base_view.dart';
 import '../../infrastructure/navigation/routes.dart';
 import 'controllers/login.controller.dart';
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../infrastructure/base/base_view.dart';
+import '../../../../infrastructure/core/base/base_view.dart';
 import '../controllers/sitter.home.controller.dart';
 
 class SettingsSitter extends BaseView<SitterHomeController> {

@@ -1,4 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:get/get.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
@@ -7,8 +6,6 @@ import 'package:in_app_review/in_app_review.dart';
 class SitterHomeController extends GetxController {
   var tabIndex = 0.obs;
   var reviewAvailable = false;
-  final heroes = Rxn<List<DocumentSnapshot>>([]);
-  final featured = Rxn<List<DocumentSnapshot>>([]);
   List<String> labels = ["Home", "Bookings", "Messages", "Settings"];
 
   var showAds = Rxn<bool>(false);
@@ -109,8 +106,6 @@ class SitterHomeController extends GetxController {
 
   @override
   Future<void> onTokenChange(String? result) async {
-    if(result != null){
-      await _firebaseRepository.saveFCMToken(result);
-    }
+
   }
 }

@@ -6,7 +6,7 @@ class Environments {
 }
 
 class ConfigEnvironments {
-  static const String _currentEnvironments = Environments.develop;
+  static const String _currentEnvironments = Environments.production;
   static const List<Map<String, String>> _availableEnvironments = [
     {
       'env': Environments.local,
